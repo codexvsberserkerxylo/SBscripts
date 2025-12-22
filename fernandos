@@ -1,0 +1,458 @@
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UIS = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- STATE MANAGEMENT
+local state = {
+	autoType = false,
+	autoSubmit = false,
+	currentWord = "",
+	speed = 0.1,
+	typoChance = 0,
+	isTyping = false
+}
+
+-- REALISTIC KEYBOARD MAP
+local keys = {
+	['q']={'w','a'},['w']={'q','a','s','e'},['e']={'w','s','d','r'},['r']={'e','d','f','t'},
+	['t']={'r','f','g','y'},['y']={'t','g','h','u'},['u']={'y','h','j','i'},['i']={'u','j','k','o'},
+	['o']={'i','k','l','p'},['p']={'o','l'},['a']={'q','w','s','z'},['s']={'a','w','e','d','x','z'},
+	['d']={'s','e','r','f','c','x'},['f']={'d','r','t','g','v','c'},['g']={'f','t','y','h','b','v'},
+	['h']={'g','y','u','j','n','b'},['j']={'h','u','i','k','m','n'},['k']={'j','i','o','l','m'},
+	['l']={'k','o','p'},['z']={'a','s','x'},['x']={'z','s','d','c'},['c']={'x','d','f','v',' '},
+	['v']={'c','f','g','b',' '},['b']={'v','g','h','n',' '},['n']={'b','h','j','m',' '},
+	['m']={'n','j','k'},[' ']={'v','b','n'}
+}
+
+-- UI CREATION
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ModernAutoTyper"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = playerGui
+
+local Main = Instance.new("Frame")
+Main.Size = UDim2.new(0, 380, 0, 480)
+Main.Position = UDim2.new(0.5, -190, 0.5, -240)
+Main.BackgroundColor3 = Color3.fromRGB(20, 20, 24)
+Main.BorderSizePixel = 0
+Main.Active = true
+Main.Draggable = true
+Main.Parent = ScreenGui
+
+local MainCorner = Instance.new("UICorner")
+MainCorner.CornerRadius = UDim.new(0, 14)
+MainCorner.Parent = Main
+
+local MainStroke = Instance.new("UIStroke")
+MainStroke.Color = Color3.fromRGB(70, 140, 255)
+MainStroke.Thickness = 2
+MainStroke.Transparency = 0.5
+MainStroke.Parent = Main
+
+-- HEADER
+local Header = Instance.new("Frame")
+Header.Size = UDim2.new(1, 0, 0, 60)
+Header.BackgroundColor3 = Color3.fromRGB(28, 28, 34)
+Header.BorderSizePixel = 0
+Header.Parent = Main
+
+local HeaderCorner = Instance.new("UICorner")
+HeaderCorner.CornerRadius = UDim.new(0, 14)
+HeaderCorner.Parent = Header
+
+local HeaderBlock = Instance.new("Frame")
+HeaderBlock.Size = UDim2.new(1, 0, 0, 14)
+HeaderBlock.Position = UDim2.new(0, 0, 1, -14)
+HeaderBlock.BackgroundColor3 = Color3.fromRGB(28, 28, 34)
+HeaderBlock.BorderSizePixel = 0
+HeaderBlock.Parent = Header
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, -80, 1, 0)
+Title.Position = UDim2.new(0, 24, 0, 0)
+Title.BackgroundTransparency = 1
+Title.Text = "⚡ AUTO TYPER"
+Title.TextColor3 = Color3.fromRGB(70, 140, 255)
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 20
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Parent = Header
+
+local CloseBtn = Instance.new("TextButton")
+CloseBtn.Size = UDim2.new(0, 50, 0, 50)
+CloseBtn.Position = UDim2.new(1, -58, 0.5, -25)
+CloseBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 52)
+CloseBtn.BorderSizePixel = 0
+CloseBtn.Text = "×"
+CloseBtn.TextColor3 = Color3.fromRGB(255, 100, 100)
+CloseBtn.Font = Enum.Font.GothamBold
+CloseBtn.TextSize = 32
+CloseBtn.AutoButtonColor = false
+CloseBtn.Parent = Header
+
+local CloseBtnCorner = Instance.new("UICorner")
+CloseBtnCorner.CornerRadius = UDim.new(0, 10)
+CloseBtnCorner.Parent = CloseBtn
+
+CloseBtn.MouseEnter:Connect(function()
+	TweenService:Create(CloseBtn, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 80, 80)}):Play()
+end)
+CloseBtn.MouseLeave:Connect(function()
+	TweenService:Create(CloseBtn, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(45, 45, 52)}):Play()
+end)
+CloseBtn.MouseButton1Click:Connect(function() 
+	ScreenGui:Destroy() 
+end)
+
+-- CONTENT AREA
+local Content = Instance.new("Frame")
+Content.Size = UDim2.new(1, -48, 1, -80)
+Content.Position = UDim2.new(0, 24, 0, 70)
+Content.BackgroundTransparency = 1
+Content.Parent = Main
+
+-- TOGGLE CREATION FUNCTION
+local function createToggle(name, position, callback)
+	local Container = Instance.new("Frame")
+	Container.Size = UDim2.new(1, 0, 0, 52)
+	Container.Position = position
+	Container.BackgroundColor3 = Color3.fromRGB(30, 30, 38)
+	Container.BorderSizePixel = 0
+	Container.Parent = Content
+
+	local Corner = Instance.new("UICorner")
+	Corner.CornerRadius = UDim.new(0, 10)
+	Corner.Parent = Container
+
+	local Stroke = Instance.new("UIStroke")
+	Stroke.Color = Color3.fromRGB(50, 50, 60)
+	Stroke.Thickness = 1
+	Stroke.Transparency = 0.8
+	Stroke.Parent = Container
+
+	local Label = Instance.new("TextLabel")
+	Label.Size = UDim2.new(0.6, -20, 1, 0)
+	Label.Position = UDim2.new(0, 16, 0, 0)
+	Label.BackgroundTransparency = 1
+	Label.Text = name
+	Label.TextColor3 = Color3.fromRGB(240, 240, 245)
+	Label.Font = Enum.Font.GothamSemibold
+	Label.TextSize = 15
+	Label.TextXAlignment = Enum.TextXAlignment.Left
+	Label.Parent = Container
+
+	local Toggle = Instance.new("TextButton")
+	Toggle.Size = UDim2.new(0, 52, 0, 28)
+	Toggle.Position = UDim2.new(1, -64, 0.5, -14)
+	Toggle.BackgroundColor3 = Color3.fromRGB(50, 50, 60)
+	Toggle.BorderSizePixel = 0
+	Toggle.Text = ""
+	Toggle.AutoButtonColor = false
+	Toggle.Parent = Container
+
+	local ToggleCorner = Instance.new("UICorner")
+	ToggleCorner.CornerRadius = UDim.new(1, 0)
+	ToggleCorner.Parent = Toggle
+
+	local Knob = Instance.new("Frame")
+	Knob.Size = UDim2.new(0, 22, 0, 22)
+	Knob.Position = UDim2.new(0, 3, 0.5, -11)
+	Knob.BackgroundColor3 = Color3.fromRGB(200, 200, 205)
+	Knob.BorderSizePixel = 0
+	Knob.Parent = Toggle
+
+	local KnobCorner = Instance.new("UICorner")
+	KnobCorner.CornerRadius = UDim.new(1, 0)
+	KnobCorner.Parent = Knob
+
+	local isOn = false
+
+	Toggle.MouseButton1Click:Connect(function()
+		isOn = not isOn
+		local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+		if isOn then
+			TweenService:Create(Toggle, tweenInfo, {BackgroundColor3 = Color3.fromRGB(70, 140, 255)}):Play()
+			TweenService:Create(Knob, tweenInfo, {
+				Position = UDim2.new(1, -25, 0.5, -11), 
+				BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			}):Play()
+		else
+			TweenService:Create(Toggle, tweenInfo, {BackgroundColor3 = Color3.fromRGB(50, 50, 60)}):Play()
+			TweenService:Create(Knob, tweenInfo, {
+				Position = UDim2.new(0, 3, 0.5, -11), 
+				BackgroundColor3 = Color3.fromRGB(200, 200, 205)
+			}):Play()
+		end
+		callback(isOn)
+	end)
+	
+	return Toggle
+end
+
+-- CREATE TOGGLES
+createToggle("Auto Type", UDim2.new(0, 0, 0, 0), function(enabled) 
+	state.autoType = enabled 
+end)
+
+createToggle("Auto Submit", UDim2.new(0, 0, 0, 62), function(enabled) 
+	state.autoSubmit = enabled 
+end)
+
+-- SETTINGS CONTAINER
+local SettingsContainer = Instance.new("Frame")
+SettingsContainer.Size = UDim2.new(1, 0, 0, 100)
+SettingsContainer.Position = UDim2.new(0, 0, 0, 124)
+SettingsContainer.BackgroundColor3 = Color3.fromRGB(30, 30, 38)
+SettingsContainer.BorderSizePixel = 0
+SettingsContainer.Parent = Content
+
+local SettingsCorner = Instance.new("UICorner")
+SettingsCorner.CornerRadius = UDim.new(0, 10)
+SettingsCorner.Parent = SettingsContainer
+
+local SettingsStroke = Instance.new("UIStroke")
+SettingsStroke.Color = Color3.fromRGB(50, 50, 60)
+SettingsStroke.Thickness = 1
+SettingsStroke.Transparency = 0.8
+SettingsStroke.Parent = SettingsContainer
+
+-- SPEED INPUT
+local SpeedLabel = Instance.new("TextLabel")
+SpeedLabel.Size = UDim2.new(0.5, 0, 0, 32)
+SpeedLabel.Position = UDim2.new(0, 16, 0, 10)
+SpeedLabel.BackgroundTransparency = 1
+SpeedLabel.Text = "Type Speed (s)"
+SpeedLabel.TextColor3 = Color3.fromRGB(240, 240, 245)
+SpeedLabel.Font = Enum.Font.GothamSemibold
+SpeedLabel.TextSize = 14
+SpeedLabel.TextXAlignment = Enum.TextXAlignment.Left
+SpeedLabel.Parent = SettingsContainer
+
+local SpeedInput = Instance.new("TextBox")
+SpeedInput.Size = UDim2.new(0, 85, 0, 30)
+SpeedInput.Position = UDim2.new(1, -95, 0, 11)
+SpeedInput.BackgroundColor3 = Color3.fromRGB(45, 45, 52)
+SpeedInput.BorderSizePixel = 0
+SpeedInput.Text = "0.1"
+SpeedInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedInput.Font = Enum.Font.GothamMedium
+SpeedInput.TextSize = 14
+SpeedInput.Parent = SettingsContainer
+
+local SpeedInputCorner = Instance.new("UICorner")
+SpeedInputCorner.CornerRadius = UDim.new(0, 8)
+SpeedInputCorner.Parent = SpeedInput
+
+SpeedInput.FocusLost:Connect(function()
+	local num = tonumber(SpeedInput.Text)
+	if num and num >= 0 then 
+		state.speed = num 
+	else 
+		SpeedInput.Text = tostring(state.speed) 
+	end
+end)
+
+-- TYPO CHANCE INPUT
+local TypoLabel = Instance.new("TextLabel")
+TypoLabel.Size = UDim2.new(0.5, 0, 0, 32)
+TypoLabel.Position = UDim2.new(0, 16, 0, 52)
+TypoLabel.BackgroundTransparency = 1
+TypoLabel.Text = "Typo Chance (%)"
+TypoLabel.TextColor3 = Color3.fromRGB(240, 240, 245)
+TypoLabel.Font = Enum.Font.GothamSemibold
+TypoLabel.TextSize = 14
+TypoLabel.TextXAlignment = Enum.TextXAlignment.Left
+TypoLabel.Parent = SettingsContainer
+
+local TypoInput = Instance.new("TextBox")
+TypoInput.Size = UDim2.new(0, 85, 0, 30)
+TypoInput.Position = UDim2.new(1, -95, 0, 53)
+TypoInput.BackgroundColor3 = Color3.fromRGB(45, 45, 52)
+TypoInput.BorderSizePixel = 0
+TypoInput.Text = "0"
+TypoInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+TypoInput.Font = Enum.Font.GothamMedium
+TypoInput.TextSize = 14
+TypoInput.Parent = SettingsContainer
+
+local TypoInputCorner = Instance.new("UICorner")
+TypoInputCorner.CornerRadius = UDim.new(0, 8)
+TypoInputCorner.Parent = TypoInput
+
+TypoInput.FocusLost:Connect(function()
+	local num = tonumber(TypoInput.Text)
+	if num and num >= 0 and num <= 100 then 
+		state.typoChance = num 
+	else 
+		TypoInput.Text = tostring(state.typoChance) 
+	end
+end)
+
+-- CONSOLE/STATUS DISPLAY
+local Console = Instance.new("Frame")
+Console.Size = UDim2.new(1, 0, 0, 140)
+Console.Position = UDim2.new(0, 0, 0, 234)
+Console.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
+Console.BorderSizePixel = 0
+Console.Parent = Content
+
+local ConsoleCorner = Instance.new("UICorner")
+ConsoleCorner.CornerRadius = UDim.new(0, 10)
+ConsoleCorner.Parent = Console
+
+local ConsoleStroke = Instance.new("UIStroke")
+ConsoleStroke.Color = Color3.fromRGB(70, 140, 255)
+ConsoleStroke.Thickness = 1
+ConsoleStroke.Transparency = 0.7
+ConsoleStroke.Parent = Console
+
+local ConsoleTitle = Instance.new("TextLabel")
+ConsoleTitle.Size = UDim2.new(1, -20, 0, 24)
+ConsoleTitle.Position = UDim2.new(0, 10, 0, 8)
+ConsoleTitle.BackgroundTransparency = 1
+ConsoleTitle.Text = "CURRENT WORD"
+ConsoleTitle.TextColor3 = Color3.fromRGB(120, 120, 130)
+ConsoleTitle.Font = Enum.Font.GothamBold
+ConsoleTitle.TextSize = 11
+ConsoleTitle.TextXAlignment = Enum.TextXAlignment.Left
+ConsoleTitle.Parent = Console
+
+local ConsoleText = Instance.new("TextLabel")
+ConsoleText.Size = UDim2.new(1, -24, 1, -56)
+ConsoleText.Position = UDim2.new(0, 12, 0, 36)
+ConsoleText.BackgroundTransparency = 1
+ConsoleText.Text = "Waiting..."
+ConsoleText.TextColor3 = Color3.fromRGB(70, 140, 255)
+ConsoleText.Font = Enum.Font.GothamBold
+ConsoleText.TextSize = 28
+ConsoleText.TextWrapped = true
+ConsoleText.TextYAlignment = Enum.TextYAlignment.Top
+ConsoleText.Parent = Console
+
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Size = UDim2.new(1, -20, 0, 18)
+StatusLabel.Position = UDim2.new(0, 10, 1, -26)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.Text = "● Ready"
+StatusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+StatusLabel.Font = Enum.Font.Gotham
+StatusLabel.TextSize = 12
+StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
+StatusLabel.Parent = Console
+
+-- HOTKEY INFO
+local HotkeyLabel = Instance.new("TextLabel")
+HotkeyLabel.Size = UDim2.new(1, 0, 0, 20)
+HotkeyLabel.Position = UDim2.new(0, 0, 1, -24)
+HotkeyLabel.BackgroundTransparency = 1
+HotkeyLabel.Text = "Press LEFT CTRL to toggle menu"
+HotkeyLabel.TextColor3 = Color3.fromRGB(120, 120, 130)
+HotkeyLabel.Font = Enum.Font.Gotham
+HotkeyLabel.TextSize = 11
+HotkeyLabel.Parent = Content
+
+-- AUTO TYPE ENGINE
+local function startTypingProcess()
+	if not state.currentWord or state.currentWord == "" then return end
+	if state.isTyping then return end
+	
+	state.isTyping = true
+	StatusLabel.Text = "● Typing..."
+	StatusLabel.TextColor3 = Color3.fromRGB(255, 200, 100)
+	
+	local speed = state.speed
+	local typoChance = state.typoChance
+	local GameGui = playerGui:FindFirstChild("ScreenGui")
+	local GameAnswerBox = GameGui and GameGui:FindFirstChild("AnswerBox")
+	
+	if not GameAnswerBox then 
+		state.isTyping = false
+		StatusLabel.Text = "● No Answer Box"
+		StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+		return 
+	end
+	
+	local finalString = ""
+	local targetWord = state.currentWord
+	GameAnswerBox:CaptureFocus()
+	
+	for i = 1, #targetWord do
+		if not state.autoType then 
+			state.isTyping = false
+			StatusLabel.Text = "● Stopped"
+			StatusLabel.TextColor3 = Color3.fromRGB(255, 100, 100)
+			break 
+		end
+		
+		local char = string.sub(targetWord, i, i)
+		local lower = string.lower(char)
+		local charToType = char
+		
+		-- Typo logic
+		if math.random(1, 100) <= typoChance and keys[lower] then
+			local roll = math.random(1, 100)
+			if roll <= 75 then
+				local neighbors = keys[lower]
+				charToType = neighbors[math.random(1, #neighbors)]
+			elseif roll <= 90 then
+				charToType = char .. char
+			else
+				charToType = ""
+			end
+		end
+		
+		finalString = finalString .. charToType
+		GameAnswerBox.Text = finalString
+		
+		-- Fire typing event if it exists
+		pcall(function()
+			ReplicatedStorage.TypingEventUpdate:FireServer(finalString)
+		end)
+		
+		task.wait(speed)
+	end
+	
+	-- Auto-submit logic
+	if state.autoSubmit and state.autoType then
+		if GameAnswerBox.Text == targetWord then
+			task.wait(0.05)
+			pcall(function()
+				ReplicatedStorage.SpellingSubmitted:FireServer(GameAnswerBox.Text)
+			end)
+			StatusLabel.Text = "● Submitted"
+			StatusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+			GameAnswerBox.Text = ""
+			GameAnswerBox:ReleaseFocus()
+		else
+			StatusLabel.Text = "● Typo - Not Submitted"
+			StatusLabel.TextColor3 = Color3.fromRGB(255, 200, 100)
+		end
+	else
+		StatusLabel.Text = "● Complete"
+		StatusLabel.TextColor3 = Color3.fromRGB(100, 255, 100)
+	end
+	
+	state.isTyping = false
+end
+
+-- LISTEN FOR NEW WORDS
+pcall(function()
+	ReplicatedStorage.ShowWord.OnClientEvent:Connect(function(word)
+		state.currentWord = word
+		ConsoleText.Text = word
+		if state.autoType then 
+			task.spawn(startTypingProcess) 
+		end
+	end)
+end)
+
+UIS.InputBegan:Connect(function(input, gp)
+	if input.KeyCode == Enum.KeyCode.LeftControl and not gp then
+		Main.Visible = not Main.Visible
+	end
+end)
