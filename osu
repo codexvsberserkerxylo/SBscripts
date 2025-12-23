@@ -1,0 +1,57 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local BASE_PITCH = 1.0
+local PITCH_INCREMENT = 0.015
+local MAX_PITCH = 2.25
+
+local sound = player:FindFirstChild("osu") or Instance.new("Sound")
+sound.Name = "osu"
+sound.SoundId = "rbxassetid://7172607676"
+sound.Volume = 0.8
+sound.Parent = player 
+
+local currentPitch = BASE_PITCH
+
+local function applySound(textBox)
+	if not textBox:GetAttribute("SoundHooked") then
+		textBox:SetAttribute("SoundHooked", true)
+		
+		textBox:GetPropertyChangedSignal("Text"):Connect(function()
+
+			local textLength = #textBox.Text
+			
+			if textLength == 0 then
+				currentPitch = BASE_PITCH
+			else
+				currentPitch = math.min(BASE_PITCH + (textLength * PITCH_INCREMENT), MAX_PITCH)
+			end
+			
+			sound.PlaybackSpeed = currentPitch
+			sound:Stop()
+			sound.TimePosition = 0
+			sound:Play()
+		end)
+	end
+end
+
+task.spawn(function()
+	while true do
+		local typeGui = playerGui:FindFirstChild("Type", true)
+		
+		if typeGui then
+			if typeGui:IsA("GuiBase2d") and typeGui.Enabled == false then
+				currentPitch = BASE_PITCH
+				sound.PlaybackSpeed = BASE_PITCH
+			end
+
+			local textBox = typeGui:FindFirstChild("TextBox", true)
+			if textBox and textBox:IsA("TextBox") then
+				applySound(textBox)
+			end
+		end
+		
+		task.wait(0.005)
+	end
+end)
