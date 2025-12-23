@@ -1,32 +1,27 @@
 local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
+local localPlayer = Players.LocalPlayer
 
 local BASE_PITCH = 1.0
 local PITCH_INCREMENT = 0.015
 local MAX_PITCH = 2.25
 
-local sound = player:FindFirstChild("osu") or Instance.new("Sound")
-sound.Name = "osu"
-sound.SoundId = "rbxassetid://7172607676"
-sound.Volume = 0.8
-sound.Parent = player 
+local function setupPlayer(player)
+	local pGui = player:FindFirstChildOfClass("PlayerGui")
+	if not pGui then return end
 
-local currentPitch = BASE_PITCH
+	local sound = player:FindFirstChild("osu") or Instance.new("Sound")
+	sound.Name = "osu"
+	sound.SoundId = "rbxassetid://7172607676"
+	sound.Volume = 0.8
+	sound.Parent = player 
 
-local function applySound(textBox)
-	if not textBox:GetAttribute("SoundHooked") then
+	local function applySound(textBox)
+		if textBox:GetAttribute("SoundHooked") then return end
 		textBox:SetAttribute("SoundHooked", true)
 		
 		textBox:GetPropertyChangedSignal("Text"):Connect(function()
-
 			local textLength = #textBox.Text
-			
-			if textLength == 0 then
-				currentPitch = BASE_PITCH
-			else
-				currentPitch = math.min(BASE_PITCH + (textLength * PITCH_INCREMENT), MAX_PITCH)
-			end
+			local currentPitch = textLength == 0 and BASE_PITCH or math.min(BASE_PITCH + (textLength * PITCH_INCREMENT), MAX_PITCH)
 			
 			sound.PlaybackSpeed = currentPitch
 			sound:Stop()
@@ -34,24 +29,35 @@ local function applySound(textBox)
 			sound:Play()
 		end)
 	end
+
+	local function hookGui(gui)
+		if gui.Name == "Type" then
+			gui:GetPropertyChangedSignal("Enabled"):Connect(function()
+				if gui.Enabled then
+					sound.PlaybackSpeed = BASE_PITCH
+					sound:Stop()
+					sound.TimePosition = 0
+					sound:Play()
+				end
+			end)
+
+			local textBox = gui:FindFirstChildWhichIsA("TextBox", true)
+			if textBox then applySound(textBox) end
+			
+			gui.DescendantAdded:Connect(function(desc)
+				if desc:IsA("TextBox") then applySound(desc) end
+			end)
+		end
+	end
+
+	for _, child in ipairs(pGui:GetChildren()) do
+		hookGui(child)
+	end
+	pGui.ChildAdded:Connect(hookGui)
 end
 
-task.spawn(function()
-	while true do
-		local typeGui = playerGui:FindFirstChild("Type", true)
-		
-		if typeGui then
-			if typeGui:IsA("GuiBase2d") and typeGui.Enabled == false then
-				currentPitch = BASE_PITCH
-				sound.PlaybackSpeed = BASE_PITCH
-			end
+for _, player in ipairs(Players:GetPlayers()) do
+	task.spawn(setupPlayer, player)
+end
 
-			local textBox = typeGui:FindFirstChild("TextBox", true)
-			if textBox and textBox:IsA("TextBox") then
-				applySound(textBox)
-			end
-		end
-		
-		task.wait(0.005)
-	end
-end)
+Players.PlayerAdded:Connect(setupPlayer)
