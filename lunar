@@ -1,1 +1,2741 @@
 
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 110 | Scripts: 12 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.f789z43hfn3i
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[f789z43hfn3i]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.f789z43hfn3i._main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["2"]["Size"] = UDim2.new(0.33971, 0, 0.45251, 0);
+G2L["2"]["Position"] = UDim2.new(0.33015, 0, 0.27321, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[_main]];
+
+
+-- StarterGui.f789z43hfn3i._main._c
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["Name"] = [[_c]];
+G2L["3"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.f789z43hfn3i._main._s
+G2L["4"] = Instance.new("UIStroke", G2L["2"]);
+G2L["4"]["Transparency"] = 0.4;
+G2L["4"]["Thickness"] = 1.5;
+G2L["4"]["Color"] = Color3.fromRGB(44, 44, 44);
+G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4"]["Name"] = [[_s]];
+
+
+-- StarterGui.f789z43hfn3i._main.dh
+G2L["5"] = Instance.new("Frame", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["Size"] = UDim2.new(0, 501, 0, 25);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Name"] = [[dh]];
+G2L["5"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main.dh.ds
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+G2L["6"]["Name"] = [[ds]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["Size"] = UDim2.new(0.24944, 0, 0.92941, 0);
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.07059, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[_btns]];
+G2L["7"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main._btns.btnhnd
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+G2L["8"]["Name"] = [[btnhnd]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.hbtn
+G2L["9"] = Instance.new("TextButton", G2L["7"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9"]["TextSize"] = 20;
+G2L["9"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["Size"] = UDim2.new(0.99172, 0, 0.07828, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[   Home]];
+G2L["9"]["Name"] = [[hbtn]];
+G2L["9"]["Position"] = UDim2.new(0.00828, 0, 0.02866, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._btns.hbtn._c
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.hbtn.brd
+G2L["b"] = Instance.new("Frame", G2L["9"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Size"] = UDim2.new(1, 0, -0.03297, 0);
+G2L["b"]["Position"] = UDim2.new(-0, 0, 1, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.hbtn.brd.grd
+G2L["c"] = Instance.new("UIGradient", G2L["b"]);
+G2L["c"]["Name"] = [[grd]];
+G2L["c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+
+
+-- StarterGui.f789z43hfn3i._main._btns.hbtn.brd._c
+G2L["d"] = Instance.new("UICorner", G2L["b"]);
+G2L["d"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.obtn
+G2L["e"] = Instance.new("TextButton", G2L["7"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["e"]["TextSize"] = 20;
+G2L["e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0.99172, 0, 0.07828, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[   Other]];
+G2L["e"]["Name"] = [[obtn]];
+G2L["e"]["Position"] = UDim2.new(0.00828, 0, 0.239, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._btns.obtn._c
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.obtn.brd
+G2L["10"] = Instance.new("Frame", G2L["e"]);
+G2L["10"]["Visible"] = false;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["Size"] = UDim2.new(1, 0, -0.03297, 0);
+G2L["10"]["Position"] = UDim2.new(-0, 0, 1, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.obtn.brd.grd
+G2L["11"] = Instance.new("UIGradient", G2L["10"]);
+G2L["11"]["Name"] = [[grd]];
+G2L["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+
+
+-- StarterGui.f789z43hfn3i._main._btns.obtn.brd._c
+G2L["12"] = Instance.new("UICorner", G2L["10"]);
+G2L["12"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.mbtn
+G2L["13"] = Instance.new("TextButton", G2L["7"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["TextSize"] = 20;
+G2L["13"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0.99172, 0, 0.07828, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[   Main]];
+G2L["13"]["Name"] = [[mbtn]];
+G2L["13"]["Position"] = UDim2.new(0.00828, 0, 0.134, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._btns.mbtn._c
+G2L["14"] = Instance.new("UICorner", G2L["13"]);
+G2L["14"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.mbtn.brd
+G2L["15"] = Instance.new("Frame", G2L["13"]);
+G2L["15"]["Visible"] = false;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Size"] = UDim2.new(1, 0, -0.03297, 0);
+G2L["15"]["Position"] = UDim2.new(-0, 0, 1, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.mbtn.brd.grd
+G2L["16"] = Instance.new("UIGradient", G2L["15"]);
+G2L["16"]["Name"] = [[grd]];
+G2L["16"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+
+
+-- StarterGui.f789z43hfn3i._main._btns.mbtn.brd._c
+G2L["17"] = Instance.new("UICorner", G2L["15"]);
+G2L["17"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm
+G2L["18"] = Instance.new("Frame", G2L["7"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 143, 44);
+G2L["18"]["Size"] = UDim2.new(0.83268, 0, 0.12392, 0);
+G2L["18"]["Position"] = UDim2.new(0.08291, 0, 0.83955, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Name"] = [[ifrm]];
+G2L["18"]["BackgroundTransparency"] = 0.9;
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm.load
+G2L["19"] = Instance.new("LocalScript", G2L["18"]);
+G2L["19"]["Name"] = [[load]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm._c
+G2L["1a"] = Instance.new("UICorner", G2L["18"]);
+G2L["1a"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm.hds
+G2L["1b"] = Instance.new("ImageLabel", G2L["18"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1b"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["1b"]["Size"] = UDim2.new(0.29491, 0, 0.72421, 0);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["BackgroundTransparency"] = 1;
+G2L["1b"]["Name"] = [[hds]];
+G2L["1b"]["Position"] = UDim2.new(0.06058, 0, 0.11756, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm.hds.UICorner
+G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
+
+
+
+-- StarterGui.f789z43hfn3i._main._btns.ifrm.namel
+G2L["1d"] = Instance.new("TextLabel", G2L["18"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Size"] = UDim2.new(0.62977, 0, 0.97619, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[]];
+G2L["1d"]["Name"] = [[namel]];
+G2L["1d"]["Position"] = UDim2.new(0.38938, 0, 0.0238, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms
+G2L["1e"] = Instance.new("Frame", G2L["2"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["1e"]["Size"] = UDim2.new(0.70673, 0, 0.87102, 0);
+G2L["1e"]["Position"] = UDim2.new(0.26497, 0, 0.09502, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Name"] = [[_frms]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms._c
+G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
+G2L["1f"]["Name"] = [[_c]];
+G2L["1f"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm
+G2L["20"] = Instance.new("Frame", G2L["1e"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["20"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
+G2L["20"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Name"] = [[hfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.hload
+G2L["21"] = Instance.new("LocalScript", G2L["20"]);
+G2L["21"]["Name"] = [[hload]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm._c
+G2L["22"] = Instance.new("UICorner", G2L["20"]);
+G2L["22"]["Name"] = [[_c]];
+G2L["22"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.display
+G2L["23"] = Instance.new("TextLabel", G2L["20"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 20;
+G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(0.50279, 0, 0.17219, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Welcome, <Display>.]];
+G2L["23"]["Name"] = [[display]];
+G2L["23"]["Position"] = UDim2.new(0.28108, 0, 0.11914, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.hds
+G2L["24"] = Instance.new("ImageLabel", G2L["20"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["24"]["Size"] = UDim2.new(0.21595, 0, 0.24509, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Name"] = [[hds]];
+G2L["24"]["Position"] = UDim2.new(0.04057, 0, 0.07489, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.user
+G2L["25"] = Instance.new("TextLabel", G2L["20"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 14;
+G2L["25"]["TextTransparency"] = 0.5;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(0.34631, 0, 0.07829, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[(@<Username>)]];
+G2L["25"]["Name"] = [[user]];
+G2L["25"]["Position"] = UDim2.new(0.28108, 0, 0.24169, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.bg
+G2L["26"] = Instance.new("Frame", G2L["20"]);
+G2L["26"]["ZIndex"] = 0;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["Size"] = UDim2.new(0.865, 0, 0.36944, 0);
+G2L["26"]["Position"] = UDim2.new(0.01739, 0, 0.02042, 0);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Name"] = [[bg]];
+G2L["26"]["BackgroundTransparency"] = 0.93;
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.bg._c
+G2L["27"] = Instance.new("UICorner", G2L["26"]);
+G2L["27"]["Name"] = [[_c]];
+G2L["27"]["CornerRadius"] = UDim.new(0, 13);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.logs
+G2L["28"] = Instance.new("Frame", G2L["20"]);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["28"]["Size"] = UDim2.new(0.89704, 0, 0.53232, 0);
+G2L["28"]["Position"] = UDim2.new(0.04057, 0, 0.44253, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Name"] = [[logs]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.logs.logl
+G2L["29"] = Instance.new("TextLabel", G2L["28"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextSize"] = 14;
+G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["29"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Size"] = UDim2.new(0.97918, 0, 0.95333, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[Change Logs [v0.1]]];
+G2L["29"]["Name"] = [[logl]];
+G2L["29"]["Position"] = UDim2.new(0.02265, 0, 0.04667, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.logs.logl.txtl
+G2L["2a"] = Instance.new("TextBox", G2L["29"]);
+G2L["2a"]["Interactable"] = false;
+G2L["2a"]["Name"] = [[txtl]];
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextTransparency"] = 0.3;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
+G2L["2a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["Selectable"] = false;
+G2L["2a"]["MultiLine"] = true;
+G2L["2a"]["ClearTextOnFocus"] = false;
+G2L["2a"]["Size"] = UDim2.new(0.998, 0, 0.854, 0);
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.146, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[     [*] Release]];
+G2L["2a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.logs._c
+G2L["2b"] = Instance.new("UICorner", G2L["28"]);
+G2L["2b"]["Name"] = [[_c]];
+G2L["2b"]["CornerRadius"] = UDim.new(0, 13);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm
+G2L["2c"] = Instance.new("Frame", G2L["1e"]);
+G2L["2c"]["Visible"] = false;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["2c"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
+G2L["2c"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Name"] = [[ofrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._c
+G2L["2d"] = Instance.new("UICorner", G2L["2c"]);
+G2L["2d"]["Name"] = [[_c]];
+G2L["2d"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr
+G2L["2e"] = Instance.new("ScrollingFrame", G2L["2c"]);
+G2L["2e"]["Active"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["Name"] = [[_scr]];
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
+G2L["2e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["ScrollBarThickness"] = 0;
+G2L["2e"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl
+G2L["2f"] = Instance.new("TextLabel", G2L["2e"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["TextSize"] = 20;
+G2L["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2f"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Size"] = UDim2.new(1, 0, 0.04632, 0);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Text"] = [[     Server Stuff]];
+G2L["2f"]["Name"] = [[sl]];
+G2L["2f"]["Position"] = UDim2.new(0, 0, -0, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.sbtns
+G2L["30"] = Instance.new("LocalScript", G2L["2f"]);
+G2L["30"]["Name"] = [[sbtns]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.brd
+G2L["31"] = Instance.new("Frame", G2L["2f"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["31"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.brd.grd
+G2L["32"] = Instance.new("UIGradient", G2L["31"]);
+G2L["32"]["Name"] = [[grd]];
+G2L["32"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.brd._c
+G2L["33"] = Instance.new("UICorner", G2L["31"]);
+G2L["33"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.shbtn
+G2L["34"] = Instance.new("TextButton", G2L["2f"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[   Server Hop]];
+G2L["34"]["Name"] = [[shbtn]];
+G2L["34"]["Position"] = UDim2.new(0.02899, 0, 1.28596, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.shbtn._c
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+G2L["35"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.rjbtn
+G2L["36"] = Instance.new("TextButton", G2L["2f"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[   Rejoin Server]];
+G2L["36"]["Name"] = [[rjbtn]];
+G2L["36"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.rjbtn._c
+G2L["37"] = Instance.new("UICorner", G2L["36"]);
+G2L["37"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm
+G2L["38"] = Instance.new("Frame", G2L["1e"]);
+G2L["38"]["Visible"] = false;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["38"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
+G2L["38"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Name"] = [[mfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._c
+G2L["39"] = Instance.new("UICorner", G2L["38"]);
+G2L["39"]["Name"] = [[_c]];
+G2L["39"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr
+G2L["3a"] = Instance.new("ScrollingFrame", G2L["38"]);
+G2L["3a"]["Active"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["Name"] = [[_scr]];
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
+G2L["3a"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["ScrollBarThickness"] = 0;
+G2L["3a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.mscr
+G2L["3b"] = Instance.new("LocalScript", G2L["3a"]);
+G2L["3b"]["Name"] = [[mscr]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl
+G2L["3c"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["TextSize"] = 20;
+G2L["3c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3c"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["3c"]["BackgroundTransparency"] = 1;
+G2L["3c"]["Size"] = UDim2.new(1, 0, 0.04632, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Text"] = [[     Main Stuff]];
+G2L["3c"]["Name"] = [[msl]];
+G2L["3c"]["Position"] = UDim2.new(0, 0, -0, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn
+G2L["3d"] = Instance.new("TextButton", G2L["3c"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Text"] = [[   Auto Type]];
+G2L["3d"]["Name"] = [[atbtn]];
+G2L["3d"]["Position"] = UDim2.new(0.02899, 0, 1.28596, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.gms
+G2L["3e"] = Instance.new("LocalScript", G2L["3d"]);
+G2L["3e"]["Name"] = [[gms]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn._c
+G2L["3f"] = Instance.new("UICorner", G2L["3d"]);
+G2L["3f"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.tfrm
+G2L["40"] = Instance.new("Frame", G2L["3d"]);
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["40"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["40"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.tfrm._c
+G2L["41"] = Instance.new("UICorner", G2L["40"]);
+G2L["41"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.tfrm.bar
+G2L["42"] = Instance.new("Frame", G2L["40"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(180, 42, 23);
+G2L["42"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["42"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Name"] = [[bar]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.tfrm.bar._c
+G2L["43"] = Instance.new("UICorner", G2L["42"]);
+G2L["43"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.normalSlider
+G2L["44"] = Instance.new("TextBox", G2L["3d"]);
+G2L["44"]["CursorPosition"] = -1;
+G2L["44"]["Name"] = [[normalSlider]];
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextSize"] = 14;
+G2L["44"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["44"]["Size"] = UDim2.new(0.22021, 0, 0.72915, 0);
+G2L["44"]["Position"] = UDim2.new(0.4336, 0, 0.11439, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[0.1]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.normalSlider.c
+G2L["45"] = Instance.new("UICorner", G2L["44"]);
+G2L["45"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.brd
+G2L["46"] = Instance.new("Frame", G2L["3c"]);
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["46"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.brd.grd
+G2L["47"] = Instance.new("UIGradient", G2L["46"]);
+G2L["47"]["Name"] = [[grd]];
+G2L["47"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.brd._c
+G2L["48"] = Instance.new("UICorner", G2L["46"]);
+G2L["48"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn
+G2L["49"] = Instance.new("TextButton", G2L["3c"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[   Random Speed]];
+G2L["49"]["Name"] = [[rsbtn]];
+G2L["49"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.ncs
+G2L["4a"] = Instance.new("LocalScript", G2L["49"]);
+G2L["4a"]["Name"] = [[ncs]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn._c
+G2L["4b"] = Instance.new("UICorner", G2L["49"]);
+G2L["4b"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.tfrm
+G2L["4c"] = Instance.new("Frame", G2L["49"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["4c"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["4c"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.tfrm._c
+G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
+G2L["4d"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.tfrm.bar
+G2L["4e"] = Instance.new("Frame", G2L["4c"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(180, 42, 23);
+G2L["4e"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["4e"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Name"] = [[bar]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.tfrm.bar._c
+G2L["4f"] = Instance.new("UICorner", G2L["4e"]);
+G2L["4f"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.maxSlider
+G2L["50"] = Instance.new("TextBox", G2L["49"]);
+G2L["50"]["CursorPosition"] = -1;
+G2L["50"]["Name"] = [[maxSlider]];
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextSize"] = 14;
+G2L["50"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["50"]["Size"] = UDim2.new(0.139, 0, 0.71, 0);
+G2L["50"]["Position"] = UDim2.new(0.38801, 0, 0.14706, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[0.03]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.maxSlider.c
+G2L["51"] = Instance.new("UICorner", G2L["50"]);
+G2L["51"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.minSlider
+G2L["52"] = Instance.new("TextBox", G2L["49"]);
+G2L["52"]["CursorPosition"] = -1;
+G2L["52"]["Name"] = [[minSlider]];
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["Size"] = UDim2.new(0.13942, 0, 0.71, 0);
+G2L["52"]["Position"] = UDim2.new(0.54569, 0, 0.14706, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[0.05]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.minSlider.c
+G2L["53"] = Instance.new("UICorner", G2L["52"]);
+G2L["53"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn
+G2L["54"] = Instance.new("TextButton", G2L["3c"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["54"]["TextSize"] = 14;
+G2L["54"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["54"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[   Typos]];
+G2L["54"]["Name"] = [[tbtn]];
+G2L["54"]["Position"] = UDim2.new(0.02589, 0, 4.2435, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.ncs
+G2L["55"] = Instance.new("LocalScript", G2L["54"]);
+G2L["55"]["Name"] = [[ncs]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn._c
+G2L["56"] = Instance.new("UICorner", G2L["54"]);
+G2L["56"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tfrm
+G2L["57"] = Instance.new("Frame", G2L["54"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["57"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["57"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tfrm._c
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
+G2L["58"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tfrm.bar
+G2L["59"] = Instance.new("Frame", G2L["57"]);
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(180, 42, 23);
+G2L["59"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["59"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Name"] = [[bar]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tfrm.bar._c
+G2L["5a"] = Instance.new("UICorner", G2L["59"]);
+G2L["5a"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tSlider
+G2L["5b"] = Instance.new("TextBox", G2L["54"]);
+G2L["5b"]["CursorPosition"] = -1;
+G2L["5b"]["Name"] = [[tSlider]];
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["TextSize"] = 14;
+G2L["5b"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5b"]["Size"] = UDim2.new(0.22, 0, 0.729, 0);
+G2L["5b"]["Position"] = UDim2.new(0.44346, 0, 0.11439, 0);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Text"] = [[15]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.tSlider.c
+G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
+G2L["5c"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl
+G2L["5d"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["TextSize"] = 20;
+G2L["5d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5d"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["5d"]["BackgroundTransparency"] = 1;
+G2L["5d"]["Size"] = UDim2.new(1, 0, 0.04632, 0);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Text"] = [[     Related]];
+G2L["5d"]["Name"] = [[rl]];
+G2L["5d"]["Position"] = UDim2.new(0.01557, 0, 0.26902, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn
+G2L["5e"] = Instance.new("TextButton", G2L["5d"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["Size"] = UDim2.new(0.9449, 0, 1.26, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[   Anti-AFK]];
+G2L["5e"]["Name"] = [[aabtn]];
+G2L["5e"]["Position"] = UDim2.new(0.00096, 0, 1.286, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.aas
+G2L["5f"] = Instance.new("LocalScript", G2L["5e"]);
+G2L["5f"]["Name"] = [[aas]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn._c
+G2L["60"] = Instance.new("UICorner", G2L["5e"]);
+G2L["60"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.tfrm
+G2L["61"] = Instance.new("Frame", G2L["5e"]);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["61"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["61"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.tfrm._c
+G2L["62"] = Instance.new("UICorner", G2L["61"]);
+G2L["62"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.tfrm.bar
+G2L["63"] = Instance.new("Frame", G2L["61"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(180, 42, 23);
+G2L["63"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["63"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Name"] = [[bar]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.tfrm.bar._c
+G2L["64"] = Instance.new("UICorner", G2L["63"]);
+G2L["64"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.brd
+G2L["65"] = Instance.new("Frame", G2L["5d"]);
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["Size"] = UDim2.new(1, 0, -0.03297, 0);
+G2L["65"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.brd.grd
+G2L["66"] = Instance.new("UIGradient", G2L["65"]);
+G2L["66"]["Name"] = [[grd]];
+G2L["66"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.brd._c
+G2L["67"] = Instance.new("UICorner", G2L["65"]);
+G2L["67"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i.tsk
+G2L["68"] = Instance.new("Frame", G2L["1"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
+G2L["68"]["Position"] = UDim2.new(0.33083, 0, 0.27286, 0);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Name"] = [[tsk]];
+G2L["68"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i.tsk.brd
+G2L["69"] = Instance.new("Frame", G2L["68"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 108, 22);
+G2L["69"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["69"]["Position"] = UDim2.new(0, 0, 0.98587, 0);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i.tsk.endb
+G2L["6a"] = Instance.new("TextButton", G2L["68"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["TextSize"] = 20;
+G2L["6a"]["TextScaled"] = true;
+G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6a"]["BackgroundTransparency"] = 1;
+G2L["6a"]["Size"] = UDim2.new(0.03902, 0, 0.91063, 0);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Text"] = [[X]];
+G2L["6a"]["Name"] = [[endb]];
+G2L["6a"]["Position"] = UDim2.new(0.94792, 0, -0.00047, 0);
+
+
+-- StarterGui.f789z43hfn3i.tsk.endb._es
+G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
+G2L["6b"]["Name"] = [[_es]];
+
+
+-- StarterGui.f789z43hfn3i.tsk.min
+G2L["6c"] = Instance.new("TextButton", G2L["68"]);
+G2L["6c"]["TextWrapped"] = true;
+G2L["6c"]["BorderSizePixel"] = 0;
+G2L["6c"]["TextSize"] = 30;
+G2L["6c"]["TextScaled"] = true;
+G2L["6c"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6c"]["BackgroundTransparency"] = 1;
+G2L["6c"]["Size"] = UDim2.new(0.04113, 0, 1.11496, 0);
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Text"] = [[-]];
+G2L["6c"]["Name"] = [[min]];
+G2L["6c"]["Position"] = UDim2.new(0.90679, 0, -0.0638, -2);
+
+
+-- StarterGui.f789z43hfn3i.tsk.min._ms
+G2L["6d"] = Instance.new("LocalScript", G2L["6c"]);
+G2L["6d"]["Name"] = [[_ms]];
+
+
+-- StarterGui.f789z43hfn3i.tsk._v
+G2L["6e"] = Instance.new("TextLabel", G2L["68"]);
+G2L["6e"]["TextWrapped"] = true;
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["TextSize"] = 14;
+G2L["6e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6e"]["TextYAlignment"] = Enum.TextYAlignment.Bottom;
+G2L["6e"]["TextScaled"] = true;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6e"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
+G2L["6e"]["BackgroundTransparency"] = 1;
+G2L["6e"]["Size"] = UDim2.new(0.2073, 0, -0.77974, 0);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Text"] = [[Lunar X  - v0.1]];
+G2L["6e"]["Name"] = [[_v]];
+G2L["6e"]["Position"] = UDim2.new(0.02259, 0, 0.82839, 0);
+
+
+-- StarterGui.f789z43hfn3i._main.dh.ds
+local function C_6()
+local script = G2L["6"];
+	local UIS = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local dragHandle = script.Parent
+	
+	local mainFrame = script.Parent.Parent
+	local tskFrame = script.Parent.Parent.Parent:WaitForChild("tsk")
+	
+	local dragging = false
+	local dragStart
+	local startPosMain
+	local startPosTsk
+	local dragSpeed = 0.1
+	
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+	
+		local newMainPos = UDim2.new(
+			startPosMain.X.Scale,
+			startPosMain.X.Offset + delta.X,
+			startPosMain.Y.Scale,
+			startPosMain.Y.Offset + delta.Y
+		)
+	
+		local newTskPos = UDim2.new(
+			startPosTsk.X.Scale,
+			startPosTsk.X.Offset + delta.X,
+			startPosTsk.Y.Scale,
+			startPosTsk.Y.Offset + delta.Y
+		)
+	
+		TweenService:Create(mainFrame, TweenInfo.new(dragSpeed), {Position = newMainPos}):Play()
+		TweenService:Create(tskFrame, TweenInfo.new(dragSpeed), {Position = newTskPos}):Play()
+	end
+	
+	
+	dragHandle.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+	
+			dragging = true
+			dragStart = input.Position
+	
+			startPosMain = mainFrame.Position
+			startPosTsk = tskFrame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	
+	UIS.InputChanged:Connect(function(input)
+		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			updateInput(input)
+		end
+	end)
+	
+end;
+task.spawn(C_6);
+-- StarterGui.f789z43hfn3i._main._btns.btnhnd
+local function C_8()
+local script = G2L["8"];
+	local btns = script.Parent
+	local frms = btns.Parent._frms
+	
+	local buttonFrameMap = {
+		hbtn = "hfrm",
+		obtn = "ofrm",
+		mbtn = "mfrm",
+	}
+	
+	local buttons = {}
+	local frames = {}
+	
+	for btnName, frmName in pairs(buttonFrameMap) do
+		buttons[btnName] = btns:WaitForChild(btnName)
+		frames[frmName] = frms:WaitForChild(frmName)
+	end 
+	
+	local function showFrame(targetFrm)
+		for frmName, frm in pairs(frames) do
+			frm.Visible = (frm == targetFrm)
+		end
+	end
+	
+	local function updateBorders(activeBtn)
+		for btnName, btn in pairs(buttons) do
+			if btn:FindFirstChild("brd") then
+				btn.brd.Visible = (btn == activeBtn)
+			end
+		end
+	end
+	
+	for btnName, btn in pairs(buttons) do
+		local correspondingFrame = frames[buttonFrameMap[btnName]]
+		btn.MouseButton1Click:Connect(function()
+			showFrame(correspondingFrame)
+			updateBorders(btn)
+		end)
+	end
+end;
+task.spawn(C_8);
+-- StarterGui.f789z43hfn3i._main._btns.ifrm.load
+local function C_19()
+local script = G2L["19"];
+	local Players = game:GetService("Players")
+	local user = Players.LocalPlayer.Name
+	local userId = Players.LocalPlayer.UserId
+	local frm = script.Parent
+	local headshot = frm.hds
+	local namel = frm.namel
+	
+	local function setHeadshot()
+		local success, err = pcall(function()
+			local thumbType = Enum.ThumbnailType.HeadShot
+			local thumbSize = Enum.ThumbnailSize.Size420x420
+			local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+			if isReady then
+				headshot.Image = content
+			else
+				warn("Headshot thumbnail not ready yet for user:", user)
+				headshot.Image = "rbxasset://textures/face.png"
+			end
+		end)
+	
+		if not success then
+			warn("Failed to get user thumbnail:", err)
+			headshot.Image = "rbxasset://textures/face.png" 
+		end
+	end
+	
+	namel.Text = "@".. user
+	
+	setHeadshot()
+end;
+task.spawn(C_19);
+-- StarterGui.f789z43hfn3i._main._frms.hfrm.hload
+local function C_21()
+local script = G2L["21"];
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local user = player.Name
+	local display = player.DisplayName
+	local userId = player.UserId
+	local home = script.Parent
+	local displayl = home:WaitForChild("display")
+	local userl = home:WaitForChild("user")
+	
+	local headshot = home:WaitForChild("hds")
+	local typed = false
+	
+	local function typeOut(speed, text, label)
+		label.Text = "" 
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			task.wait(speed)
+		end
+	end
+	
+	local function setHeadshot()
+		local success, err = pcall(function()
+			local thumbType = Enum.ThumbnailType.HeadShot
+			local thumbSize = Enum.ThumbnailSize.Size420x420
+			local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+			if isReady then
+				headshot.Image = content
+			else
+				warn("Headshot thumbnail not ready yet for user:", user)
+				headshot.Image = "rbxasset://textures/face.png"
+			end
+		end)
+	
+		if not success then
+			warn("Failed to get user thumbnail:", err)
+			headshot.Image = "rbxasset://textures/face.png" 
+		end
+	end
+	
+	setHeadshot()
+	userl.Text = ""
+	
+	typeOut(0.05, "Welcome, " .. display .. ".", displayl)
+	typeOut(0.05, "(@"..user..")", userl)
+end;
+task.spawn(C_21);
+-- StarterGui.f789z43hfn3i._main._frms.ofrm._scr.sl.sbtns
+local function C_30()
+local script = G2L["30"];
+	local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local placeId = game.PlaceId
+	local jobId = game.JobId
+	local btnn = LocalPlayer:WaitForChild("btnn")
+	local on = LocalPlayer:WaitForChild("on")
+	local randomServerButton = script.Parent:WaitForChild("shbtn")
+	local rejoinServerButton = script.Parent:WaitForChild("rjbtn")
+	
+	local function notif(str, dur)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Lunar Notify",
+			Text = str,
+			Icon = "rbxassetid://77980660684977",
+			Duration = dur or 3
+		})
+	end
+	
+	TeleportService.TeleportInitFailed:Connect(function()
+		task.wait(5)
+		pcall(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/lunar"))()
+		end)
+	end)
+	
+	function queueReload()
+		local queued = [[
+	        task.wait(5)
+	        loadstring(game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/lunar"))()
+	    ]]
+		if syn and syn.queue_on_teleport then
+			syn.queue_on_teleport(queued)
+		elseif queue_on_teleport then
+			queue_on_teleport(queued)
+		elseif fluxus and fluxus.queue_on_teleport then
+			fluxus.queue_on_teleport(queued)
+		end
+	end
+	
+	function joinRandomServer()
+		queueReload()
+	
+		local HttpService = game:GetService("HttpService")
+		local servers = {}
+		local cursor = ""
+	
+		local success, response = pcall(function()
+			return game:HttpGet("https://games.roblox.com/v1/games/" .. placeId .. "/servers/Public?sortOrder=Asc&limit=100")
+		end)
+	
+		if not success then
+			if btnn.Value == 1 then
+	           notif("Failed to fetch servers.")
+			end
+			return
+		end
+	
+		local data = HttpService:JSONDecode(response)
+		if not data or not data.data or #data.data == 0 then
+			if btnn.Value == 1 then
+				notif("No servers found.")
+			end
+			
+			return
+		end
+	
+		for _, server in ipairs(data.data) do
+			if server.playing < server.maxPlayers and server.id ~= jobId then
+				table.insert(servers, server.id)
+			end
+		end
+	
+		if #servers == 0 then
+			if btnn.Value == 1 then
+	           notif("No available servers to join.")
+			end
+			
+			return
+		end
+	
+		local randomServer = servers[math.random(1, #servers)]
+		local success2, err = pcall(function()
+			game:GetService("TeleportService"):TeleportToPlaceInstance(placeId, randomServer, LocalPlayer)
+		end)
+	
+		if not success2 then
+			if btnn.Value == 1 then
+				notif("Teleport failed: " .. tostring(err))
+			end
+		else
+			if btnn.Value == 1 then
+				notif("Joining a random server...")
+			end
+		end
+	end
+	
+	if btnn.Value == 1 then
+		
+	end
+	
+	function rejoinServer()
+		if jobId == "" then
+			return
+		end
+		queueReload()
+		local success, result = pcall(function()
+			TeleportService:TeleportToPlaceInstance(placeId, jobId, LocalPlayer)
+		end)
+		if not success then
+			if btnn.Value == 1 then
+				notif("Rejoin Error.")
+			end
+		end
+	end
+	
+	local connections = {}
+	table.insert(connections, randomServerButton.MouseButton1Click:Connect(joinRandomServer))
+	table.insert(connections, rejoinServerButton.MouseButton1Click:Connect(rejoinServer))
+	
+	script.AncestryChanged:Connect(function()
+		if not script.Parent then
+			for _, conn in ipairs(connections) do
+				conn:Disconnect()
+			end
+		end
+	end)
+end;
+task.spawn(C_30);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.mscr
+local function C_3b()
+local script = G2L["3b"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local VirtualInputManager = game:GetService("VirtualInputManager")
+	
+	local player = Players.LocalPlayer
+	if not player then
+		player = Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+		player = Players.LocalPlayer
+	end
+	
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local mainFrame = script.Parent:WaitForChild("msl")
+	local atBtn = mainFrame:WaitForChild("atbtn")
+	local rsBtn = mainFrame:WaitForChild("rsbtn")
+	local tBtn = mainFrame:WaitForChild("tbtn")
+	
+	local normalSlider = atBtn:WaitForChild("normalSlider")
+	local maxSlider = rsBtn:WaitForChild("maxSlider")
+	local minSlider = rsBtn:WaitForChild("minSlider")
+	local tSlider = tBtn:WaitForChild("tSlider")
+	
+	local wordlist = {
+		["rbxassetid://119699946181489"] =      "dolphin",
+		["rbxassetid://17620333788"]     =      "thesis",
+		["rbxassetid://18257417645"]     =      "refrain",
+		["rbxassetid://17620149976"]     =      "comply",
+		["rbxassetid://17627837193"]     =      "robust",
+		["rbxassetid://17632835647"]     =      "burial",
+		["rbxassetid://17632805150"]     =      "monk",
+		["rbxassetid://17620204375"]     =      "random",
+		["rbxassetid://18257146758"]     =      "pigeon",
+		["rbxassetid://17620183873"]     =      "margin",
+		["rbxassetid://17704895495"]     =      "transaction",
+		["rbxassetid://135308613056609"] =      "villain",
+		["rbxassetid://102456753847783"] =      "human",
+		["rbxassetid://77466979227881"]  =      "echo",
+		["rbxassetid://18263817395"]     =      "suck",
+		["rbxassetid://80738513122758"]  =      "absorb",
+		["rbxassetid://17620365116"]     =      "workout",
+		["rbxassetid://17627896746"]     =      "voluntary",
+		["rbxassetid://17632830629"]     =      "automatic",
+		["rbxassetid://18263903610"]     =      "alphabet",
+		["rbxassetid://18263893180"]     =      "password",
+		["rbxassetid://73040937432058"]  =      "immobilise",
+		["rbxassetid://107611408395063"] =      "quill",
+		["rbxassetid://133882847828955"] =      "uncomfortable",
+		["rbxassetid://17704908669"]     =      "validity",
+		["rbxassetid://90727890439436"]  =      "photographer",
+		["rbxassetid://138150769315459"] =      "translucent",
+		["rbxassetid://126203841438523"] =      "rhythm",
+		["rbxassetid://17707360297"]     =      "practitioner",
+		["rbxassetid://18257137133"]     =      "duck",
+		["rbxassetid://17704818087"]     =      "trauma",
+		["rbxassetid://119025155438467"] =      "familiar",
+		["rbxassetid://17620325241"]     =      "pursuit",
+		["rbxassetid://17627829602"]     =      "sigh",
+		["rbxassetid://18263962173"]     =      "gender",
+		["rbxassetid://17620519693"]     =      "exile",
+		["rbxassetid://99874477789348"]  =      "pray",
+		["rbxassetid://17627808861"]     =      "vein",
+		["rbxassetid://97192746411344"]  =      "concentration",
+		["rbxassetid://18257268915"]     =      "abstract",
+		["rbxassetid://101791465848329"] =      "hungry",
+		["rbxassetid://17632862191"]     =      "debris",
+		["rbxassetid://140417801525692"] =      "semicircle",
+		["rbxassetid://86409026377667"]  =      "excellent",
+		["rbxassetid://85723587162167"]  =      "transportation",
+		["rbxassetid://18263755358"]     =      "melancholy",
+		["rbxassetid://106985843863114"] =      "adolescent",
+		["rbxassetid://18257408753"]     =      "nonplussed",
+		["rbxassetid://75575501402787"]  =      "aspiration",
+		["rbxassetid://17704873644"]     =      "parallel",
+		["rbxassetid://98510562083918"]  =      "ink",
+		["rbxassetid://108828500723259"] =      "agnostic",
+		["rbxassetid://18263987667"]     =      "flavour",
+		["rbxassetid://88497803472729"]  =      "formidable",
+		["rbxassetid://131174690191810"] =      "abolish",
+		["rbxassetid://84228988235837"]  =      "betray",
+		["rbxassetid://17704903466"]     =      "scholarship",
+		["rbxassetid://116481385444935"] =      "reliability",
+		["rbxassetid://17620602249"]     =      "albeit",
+		["rbxassetid://98225180005851"]  =      "meditate",
+		["rbxassetid://108734885770838"] =      "state",
+		["rbxassetid://17705033632"]     =      "magnificent",
+		["rbxassetid://18264025587"]     =      "chronic",
+		["rbxassetid://17707340325"]     =      "firefighter",
+		["rbxassetid://17713083658"]     =      "consumption",
+		["rbxassetid://17620700276"]     =      "asthma",
+		["rbxassetid://70645856927149"]  =      "necromancer",
+		["rbxassetid://17705282482"]     =      "controversial",
+		["rbxassetid://71087464810297"]  =      "lightning",
+		["rbxassetid://18257253087"]     =      "accomplishment",
+		["rbxassetid://17713017966"]     =      "discombobulate",
+		["rbxassetid://17705254483"]     =      "correspondence",
+		["rbxassetid://83560684718752"]  =      "hypermetropia",
+		["rbxassetid://82887742240951"]  =      "forbid",
+		["rbxassetid://70867787098828"]  =      "burger",
+		["rbxassetid://17704808351"]     =      "await",
+		["rbxassetid://73124320355251"]  =      "anatomical",
+		["rbxassetid://17704822386"]     =      "vague",
+		["rbxassetid://17632856701"]     =      "curious",
+		["rbxassetid://17627920277"]     =      "gastronomic",
+		["rbxassetid://99199820973488"]  =      "zygote",
+		["rbxassetid://122475465397699"] =      "furious",
+		["rbxassetid://116018579968737"] =      "ricochet",
+		["rbxassetid://18263796834"]     =      "participation",
+		["rbxassetid://17620609623"]     =      "accommodate",
+		["rbxassetid://120578183641103"] =      "deleterious",
+		["rbxassetid://17713030113"]     =      "sentimental",
+		["rbxassetid://17627869431"]     =      "convey",
+		["rbxassetid://74143004708139"]  =      "noble",
+		["rbxassetid://17705210045"]     =      "integrity",
+		["rbxassetid://97227188440853"]  =      "circle",
+		["rbxassetid://120763790488963"] =      "broccoli",
+		["rbxassetid://17713098718"]     =      "diplomatic",
+		["rbxassetid://17704887854"]     =      "revelation",
+		["rbxassetid://17707289545"]     =      "tremendous",
+		["rbxassetid://17628083241"]     =      "wednesday",
+		["rbxassetid://94790688626425"]  =      "solidarity",
+		["rbxassetid://18263703239"]     =      "counterintuitive",
+		["rbxassetid://17704857752"]     =      "simultaneous",
+		["rbxassetid://18257534795"]     =      "exponential",
+		["rbxassetid://138704636737437"] =      "alliance",
+		["rbxassetid://116383900625275"] =      "strategic",
+		["rbxassetid://114962550365383"] =      "diesel",
+		["rbxassetid://17705151730"]     =      "offender",
+		["rbxassetid://17620534977"]     =      "expenditure",
+		["rbxassetid://86969237568134"]  =      "paradox",
+		["rbxassetid://18257495713"]     =      "abscond",
+		["rbxassetid://123500259853820"] =      "stereotype",
+		["rbxassetid://18257209590"]     =      "transparency",
+		["rbxassetid://134166567634467"] =      "probably",
+		["rbxassetid://85743131773074"]  =      "tangerine",
+		["rbxassetid://18257220047"]     =      "seldom",
+		["rbxassetid://126503711288758"] =      "shareholder",
+		["rbxassetid://123035811233574"] =      "thesaurus",
+		["rbxassetid://18263831025"]     =      "spokesperson",
+		["rbxassetid://17620374296"]     =      "worthwhile",
+		["rbxassetid://17627821778"]     =      "colonel",
+		["rbxassetid://17620542202"]     =      "endeavour",
+		["rbxassetid://72332633000965"]  =      "beneficiary",
+		["rbxassetid://17705270738"]     =      "attorney",
+		["rbxassetid://17707321238"]     =      "refugee",
+		["rbxassetid://106144085367658"] =      "congratulate",
+		["rbxassetid://17620226078"]     =      "remarkable",
+		["rbxassetid://125209787139773"] =      "portfolio",
+		["rbxassetid://82419708734232"]  =      "doctrine",
+		["rbxassetid://18264002127"]     =      "elaborate",
+		["rbxassetid://79171344178056"]  =      "abhorrent",
+		["rbxassetid://18257529285"]     =      "frolic",
+		["rbxassetid://18257481978"]     =      "malapropism",
+		["rbxassetid://17619435492"]     =      "assumption",
+		["rbxassetid://121128593595148"] =      "opaque",
+		["rbxassetid://83734163825187"]  =      "municipal",
+		["rbxassetid://17627767018"]     =      "surveillance",
+		["rbxassetid://137651872335785"] =      "anaphylactic",
+		["rbxassetid://99614655778679"]  =      "limousine",
+		["rbxassetid://140119942342374"] =      "fictitious",
+		["rbxassetid://99148958188453"]  =      "misconception",
+		["rbxassetid://18263942591"]     =      "ideological",
+		["rbxassetid://81056535030917"]  =      "pomegranate",
+		["rbxassetid://91401812744248"]  =      "rye",
+		["rbxassetid://18263643124"]     =      "optimism",
+		["rbxassetid://17705244259"]     =      "residential",
+		["rbxassetid://18257182776"]     =      "warrior",
+		["rbxassetid://109783304461923"] =      "cuisine",
+		["rbxassetid://88206521550650"]  =      "sapphire",
+		["rbxassetid://17620710842"]     =      "phlegm",
+		["rbxassetid://17628071882"]     =      "handkerchief",
+		["rbxassetid://18257398103"]     =      "dilate",
+		["rbxassetid://98428059169323"]  =      "liable",
+		["rbxassetid://18264037984"]     =      "pronunciation",
+		["rbxassetid://17707373034"]     =      "neighbouring",
+		["rbxassetid://81096857844980"]  =      "intermediate",
+		["rbxassetid://70449437840011"]  =      "susceptible",
+		["rbxassetid://17704831171"]     =      "technological",
+		["rbxassetid://17707350399"]     =      "exaggerate",
+		["rbxassetid://125963298456666"] =      "coalescence",
+		["rbxassetid://18257335313"]     =      "monosyllabic",
+		["rbxassetid://18263845478"]     =      "passionate",
+		["rbxassetid://18257462686"]     =      "captious",
+		["rbxassetid://80335572225978"]  =      "neuroplasticity",
+		["rbxassetid://121960186073109"] =      "pestilence",
+		["rbxassetid://17627928668"]     =      "obesity",
+		["rbxassetid://18263975679"]     =      "embassy",
+		["rbxassetid://18257432800"]     =      "oblivious",
+		["rbxassetid://17707300132"]     =      "significance",
+		["rbxassetid://92147310918517"]  =      "ravenous",
+		["rbxassetid://71717044292435"]  =      "personnel",
+		["rbxassetid://111287681130849"] =      "guideline",
+		["rbxassetid://17627904367"]     =      "subsidy",
+		["rbxassetid://94765859644521"]  =      "imprisonment",
+		["rbxassetid://18257344093"]     =      "cacophony",
+		["rbxassetid://115799550003376"] =      "telepathy",
+		["rbxassetid://71445957374329"]  =      "dauntless",
+		["rbxassetid://112855395997904"] =      "ambiguous",
+		["rbxassetid://18257310148"]     =      "brusque",
+		["rbxassetid://17713076703"]     =      "vulnerability",
+		["rbxassetid://122762077142796"] =      "ubiquitous",
+		["rbxassetid://17632817018"]     =      "appetite",
+		["rbxassetid://18257204844"]     =      "scrutiny",
+		["rbxassetid://103384123284811"] =      "erratic",
+		["rbxassetid://18257163705"]     =      "legendary",
+		["rbxassetid://90620950582221"]  =      "hypothesis",
+		["rbxassetid://71410655886078"]  =      "recipient",
+		["rbxassetid://89954467034919"]  =      "psychological",
+		["rbxassetid://122343089169402"] =      "subterranean",
+		["rbxassetid://122827915740003"] =      "obituary",
+		["rbxassetid://17707384399"]     =      "negotiation",
+		["rbxassetid://89675342289919"]  =      "pygmy",
+		["rbxassetid://18257367013"]     =      "nauseous",
+		["rbxassetid://108024036194672"] =      "myopic",
+		["rbxassetid://113818213569377"] =      "monochromatic",
+		["rbxassetid://18257170998"]     =      "predecessor",
+		["rbxassetid://89113407015417"]  =      "silhouette",
+		["rbxassetid://18257293601"]     =      "aggrandize",
+		["rbxassetid://79379278211018"]  =      "kaleidoscope",
+		["rbxassetid://17707307947"]     =      "rehabilitation",
+		["rbxassetid://82966257065332"]  =      "gentrification",
+		["rbxassetid://17707273461"]     =      "sovereignty",
+		["rbxassetid://90499060394972"]  =      "reminiscence",
+		["rbxassetid://115598216153845"] =      "bourgeoisie",
+		["rbxassetid://81085227021194"]  =      "aegis",
+		["rbxassetid://17713056403"]     =      "hierarchy",
+		["rbxassetid://18257542135"]     =      "iconoclast",
+		["rbxassetid://109297423141020"] =      "sequoia",
+		["rbxassetid://70473378112394"]  =      "gubernatorial",
+		["rbxassetid://72672639356799"]  =      "subpoena",
+		["rbxassetid://18257618490"]     =      "abacaxi",
+		["rbxassetid://129862611252162"] =      "thalassophobia",
+		["rbxassetid://17628020594"]     =      "fuchsia",
+		["rbxassetid://18257380431"]     =      "anachronistic",
+		["rbxassetid://114067140591080"] =      "paroxysm",
+		["rbxassetid://18257356413"]     =      "paraphernalia",
+		["rbxassetid://124258616891836"] =      "lepidopterology",
+		["rbxassetid://18257506847"]     =      "languid",
+		["rbxassetid://17632825637"]     =      "bureaucracy",
+		["rbxassetid://17627999828"]     =      "acquiesce",
+		["rbxassetid://124529745822252"] =      "capricious",
+		["rbxassetid://85585767847749"]  =      "hieroglyphics",
+		["rbxassetid://112842520789035"] =      "sesquipedalian",
+		["rbxassetid://17632791064"]     =      "incomprehensibility",
+		["rbxassetid://111879126889878"] =      "soliloquy",
+		["rbxassetid://93261780878211"]  =      "onomatopoeia",
+		["rbxassetid://95957616756447"]  =      "entrepreneur",
+		["rbxassetid://17620759598"]     =      "paradigm",
+		["rbxassetid://124212548906430"] =      "independence",
+		["rbxassetid://95282167666552"]  =      "procrastinate",
+		["rbxassetid://102185883621465"] =      "rendezvous",
+		["rbxassetid://82352623119207"]  =      "glockenspiel",
+		["rbxassetid://17627975911"]     =      "syllepsis",
+		["rbxassetid://86033706945371"]  =      "liaison",
+		["rbxassetid://17620345413"]     =      "antidisestablishmentarianism",
+		["rbxassetid://112058503215092"] =      "problematic",
+		["rbxassetid://92215948292569"]  =      "sequacious",
+		["rbxassetid://17628064988"]     =      "ingenious",
+		["rbxassetid://18257389997"]     =      "anemone",
+		["rbxassetid://71678595652129"]  =      "heritage",
+		["rbxassetid://17620505761"]     =      "humanitarian",
+		["rbxassetid://18257323258"]     =      "caustic",
+		["rbxassetid://72942600245342"]  =      "aerodynamic",
+		["rbxassetid://120786669970568"] =      "venerate",
+		["rbxassetid://98239573833470"]  =      "pharaoh",
+		["rbxassetid://107315012360412"] =      "polydactyly",
+		["rbxassetid://17620589321"]     =      "narcissistic",
+		["rbxassetid://93365154213072"]  =      "forthcoming",
+		["rbxassetid://17704882178"]     =      "separation",
+		["rbxassetid://17713066287"]     =      "violation",
+		["rbxassetid://18263788390"]     =      "notorious",
+		["rbxassetid://106543699707550"] =      "pirouette",
+		["rbxassetid://72435768737741"]  =      "sagacious",
+		["rbxassetid://17620579985"]     =      "biography",
+		["rbxassetid://94700726432644"]  =      "eloquent",
+		["rbxassetid://17628113162"]     =      "minuscule",
+		["rbxassetid://17704849455"]     =      "prestigious",
+		["rbxassetid://18257440681"]     =      "supersede",
+		["rbxassetid://105732469322919"] =      "reincarnation",
+		["rbxassetid://17620528227"]     =      "embarrassment",
+		["rbxassetid://18263664646"]     =      "pessimistic",
+		["rbxassetid://17627911842"]     =      "methodology",
+		["rbxassetid://82025751524144"]  =      "nutritious",
+		["rbxassetid://97611256826794"]  =      "pneumatic",
+		["rbxassetid://136906670235418"] =      "acculturate",
+		["rbxassetid://17627937145"]     =      "parliamentary",
+		["rbxassetid://17707331642"]     =      "legislation",
+		["rbxassetid://18263742531"]     =      "obfuscation",
+		["rbxassetid://17705223522"]     =      "inhabitant",
+		["rbxassetid://105192684751247"] =      "fluorescent",
+		["rbxassetid://128665658754377"] =      "juxtaposition",
+		["rbxassetid://17704867480"]     =      "predominantly",
+		["rbxassetid://119992234251657"] =      "deployment",
+		["rbxassetid://18257197694"]     =      "systematic",
+		["rbxassetid://17632867945"]     =      "commodity",
+		["rbxassetid://88356842094041"]  =      "supposedly",
+		["rbxassetid://139389432004640"] =      "size",
+		["rbxassetid://112726533133258"] =      "film",
+		["rbxassetid://113302422028204"] =      "mix",
+		["rbxassetid://100067711890448"] =      "pear",
+		["rbxassetid://77278723571350"]  =      "length",
+		["rbxassetid://115775363677306"] =      "twist",
+		["rbxassetid://125555053201251"] =      "filter",
+		["rbxassetid://17627875944"]     =      "erupt",
+		["rbxassetid://86603383226078"]  =      "stumble",
+		["rbxassetid://111336307566133"] =      "proof",
+		["rbxassetid://129301367618315"] =      "quack",
+		["rbxassetid://106164144827690"] =      "recession",
+		["rbxassetid://115907357932449"] =      "syntax",
+		["rbxassetid://137931211649180"] =      "exert",
+		["rbxassetid://17620089870"]     =      "dairy",
+		["rbxassetid://18263721867"]     =      "noob",
+		["rbxassetid://113296258582753"] =      "hotel",
+		["rbxassetid://135518440831273"] =      "clever",
+		["rbxassetid://134841673180854"] =      "water",
+		["rbxassetid://116280401110349"] =      "gallant",
+		["rbxassetid://73560380115539"]  =      "lather",
+		["rbxassetid://82235795990204"]  =      "oasis",
+		["rbxassetid://115567352272490"] =      "town",
+		["rbxassetid://89945234291258"]  =      "greedy",
+		["rbxassetid://116270155445876"] =      "update",
+		["rbxassetid://129568424936057"] =      "pie",
+		["rbxassetid://17620726892"]     =      "unprecedented",
+		["rbxassetid://115301392260162"] =      "mathematician",
+		["rbxassetid://127187168346802"] =      "propaganda",
+		["rbxassetid://122859885984507"] =      "microorganism",
+		["rbxassetid://17627757409"]     =      "intent",
+		["rbxassetid://17705261975"]     =      "breakthrough",
+		["rbxassetid://86264727885079"]  =      "soda",
+		["rbxassetid://131087527182954"] =      "reply",
+		["rbxassetid://17620214854"]     =      "rally",
+		["rbxassetid://110992488713038"] =      "agriculture",
+		["rbxassetid://139445462509156"] =      "still",
+		["rbxassetid://17632846437"]     =      "defy",
+		["rbxassetid://78542491010706"]  =      "shake",
+		["rbxassetid://127663239097832"] =      "absence",
+		["rbxassetid://17627860878"]     =      "irony",
+		["rbxassetid://17632892861"]     =      "bizarre",
+		["rbxassetid://126481539910012"] =      "resilience",
+		["rbxassetid://17712977280"]     =      "heresy",
+		["rbxassetid://80520052097207"]  =      "symmetrical",
+		["rbxassetid://89384242074757"]  =      "grub",
+		["rbxassetid://127586980434822"] =      "catalogue",
+		["rbxassetid://17627887884"]     =      "enact",
+		["rbxassetid://70469781693470"]  =      "euphoria",
+		["rbxassetid://18257236422"]     =      "favourable",
+		["rbxassetid://18264015967"]     =      "accumulation",
+		["rbxassetid://86286320452222"]  =      "hornswoggle",
+		["rbxassetid://139833268158271"] =      "surrogate",
+		["rbxassetid://80097477282865"]  =      "ash",
+		["rbxassetid://91248922608173"]  =      "ruby",
+		["rbxassetid://132283121031638"] =      "wrist",
+		["rbxassetid://82709137280034"]  =      "gold",
+		["rbxassetid://72368123980516"]  =      "giant",
+		["rbxassetid://99770067131062"]  =      "ionise",
+		["rbxassetid://71206756354514"]  =      "house",
+		["rbxassetid://102020618693697"] =      "overdue",
+		["rbxassetid://73476668810120"]  =      "power",
+		["rbxassetid://92706054312788"]  =      "cliff",
+		["rbxassetid://115979653696988"] =      "lactose",
+		["rbxassetid://98496714233552"]  =      "bayonet",
+		["rbxassetid://76232469730644"]  =      "bingo",
+		["rbxassetid://125087918616230"] =      "cabin",
+		["rbxassetid://111702628375025"] =      "prank",
+		["rbxassetid://85845746014726"]  =      "zephyr",
+		["rbxassetid://95183391465404"]  =      "intermission",
+		["rbxassetid://112305751879846"] =      "bandeau",
+		["rbxassetid://114349019555811"] =      "polemic",
+		["rbxassetid://136487825977974"] =      "therapeutic",
+		["rbxassetid://110098752229751"] =      "institutionalization",
+		["rbxassetid://126794981237325"] =      "commodore",
+		["rbxassetid://103405516838095"] =      "bucolic",
+		["rbxassetid://136229723152982"] =      "homogeneous",
+		["rbxassetid://139823199442280"] =      "utilitarianism",
+		["rbxassetid://75420795836811"]  =      "agoraphobic",
+		["rbxassetid://105281278011169"] =      "encore",
+		["rbxassetid://94708142436657"]  =      "sarcophagus",
+		["rbxassetid://83854783654942"]  =      "extraterrestrial",
+		["rbxassetid://98015030093970"]  =      "puerile",
+		["rbxassetid://135155597714681"] =      "verbatim",
+		["rbxassetid://86238755046399"]  =      "colloquialism",
+		["rbxassetid://121794379441457"] =      "depilatory",
+		["rbxassetid://111965000473684"] =      "uncharacteristic",
+		["rbxassetid://92411985593823"]  =      "rambunctious",
+		["rbxassetid://107321554203993"] =      "homeopathy",
+		["rbxassetid://82464790412950"]  =      "verisimilitude",
+		["rbxassetid://87407947157868"]  =      "menagerie",
+		["rbxassetid://126270946563337"] =      "phenomenon",
+		["rbxassetid://99772723640742"]  =      "compunction",
+		["rbxassetid://110367036610316"] =      "codicil",
+		["rbxassetid://76289478501081"]  =      "macabre",
+		["rbxassetid://100119991534791"] =      "asphyxiation",
+		["rbxassetid://112582266844124"] =      "calamitous",
+		["rbxassetid://109625013162241"] =      "iron",
+		["rbxassetid://99657348762334"]  =      "chicken",
+		["rbxassetid://110476086581191"] =      "indifference",
+		["rbxassetid://103682063052182"] =      "combustible",
+		["rbxassetid://121504356676507"] =      "capoeira",
+		["rbxassetid://79837237305146"]  =      "inchoate",
+		["rbxassetid://135851462066194"] =      "cyrillic",
+		["rbxassetid://118565618469497"] =      "pusillanimous",
+		["rbxassetid://93977641775368"]  =      "apocryphal",
+		["rbxassetid://132823289980578"] =      "pulchritudinous",
+		["rbxassetid://80521222355609"]  =      "word",
+		["rbxassetid://112635032040804"] =      "unintelligible",
+		["rbxassetid://117319882689305"] =      "myriad",
+		["rbxassetid://79043260418341"]  =      "infinitesimal",
+		["rbxassetid://107792347333512"] =      "milieu",
+		["rbxassetid://126212796300089"] =      "imminent",
+		["rbxassetid://124693070835234"] =      "sapphire",
+		["rbxassetid://134394182430711"] =      "champagne",
+		["rbxassetid://99128331263674"]  =      "proclamation",
+		["rbxassetid://73135548655164"]  =      "clandestine",
+		["rbxassetid://138348596941715"] =      "quixotry",
+		["rbxassetid://71689115838522"]  =      "quasquicentennial",
+		["rbxassetid://79634645166740"]  =      "compartmentalisation",
+		["rbxassetid://110331846795098"] =      "deoxyribonucleic",
+		["rbxassetid://111716633397592"] =      "neuropsychological",
+		["rbxassetid://102182105821013"] =      "psychoneuroendocrinological",
+		["rbxassetid://112210941507084"] =      "otorhinolaryngological",
+		["rbxassetid://137212544394249"] =      "pneumoencephalography",
+		["rbxassetid://71790576062133"]  =      "psychoneuroimmunology",
+		["rbxassetid://72142085097038"]  =      "gobbledegook",
+		["rbxassetid://101038738333764"] =      "acetaminophen",
+		["rbxassetid://102263277530690"] =      "infundibulum",
+		["rbxassetid://91172066647693"]  =      "portmanteau",
+		["rbxassetid://102560084661584"] =      "subcompartmentalisation",
+		["rbxassetid://74581123575676"]  =      "floccinaucinihilipilification",
+		["rbxassetid://134719010200043"] =      "pseudopseudohypoparathyroidism",
+		["rbxassetid://85718140835565"]  =      "polyphiloprogenitive",
+		["rbxassetid://75843042273504"]  =      "enchantment",
+		["rbxassetid://121066316976940"] =      "epiphany",
+		["rbxassetid://129558873836404"] =      "sachet",
+		["rbxassetid://135050742996927"] =      "serendipity",
+		["rbxassetid://138821716593962"] =      "jurisprudence",
+		["rbxassetid://126053443358984"] =      "labyrinthine",
+		["rbxassetid://123068157554225"] =      "borborygmus",
+		["rbxassetid://87242881728306"]  =      "dendrochronology",
+		["rbxassetid://114029523615673"] =      "absquatulate",
+		["rbxassetid://76383675691311"]  =      "perspicacious",
+		["rbxassetid://119316568020320"] =      "batrachophobia",
+		["rbxassetid://117718949590686"] =      "bourgeoisification",
+		["rbxassetid://94279664213511"]  =      "supercalifragilisticexpialidocious",
+		["rbxassetid://73465606584074"]  =      "hippopotomonstrosesquippedaliophobia",
+		["rbxassetid://70505976551063"]  =      "anthropomorphisation",
+		["rbxassetid://127888074763916"] =      "supererogatory",
+		["rbxassetid://77710543162978"]  =      "susurration",
+		["rbxassetid://87548225336904"]  =      "gastroenterologist",
+		["rbxassetid://81226892972143"]  =      "ethnomethodology",
+		["rbxassetid://81545396047331"]  =      "antediluvian",
+		["rbxassetid://89664599913279"]  =      "worcestershire",
+		["rbxassetid://133120731201012"] =      "rhinorrhagia",
+		["rbxassetid://111879051386379"] =      "achromatophilia",
+		["rbxassetid://79084035550919"]  =      "prestidigitation",
+		["rbxassetid://85916284700151"]  =      "isthmus",
+		["rbxassetid://120354255564982"] =      "prognostication",
+		["rbxassetid://80353304937521"]  =      "allotransplantation",
+		["rbxassetid://108750322302298"] =      "syzygy",
+		["rbxassetid://136198051423044"] =      "superferromagnetism",
+		["rbxassetid://103090228279374"] =      "contradistinguish",
+		["rbxassetid://78729315183516"]  =      "fossiliferous",
+		["rbxassetid://139519420071189"] =      "buckminsterfullerene",
+		["rbxassetid://75453456712920"]  =      "baccalaureate",
+		["rbxassetid://120654116196961"] =      "hypoparathyroidism",
+		["rbxassetid://103885888979676"] =      "autothaumaturgist",
+		["rbxassetid://92321736862686"]  =      "xylotypographic",
+		["rbxassetid://105977056425999"] =      "dichotomisation",
+		["rbxassetid://92910652774687"]  =      "bogolanfini",
+		["rbxassetid://87257932620855"]  =      "achromatophil",
+		["rbxassetid://87247321856093"]  =      "honorificabilitudinity",
+		["rbxassetid://72713625425585"]  =      "glyceraldehyde",
+		["rbxassetid://81699536928237"]  =      "radiometeorograph",
+		["rbxassetid://105123759291275"] =      "convolvulaceous",
+		["rbxassetid://132536981845673"] =      "psychophysicotherapeutics",
+		["rbxassetid://95968193297116"]  =      "oligonucleotide",
+		["rbxassetid://112819574138692"] =      "arthroereisis",
+		["rbxassetid://80398980657207"]  =      "quindecasyllabic",
+		["rbxassetid://132373491943811"] =      "brain",
+		["rbxassetid://72033127723473"]  =      "cool",
+		["rbxassetid://88261145100780"]  =      "pasta",
+		["rbxassetid://114994367532589"] =      "gradual",
+		["rbxassetid://78604127447619"]  =      "emoji",
+		["rbxassetid://120763306045362"] =      "flower",
+		["rbxassetid://71044946603373"]  =      "wind",
+		["rbxassetid://110124745431034"] =      "zoo",
+		["rbxassetid://102458623296489"] =      "kiss",
+		["rbxassetid://115971916363494"] =      "tank",
+		["rbxassetid://139255367539330"] =      "secret",
+		["rbxassetid://78716954186837"]  =      "center",
+		["rbxassetid://81537462730819"]  =      "sniffle",
+		["rbxassetid://74236051984130"]  =      "window",
+		["rbxassetid://135422537180381"] =      "twenty",
+		["rbxassetid://130783599042471"] =      "congratulate",
+		["rbxassetid://104156082743487"] =      "special",
+		["rbxassetid://132900887545745"] =      "plethora",
+		["rbxassetid://134850790735208"] =      "vexatious",
+		["rbxassetid://71736494172063"]  =      "incandescent",
+		["rbxassetid://80501348105375"]  =      "nomenclature",
+		["rbxassetid://115109094409913"] =      "normal",
+		["rbxassetid://99480986785855"]  =      "quadomototative",
+		["rbxassetid://120111225374491"] =      "armor",
+		["rbxassetid://126493921501260"] =      "machiavellian",
+		["rbxassetid://131102124047369"] =      "triphosphate",
+		["rbxassetid://134868701185141"] =      "brucellosis",
+		["rbxassetid://88458803959141"]  =      "lexicography",
+		["rbxassetid://139396434446159"] =      "martyrdom",
+		["rbxassetid://89459703586104"]  =      "fjord",
+		["rbxassetid://83524666922569"]  =      "querimony",
+		["rbxassetid://118905258701198"] =      "dodecahedron",
+		["rbxassetid://132830658602644"] =      "defenestration",
+		["rbxassetid://93383805575524"]  =      "heterozygous",
+		["rbxassetid://138093690305265"] =      "astigmatism",
+		["rbxassetid://102681692035292"] =      "facsimile",
+		["rbxassetid://137346416233360"] =      "elision",
+		["rbxassetid://70783749900158"]  =      "indefatigable",
+		["rbxassetid://100277598755570"] =      "consanguine",
+		["rbxassetid://111563154007908"] =      "plenipotentiary",
+		["rbxassetid://77838375723230"]  =      "calymny",
+		["rbxassetid://121956817114946"] =      "symbiosis",
+		["rbxassetid://96968674308046"]  =      "malifluous",
+		["rbxassetid://138885449225212"] =      "comeuppance",
+		["rbxassetid://89502754658067"]  =      "chauffeur",
+		["rbxassetid://111917312480616"] =      "ambidextrous",
+		["rbxassetid://104661445987660"] =      "glaucomatous",
+		["rbxassetid://89274543400563"]  =      "queen",
+		["rbxassetid://99396093625375"]  =      "powder",
+		["rbxassetid://90139826339126"]  =      "benevolence",
+		["rbxassetid://107244446944458"] =      "abdomen",
+		["rbxassetid://109251818187292"] =      "cooking",
+		["rbxassetid://90580036929928"]  =      "walnut",
+		["rbxassetid://135295711012587"] =      "gazebo",
+		["rbxassetid://137038697933424"] =      "steadfast",
+		["rbxassetid://133330554655739"] =      "bamboo",
+		["rbxassetid://117211452869325"] =      "syllable",
+		["rbxassetid://17627882118"]     =      "disappointment",
+		["rbxassetid://86714635724536"]  =      "derogatory",
+		["rbxassetid://137371985991938"] =      "cognitive",
+		["rbxassetid://76654925909282"]  =      "idiom",
+		["rbxassetid://17705289473"]     =      "articulate",
+		["rbxassetid://86822918483420"]  =      "bronchitis",
+		["rbxassetid://130033626818613"] =      "kangaroo",
+		["rbxassetid://99528494242500"]  =      "adrenocorticotrophin",
+		["rbxassetid://91224594266635"]  =      "parallelogrammatic",
+		["rbxassetid://109735990203735"] =      "akin",
+		["rbxassetid://92409967821987"]  =      "crowd",
+		["rbxassetid://82434266826799"]  =      "peppermint",
+		["rbxassetid://104301128511856"] =      "gibberish",
+		["rbxassetid://90127518471765"]  =      "isometropia",
+		["rbxassetid://72497145185965"]  =      "car",
+		["rbxassetid://93819194831050"]  =      "red",
+		["rbxassetid://137108584920305"] =      "blue",
+		["rbxassetid://117662454431230"] =      "cake",
+		["rbxassetid://133271484955710"] =      "bird",
+		["rbxassetid://92524193644168"]  =      "mom",
+		["rbxassetid://80335986884136"]  =      "snow",
+		["rbxassetid://94886841967911"]  =      "green",
+		["rbxassetid://135778799625128"] =      "white",
+		["rbxassetid://128151136472887"] =      "dog",
+		["rbxassetid://113701844933752"] =      "chargoggagoggmanchauggagoggchaubunagungamaugg",
+		["rbxassetid://121520576446057"] =      "ball",
+		["rbxassetid://81805037627536"]  =      "milk",
+		["rbxassetid://121004975337077"] =      "cat",
+		["rbxassetid://86265470608835"]  =      "book",
+		["rbxassetid://128454874254490"] =      "sun",
+		["rbxassetid://128019685213147"] =      "rain",
+		["rbxassetid://116582709384086"] =      "moon",
+		["rbxassetid://113317511265084"] =      "tree",
+		["rbxassetid://85207492160809"]  =      "pink",
+		["rbxassetid://75326644767600"]  =      "fish",
+		["rbxassetid://131526151571361"] =      "agaric",
+		["rbxassetid://90480977391028"]  =      "sphygmomanometer",
+		["rbxassetid://76947910563172"]  =      "antixerophthalmic",
+		["rbxassetid://91804093836875"]  =      "cholangiopancreatography",
+		["rbxassetid://139170917287814"] =      "photoplethysmography",
+		["rbxassetid://71339947533270"]  =      "pseudorhombicuboctahedron",
+		["rbxassetid://129356318322176"] =      "ferriprotoporphyrin",
+		["rbxassetid://114873310602398"] =      "dextrodeorsumversion",
+		["rbxassetid://98042397605477"]  =      "pneumonoultramicroscopicsilicovolcanoconiosis",
+		["rbxassetid://95282402307829"]  =      "hexakosioihexekontahexaphobia",
+		["rbxassetid://73475402284208"]  =      "sclerectoiridectomy",
+		["rbxassetid://104964334251834"] =      "gegenstandstheorie",
+		["rbxassetid://79941705975722"]  =      "spectrophotofluorometry",
+		["rbxassetid://114516156143885"] =      "canaliculodacryocystorhinostomy",
+		["rbxassetid://97379690088558"]  =      "erythrocytapheresis",
+		["rbxassetid://103900275039505"] =      "stereoelectroencephalography",
+		["rbxassetid://140633100049565"] =      "tonsillopharyngitis",
+		["rbxassetid://131403411310271"] =      "counterimmunoelectrophoresis",
+		["rbxassetid://88657975806409"]  =      "corticopontocerebellar",
+		["rbxassetid://111310646254517"] =      "ventriculocisternostomy",
+		["rbxassetid://121312838827284"] =      "laryngotracheobronchitis",
+		["rbxassetid://137966264931091"] =      "dehydrothiotoluidine",
+		["rbxassetid://92915920472262"]  =      "dad",
+		["rbxassetid://129445158381757"] =      "clutch",
+		["rbxassetid://128678505958261"] =      "demon",
+		["rbxassetid://138271009606066"] =      "orange",
+		["rbxassetid://84097942568563"]  =      "foggy",
+		["rbxassetid://135388332257882"] =      "angel",
+		["rbxassetid://82315447114275"]  =      "livery",
+		["rbxassetid://127289608413940"] =      "chlorophyll",
+		["rbxassetid://118039655219110"] =      "apostrophe",
+		["rbxassetid://112515167525878"] =      "charisma",
+		["rbxassetid://103014045347621"] =      "epsilon",
+		["rbxassetid://117359523213775"] =      "cinematographer",
+		["rbxassetid://105991046195281"] =      "atmospheric",
+		["rbxassetid://138870565319851"] =      "calibration",
+		["rbxassetid://137675191663208"] =      "hexagonal",
+		["rbxassetid://96939572400892"]  =      "chronological",
+		["rbxassetid://84012144325704"]  =      "bodacious",
+		["rbxassetid://119786735968587"] =      "agoraphobia",
+		["rbxassetid://134374453863716"] =      "betwixt",
+		["rbxassetid://71693600785270"]  =      "apothecary",
+		["rbxassetid://135398089106529"] =      "tempestuous",
+		["rbxassetid://94553689930996"]  =      "tetraphobia",
+		["rbxassetid://80408573099127"]  =      "culvert",
+		["rbxassetid://126588972177631"] =      "pecuniary",
+		["rbxassetid://108125816975485"] =      "belvedere",
+		["rbxassetid://81185679964457"]  =      "nocturn",
+		["rbxassetid://124074688479439"] =      "miscellaneous",
+		["rbxassetid://120384136556739"] =      "aforementioned",
+		["rbxassetid://139785122464766"] =      "fastidious",
+		["rbxassetid://103472441933737"] =      "cerulean",
+		["rbxassetid://121123904443779"] =      "subdermatoglyphic",
+		["rbxassetid://118489236666265"] =      "orthogeosyncline",
+		["rbxassetid://128057279120388"] =      "quasiautobiographical",
+		["rbxassetid://126189629812763"] =      "mechanotransduction",
+		["rbxassetid://88103015347123"]  =      "transinstitutionalization",
+		["rbxassetid://83030960596696"]  =      "metonymic",
+		["rbxassetid://110211473712590"] =      "hemispherectomy",
+		["rbxassetid://100171320685456"] =      "electrotelethermometer",
+		["rbxassetid://120404396245528"] =      "flibbertigibbet",
+		["rbxassetid://96770126688470"]  =      "abdominothoracic",
+		["rbxassetid://113217771240475"] =      "spectrophotometer",
+		["rbxassetid://89693182997274"]  =      "geitonogamy",
+		["rbxassetid://96786003009625"]  =      "countermajoritarianism",
+		["rbxassetid://114943750421034"] =      "tintinnabulation",
+		["rbxassetid://73849042352258"]  =      "black",
+		["rbxassetid://92967454672089"]  =      "resurrection",
+		["rbxassetid://118596569578688"] =      "periodically",
+		["rbxassetid://104663108972171"] =      "asunder",
+		["rbxassetid://103533967513095"] =      "harbor",
+		["rbxassetid://110829617178725"] =      "hourglass",
+		["rbxassetid://131500246462514"] =      "ataraxy",
+		["rbxassetid://135783436804008"] =      "fissiparous",
+		["rbxassetid://76016011477158"]  =      "harpsichord",
+		["rbxassetid://88491511734625"]  =      "xenogeneic",
+		["rbxassetid://104141008242079"] =      "vignette",
+		["rbxassetid://118825971952664"] =      "semaphore",
+		["rbxassetid://114793812699768"] =      "pugnacious",
+		["rbxassetid://124289311865619"] =      "abasia",
+		["rbxassetid://133831557421362"] =      "wholeheartedly",
+		["rbxassetid://106289257367197"] =      "detrimental",
+		["rbxassetid://99494906069085"]  =      "palatine",
+		["rbxassetid://119445344231541"] =      "extravagant",
+		["rbxassetid://110931757925124"] =      "sabotage",
+		["rbxassetid://87042452865278"]  =      "adversity",
+		["rbxassetid://95877000629418"]  =      "abacaxi",
+		["rbxassetid://136796468565906"] =      "flamboyant",
+		["rbxassetid://89565411786796"]  =      "excalibur",
+		["rbxassetid://100445166437029"] =      "pantograph",
+		["rbxassetid://94618176013854"]  =      "understand",
+		["rbxassetid://82587529740499"]  =      "sigma",
+		["rbxassetid://135397571159898"] =      "abditive",
+		["rbxassetid://109409661542663"] =      "pyrrolizidinealkaloidosis",
+		["rbxassetid://72292629282400"]  =      "sphenopalatineganglioneuralgia",
+		["rbxassetid://95578771791828"]  =      "thyroparathyroidectomy",
+		["rbxassetid://140404864954408"] =      "aneurysmorrhaphy",
+		["rbxassetid://90849207164364"]  =      "panprotocolectomy",
+		["rbxassetid://75907413580434"]  =      "cryptoendolithic",
+		["rbxassetid://108132854862918"] =      "charcuterie",
+		["rbxassetid://131480156769590"] =      "hyperpolysyllabic",
+		["rbxassetid://79588372574586"]  =      "psychotomimetic",
+		["rbxassetid://133634860967486"] =      "dichlorodiphenyltrichloroethane",
+		["rbxassetid://136321963218029"] =      "loncastuximabtesirine",
+		["rbxassetid://80094460712498"]  =      "inositolphosphorylceramide",
+		["rbxassetid://70958166148017"]  =      "eellogofusciouhipoppokunurious",
+		["rbxassetid://137616660543371"] =      "bat",
+		["rbxassetid://119968471319625"] =      "best",
+		["rbxassetid://117570565674578"] =      "bag",
+		["rbxassetid://91297925838574"]  =      "eat",
+		["rbxassetid://137111733544217"] =      "run",
+		["rbxassetid://103906662494068"] =      "eye",
+		["rbxassetid://123812438811856"] =      "bug",
+		["rbxassetid://121642373202828"] =      "cry",
+		["rbxassetid://73106294599616"]  =      "star",
+		["rbxassetid://107770975379191"] =      "big",
+		["rbxassetid://138741933581821"] =      "end",
+		["rbxassetid://96625370785783"]  =      "face",
+		["rbxassetid://90084832411472"]  =      "bad",
+		["rbxassetid://121891450372479"] =      "mug",
+		["rbxassetid://72813945848183"]  =      "foot",
+		["rbxassetid://85575659491298"]  =      "air",
+		["rbxassetid://82450160083885"]  =      "baby",
+		["rbxassetid://104555791970869"] =      "rat",
+		["rbxassetid://82576263451701"]  =      "fire",
+		["rbxassetid://75285440897761"]  =      "hand",
+		["rbxassetid://123292962781131"] =      "walk",
+		["rbxassetid://88033199653433"]  =      "incoagulable",
+		["rbxassetid://114845129835119"] =      "phenomenon",
+		["rbxassetid://133369289865739"] =      "consummate",
+		["rbxassetid://123394107835425"] =      "polychromatic",
+		["rbxassetid://129389751987838"] =      "sanguine",
+		["rbxassetid://95480328469111"]  =      "diminution",
+		["rbxassetid://79905015855519"]  =      "epitome",
+		["rbxassetid://75824341716939"]  =      "insinuate",
+		["rbxassetid://135118301150083"] =      "craniosynostosis",
+		["rbxassetid://111580661704036"] =      "clinicoechocardiographic",
+		["rbxassetid://85534271250958"]  =      "frontoethmoidectomy",
+		["rbxassetid://97493051628700"]  =      "goniosynechialysis",
+		["rbxassetid://116220941663660"] =      "flummox",
+		["rbxassetid://86280931903955"]  =      "ascosporogenous",
+		["rbxassetid://97758350605839"]  =      "damage",
+		["rbxassetid://97920039512086"]  =      "radioallergosorbent",
+		["rbxassetid://86996188615439"]  =      "nebulous",
+		["rbxassetid://128024335406726"] =      "answer",
+		["rbxassetid://91091965384675"]  =      "panproctocolectomy",
+		["rbxassetid://119686666721131"] =      "encephalocraniocutaneouslipomatosis",
+		["rbxassetid://126354015032130"] =      "nucleotidylexotransferase",
+		["rbxassetid://131200049441914"] =      "laparohysterosalpingooophorectomy",
+		["rbxassetid://136021051422994"] =      "cholangiocholecystocholedochectomy",
+		["rbxassetid://74970723311689"]  =      "hypothalamicpituitaryadrenocortical",
+		["rbxassetid://95006680232647"]  =      "lymphangioleiomyomatosis",
+		["rbxassetid://109080933840945"] =      "nonanonacontanonactanonaliagon",
+		["rbxassetid://122567552808354"] =      "hematospectrophotometrically",
+		["rbxassetid://73955592805355"]  =      "acetylglucocoroglaucigenin",
+		["rbxassetid://72443581045915"]  =      "exorcism",
+		["rbxassetid://112138628448150"] =      "temporomandibular",
+		["rbxassetid://84140832645301"]  =      "thermochromatography",
+		["rbxassetid://108683930648440"] =      "chronopsychophysiology",
+		["rbxassetid://129188003985152"] =      "xiphiplastron",
+		["rbxassetid://123439804737100"] =      "pseudoparallelodromous",
+		["rbxassetid://85107410801671"]  =      "bougainvillea",
+		["rbxassetid://114061350303862"] =      "hypercholesterolemia",
+		["rbxassetid://126290233307593"] =      "lymphangiography",
+		["rbxassetid://86902057544677"]  =      "phantasmagoria",
+		["rbxassetid://105926441103826"] =      "grandiloquent",
+		["rbxassetid://79559529680779"]  =      "photogeochemistry",
+		["rbxassetid://81079094301922"]  =      "hemoglobin",
+		["rbxassetid://138817096599495"] =      "magniloquent",
+		["rbxassetid://116601976682009"] =      "fruition",
+		["rbxassetid://116752707282408"] =      "hello",
+		["rbxassetid://120045447608972"] =      "ghost",
+		["rbxassetid://111649432916420"] =      "boss",
+		["rbxassetid://97140499645287"]  =      "way",
+		["rbxassetid://92369787640338"]  =      "meow",
+		["rbxassetid://114666254805811"] =      "land",
+		["rbxassetid://95020551857030"]  =      "shark",
+		["rbxassetid://117052341991065"] =      "multidimensionality",
+		["rbxassetid://107190737551043"] =      "ethnopsychopharmacology",
+		["rbxassetid://73326498258782"]  =      "church",
+		["rbxassetid://106985445200375"] =      "zombie",
+		["rbxassetid://135876297992493"] =      "pumpkin",
+		["rbxassetid://108950930763077"] =      "spooky",
+		["rbxassetid://136242033338684"] =      "bee",
+		["rbxassetid://91048252055751"]  =      "bus",
+		["rbxassetid://70546270795070"]  =      "tap",
+		["rbxassetid://71319874517464"]  =      "sit",
+		["rbxassetid://117319147821571"] =      "cup",
+		["rbxassetid://97578153969171"]  =      "bar",
+		["rbxassetid://123318660229678"] =      "skeleton",
+		["rbxassetid://129135159876732"] =      "gravestone",
+		["rbxassetid://137480365130596"] =      "immunoelectrochemiluminescence",
+		["rbxassetid://134464190918342"] = "dermatofibrosarcomaprotuberans",
+		["rbxassetid://81485346191520"]  = "bromochlorodifluoromethane",
+		["rbxassetid://87085291092682"]  = "fluorotetraferriphlogopite",
+		["rbxassetid://124970329588686"] = "neohesperidindihydrochalcone",
+		["rbxassetid://115017285619185"] = "chondromyxohemangioendotheliosarcoma",
+		["rbxassetid://100964308786596"] = "micropachycephalosaurus",
+		["rbxassetid://87289378560741"] = "uvulopalatopharyngoplasty",
+		["rbxassetid://114536427711405"] = "anisosquaric",
+		["rbxassetid://94880911968314"] = "horticulturist",
+		["rbxassetid://129406600761438"] = "scintillate",
+		["rbxassetid://135607034300060"] = "blatherskite",
+		["rbxassetid://113103479171001"] = "diisopropylfluorophosphate",
+		["rbxassetid://123234229273943"] = "ribulosebisphosphatecarboxylaseoxygenase",
+		["rbxassetid://138098843183963"] = "morphodifferentiation",
+		["rbxassetid://88627757757981"] = "pseudoriemannian",
+		["rbxassetid://136997362064662"] = "pseudohyperaldosteronism",
+		["rbxassetid://81318652212839"] = "disconsolate",
+		["rbxassetid://92832554429476"] = "featherweight",
+		["rbxassetid://71185603039056"] = "christmas",
+		["rbxassetid://115673139213047"] = "mistletoe",
+		["rbxassetid://121757275379414"] = "hibernation",
+		["rbxassetid://105133306381476"] = "snowflake",
+		["rbxassetid://123176125694575"] = "frostbite",
+		["rbxassetid://132025384720305"] = "contour",
+		["rbxassetid://90470690668164"] = "division",
+		["rbxassetid://117668688708986"] = "glacier",
+		["rbxassetid://70503196430092"] = "gingerbread",
+		["rbxassetid://120592068118156"] = "abditive",
+		["rbxassetid://120475209654358"] = "protocol",
+		["rbxassetid://97742450990655"] = "blizzard",
+		["rbxassetid://97354675442149"] = "gratitude",
+	}
+	
+	local nearbyKeys = {
+		["a"] = {"s", "q", "w", "z"}, ["b"] = {"v", "g", "h", "n"}, ["c"] = {"x", "v", "d", "f"},
+		["d"] = {"s", "f", "e", "r", "c", "x"}, ["e"] = {"w", "r", "d", "s"}, ["f"] = {"d", "g", "r", "t", "v", "c"},
+		["g"] = {"f", "h", "t", "y", "b", "v"}, ["h"] = {"g", "j", "y", "u", "n", "b"}, ["i"] = {"u", "o", "k", "j"},
+		["j"] = {"h", "k", "u", "i", "n", "m"}, ["k"] = {"j", "l", "i", "o", "m"}, ["l"] = {"k", "o", "p"},
+		["m"] = {"n", "j", "k"}, ["n"] = {"b", "m", "h", "j"}, ["o"] = {"i", "p", "k", "l"},
+		["p"] = {"o", "l"}, ["q"] = {"w", "a"}, ["r"] = {"e", "t", "f", "d"},
+		["s"] = {"a", "d", "w", "e", "z", "x"}, ["t"] = {"r", "y", "g", "f"}, ["u"] = {"y", "i", "j", "h"},
+		["v"] = {"c", "b", "f", "g"}, ["w"] = {"q", "e", "s", "a"}, ["x"] = {"z", "c", "s", "d"},
+		["y"] = {"t", "u", "h", "g"}, ["z"] = {"a", "s", "x"}
+	}
+	
+	local state = {
+		autoType = false,
+		randomSpeed = false,
+		minSpeed = 0.01,
+		maxSpeed = 0.04,
+		currentWord = "Waiting...",
+		typosEnabled = false,
+		typoChance = 15,
+		loseAfterWords = false,
+		loseCount = 10,
+		earlyType = false,
+		earlyEnter = false,
+		autoEnter = true,
+		submitDelay = 0,
+		typeDelay = 0.95,
+		wordsTyped = 0,
+		isTyping = false
+	}
+	
+	atBtn.MouseButton1Click:Connect(function()
+		state.autoType = not state.autoType
+	end)
+	
+	rsBtn.MouseButton1Click:Connect(function()
+		state.randomSpeed = not state.randomSpeed
+	end)
+	
+	tBtn.MouseButton1Click:Connect(function()
+		state.typosEnabled = not state.typosEnabled
+	end)
+	
+	normalSlider.FocusLost:Connect(function()
+		state.minSpeed = tonumber(normalSlider.Text) or state.minSpeed
+	end)
+	
+	minSlider.FocusLost:Connect(function()
+		state.minSpeed = tonumber(minSlider.Text) or state.minSpeed
+	end)
+	
+	maxSlider.FocusLost:Connect(function()
+		state.maxSpeed = tonumber(maxSlider.Text) or state.maxSpeed
+	end)
+	
+	tSlider.FocusLost:Connect(function()
+		state.typoChance = tonumber(tSlider.Text) or state.typoChance
+	end)
+	
+	local function getTypoChar(char)
+		local lc = char:lower()
+		if nearbyKeys[lc] then
+			return nearbyKeys[lc][math.random(1, #nearbyKeys[lc])]
+		end
+		return char
+	end
+	
+	local function findTextBox()
+		local typeGui = playerGui:FindFirstChild("Type")
+		if not typeGui or not typeGui.Enabled then return nil end
+	
+		local textbox = typeGui:FindFirstChild("TextBox", true)
+		if textbox and textbox:IsA("TextBox") and textbox.Parent.Enabled then
+			return textbox
+		end
+		return nil
+	end
+	
+	local function submitWord()
+		local textbox = findTextBox()
+		if textbox and textbox.Text == state.currentWord then
+			textbox:CaptureFocus()
+			task.wait(0.05)
+			VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+			task.wait(0.05)
+			VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+		end
+	end
+	
+	local function typeWord(word)
+		if state.isTyping then return end
+		state.isTyping = true
+	
+		task.wait(state.typeDelay)
+	
+		local textbox = findTextBox()
+		if not textbox then
+			state.isTyping = false
+			return
+		end
+	
+		local targetWord = word
+	
+		if state.minSpeed <= 0 and not state.randomSpeed then
+			textbox.Text = targetWord
+		else
+			local startIndex = 1
+			if state.earlyType then
+				startIndex = math.random(1, 2)
+			end
+	
+			local endIndex = #targetWord
+			if state.earlyEnter then
+				endIndex = #targetWord - math.random(1, 2)
+			end
+	
+			textbox.Text = ""
+	
+			for i = startIndex, endIndex do
+				if not state.autoType then break end
+	
+				local char = targetWord:sub(i, i)
+	
+				if state.typosEnabled and math.random(1, 100) <= state.typoChance and i < endIndex then
+					textbox.Text = textbox.Text .. getTypoChar(char)
+					task.wait(0.2)
+					textbox.Text = textbox.Text:sub(1, -2)
+				end
+	
+				textbox.Text = textbox.Text .. char
+	
+				local waitTime = state.randomSpeed 
+					and (state.minSpeed + math.random() * (state.maxSpeed - state.minSpeed))
+					or state.minSpeed
+	
+				if waitTime > 0 then
+					task.wait(waitTime)
+				end
+			end
+		end
+	
+		if state.autoEnter then
+			task.wait(state.submitDelay)
+			submitWord()
+			state.wordsTyped = state.wordsTyped + 1
+	
+			if state.loseAfterWords and state.wordsTyped >= state.loseCount then
+				state.autoType = false
+			end
+		end
+	
+		state.isTyping = false
+	end
+	
+	local function onSoundPlayed(sound)
+		local soundId = sound.SoundId
+		if wordlist[soundId] then
+			local word = wordlist[soundId]
+			state.currentWord = word
+			if state.autoType then
+				task.spawn(function()
+					typeWord(word)
+				end)
+			end
+		end
+	end
+	
+	workspace.DescendantAdded:Connect(function(descendant)
+		if descendant:IsA("Sound") then
+			descendant:GetPropertyChangedSignal("Playing"):Connect(function()
+				if descendant.Playing then
+					onSoundPlayed(descendant)
+				end
+			end)
+	
+			if descendant.Playing then
+				onSoundPlayed(descendant)
+			end
+		end
+	end)
+	
+	for _, descendant in pairs(workspace:GetDescendants()) do
+		if descendant:IsA("Sound") then
+			descendant:GetPropertyChangedSignal("Playing"):Connect(function()
+				if descendant.Playing then
+					onSoundPlayed(descendant)
+				end
+			end)
+		end
+	end
+end;
+task.spawn(C_3b);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.atbtn.gms
+local function C_3e()
+local script = G2L["3e"];
+	local Players = game:GetService("Players")
+	local TWS = game:GetService("TweenService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local btn = script.Parent
+	local bar = btn:WaitForChild("tfrm"):WaitForChild("bar") 
+	
+	local activeColor = Color3.fromRGB(44, 179, 13)
+	local normalColor = Color3.fromRGB(179, 41, 22)
+	
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
+	
+	local activated = false
+	local activeConnection = nil
+	
+	local tweenInfo = TweenInfo.new(
+		0.3, 
+		Enum.EasingStyle.Quad,
+		Enum.EasingDirection.Out
+	)
+	
+	local function toggleGodMode()
+		if not LocalPlayer.Character then return end
+		local humanoid = LocalPlayer.Character:FindFirstChild("Humanoid")
+		if not humanoid then return end
+	
+		_G.GodModeEnabled = activated 
+	
+		if activeConnection then
+			activeConnection:Disconnect()
+			activeConnection = nil
+		end
+	
+		if activated then
+	
+			humanoid.MaxHealth = 100
+			humanoid.Health = humanoid.MaxHealth
+	
+			activeConnection = humanoid.HealthChanged:Connect(function(health)
+				if _G.GodModeEnabled and LocalPlayer.Character and humanoid then
+					if health < humanoid.MaxHealth then
+						humanoid.Health = humanoid.MaxHealth
+					end
+				end
+			end)
+	
+			task.spawn(function()
+				while _G.GodModeEnabled and humanoid.Parent do
+					if humanoid.Health < humanoid.MaxHealth then
+						humanoid.Health = humanoid.MaxHealth
+					end
+					task.wait(0.05)
+				end
+	
+				if activeConnection then
+					activeConnection:Disconnect()
+					activeConnection = nil
+				end
+			end)
+		end
+	end
+	
+	local function updateToggleVisual()
+		local targetPos = activated and activePos or normalPos
+		local targetColor = activated and activeColor or normalColor
+	
+		local tweenPos = TWS:Create(bar, tweenInfo, {Position = targetPos})
+		local tweenColor = TWS:Create(bar, tweenInfo, {BackgroundColor3 = targetColor})
+	
+		tweenPos:Play()
+		tweenColor:Play()
+	end
+	
+	btn.MouseButton1Click:Connect(function()
+		activated = not activated
+		updateToggleVisual()
+		toggleGodMode()
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if activated then
+			task.wait(0.3)
+			toggleGodMode()
+		end
+	end)
+	
+	bar.Position = normalPos
+	bar.BackgroundColor3 = normalColor
+	
+end;
+task.spawn(C_3e);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.ncs
+local function C_4a()
+local script = G2L["4a"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TWS = game:GetService("TweenService")
+	
+	local player = Players.LocalPlayer
+	local btn = script.Parent
+	local bar = btn:WaitForChild("tfrm"):WaitForChild("bar")
+	
+	local activeColor = Color3.fromRGB(44, 179, 13)
+	local normalColor = Color3.fromRGB(179, 41, 22)
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
+	
+	local noclipOn = false
+	local connection = nil
+	local modifiedParts = {}
+	
+	local activeColor = Color3.fromRGB(44, 179, 13)
+	local normalColor = Color3.fromRGB(179, 41, 22)
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
+	
+	local tweenInfo = TweenInfo.new(
+		0.3, 
+		Enum.EasingStyle.Quad,
+		Enum.EasingDirection.Out
+	)
+	
+	local function getCharacter()
+		return player.Character or player.CharacterAdded:Wait()
+	end
+	
+	local function stopNoclip()
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	
+		local char = getCharacter()
+		if not char then return end
+	
+		for part in pairs(modifiedParts) do
+			if part:IsA("BasePart") and part.Parent == char then
+				part.CanCollide = true
+			end
+		end
+		modifiedParts = {}
+	end
+	
+	local function startNoclip()
+		stopNoclip()
+		local char = getCharacter()
+		if not char then return end
+	
+		connection = RunService.Stepped:Connect(function()
+			for _, part in pairs(char:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = false
+					modifiedParts[part] = true
+				end
+			end
+		end)
+	end
+	
+	local function toggleNoclip()
+		noclipOn = not noclipOn
+	
+		local posTween = TWS:Create(bar, tweenInfo, {Position = noclipOn and activePos or normalPos})
+		posTween:Play()
+	
+		local colorTween = TWS:Create(bar, tweenInfo, {BackgroundColor3 = noclipOn and activeColor or normalColor})
+		colorTween:Play()
+	
+		if noclipOn then
+			startNoclip()
+		else
+			stopNoclip()
+		end
+	end
+	
+	btn.MouseButton1Click:Connect(toggleNoclip)
+	
+	player.CharacterAdded:Connect(function(char)
+		if noclipOn then
+			task.wait(1)
+			startNoclip()
+		end
+	end)
+	
+	bar.Position = normalPos
+	bar.BackgroundColor3 = normalColor
+	
+end;
+task.spawn(C_4a);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.tbtn.ncs
+local function C_55()
+local script = G2L["55"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TWS = game:GetService("TweenService")
+	
+	local player = Players.LocalPlayer
+	local btn = script.Parent
+	local bar = btn:WaitForChild("tfrm"):WaitForChild("bar")
+	
+	local activeColor = Color3.fromRGB(44, 179, 13)
+	local normalColor = Color3.fromRGB(179, 41, 22)
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
+	
+	local noclipOn = false
+	local connection = nil
+	local modifiedParts = {}
+	
+	local activeColor = Color3.fromRGB(44, 179, 13)
+	local normalColor = Color3.fromRGB(179, 41, 22)
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
+	
+	local tweenInfo = TweenInfo.new(
+		0.3, 
+		Enum.EasingStyle.Quad,
+		Enum.EasingDirection.Out
+	)
+	
+	local function getCharacter()
+		return player.Character or player.CharacterAdded:Wait()
+	end
+	
+	local function stopNoclip()
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	
+		local char = getCharacter()
+		if not char then return end
+	
+		for part in pairs(modifiedParts) do
+			if part:IsA("BasePart") and part.Parent == char then
+				part.CanCollide = true
+			end
+		end
+		modifiedParts = {}
+	end
+	
+	local function startNoclip()
+		stopNoclip()
+		local char = getCharacter()
+		if not char then return end
+	
+		connection = RunService.Stepped:Connect(function()
+			for _, part in pairs(char:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = false
+					modifiedParts[part] = true
+				end
+			end
+		end)
+	end
+	
+	local function toggleNoclip()
+		noclipOn = not noclipOn
+	
+		local posTween = TWS:Create(bar, tweenInfo, {Position = noclipOn and activePos or normalPos})
+		posTween:Play()
+	
+		local colorTween = TWS:Create(bar, tweenInfo, {BackgroundColor3 = noclipOn and activeColor or normalColor})
+		colorTween:Play()
+	
+		if noclipOn then
+			startNoclip()
+		else
+			stopNoclip()
+		end
+	end
+	
+	btn.MouseButton1Click:Connect(toggleNoclip)
+	
+	player.CharacterAdded:Connect(function(char)
+		if noclipOn then
+			task.wait(1)
+			startNoclip()
+		end
+	end)
+	
+	bar.Position = normalPos
+	bar.BackgroundColor3 = normalColor
+	
+end;
+task.spawn(C_55);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.aas
+local function C_5f()
+local script = G2L["5f"];
+	local LocalPlayer = game.Players.LocalPlayer
+	local TweenService = game:GetService("TweenService")
+	local btn = script.Parent
+	local bar = btn.tfrm.bar
+	
+	local activeColor = Color3.fromRGB(8,197,20)
+	local inactiveColor = bar.BackgroundColor3
+	local tweenInfo = TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out)
+	local activePos = UDim2.new(0.506,0,0,0)
+	local normalPos = UDim2.new(0,0,0,0)
+	
+	_G.AntiAFKEnabled = false
+	
+	local function toggleAntiAFK()
+		if _G.AntiAFKEnabled then
+			task.spawn(function()
+				while _G.AntiAFKEnabled and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") do
+					local humanoid = LocalPlayer.Character.Humanoid
+					local rootPart = LocalPlayer.Character.HumanoidRootPart
+					humanoid:MoveTo(rootPart.Position + Vector3.new(math.random(-5,5),0,math.random(-5,5)))
+					wait(20)
+				end
+			end)
+		end
+	end
+	
+	btn.MouseButton1Click:Connect(function()
+		_G.AntiAFKEnabled = not _G.AntiAFKEnabled
+		TweenService:Create(bar,tweenInfo,{Position = _G.AntiAFKEnabled and activePos or normalPos}):Play()
+		TweenService:Create(bar,tweenInfo,{BackgroundColor3 = _G.AntiAFKEnabled and activeColor or inactiveColor}):Play()
+		toggleAntiAFK()
+	end)
+	
+end;
+task.spawn(C_5f);
+-- StarterGui.f789z43hfn3i.tsk.endb._es
+local function C_6b()
+local script = G2L["6b"];
+	local Players = game:GetService("Players")
+	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+	local hide = playerGui:WaitForChild("f789z43hfn3i")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hide:Destroy()
+	end)
+	
+end;
+task.spawn(C_6b);
+-- StarterGui.f789z43hfn3i.tsk.min._ms
+local function C_6d()
+local script = G2L["6d"];
+	local Players = game:GetService("Players")
+	local TweenService = game:GetService("TweenService")
+	
+	local button = script.Parent
+	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+	local miniFolder = playerGui:WaitForChild("f789z43hfn3i")
+	local mini = miniFolder:WaitForChild("_main")
+	
+	local minimized = false
+	local sizeNormal = UDim2.new(0.34, 0, 0.453, 0)
+	local sizeMin = UDim2.new(0.34, 0, 0.032, 0)
+	local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Circular, Enum.EasingDirection.InOut)
+	local isTweening = false
+	
+	local function setChildrenVisible(frame, visible)
+		for _, child in ipairs(frame:GetChildren()) do
+			if child:IsA("GuiObject") then
+				if child.Name == "dh" then
+					child.Visible = true
+				else
+					child.Visible = visible
+				end
+			end
+		end
+	end
+	
+	button.Active = true
+	button.AutoButtonColor = true
+	
+	local function toggle()
+		if isTweening then return end
+		isTweening = true
+		if not minimized then
+			local t = TweenService:Create(mini, tweenInfo, {Size = sizeMin})
+			t:Play()
+			setChildrenVisible(mini, false)
+			t.Completed:Connect(function()
+				minimized = true
+				isTweening = false
+			end)
+		else
+			local t2 = TweenService:Create(mini, tweenInfo, {Size = sizeNormal})
+			t2:Play()
+			t2.Completed:Connect(function()
+				setChildrenVisible(mini, true)
+				minimized = false
+				isTweening = false
+			end)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+	button.Activated:Connect(toggle)
+	
+end;
+task.spawn(C_6d);
+
+return G2L["1"], require;
