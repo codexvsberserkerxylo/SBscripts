@@ -386,7 +386,7 @@ G2L["2a"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
 G2L["2a"]["BackgroundTransparency"] = 1;
 G2L["2a"]["Size"] = UDim2.new(0.97918, 0, 0.95333, 0);
 G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2a"]["Text"] = [[Change Logs (v0.20)]];
+G2L["2a"]["Text"] = [[Change Logs (v0.2.5)]];
 G2L["2a"]["Name"] = [[logl]];
 G2L["2a"]["Position"] = UDim2.new(0.02265, 0, 0.04667, 0);
 
@@ -1527,7 +1527,7 @@ G2L["a6"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
 G2L["a6"]["BackgroundTransparency"] = 1;
 G2L["a6"]["Size"] = UDim2.new(0.2073, 0, -0.77974, 0);
 G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a6"]["Text"] = [[Lunar X  - v0.20]];
+G2L["a6"]["Text"] = [[Lunar X  - v0.2.5]];
 G2L["a6"]["Name"] = [[_v]];
 G2L["a6"]["Position"] = UDim2.new(0.02259, 0, 0.82839, 0);
 
@@ -1751,7 +1751,13 @@ task.spawn(C_22);
 local function C_2c()
 local script = G2L["2c"];
 	if script.Parent then
-		script.Parent.Text = [[      [!!] Shut the fuck up]]
+		script.Parent.Text = [[      [*] Actually added the galaxy wordlist
+		
+		[!] fixed oiia, 1x1x1's spelling bee
+		
+		  [*] spelling master supported now
+		  
+		 [*] added notifications]]
 	end
 end;
 task.spawn(C_2c);
@@ -1763,7 +1769,6 @@ local script = G2L["32"];
 	local LocalPlayer = Players.LocalPlayer
 	local placeId = game.PlaceId
 	local jobId = game.JobId
-	local on = LocalPlayer:WaitForChild("on")
 	local randomServerButton = script.Parent:WaitForChild("shbtn")
 	local rejoinServerButton = script.Parent:WaitForChild("rjbtn")
 	
@@ -2736,7 +2741,7 @@ local script = G2L["5f"];
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local TweenService = game:GetService("TweenService")
 	local VirtualInputManager = game:GetService("VirtualInputManager")
-	
+	local TeleportService = game:GetService("TeleportService")
 	local player = Players.LocalPlayer
 	if not player then
 		player = Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
@@ -2755,7 +2760,8 @@ local script = G2L["5f"];
 		SHIVA = {73969827183471},
 		ONEX = {96408116861419, 88277919745087, 74788535207383, 103731098756786, 111866664822693},
 		OIIA = {100548936992564, 119209707540839},
-		GALAXY = {81758715686872, 134256650999630, 85435089388064}
+		GALAXY = {81758715686872, 134256650999630, 85435089388064},
+		SPELLING_MASTERS = {122374779203159},
 	}
 	
 	local function contains(tbl, val)
@@ -2771,11 +2777,6 @@ local script = G2L["5f"];
 			gameType = name
 			break
 		end
-	end
-	
-	if not gameType then
-		warn("unsupported game: " .. placeId)
-		return
 	end
 	
 	local wordlist = {}
@@ -3618,7 +3619,7 @@ local script = G2L["5f"];
 			["rbxassetid://75541566105023"] = "Tape",
 			["rbxassetid://71184809277920"] = "Teacher",
 			["rbxassetid://114441694493485"] = "Trace",
-			["rbxassetid://125873891723822"] = "Tremilliamilliamilliatrecenttretriginmilliamilliatrecenttretriginmilliatrecentdotrigintillion",
+			["rbxassetid://125873891723822"] = "Tremilliamilliamilliatrecenttretriginmilliamilliatrecenttretriginmilliatrecentduotrigintillion",
 			["rbxassetid://84474039756329"] = "Tuvalu",
 			["rbxassetid://97829527860804"] = "Typist",
 			["rbxassetid://84049581201091"] = "Umami",
@@ -3627,13 +3628,98 @@ local script = G2L["5f"];
 			["rbxassetid://111598358247601"] = "Water",
 			["rbxassetid://130453638421221"] = "Year",
 			["rbxassetid://93208137184565"] = "Zoologicoarchaeologist",
-			["rbxassetid://102009458198367"] = "Quasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasiquasirhombicosidodecahedron",
 			["rbxassetid://84210869249463"] = "\227\129\169\227\129\147\227\129\171\227\129\132\227\129\166\227\130\130\227\128\129\227\129\191\227\130\147\227\129\170\227\129\164\227\129\170\227\129\140\227\129\163\227\129\166\227\129\132\227\130\139\227\128\130",
 		}
 	elseif gameType == "BESTPLAYER" then
-		wordlist = {"Floccinaucinihilipilification","Hippopotomonstrosesquippedaliophobia","Eellogofusciouhipoppokunurious","Supercalifragilisticexpialidocious","Nonanonacontanonactanonaliagon","Chargoggagoggmanchauggagoggchaubunagungamaugg","Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft","Dziewiecsetdziewiecdziesiatdziewiecmiliardowdziewiecsetdziewiecdziesiatdziewiecmilionowdziewiecsetdziewiecdziesiatdziewiectysiecydziewiecsetdziewiecdziesieciodziewiecioletniego","taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu","gdgdgdgdgdgdgdgdddgdgdgdgdghsssssssssssssssssssghssssssssssssssssjssssssssssssssssssssssssssetbjhiiiiiiiiiiiiiiiiiiiibrbrbrbrbrbrbrbrbrbrbricespicejgjgjgjgjgjgjgjgjgboing"}
+		wordlist = {
+			"Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft", "nonanonacontanonactanonaliagon", "Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft",
+			"Dziewiecsetdziewiecdziesiatdziewiecmiliardowdziewiecsetdziewiecdziesiatdziewiecmilionowdziewiecsetdziewiecdziesiatdziewiectysiecydziewiecsetdziewiecdziesieciodziewiecioletniego", "eellogofusciouhipoppokunurious", "Dziewiecsetdziewiecdziesiatdziewiecmiliardowdziewiecsetdziewiecdziesiatdziewiecmilionowdziewiecsetdziewiecdziesiatdziewiectysiecydziewiecsetdziewiecdziesieciodziewiecioletniego",
+			"taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu", "floccinaucinihilipilification", "taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu",
+			"gdgdgdgdgdgdgdgdddgdgdgdgdghsssssssssssssssssssghssssssssssssssssjssssssssssssssssssssssssssetbjhiiiiiiiiiiiiiiiiiiiibrbrbrbrbrbrbrbrbrbrbricespicejgjgjgjgjgjgjgjgjgboing", "supercalifragilisticexpialidocious", "gdgdgdgdgdgdgdgdddgdgdgdgdghsssssssssssssssssssghssssssssssssssssjssssssssssssssssssssssssssetbjhiiiiiiiiiiiiiiiiiiiibrbrbrbrbrbrbrbrbrbrbricespicejgjgjgjgjgjgjgjgjgboing",
+			"Trillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentilliduotogintatrecentillion", "charg", "Trillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestregintatrecentillitrestrigintatrecentilliduotogintatrecentillion",
+			"hexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahelix", "hippopotomonstrosesquippedaliophobia", "hexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahexahelix",
+		}
+	
 	elseif gameType == "GALAXY" then
-		wordlist = {"Phosphatidylethanolamine","Electroencephalographically","Antidisestablishmentarianism","Acetylcholinergictransmission","Inositoltrisphosphatesynthesis","Butyrylcholinesteraseinhibitor","Canaliculodacryocystorhinostomy","Supercalifragilisticexpialidocious","Ribulosebisphosphatecarboxylaseoxygenase","Pneumonoultramicroscopicsilicovolcanoconiosis","Chargoggagoggmanchauggagoggchaubunagungamaugg","Pancreaticoduodenectomy","Xenotransplantation","Glycosylphosphatidylinositol","Lymphangiomacircumscriptum","Membranoproliferativeglomerulonephritis","Bronchopulmonaryaspergillosis","Thromboticthrombocytopenicpurpura","Eosinophilicgranulomatosis","Percutaneoustransluminalcoronaryangioplasty","Acutemyelogenousleukemia","Acutehemorrhagicleukoencephalitis","Acutelymphoblasticleukemia","Tumefactivedemyelinatinglesion","Monofocalacuteinflammatorydemyelination","Sacrilegiousnesses","Leucohydroxyanthocyanidinsdioxygenase","Dihydrokaempferolglycoside","Brevibacteriumravenspurgensebacteremia","Brachiocephalicarteriovenousfistula","Influenzaemeningitisprophylaxis","Intravenousleiomyomatosisperitonealis","Encephalomyeloradiculoneuropathy","Hypopharyngealsquamouscellcarcinoma","Pseudoangiomatousstromalhyperplasia","Xanthogranulomatouspyelonephritis","Kaposiformlymphangiomatosis","Nonphosphorylatingglyceraldehydetriosedehydrogenase","Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu","Ornithogalumadseptentrionesvergentulum","Acanthoscurriahirsutissimasterni","Acquiredcysticfibrosistransmembraneconductanceregulatordysfunction","Chronicinflammatorydemyelinatingpolyradiculoneuropathy","Hydroxypropylmethylcellulosestearoxyether","Diethylaminohydroxybenzoylhexylbenzoate","Hydroxyethylpiperazineethanesulfonicacid","Humuhumunukunukuapuaa","Benggwigwishingasuchus","Gyrocerviceanserispassamaquoddyensis","Mitochondrialaspartateaminotransferase","Tetramethyldiaminobenzhydrylphosphinousacid","Nicotinamideadeninedinucleotidephosphate","Hexacosiahexacontatachiliahexacosiahexacontatanygon","Hexamryiakaipentachiliapentahectokaitriacontakaiheptagon","Kimmeridgebrachypteraeschnidium","Gorsafawddachaidraigodanheddogleddollonpenrhynareurdraethceredigion","Cysteinyltyrosylisoleucylglutaminylasparaginylcysteinylprolylleucylglycinamide","Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch","Pseudohalocynthiibacteraestuariivivens","Aspartylarginylvalyltyrosylisoleucylhistidylprolylphenylalanine","Butyloxycarbonylphenylalanylphenylalanine","Lauwiliwilinukunukuoioi","Huehuecanauhtlustiquichensis","Tetrahydropyranylcyclopentyltetrahydropyridopyridine","Anemelectrorecoilpedalicoupeeventombrosoparacloucycle","Keihanaikukauakahihuliheekahaunaele","Tetraethylcarbinolchlorobenzeneaminoeosin","Sulcustendinismusculusflexorishallucislongi","Abdominophrenicdyssynergiapathophysiology","Deoxyguanylyldeoxyadenylyldeoxythymidilyldeoxycytidyldeoxyadenylyldeoxycytidyldeoxyadenylyldeoxyguan","Spaarvagnsaktiebolagsskensmutsskjutarefackfoereningspersonalbeklaednadsmagasinsfoerraadsfoervaltarens","Audmannastjornvaldaembaettisstjornmalaverkalydsverdlausraverdbrefaabyrgdarlausrakvotaraeningjaaftaniossaspilling","Alanylglycylcysteinyllysylasparaginylphenylalanylphenylalanyltryptophyllysylthreonylphenylalanylthreonylserylcysteine","Neunhundertneunundneunzigmilliardenneunhundertneunundneunzigmillionenneunhundertneunundneunzigtausendneunhundertneunundneunzig","Lopadotemachoselachogaleokranioleipsanodrimhypotrimmatosilphiokarabomelitokatakechymenokichlepikossyphophattoperisteralektryonoptekephalliokigklopeleiolagoiosiraiobaphetraganopterygon","Sunjoseongagyeondeoghyeondogyeonginsunhuicheseongeungmyeongheumgwangseoggyeonggyecheonbaegeugyungwondonhyuuihaengsoyunhuihwajunlyeoldaejungjijeonghonghuncheolmogeonsitaehyeongchangunhonggigomyeongbaghuganggeonsujeonggyetongsulyeoggongyubeommunanmujeongyeonggyeongseonghyodaewang"}
+		wordlist = {
+			["rbxassetid://109961819482906"] = "Phosphatidylethanolamine",
+			["rbxassetid://80755797560598"] = "Pneumonoultramicroscopicsilicovolcanoconiosis",
+			["rbxassetid://82538930350486"] = "Sunjoseongagyeondeoghyeondogyeonginsunhuicheseongeungmyeongheumgwangseoggyeonggyecheonbaegeugyungwon",
+			["rbxassetid://93815184293600"] = "Spaarvagnsaktiebolagsskensmutsskjutarefackfoereningspersonalbeklaednadsmagasinsfoerraadsfoervaltaren",
+			["rbxassetid://119255879672766"] = "Neunhundertneunundneunzigmilliardenneunhundertneunundneunzigmillionenneunhundertneunundneunzigtausen",
+			["rbxassetid://118184565134410"] = "Electroencephalographically", 
+			["rbxassetid://105227706155351"] = "Antidisestablishmentarianism",
+			["rbxassetid://132731583998553"] = "Acetylcholinergictransmission", 
+			["rbxassetid://104436587088007"] = "Inositoltrisphosphatesynthesis", 
+			["rbxassetid://122797032582844"] = "Butyrylcholinesteraseinhibitor",
+			["rbxassetid://83411271592768"] = "Canaliculodacryocystorhinostomy", 
+			["rbxassetid://76814150560148"] = "Supercalifragilisticexpialidocious", 
+			["rbxassetid://97845120741104"] = "Ribulosebisphosphatecarboxylaseoxygenase",
+			["rbxassetid://0"] = "Hectodigiliicositrigilitetrachilipentacosiahexacontachiliheptacosiaogdoacontanyenneagon",
+			["rbxassetid://75028639937562"] = "Hypopharyngealsquamouscellcarcinoma", 
+			["rbxassetid://104526540476575"] = "Gyrocerviceanserispassamaquoddyensis", 
+			["rbxassetid://134521474620831"] = "Gorsafawddachaidraigodanheddogleddollonpenrhynareurdraethceredigion", 
+			["rbxassetid://99455064989331"] = "Chargoggagoggmanchauggagoggchaubunagungamaugg",
+			["rbxassetid://125742222717131"] = "Pancreaticoduodenectomy", 
+			["rbxassetid://86178817886273"] = "Xenotransplantation", 
+			["rbxassetid://138895061029824"] = "Glycosylphosphatidylinositol", 
+			["rbxassetid://130620925534079"] = "Lymphangiomacircumscriptum",
+			["rbxassetid://119370388181871"] = "Membranoproliferativeglomerulonephritis", 
+			["rbxassetid://128482216732546"] = "Bronchopulmonaryaspergillosis", 
+			["rbxassetid://112401028413867"] = "Thromboticthrombocytopenicpurpura",
+			["rbxassetid://120728000253812"] = "Eosinophilicgranulomatosis", 
+			["rbxassetid://96383180326088"] = "Percutaneoustransluminalcoronaryangioplasty", 
+			["rbxassetid://95339707255094"] = "Acutemyelogenousleukemia",
+			["rbxassetid://120912574623410"] = "Acutehemorrhagicleukoencephalitis", 
+			["rbxassetid://115825780908097"] = "Acutelymphoblasticleukemia", 
+			["rbxassetid://91937956028867"] = "Tumefactivedemyelinatinglesion",
+			["rbxassetid://72793295396983"] = "Monofocalacuteinflammatorydemyelination", 
+			["rbxassetid://103604022203499"] = "Sacrilegiousnesses", 
+			["rbxassetid://134154118429274"] = "Leucohydroxyanthocyanidinsdioxygenase",
+			["rbxassetid://98146840110950"] = "Dihydrokaempferolglycoside", 
+			["rbxassetid://136045675068314"] = "Brevibacteriumravenspurgensebacteremia", 
+			["rbxassetid://75130678551620"] = "Brachiocephalicarteriovenousfistula",
+			["rbxassetid://95905996359947"] = "Influenzaemeningitisprophylaxis", 
+			["rbxassetid://89928569218540"] = "Lopadotemachoselachogaleokranioleipsanodrimhypotrimmatosilphiokarabomelitokatakechymenokichlepikossy", 
+			["rbxassetid://103706447378940"] = "Encephalomyeloradiculoneuropathy",
+			["rbxassetid://78721018508400"] = "Intravenousleiomyomatosisperitonealis", 
+			["rbxassetid://95130375321464"] = "Pseudoangiomatousstromalhyperplasia", 
+			["rbxassetid://71350912654864"] = "Xanthogranulomatouspyelonephritis",
+			["rbxassetid://107568124965309"] = "Kaposiformlymphangiomatosis", 
+			["rbxassetid://101582108617303"] = "Nonphosphorylatingglyceraldehydetriosedehydrogenase",
+			["rbxassetid://93177092428983"] = "Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu",
+			["rbxassetid://123848280524487"] = "Ornithogalumadseptentrionesvergentulum", 
+			["rbxassetid://132731583998553"] = "Acanthoscurriahirsutissimasterni",
+			["rbxassetid://131219565122870"] = "Acquiredcysticfibrosistransmembraneconductanceregulatordysfunction",
+			["rbxassetid://104301132637864"] = "Chronicinflammatorydemyelinatingpolyradiculoneuropathy", 
+			["rbxassetid://95841701859066"] = "Hydroxypropylmethylcellulosestearoxyether",
+			["rbxassetid://70891448528230"] = "Diethylaminohydroxybenzoylhexylbenzoate", 
+			["rbxassetid://116760596022762"] = "Hydroxyethylpiperazineethanesulfonicacid",
+			["rbxassetid://78994867847021"] = "Humuhumunukunukuapuaa",
+			["rbxassetid://89741994684661"] = "Benggwigwishingasuchus", 
+			["rbxassetid://131266153472781"] = "Mitochondrialaspartateaminotransferase",
+			["rbxassetid://74243486418343"] = "Tetramethyldiaminobenzhydrylphosphinousacid", 
+			["rbxassetid://112904953978374"] = "Nicotinamideadeninedinucleotidephosphate",
+			["rbxassetid://119002133793802"] = "Hexacosiahexacontatachiliahexacosiahexacontatanygon", 
+			["rbxassetid://120284610903983"] = "Hexamryiakaipentachiliapentahectokaitriacontakaiheptagon",
+			["rbxassetid://82801889825971"] = "Kimmeridgebrachypteraeschnidium", 
+			["rbxassetid://77170536177171"] = "Cysteinyltyrosylisoleucylglutaminylasparaginylcysteinylprolylleucylglycinamide",
+			["rbxassetid://85590345381135"] = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
+			["rbxassetid://77206804601435"] = "Pseudohalocynthiibacteraestuariivivens",
+			["rbxassetid://90256332195726"] = "Aspartylarginylvalyltyrosylisoleucylhistidylprolylphenylalanine", 
+			["rbxassetid://111302204446509"] = "Butyloxycarbonylphenylalanylphenylalanine",
+			["rbxassetid://132790198208470"] = "Lauwiliwilinukunukuoioi", 
+			["rbxassetid://99178069244695"] = "Huehuecanauhtlustiquichensis", 
+			["rbxassetid://105299186035720"] = "Tetrahydropyranylcyclopentyltetrahydropyridopyridine",
+			["rbxassetid://105198984808058"] = "Anemelectrorecoilpedalicoupeeventombrosoparacloucycle", 
+			["rbxassetid://95448144414194"] = "Keihanaikukauakahihuliheekahaunaele",
+			["rbxassetid://92420916345549"] = "Tetraethylcarbinolchlorobenzeneaminoeosin", 
+			["rbxassetid://92545703635515"] = "Sulcustendinismusculusflexorishallucislongi",
+			["rbxassetid://80447727901252"] = "Deoxyguanylyldeoxyadenylyldeoxythymidilyldeoxycytidyldeoxyadenylyldeoxycytidyldeoxyadenylyldeoxyguan",
+			["rbxassetid://127843343367996"] = "Abdominophrenicdyssynergiapathophysiology",
+			["rbxassetid://108834787133701"] = "Audmannastjornvaldaembaettisstjornmalaverkalydsverdlausraverdbrefaabyrgdarlausrakvotaraeningjaaftani",
+			["rbxassetid://107803862785263"] = "Alanylglycylcysteinyllysylasparaginylphenylalanylphenylalanyltryptophyllysylthreonylphenylalanylthre",
+		}
 	elseif gameType == "ORIGINAL" then
 		wordlist = {
 			["rbxassetid://119699946181489"] =      "dolphin",
@@ -4416,7 +4502,139 @@ local script = G2L["5f"];
 		}
 	end
 	
-	print("Words: " .. (type(wordlist) == "table" and (#wordlist > 0 and #wordlist or "soundID") or "value"))
+	print("words: " .. (type(wordlist) == "table" and (#wordlist > 0 and #wordlist) or "value"))
+	
+	local NH = Instance.new("ScreenGui")
+	NH.Name = "LunarNotifications"
+	NH.ResetOnSpawn = false
+	NH.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	NH.IgnoreGuiInset = true
+	
+	local activeNotifs = {}
+	local NW, NH_H, NPAD, NRIGHT, NBOTTOM = 248, 70, 7, 14, 14
+	
+	local ICONS = {
+		success = "rbxassetid://6031068426",
+		info    = "rbxassetid://6031071196",
+		error   = "rbxassetid://6031071057",
+		warn    = "rbxassetid://6031071067",
+	}
+	
+	local COLORS = {
+		success = Color3.fromRGB(45,  185, 85),
+		info    = Color3.fromRGB(55,  145, 230),
+		error   = Color3.fromRGB(205, 55,  55),
+		warn    = Color3.fromRGB(220, 155, 25),
+	}
+	
+	local function restack()
+		for i, f in ipairs(activeNotifs) do
+			TweenService:Create(f, TweenInfo.new(0.22, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+				Position = UDim2.new(1, -(NW + NRIGHT), 1, -(NBOTTOM + (NH_H + NPAD) * i))
+			}):Play()
+		end
+	end
+	
+	local function notify(title, body, dur, ntype)
+		dur   = dur   or 4
+		ntype = ntype or "info"
+	
+		local col     = COLORS[ntype] or COLORS.info
+		local iconId  = ICONS[ntype]  or ICONS.info
+	
+		-- card
+		local card = Instance.new("Frame")
+		card.Size = UDim2.new(0, NW, 0, NH_H)
+		card.Position = UDim2.new(1, NRIGHT, 1, -(NBOTTOM + NH_H))
+		card.BackgroundColor3 = Color3.fromRGB(26, 26, 34)
+		card.BackgroundTransparency = 0
+		card.BorderSizePixel = 0
+		card.Parent = NH
+		Instance.new("UICorner", card).CornerRadius = UDim.new(0, 9)
+		local cardStroke = Instance.new("UIStroke", card)
+		cardStroke.Color = Color3.fromRGB(44, 44, 60)
+		cardStroke.Thickness = 1
+	
+		-- left accent bar
+		local accent = Instance.new("Frame", card)
+		accent.Size = UDim2.new(0, 3, 1, -12)
+		accent.Position = UDim2.new(0, 0, 0, 6)
+		accent.BackgroundColor3 = col
+		accent.BorderSizePixel = 0
+		Instance.new("UICorner", accent).CornerRadius = UDim.new(1, 0)
+	
+		-- icon ImageLabel (real icon, no letters)
+		local iconImg = Instance.new("ImageLabel", card)
+		iconImg.Size = UDim2.new(0, 20, 0, 20)
+		iconImg.Position = UDim2.new(0, 10, 0, 10)
+		iconImg.BackgroundTransparency = 1
+		iconImg.BorderSizePixel = 0
+		iconImg.Image = iconId
+		iconImg.ImageColor3 = Color3.new(1, 1, 1)
+	
+		-- title row (icon + text on same line)
+		local tLbl = Instance.new("TextLabel", card)
+		tLbl.Size = UDim2.new(1, -40, 0, 20)
+		tLbl.Position = UDim2.new(0, 36, 0, 10)
+		tLbl.BackgroundTransparency = 1
+		tLbl.Text = title
+		tLbl.TextColor3 = Color3.fromRGB(232, 232, 238)
+		tLbl.TextXAlignment = Enum.TextXAlignment.Left
+		tLbl.Font = Enum.Font.GothamBold
+		tLbl.TextSize = 13
+	
+		-- separator
+		local sepHolder = Instance.new("Frame", card)
+		sepHolder.Size = UDim2.new(1, -16, 0, 1)
+		sepHolder.Position = UDim2.new(0, 8, 0, 33)
+		sepHolder.BackgroundTransparency = 1
+		sepHolder.BorderSizePixel = 0
+	
+		-- gradient separator using UIGradient on a frame
+		local sepLine = Instance.new("Frame", sepHolder)
+		sepLine.Size = UDim2.new(1, 0, 1, 0)
+		sepLine.BackgroundColor3 = col
+		sepLine.BackgroundTransparency = 0.5
+		sepLine.BorderSizePixel = 0
+		local sepGrad = Instance.new("UIGradient", sepLine)
+		sepGrad.Color = ColorSequence.new({
+			ColorSequenceKeypoint.new(0, Color3.new(1,1,1)),
+			ColorSequenceKeypoint.new(0.5, Color3.new(1,1,1)),
+			ColorSequenceKeypoint.new(1, Color3.new(0,0,0)),
+		})
+		sepGrad.Transparency = NumberSequence.new({
+			NumberSequenceKeypoint.new(0, 1),
+			NumberSequenceKeypoint.new(0.15, 0),
+			NumberSequenceKeypoint.new(0.85, 0),
+			NumberSequenceKeypoint.new(1, 1),
+		})
+	
+		-- body text
+		local bLbl = Instance.new("TextLabel", card)
+		bLbl.Size = UDim2.new(1, -16, 0, 24)
+		bLbl.Position = UDim2.new(0, 10, 0, 38)
+		bLbl.BackgroundTransparency = 1
+		bLbl.Text = body
+		bLbl.TextColor3 = Color3.fromRGB(155, 155, 170)
+		bLbl.TextXAlignment = Enum.TextXAlignment.Left
+		bLbl.TextWrapped = true
+		bLbl.Font = Enum.Font.Gotham
+		bLbl.TextSize = 11
+	
+		table.insert(activeNotifs, card)
+		restack()
+	
+		task.delay(dur, function()
+			local idx = table.find(activeNotifs, card)
+			if idx then table.remove(activeNotifs, idx) end
+			TweenService:Create(card, TweenInfo.new(0.2), {
+				Position = UDim2.new(1, NRIGHT, card.Position.Y.Scale, card.Position.Y.Offset)
+			}):Play()
+			task.wait(0.2)
+			card:Destroy()
+			restack()
+		end)
+	end
 	
 	local playerGui = player:WaitForChild("PlayerGui")
 	local mainFrame = script.Parent:WaitForChild("msl")
@@ -4465,7 +4683,6 @@ local script = G2L["5f"];
 		word = word:gsub("^❌ Incorrect! It was:%s*", "")
 		word = word:gsub("^Spell:%s*", "")
 		word = word:gsub("^Try again:%s*", "")
-	
 		return word
 	end
 	
@@ -4516,6 +4733,8 @@ local script = G2L["5f"];
 		elseif gameType=="GALAXY" then
 			local remotesFolder=ReplicatedStorage:FindFirstChild("Remotes")
 			if remotesFolder then return remotesFolder:FindFirstChild("SubmitWord"),remotesFolder:FindFirstChild("UpdateBoard") end
+		elseif gameType=="SPELLING_MASTERS" then
+			return ReplicatedStorage:FindFirstChild("SubmitAnswerEvent"),ReplicatedStorage:FindFirstChild("UpdateTypingEvent")
 		end
 		return nil,nil
 	end
@@ -4557,12 +4776,69 @@ local script = G2L["5f"];
 		else return playerGui.Type.TextBox end
 	end
 	
+	-- Input mode: directly set textbox.Text char by char, fire enter remote when done
+	local function typeWordInput(word)
+		if state.isTyping then return end
+		state.isTyping=true
+		local typeGui=waitForTypeGui(gameType=="CARL" and 5 or 3)
+		if not typeGui then state.isTyping=false return end
+		local textbox=findTextBoxInGui()
+		if not textbox then state.isTyping=false return end
+		local remoteEvent=getRemoteEvents()
+		local targetWord=word local partialWord=""
+		local totalLetters=#targetWord
+		updateLettersLabel(0, totalLetters)
+	
+		local startIndex=1 if state.dieMode=="EarlyType" then startIndex=math.random(1,math.min(2,#targetWord)) end
+		local endIndex=#targetWord if state.dieMode=="EarlyEnter" then endIndex=math.max(1,#targetWord-math.random(1,2)) end
+	
+		textbox.Text=""
+		for i=startIndex,endIndex do
+			if not state.autoType then break end
+			local char=targetWord:sub(i,i)
+			local shouldTypo=state.typosEnabled and math.random(1,100)<=state.typoChance and i<endIndex
+			if shouldTypo then
+				local typoChar=getTypoChar(char)
+				partialWord=partialWord..typoChar
+				textbox.Text=partialWord
+				if state.typoMethod=="Fix" then
+					task.wait(math.random(10,20)/100)
+					partialWord=partialWord:sub(1,-2)
+					textbox.Text=partialWord
+				end
+			end
+			if not shouldTypo or state.typoMethod=="Fix" then
+				partialWord=partialWord..char
+				textbox.Text=partialWord
+				updateLettersLabel(#partialWord, totalLetters)
+			end
+			if shouldTypo then task.wait(math.random()*0.03+0.02) end
+			local waitTime if state.randomSpeed then waitTime=state.minSpeed+math.random()*(state.maxSpeed-state.minSpeed) else waitTime=state.normalSpeed end
+			if waitTime>0 and i<endIndex then task.wait(waitTime) end
+		end
+	
+		if state.autoEnter and remoteEvent then
+			if gameType=="ORIGINAL" then remoteEvent:FireServer(partialWord,workspace:GetServerTimeNow(),true)
+			elseif gameType=="XISTER" or gameType=="BESTPLAYER" or gameType=="ONEX" then remoteEvent:FireServer(partialWord,true)
+			elseif gameType=="THE_SB" then remoteEvent:FireServer(partialWord,true)
+			elseif gameType=="CARL" then remoteEvent:FireServer(word)
+			elseif gameType=="NUNU" then remoteEvent:FireServer("SubmitSpelling",partialWord,workspace:GetServerTimeNow())
+			elseif gameType=="SHIVA" then remoteEvent:FireServer(true,workspace:GetServerTimeNow(),#partialWord)
+			elseif gameType=="OIIA" then remoteEvent:FireServer(partialWord)
+			elseif gameType=="GALAXY" then remoteEvent:FireServer(partialWord)
+			elseif gameType=="SPELLING_MASTERS" then remoteEvent:FireServer(partialWord) end
+			state.wordsTyped=state.wordsTyped+1
+			if state.loseAfterWords and state.wordsTyped>=state.loseCount then state.autoType=false updateToggleBar(atBtn,false) end
+		end
+		state.isTyping=false
+	end
+	
 	local function typeWordRemote(word)
 		if state.isTyping then return end
 		state.isTyping=true
 		local typeGui=waitForTypeGui(gameType=="CARL" and 5 or 1)
-		if not typeGui and gameType~="THE_SB" and gameType~="NUNU" then state.isTyping=false return end
-		local textbox if gameType~="THE_SB" and gameType~="NUNU" then textbox=findTextBoxInGui() end
+		if not typeGui and gameType~="THE_SB" and gameType~="NUNU" and gameType~="SPELLING_MASTERS" then state.isTyping=false return end
+		local textbox if gameType~="THE_SB" and gameType~="NUNU" and gameType~="SPELLING_MASTERS" then textbox=findTextBoxInGui() end
 		local remoteEvent,secondaryRemote=getRemoteEvents()
 		if not remoteEvent then warn("RemoteEvent not found!") state.isTyping=false return end
 		local targetWord=word local partialWord=""
@@ -4581,14 +4857,14 @@ local script = G2L["5f"];
 				elseif gameType=="XISTER" or gameType=="BESTPLAYER" or gameType=="ONEX" then remoteEvent:FireServer(partialWord,false)
 				elseif gameType=="THE_SB" then remoteEvent:FireServer(partialWord)
 				elseif gameType=="CARL" then if secondaryRemote then for _,remote in ipairs(secondaryRemote) do remote:FireServer(partialWord) end end
-				elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
+				elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" or gameType=="SPELLING_MASTERS" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
 				if state.typoMethod=="Fix" then
 					task.wait(math.random(10, 20) / 100) partialWord=partialWord:sub(1,-2)
 					if gameType=="ORIGINAL" then remoteEvent:FireServer(partialWord,workspace:GetServerTimeNow(),false) if secondaryRemote then secondaryRemote:FireServer(partialWord) end
 					elseif gameType=="XISTER" or gameType=="BESTPLAYER" or gameType=="ONEX" then remoteEvent:FireServer(partialWord,false)
 					elseif gameType=="THE_SB" then remoteEvent:FireServer(partialWord)
 					elseif gameType=="CARL" then if secondaryRemote then for _,remote in ipairs(secondaryRemote) do remote:FireServer(partialWord) end end
-					elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
+					elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" or gameType=="SPELLING_MASTERS" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
 				end
 			end
 			if not shouldTypo or state.typoMethod=="Fix" then
@@ -4598,7 +4874,7 @@ local script = G2L["5f"];
 				elseif gameType=="XISTER" or gameType=="BESTPLAYER" or gameType=="ONEX" then remoteEvent:FireServer(partialWord,false)
 				elseif gameType=="THE_SB" then remoteEvent:FireServer(partialWord)
 				elseif gameType=="CARL" then if secondaryRemote then for _,remote in ipairs(secondaryRemote) do remote:FireServer(partialWord) end end
-				elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
+				elseif gameType=="OIIA" or gameType=="SHIVA" or gameType=="GALAXY" or gameType=="SPELLING_MASTERS" then if secondaryRemote then secondaryRemote:FireServer(partialWord) end end
 			end
 			if shouldTypo then task.wait(math.random()*0.03+0.02) end
 			local waitTime if state.randomSpeed then waitTime=state.minSpeed+math.random()*(state.maxSpeed-state.minSpeed) else waitTime=state.normalSpeed end
@@ -4612,7 +4888,8 @@ local script = G2L["5f"];
 			elseif gameType=="NUNU" then remoteEvent:FireServer("SubmitSpelling",partialWord,workspace:GetServerTimeNow())
 			elseif gameType=="SHIVA" then remoteEvent:FireServer(true,workspace:GetServerTimeNow(),#partialWord)
 			elseif gameType=="OIIA" then remoteEvent:FireServer(partialWord)
-			elseif gameType=="GALAXY" then remoteEvent:FireServer(partialWord) end
+			elseif gameType=="GALAXY" then remoteEvent:FireServer(partialWord)
+			elseif gameType=="SPELLING_MASTERS" then remoteEvent:FireServer(partialWord) end
 			state.wordsTyped=state.wordsTyped+1
 			if state.loseAfterWords and state.wordsTyped>=state.loseCount then state.autoType=false updateToggleBar(atBtn,false) end
 		end
@@ -4625,7 +4902,15 @@ local script = G2L["5f"];
 		state.currentWord=word
 		updateWordLabel()
 		updateLettersLabel(0, #word)
-		if state.autoType then task.spawn(function() typeWordRemote(word) end) end
+		if state.autoType then
+			task.spawn(function()
+				if state.mode=="Input" then
+					typeWordInput(word)
+				else
+					typeWordRemote(word)
+				end
+			end)
+		end
 	end
 	
 	local function onSoundPlayed(sound) local soundId=sound.SoundId if wordlist[soundId] then onWordDetected(wordlist[soundId]) end end
@@ -4647,7 +4932,37 @@ local script = G2L["5f"];
 		if wordsFolder then wordsFolder=wordsFolder:FindFirstChild("Words") if wordsFolder then for _,sound in ipairs(wordsFolder:GetChildren()) do if sound:IsA("Sound") then sound:GetPropertyChangedSignal("Playing"):Connect(function() if sound.Playing then onWordDetected(sound.Name) end end) end end end end
 	elseif gameType=="BESTPLAYER" or gameType=="GALAXY" then
 		workspace.DescendantAdded:Connect(function(descendant) if descendant:IsA("Sound") and descendant.Playing then if #wordlist>0 then onWordDetected(wordlist[math.random(1,#wordlist)]) end end end)
+	elseif gameType=="SPELLING_MASTERS" then
+		local wordValue=ReplicatedStorage:WaitForChild("CurrentWord",10)
+		if wordValue then
+			wordValue:GetPropertyChangedSignal("Value"):Connect(function()
+				if wordValue.Value~="" then onWordDetected(wordValue.Value) end
+			end)
+			if wordValue.Value~="" then onWordDetected(wordValue.Value) end
+		end
 	end
+	
+	local scriptUrl = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/lunarX"
+	
+	local function queueReload()
+		local queued = [[
+	        task.wait(5)
+	        loadstring(game:HttpGet("]] .. scriptUrl .. [["))()
+	    ]]
+		if syn and syn.queue_on_teleport then
+			syn.queue_on_teleport(queued)
+		elseif queue_on_teleport then
+			queue_on_teleport(queued)
+		elseif fluxus and fluxus.queue_on_teleport then
+			fluxus.queue_on_teleport(queued)
+		end
+	end
+	
+	Players.LocalPlayer.OnTeleport:Connect(function(state)
+		if state == Enum.TeleportState.Started then
+			queueReload()
+		end
+	end)
 	
 	atBtn.MouseButton1Click:Connect(function() state.autoType=not state.autoType updateToggleBar(atBtn,state.autoType) if state.autoType then state.wordsTyped=0 end end)
 	rsBtn.MouseButton1Click:Connect(function() state.randomSpeed=not state.randomSpeed updateToggleBar(rsBtn,state.randomSpeed) end)
@@ -4667,6 +4982,19 @@ local script = G2L["5f"];
 	modeBtn.Text=state.mode dieBtn.Text=state.dieMode typoMethodBtn.Text=state.typoMethod updateWordLabel()
 	normalSlider.Text=formatSliderValue(state.normalSpeed) minSlider.Text=formatSliderValue(state.minSpeed) maxSlider.Text=formatSliderValue(state.maxSpeed) tSlider.Text=tostring(state.typoChance) loseCountSlider.Text=tostring(state.loseCount)
 	updateLettersLabel(0, 0)
+	
+	if not gameType then
+		notify("Lunar X", "unsupported placeid: "..placeId.. ", closing script",1,"error")
+		task.wait(0.5)
+		playerGui:WaitForChild("f789z43hfn3i"):Destroy()
+		task.wait(1)
+		playerGui:WaitForChild("LunarNotifications"):Destroy()
+	end
+	
+	task.wait(0.5)
+	notify("Lunar X", "Found and recognized placeid: "..placeId,5,"success")
+	notify("Lunar X", "Version: 0.2.5",5,"info")
+	notify("Lunar X", "script made and developed by _n.ick",3,"info")
 end;
 task.spawn(C_5f);
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.aas
