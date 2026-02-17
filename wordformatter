@@ -5,10 +5,8 @@ local TweenService = game:GetService("TweenService")
 local CoreGui = game:GetService("CoreGui")
 local player  = Players.LocalPlayer
 local pGui    = player:WaitForChild("PlayerGui")
-
--- ─── Auto Reload on Leave ───────────────────────────────────────────────────
-
-local scriptUrl = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/lunarX"
+print("i")
+local scriptUrl = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/wordformatter"
 
 local function queueReload()
 	local queued = 'task.wait(5) loadstring(game:HttpGet("' .. scriptUrl .. '"))()'
@@ -27,8 +25,6 @@ player.OnTeleport:Connect(function(state)
 	end
 end)
 
--- ─── Logging ────────────────────────────────────────────────────────────────
-
 local SEP = string.rep("─", 56)
 local function log(m)  print(("[LunarFormatter | %s] %s"):format(os.date("%H:%M:%S"), m)) end
 local function wlog(m) warn(("[LunarFormatter | %s] !! %s"):format(os.date("%H:%M:%S"), m)) end
@@ -36,8 +32,6 @@ local function pbar(label, n, total)
 	local f = math.floor((n / math.max(total,1)) * 28)
 	print(("  [%s%s] %s (%d/%d)"):format(string.rep("▓",f), string.rep("░",28-f), label, n, total))
 end
-
--- ─── Cleanup old instances ───────────────────────────────────────────────────
 
 for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 	local old = pGui:FindFirstChild(name)
@@ -48,8 +42,7 @@ for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 	end)
 end
 
--- ─── Notification System ────────────────────────────────────────────────────
-
+print("g")
 local notificationHolder = Instance.new("ScreenGui")
 notificationHolder.Name = "LunarNotifications"
 notificationHolder.ResetOnSpawn = false
@@ -129,8 +122,7 @@ local function notify(title, text, duration)
 		end
 	end)
 end
-
--- ─── Core Logic ─────────────────────────────────────────────────────────────
+print("g")
 
 local function resolvePath(raw)
 	local parts = {}
@@ -260,9 +252,7 @@ local function run(paths, varName)
 	log(("Done  %.4fs  |  %d lines  |  %d bytes"):format(secs, lines, #output))
 	return output, lines, #output
 end
-
--- ─── GUI ────────────────────────────────────────────────────────────────────
-
+print("e")
 local W = 640
 
 local sg = Instance.new("ScreenGui")
@@ -526,3 +516,4 @@ refreshUI()
 
 notify("lunar formatter", "lunar formatter is ready!", 5)
 notify("lunar formatter", "Version: 0.1.4", 5)
+print("r")
