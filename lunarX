@@ -4249,6 +4249,12 @@ local script = G2L["6f"];
 	elseif gameType == "ORIGINAL" then
 		wordlist = {
 			["rbxassetid://119699946181489"] =      "dolphin",
+      	    ["rbxassetid://118760367777607"] = "tag",
+      	    ["rbxassetid://90491050592870"] = "sock",
+      	    ["rbxassetid://126713104371193"] = "elf",
+      	    ["rbxassetid://72397566459211"] = "wrought",
+      	    ["rbxassetid://104726012267702"] = "melt",
+      	    ["rbxassetid://118888914787461"] = "stew",
 			["rbxassetid://17620333788"]     =      "thesis",
 			["rbxassetid://18257417645"]     =      "refrain",
 			["rbxassetid://17620149976"]     =      "comply",
