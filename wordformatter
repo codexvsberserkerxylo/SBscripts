@@ -1,15 +1,16 @@
 --open source for you all that need the fuckass wordlists :blushing-face:
-print("n")
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local CoreGui = game:GetService("CoreGui")
-local player  = Players.LocalPlayer
-local pGui    = player:WaitForChild("PlayerGui")
-print("i")
+local player = Players.LocalPlayer
+local pGui = player:WaitForChild("PlayerGui")
+
+-- ─── Auto Reload ─────────────────────────────────────────────────────────────
+
 local scriptUrl = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/wordformatter"
 
 local function queueReload()
-	local queued = 'task.wait(5) loadstring(game:HttpGet("' .. scriptUrl .. '"))()'
+	local queued = 'task.wait(3) loadstring(game:HttpGet("' .. scriptUrl .. '"))()'
 	if syn and syn.queue_on_teleport then
 		syn.queue_on_teleport(queued)
 	elseif queue_on_teleport then
@@ -19,19 +20,25 @@ local function queueReload()
 	end
 end
 
+local teleportQueued = false
 player.OnTeleport:Connect(function(state)
-	if state == Enum.TeleportState.Started then
+	if (state == Enum.TeleportState.Started or state == Enum.TeleportState.WaitingForServer) and not teleportQueued then
+		teleportQueued = true
 		queueReload()
 	end
 end)
+
+-- ─── Logging ─────────────────────────────────────────────────────────────────
 
 local SEP = string.rep("─", 56)
 local function log(m)  print(("[LunarFormatter | %s] %s"):format(os.date("%H:%M:%S"), m)) end
 local function wlog(m) warn(("[LunarFormatter | %s] !! %s"):format(os.date("%H:%M:%S"), m)) end
 local function pbar(label, n, total)
-	local f = math.floor((n / math.max(total,1)) * 28)
-	print(("  [%s%s] %s (%d/%d)"):format(string.rep("▓",f), string.rep("░",28-f), label, n, total))
+	local f = math.floor((n / math.max(total, 1)) * 28)
+	print(("  [%s%s] %s (%d/%d)"):format(string.rep("▓", f), string.rep("░", 28 - f), label, n, total))
 end
+
+-- ─── Cleanup Old GUI ─────────────────────────────────────────────────────────
 
 for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 	local old = pGui:FindFirstChild(name)
@@ -42,91 +49,117 @@ for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 	end)
 end
 
-print("g")
+-- ─── Notification System ─────────────────────────────────────────────────────
+
 local notificationHolder = Instance.new("ScreenGui")
 notificationHolder.Name = "LunarNotifications"
 notificationHolder.ResetOnSpawn = false
 notificationHolder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 notificationHolder.IgnoreGuiInset = true
-
 local nhOk = pcall(function() notificationHolder.Parent = CoreGui end)
 if not nhOk or not notificationHolder.Parent then
 	notificationHolder.Parent = pGui
 end
 
 local activeNotifications = {}
+local NOTIF_W = 220
+local NOTIF_H = 64
+local NOTIF_PAD = 6
+local NOTIF_RIGHT = 14
+local NOTIF_BOTTOM = 14
 
-local function notify(title, text, duration)
-	duration = duration or 5
-
-	local frame = Instance.new("Frame")
-	frame.Size = UDim2.new(0, 250, 0, 70)
-	frame.Position = UDim2.new(1, 300, 1, -80)
-	frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-	frame.BorderSizePixel = 0
-	frame.Parent = notificationHolder
-	Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 8)
-
-	local line = Instance.new("Frame")
-	line.Size = UDim2.new(1, 0, 0, 2)
-	line.Position = UDim2.new(0, 0, 0.45, 0)
-	line.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-	line.BorderSizePixel = 0
-	line.Parent = frame
-
-	local titleLabel = Instance.new("TextLabel")
-	titleLabel.Size = UDim2.new(1, -10, 0.45, 0)
-	titleLabel.Position = UDim2.new(0, 10, 0, 0)
-	titleLabel.BackgroundTransparency = 1
-	titleLabel.Text = " i  " .. title
-	titleLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
-	titleLabel.TextXAlignment = Enum.TextXAlignment.Left
-	titleLabel.Font = Enum.Font.SourceSansBold
-	titleLabel.TextSize = 15
-	titleLabel.Parent = frame
-
-	local msgLabel = Instance.new("TextLabel")
-	msgLabel.Size = UDim2.new(1, -10, 0.55, -5)
-	msgLabel.Position = UDim2.new(0, 10, 0.45, 5)
-	msgLabel.BackgroundTransparency = 1
-	msgLabel.Text = text
-	msgLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
-	msgLabel.TextWrapped = true
-	msgLabel.TextXAlignment = Enum.TextXAlignment.Left
-	msgLabel.Font = Enum.Font.SourceSans
-	msgLabel.TextSize = 14
-	msgLabel.Parent = frame
-
-	table.insert(activeNotifications, frame)
-
+local function restack()
 	for i, notif in ipairs(activeNotifications) do
-		TweenService:Create(notif, TweenInfo.new(0.25), {
-			Position = UDim2.new(1, -270, 1, -(80 * i))
+		local targetY = -(NOTIF_BOTTOM + (NOTIF_H + NOTIF_PAD) * i)
+		TweenService:Create(notif, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+			Position = UDim2.new(1, -(NOTIF_W + NOTIF_RIGHT), 1, targetY)
 		}):Play()
 	end
+end
+
+local function notify(title, text, duration, ntype)
+	duration = duration or 4
+	ntype = ntype or "info"
+
+	local iconColor = Color3.fromRGB(50, 185, 90)
+	local iconChar  = "✓"
+	if ntype == "info" then
+		iconColor = Color3.fromRGB(55, 145, 230)
+		iconChar  = "i"
+	elseif ntype == "error" then
+		iconColor = Color3.fromRGB(210, 55, 55)
+		iconChar  = "✕"
+	elseif ntype == "warn" then
+		iconColor = Color3.fromRGB(230, 170, 30)
+		iconChar  = "!"
+	end
+
+	local frame = Instance.new("Frame")
+	frame.Size = UDim2.new(0, NOTIF_W, 0, NOTIF_H)
+	frame.Position = UDim2.new(1, NOTIF_RIGHT, 1, -(NOTIF_BOTTOM + NOTIF_H))
+	frame.BackgroundColor3 = Color3.fromRGB(38, 38, 45)
+	frame.BackgroundTransparency = 0
+	frame.BorderSizePixel = 0
+	frame.Parent = notificationHolder
+	Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 10)
+
+	local iconCircle = Instance.new("Frame", frame)
+	iconCircle.Size = UDim2.new(0, 18, 0, 18)
+	iconCircle.Position = UDim2.new(0, 10, 0, 10)
+	iconCircle.BackgroundColor3 = iconColor
+	iconCircle.BackgroundTransparency = 0
+	iconCircle.BorderSizePixel = 0
+	Instance.new("UICorner", iconCircle).CornerRadius = UDim.new(1, 0)
+
+	local iconLbl = Instance.new("TextLabel", iconCircle)
+	iconLbl.Size = UDim2.new(1, 0, 1, 0)
+	iconLbl.BackgroundTransparency = 1
+	iconLbl.Text = iconChar
+	iconLbl.TextColor3 = Color3.new(1, 1, 1)
+	iconLbl.Font = Enum.Font.GothamBold
+	iconLbl.TextSize = 11
+
+	local titleLbl = Instance.new("TextLabel", frame)
+	titleLbl.Size = UDim2.new(1, -38, 0, 20)
+	titleLbl.Position = UDim2.new(0, 34, 0, 8)
+	titleLbl.BackgroundTransparency = 1
+	titleLbl.Text = title
+	titleLbl.TextColor3 = Color3.fromRGB(235, 235, 235)
+	titleLbl.TextXAlignment = Enum.TextXAlignment.Left
+	titleLbl.Font = Enum.Font.GothamBold
+	titleLbl.TextSize = 13
+
+	local bodyLbl = Instance.new("TextLabel", frame)
+	bodyLbl.Size = UDim2.new(1, -14, 0, 28)
+	bodyLbl.Position = UDim2.new(0, 10, 0, 32)
+	bodyLbl.BackgroundTransparency = 1
+	bodyLbl.Text = text
+	bodyLbl.TextColor3 = Color3.fromRGB(175, 175, 185)
+	bodyLbl.TextXAlignment = Enum.TextXAlignment.Left
+	bodyLbl.TextWrapped = true
+	bodyLbl.Font = Enum.Font.Gotham
+	bodyLbl.TextSize = 11
+
+	table.insert(activeNotifications, frame)
+	restack()
 
 	task.delay(duration, function()
 		local idx = table.find(activeNotifications, frame)
 		if idx then table.remove(activeNotifications, idx) end
-
-		TweenService:Create(frame, TweenInfo.new(0.25), {
-			Position = UDim2.new(1, 300, frame.Position.Y.Scale, frame.Position.Y.Offset)
+		TweenService:Create(frame, TweenInfo.new(0.2), {
+			Position = UDim2.new(1, NOTIF_RIGHT, frame.Position.Y.Scale, frame.Position.Y.Offset)
 		}):Play()
-		task.wait(0.25)
+		task.wait(0.2)
 		frame:Destroy()
-
-		for i, notif in ipairs(activeNotifications) do
-			TweenService:Create(notif, TweenInfo.new(0.25), {
-				Position = UDim2.new(1, -270, 1, -(80 * i))
-			}):Play()
-		end
+		restack()
 	end)
 end
-print("g")
+
+-- ─── Core Logic ──────────────────────────────────────────────────────────────
 
 local function resolvePath(raw)
 	local parts = {}
-	for p in raw:match("^%s*(.-)%s*$"):gmatch("[^%.]+") do parts[#parts+1] = p end
+	for p in raw:match("^%s*(.-)%s*$"):gmatch("[^%.]+") do parts[#parts + 1] = p end
 	local cur = game
 	for i, part in ipairs(parts) do
 		if i == 1 and part:lower() == "game" then
@@ -156,128 +189,230 @@ local function getSource(obj)
 	return nil, "no decompiler available"
 end
 
+-- ─── Definition format detector ──────────────────────────────────────────────
+-- Returns true if the source looks like a word→definition table
+-- e.g.  word = "[Noun] A definition.";
+local function isDefinitionSource(src)
+	local defMatches = 0
+	for _ in src:gmatch('%[%s*[Nn]oun%s*%]') do defMatches = defMatches + 1 end
+	for _ in src:gmatch('%[%s*[Vv]erb%s*%]') do defMatches = defMatches + 1 end
+	for _ in src:gmatch('%[%s*[Aa]djective%s*%]') do defMatches = defMatches + 1 end
+	for _ in src:gmatch('%[%s*[Aa]dverb%s*%]') do defMatches = defMatches + 1 end
+	return defMatches >= 3
+end
+
+-- ─── Parse word→definition entries ───────────────────────────────────────────
+-- Handles:
+--   word = "definition";
+--   ["word"] = "definition";
+--   word = 'definition';
+local function parseDefinitionEntries(src)
+	local entries = {}
+	local seen = {}
+
+	local function add(word, def)
+		if not word or not def then return end
+		word = word:match("^%s*(.-)%s*$")
+		def  = def:match("^%s*(.-)%s*$")
+		-- skip Lua keywords and short/empty results that aren't real words
+		local luaKeywords = {["local"]=true,["return"]=true,["end"]=true,["function"]=true,
+		                     ["if"]=true,["then"]=true,["else"]=true,["for"]=true,
+		                     ["do"]=true,["while"]=true,["repeat"]=true,["until"]=true,
+		                     ["true"]=true,["false"]=true,["nil"]=true,["not"]=true,
+		                     ["and"]=true,["or"]=true,["in"]=true}
+		if not word or #word == 0 or luaKeywords[word] then return end
+		if not def or #def == 0 then return end
+		if not seen[word] then
+			seen[word] = true
+			entries[#entries + 1] = {word = word, def = def}
+		end
+	end
+
+	-- Priority 1: bracketed key with double quotes:  ["word"] = "definition";
+	for word, def in src:gmatch('%["([A-Za-z][A-Za-z0-9_]*)"%]%s*=%s*"(.-)"') do
+		add(word, def)
+	end
+	-- Priority 2: bracketed key with single quotes:  ['word'] = 'definition';
+	for word, def in src:gmatch("%['([A-Za-z][A-Za-z0-9_]*)']%s*=%s*'(.-)'") do
+		add(word, def)
+	end
+	-- Priority 3: bare key with double quotes — must be indented (tab or spaces) to avoid matching top-level locals
+	-- Pattern: start of line with whitespace, then word = "..."
+	for word, def in src:gmatch('\n%s+([A-Za-z][A-Za-z0-9_]*)%s*=%s*"(.-)"') do
+		add(word, def)
+	end
+	for word, def in src:gmatch('\n%s+([A-Za-z][A-Za-z0-9_]*)%s*=%s*\'(.-)\'') do
+		add(word, def)
+	end
+
+	return entries
+end
+
+-- ─── Format defToWord table ───────────────────────────────────────────────────
+local COL_DEF = 48
+
+local function formatDefToWord(entries, varName)
+	local lines = {("local %s = {"):format(varName)}
+	for _, e in ipairs(entries) do
+		if not e.word or not e.def then continue end
+		-- escape any quotes in the definition string
+		local safeDef = e.def:gsub('"', '\\"')
+		local kPart = ('\t["%s"]'):format(e.word)
+		local padding = string.rep(" ", math.max(1, COL_DEF - #kPart))
+		lines[#lines + 1] = ('%s%s= "%s",'):format(kPart, padding, safeDef)
+	end
+	lines[#lines + 1] = "}"
+	return table.concat(lines, "\n")
+end
+
+-- ─── Parse word→soundid entries (original format) ────────────────────────────
+local COL = 52
+
 local function parseEntries(src)
 	local entries = {}
-	local seen    = {}
+	local seen = {}
 
-	for word, id in src:gmatch('"([A-Za-z][A-Za-z0-9_]*)"[,]?\n?%s*(%d%d%d%d%d+)') do
-		local key = word:lower()
-		if not seen[key] then seen[key] = true; entries[#entries+1] = { word = word, id = id } end
+	local function add(word, id)
+		if not seen[id] then
+			seen[id] = true
+			entries[#entries + 1] = {word = word, id = id}
+		end
 	end
-	for word, id in src:gmatch('{%s*"([A-Za-z][A-Za-z0-9_]*)",%s*(%d%d%d%d%d+)') do
-		local key = word:lower()
-		if not seen[key] then seen[key] = true; entries[#entries+1] = { word = word, id = id } end
-	end
-	for word, id in src:gmatch('([A-Za-z][A-Za-z0-9_]*)%s*=%s*(%d%d%d%d%d+)') do
-		local key = word:lower()
-		if not seen[key] then seen[key] = true; entries[#entries+1] = { word = word, id = id } end
-	end
-	for id, word in src:gmatch('%[(%d%d%d%d%d+)%]%s*=%s*"([A-Za-z][A-Za-z0-9_]*)"') do
-		local key = word:lower()
-		if not seen[key] then seen[key] = true; entries[#entries+1] = { word = word, id = id } end
-	end
+
+	for word, id in src:gmatch('"([A-Za-z][A-Za-z0-9_]*)"[,]?\n?%s*(%d%d%d%d%d+)') do add(word, id) end
+	for word, id in src:gmatch('{%s*"([A-Za-z][A-Za-z0-9_]*)",%s*(%d%d%d%d%d+)') do add(word, id) end
+	for word, id in src:gmatch('([A-Za-z][A-Za-z0-9_]*)%s*=%s*(%d%d%d%d%d+)') do add(word, id) end
+	for id, word in src:gmatch('%[(%d%d%d%d%d+)%]%s*=%s*"([A-Za-z][A-Za-z0-9_]*)"') do add(word, id) end
 
 	local capturedIds = {}
 	for _, e in ipairs(entries) do capturedIds[e.id] = true end
 	for id in src:gmatch('(%d%d%d%d%d+)') do
 		if not capturedIds[id] then
 			capturedIds[id] = true
-			entries[#entries+1] = { word = "null", id = id }
+			entries[#entries + 1] = {word = "null", id = id}
 		end
 	end
 
 	return entries
 end
 
-local COL = 52
-
 local function formatGwl(entries, varName)
-	local lines = { ("local %s = {"):format(varName) }
+	local lines = {("local %s = {"):format(varName)}
 	for _, e in ipairs(entries) do
-		local kPart   = ('\t["rbxassetid://%s"]'):format(e.id)
+		local kPart = ('\t["rbxassetid://%s"]'):format(e.id)
 		local padding = string.rep(" ", math.max(1, COL - #kPart))
-		lines[#lines+1] = ('%s%s= "%s",'):format(kPart, padding, e.word)
+		lines[#lines + 1] = ('%s%s= "%s",'):format(kPart, padding, e.word)
 	end
-	lines[#lines+1] = "}"
+	lines[#lines + 1] = "}"
 	return table.concat(lines, "\n")
 end
 
-local function processOne(pathStr, idx, total, all, seen)
-	log(("module %d/%d  →  %s"):format(idx, total, pathStr))
+-- ─── Process one module (auto-detects format) ────────────────────────────────
 
+local function processOne(pathStr, idx, total, all, seenGlobal, isDefMode)
+	log(("module %d/%d  →  %s"):format(idx, total, pathStr))
 	local obj, pathErr = resolvePath(pathStr)
 	if not obj then wlog("  path error: " .. pathErr); return end
 	if not (obj:IsA("ModuleScript") or obj:IsA("LocalScript") or obj:IsA("Script")) then
 		wlog("  not a script: " .. obj.ClassName); return
 	end
-
 	log("  decompiling ...")
 	local src, deErr = getSource(obj)
 	if not src then wlog("  " .. deErr); return end
 	log(("  got %d bytes"):format(#src))
 
-	local entries = parseEntries(src)
-	log(("  parsed %d word/id pairs"):format(#entries))
-	if #entries == 0 then wlog("no entries"); return end
-
-	local added = 0
-	for i, e in ipairs(entries) do
-		local k = e.word:lower() .. "_" .. e.id
-		if not seen[k] then
-			seen[k] = true
-			all[#all+1] = e
-			added = added + 1
+	-- Auto-detect or use forced mode
+	local useDefMode = isDefMode
+	if useDefMode == nil then
+		useDefMode = isDefinitionSource(src)
+		if useDefMode then
+			log("  detected: definition table (word → definition)")
+		else
+			log("  detected: wordlist table (soundid → word)")
 		end
-		if i % 10 == 0 or i == #entries then pbar(("mod%d"):format(idx), i, #entries) end
 	end
-	log(("  added %d entries (%d dupes skipped)"):format(added, #entries - added))
+
+	if useDefMode then
+		local entries = parseDefinitionEntries(src)
+		log(("  parsed %d definition entries"):format(#entries))
+		if #entries == 0 then wlog("no definition entries found"); return end
+		local added = 0
+		for i, e in ipairs(entries) do
+			local key = e.word
+			if not seenGlobal[key] then
+				seenGlobal[key] = true
+				all[#all + 1] = e
+				added = added + 1
+			end
+			if i % 10 == 0 or i == #entries then pbar(("mod%d"):format(idx), i, #entries) end
+		end
+		log(("  added %d  |  %d dupes skipped"):format(added, #entries - added))
+	else
+		local entries = parseEntries(src)
+		log(("  parsed %d entries"):format(#entries))
+		if #entries == 0 then wlog("no entries found"); return end
+		local added = 0
+		for i, e in ipairs(entries) do
+			if not seenGlobal[e.id] then
+				seenGlobal[e.id] = true
+				all[#all + 1] = e
+				added = added + 1
+			end
+			if i % 10 == 0 or i == #entries then pbar(("mod%d"):format(idx), i, #entries) end
+		end
+		log(("  added %d  |  %d dupes skipped"):format(added, #entries - added))
+	end
 end
 
-local function run(paths, varName)
-	local all  = {}
+local function run(paths, varName, isDefMode)
+	local all = {}
 	local seen = {}
-
 	for idx, pathStr in ipairs(paths) do
 		print(SEP)
-		processOne(pathStr, idx, #paths, all, seen)
+		processOne(pathStr, idx, #paths, all, seen, isDefMode)
 	end
-
 	print(SEP)
 	log(("Total: %d entries  |  formatting ..."):format(#all))
-
-	local t0     = os.clock()
-	local output = formatGwl(all, varName)
-	local secs   = os.clock() - t0
-	local lines  = select(2, output:gsub("\n","")) + 1
+	local t0 = os.clock()
+	local output
+	if isDefMode then
+		output = formatDefToWord(all, varName)
+	else
+		output = formatGwl(all, varName)
+	end
+	local secs = os.clock() - t0
+	local lines = select(2, output:gsub("\n", "")) + 1
 	log(("Done  %.4fs  |  %d lines  |  %d bytes"):format(secs, lines, #output))
 	return output, lines, #output
 end
-print("e")
-local W = 640
+
+-- ─── GUI ─────────────────────────────────────────────────────────────────────
+
+local W = 520
 
 local sg = Instance.new("ScreenGui")
 sg.Name = "GwlFmtGui"
 sg.ResetOnSpawn = false
 sg.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-sg.IgnoreGuiInset = true  -- fixes GUI being hidden/offset under topbar
-
+sg.IgnoreGuiInset = true
 local sgOk = pcall(function() sg.Parent = CoreGui end)
-if not sgOk or not sg.Parent then
-	sg.Parent = pGui
-end
+if not sgOk or not sg.Parent then sg.Parent = pGui end
 
+-- main frame
 local F = Instance.new("Frame")
-F.Size = UDim2.new(0,W,0,310)
-F.Position = UDim2.new(0.5,-W/2,0.5,-155)
-F.BackgroundColor3 = Color3.fromRGB(14,14,20)
+F.Size = UDim2.new(0, W, 0, 200)
+F.Position = UDim2.new(0.5, -W/2, 0.5, -130)
+F.BackgroundColor3 = Color3.fromRGB(22, 22, 30)
+F.BackgroundTransparency = 0
 F.BorderSizePixel = 0
 F.ClipsDescendants = true
 F.Parent = sg
-Instance.new("UICorner",F).CornerRadius = UDim.new(0,10)
-local fs = Instance.new("UIStroke",F)
-fs.Color = Color3.fromRGB(52,52,82)
-fs.Thickness = 1.2
+Instance.new("UICorner", F).CornerRadius = UDim.new(0, 10)
+local fStroke = Instance.new("UIStroke", F)
+fStroke.Color = Color3.fromRGB(50, 50, 72)
+fStroke.Thickness = 1.2
 
+-- drag
 local drag, ds, dp
 F.InputBegan:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -287,115 +422,184 @@ end)
 F.InputChanged:Connect(function(i)
 	if drag and i.UserInputType == Enum.UserInputType.MouseMovement then
 		local d = i.Position - ds
-		F.Position = UDim2.new(dp.X.Scale, dp.X.Offset+d.X, dp.Y.Scale, dp.Y.Offset+d.Y)
+		F.Position = UDim2.new(dp.X.Scale, dp.X.Offset + d.X, dp.Y.Scale, dp.Y.Offset + d.Y)
 	end
 end)
 F.InputEnded:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = false end
 end)
 
+-- title bar
 local TB = Instance.new("Frame", F)
-TB.Size = UDim2.new(1,0,0,36)
-TB.BackgroundColor3 = Color3.fromRGB(18,18,28)
+TB.Size = UDim2.new(1, 0, 0, 36)
+TB.BackgroundColor3 = Color3.fromRGB(16, 16, 26)
+TB.BackgroundTransparency = 0
 TB.BorderSizePixel = 0
 
 local TL = Instance.new("TextLabel", TB)
-TL.Size = UDim2.new(1,-44,1,0)
-TL.Position = UDim2.new(0,12,0,0)
+TL.Size = UDim2.new(1, -44, 1, 0)
+TL.Position = UDim2.new(0, 12, 0, 0)
 TL.BackgroundTransparency = 1
 TL.Text = "lunar formatter"
-TL.TextColor3 = Color3.fromRGB(185,185,255)
+TL.TextColor3 = Color3.fromRGB(185, 185, 255)
 TL.Font = Enum.Font.GothamBold
 TL.TextSize = 13
 TL.TextXAlignment = Enum.TextXAlignment.Left
 
 local XB = Instance.new("TextButton", TB)
-XB.Size = UDim2.new(0,28,0,28)
-XB.Position = UDim2.new(1,-32,0.5,-14)
-XB.BackgroundColor3 = Color3.fromRGB(175,40,40)
+XB.Size = UDim2.new(0, 26, 0, 26)
+XB.Position = UDim2.new(1, -32, 0.5, -13)
+XB.BackgroundColor3 = Color3.fromRGB(175, 40, 40)
 XB.Text = "✕"
-XB.TextColor3 = Color3.new(1,1,1)
+XB.TextColor3 = Color3.new(1, 1, 1)
 XB.Font = Enum.Font.GothamBold
-XB.TextSize = 12
+XB.TextSize = 11
 XB.BorderSizePixel = 0
-Instance.new("UICorner", XB).CornerRadius = UDim.new(0,5)
+Instance.new("UICorner", XB).CornerRadius = UDim.new(0, 5)
 XB.MouseButton1Click:Connect(function() sg:Destroy() end)
+XB.MouseEnter:Connect(function() XB.BackgroundColor3 = Color3.fromRGB(210, 55, 55) end)
+XB.MouseLeave:Connect(function() XB.BackgroundColor3 = Color3.fromRGB(175, 40, 40) end)
 
+-- divider line under title bar
+local divider = Instance.new("Frame", F)
+divider.Size = UDim2.new(1, 0, 0, 1)
+divider.Position = UDim2.new(0, 0, 0, 36)
+divider.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
+divider.BorderSizePixel = 0
+
+-- ─── var name row ─────────────────────────────────────────────────────────────
+local BODY_Y = 46
+
+local VL = Instance.new("TextLabel", F)
+VL.Size = UDim2.new(0, 65, 0, 22)
+VL.Position = UDim2.new(0, 10, 0, BODY_Y)
+VL.BackgroundTransparency = 1
+VL.Text = "var name:"
+VL.TextColor3 = Color3.fromRGB(115, 115, 160)
+VL.Font = Enum.Font.Gotham
+VL.TextSize = 11
+VL.TextXAlignment = Enum.TextXAlignment.Left
+
+local VB = Instance.new("TextBox", F)
+VB.Size = UDim2.new(0, 140, 0, 22)
+VB.Position = UDim2.new(0, 78, 0, BODY_Y)
+VB.BackgroundColor3 = Color3.fromRGB(16, 16, 26)
+VB.BackgroundTransparency = 0
+VB.TextColor3 = Color3.fromRGB(255, 230, 80)
+VB.Font = Enum.Font.Code
+VB.TextSize = 12
+VB.Text = ""
+VB.PlaceholderText = "GwlWords"
+VB.PlaceholderColor3 = Color3.fromRGB(60, 60, 90)
+VB.ClearTextOnFocus = false
+VB.BorderSizePixel = 0
+VB.TextXAlignment = Enum.TextXAlignment.Left
+Instance.new("UICorner", VB).CornerRadius = UDim.new(0, 5)
+Instance.new("UIStroke", VB).Color = Color3.fromRGB(40, 40, 65)
+Instance.new("UIPadding", VB).PaddingLeft = UDim.new(0, 7)
+
+-- ─── Mode toggle (Auto / Wordlist / Definitions) ──────────────────────────────
+-- Sits to the right of the var name box
+local modeStates = {"auto", "wordlist", "definitions"}
+local modeIdx = 1
+local modeColors = {
+	auto        = Color3.fromRGB(50, 50, 80),
+	wordlist    = Color3.fromRGB(45, 100, 175),
+	definitions = Color3.fromRGB(120, 55, 175),
+}
+local modeLabels = {
+	auto        = "mode: auto",
+	wordlist    = "mode: wordlist",
+	definitions = "mode: definitions",
+}
+
+local ModeBtn = Instance.new("TextButton", F)
+ModeBtn.Size = UDim2.new(0, 140, 0, 22)
+ModeBtn.Position = UDim2.new(0, 228, 0, BODY_Y)
+ModeBtn.BackgroundColor3 = modeColors["auto"]
+ModeBtn.BackgroundTransparency = 0
+ModeBtn.Text = modeLabels["auto"]
+ModeBtn.TextColor3 = Color3.fromRGB(180, 180, 220)
+ModeBtn.Font = Enum.Font.GothamBold
+ModeBtn.TextSize = 11
+ModeBtn.BorderSizePixel = 0
+Instance.new("UICorner", ModeBtn).CornerRadius = UDim.new(0, 5)
+Instance.new("UIStroke", ModeBtn).Color = Color3.fromRGB(50, 50, 80)
+
+ModeBtn.MouseButton1Click:Connect(function()
+	modeIdx = modeIdx % #modeStates + 1
+	local m = modeStates[modeIdx]
+	ModeBtn.BackgroundColor3 = modeColors[m]
+	ModeBtn.Text = modeLabels[m]
+	-- update var name placeholder to something sensible
+	if m == "definitions" then
+		VB.PlaceholderText = "defToWord"
+	else
+		VB.PlaceholderText = "GwlWords"
+	end
+end)
+ModeBtn.MouseEnter:Connect(function()
+	ModeBtn.BackgroundTransparency = 0.15
+end)
+ModeBtn.MouseLeave:Connect(function()
+	ModeBtn.BackgroundTransparency = 0
+end)
+
+-- ─── tab row ──────────────────────────────────────────────────────────────────
 local TabRow = Instance.new("Frame", F)
-TabRow.Size = UDim2.new(0,275,0,26)
-TabRow.Position = UDim2.new(0,10,0,43)
+TabRow.Size = UDim2.new(0, 185, 0, 24)
+TabRow.Position = UDim2.new(0, 10, 0, BODY_Y + 28)
 TabRow.BackgroundTransparency = 1
 local tll = Instance.new("UIListLayout", TabRow)
 tll.FillDirection = Enum.FillDirection.Horizontal
-tll.Padding = UDim.new(0,5)
+tll.Padding = UDim.new(0, 4)
 
 local activeTabs = 1
 local tabBtns = {}
 local pathRows = {}
 local pathBoxes = {}
 
-local VL = Instance.new("TextLabel", F)
-VL.Size = UDim2.new(0,68,0,20)
-VL.Position = UDim2.new(0,10,0,77)
-VL.BackgroundTransparency = 1
-VL.Text = "var name:"
-VL.TextColor3 = Color3.fromRGB(115,115,160)
-VL.Font = Enum.Font.Gotham
-VL.TextSize = 11
-VL.TextXAlignment = Enum.TextXAlignment.Left
-
-local VB = Instance.new("TextBox", F)
-VB.Size = UDim2.new(0,110,0,20)
-VB.Position = UDim2.new(0,82,0,77)
-VB.BackgroundColor3 = Color3.fromRGB(18,18,28)
-VB.TextColor3 = Color3.fromRGB(255,255,120)
-VB.Font = Enum.Font.Code
-VB.TextSize = 12
-VB.Text = ""
-VB.ClearTextOnFocus = false
-VB.BorderSizePixel = 0
-VB.TextXAlignment = Enum.TextXAlignment.Left
-Instance.new("UICorner", VB).CornerRadius = UDim.new(0,4)
-local vbp = Instance.new("UIPadding", VB)
-vbp.PaddingLeft = UDim.new(0,6)
+local PATH_START_Y = BODY_Y + 58
 
 local function makePathRow(idx)
 	local row = Instance.new("Frame", F)
-	row.Name = "PR"..idx
-	row.Size = UDim2.new(1,-20,0,50)
-	row.Position = UDim2.new(0,10,0,105+(idx-1)*58)
-	row.BackgroundColor3 = Color3.fromRGB(19,19,29)
+	row.Name = "PR" .. idx
+	row.Size = UDim2.new(1, -20, 0, 46)
+	row.Position = UDim2.new(0, 10, 0, PATH_START_Y + (idx - 1) * 52)
+	row.BackgroundColor3 = Color3.fromRGB(17, 17, 27)
+	row.BackgroundTransparency = 0
 	row.BorderSizePixel = 0
-	Instance.new("UICorner", row).CornerRadius = UDim.new(0,7)
+	Instance.new("UICorner", row).CornerRadius = UDim.new(0, 7)
 	local rs = Instance.new("UIStroke", row)
-	rs.Color = Color3.fromRGB(40,40,62)
+	rs.Color = Color3.fromRGB(38, 38, 60)
 	rs.Thickness = 1
 
 	local lbl = Instance.new("TextLabel", row)
-	lbl.Size = UDim2.new(1,-10,0,16)
-	lbl.Position = UDim2.new(0,8,0,2)
+	lbl.Size = UDim2.new(1, -10, 0, 15)
+	lbl.Position = UDim2.new(0, 8, 0, 2)
 	lbl.BackgroundTransparency = 1
-	lbl.Text = ("module %d path"):format(idx)
-	lbl.TextColor3 = Color3.fromRGB(95,95,145)
+	lbl.Text = "module " .. idx .. " path"
+	lbl.TextColor3 = Color3.fromRGB(80, 80, 130)
 	lbl.Font = Enum.Font.GothamBold
 	lbl.TextSize = 10
 	lbl.TextXAlignment = Enum.TextXAlignment.Left
 
 	local b = Instance.new("TextBox", row)
-	b.Size = UDim2.new(1,-16,0,24)
-	b.Position = UDim2.new(0,8,0,22)
-	b.BackgroundColor3 = Color3.fromRGB(11,11,17)
-	b.TextColor3 = Color3.fromRGB(95,190,255)
+	b.Size = UDim2.new(1, -16, 0, 22)
+	b.Position = UDim2.new(0, 8, 0, 18)
+	b.BackgroundColor3 = Color3.fromRGB(11, 11, 18)
+	b.BackgroundTransparency = 0
+	b.TextColor3 = Color3.fromRGB(80, 185, 255)
 	b.Font = Enum.Font.Code
 	b.TextSize = 12
 	b.Text = "game.ReplicatedStorage.Words"
+	b.PlaceholderText = "game.ReplicatedStorage.ModuleName"
+	b.PlaceholderColor3 = Color3.fromRGB(40, 40, 65)
 	b.ClearTextOnFocus = false
 	b.BorderSizePixel = 0
 	b.TextXAlignment = Enum.TextXAlignment.Left
-	b.PlaceholderColor3 = Color3.fromRGB(44,44,64)
-	Instance.new("UICorner", b).CornerRadius = UDim.new(0,4)
-	local bp = Instance.new("UIPadding", b)
-	bp.PaddingLeft = UDim.new(0,6)
+	Instance.new("UICorner", b).CornerRadius = UDim.new(0, 4)
+	Instance.new("UIPadding", b).PaddingLeft = UDim.new(0, 6)
 
 	pathBoxes[idx] = b
 	pathRows[idx] = row
@@ -403,117 +607,148 @@ end
 
 for i = 1, 3 do makePathRow(i) end
 
+-- status label
 local statusLbl = Instance.new("TextLabel", F)
-statusLbl.Size = UDim2.new(1,-20,0,20)
+statusLbl.Size = UDim2.new(1, -20, 0, 18)
 statusLbl.BackgroundTransparency = 1
-statusLbl.TextColor3 = Color3.fromRGB(85,170,85)
+statusLbl.TextColor3 = Color3.fromRGB(80, 165, 80)
 statusLbl.Font = Enum.Font.Gotham
-statusLbl.TextSize = 12
+statusLbl.TextSize = 11
 statusLbl.TextXAlignment = Enum.TextXAlignment.Left
 statusLbl.Text = "enter module path and shit"
 
+-- format button
 local btn = Instance.new("TextButton", F)
-btn.Size = UDim2.new(1,-20,0,32)
-btn.BackgroundColor3 = Color3.fromRGB(55,150,70)
+btn.Size = UDim2.new(1, -20, 0, 30)
+btn.BackgroundColor3 = Color3.fromRGB(55, 150, 70)
+btn.BackgroundTransparency = 0
 btn.Text = "format + copy to clipboard"
-btn.TextColor3 = Color3.new(1,1,1)
+btn.TextColor3 = Color3.new(1, 1, 1)
 btn.Font = Enum.Font.GothamBold
-btn.TextSize = 14
+btn.TextSize = 13
 btn.BorderSizePixel = 0
-Instance.new("UICorner", btn).CornerRadius = UDim.new(0,7)
-btn.MouseEnter:Connect(function() btn.BackgroundColor3 = Color3.fromRGB(75,180,90) end)
-btn.MouseLeave:Connect(function() btn.BackgroundColor3 = Color3.fromRGB(55,150,70) end)
+Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 7)
+btn.MouseEnter:Connect(function() btn.BackgroundColor3 = Color3.fromRGB(70, 180, 85) end)
+btn.MouseLeave:Connect(function() btn.BackgroundColor3 = Color3.fromRGB(55, 150, 70) end)
 
 local function refreshUI()
 	for n = 1, 3 do
-		tabBtns[n].BackgroundColor3 = (n == activeTabs) and Color3.fromRGB(70,70,200) or Color3.fromRGB(30,30,46)
-		pathRows[n].Visible = (n <= activeTabs)
+		local active = n == activeTabs
+		tabBtns[n].BackgroundColor3 = active and Color3.fromRGB(65, 65, 190) or Color3.fromRGB(25, 25, 40)
+		tabBtns[n].TextColor3 = active and Color3.new(1, 1, 1) or Color3.fromRGB(100, 100, 140)
+		pathRows[n].Visible = n <= activeTabs
 	end
-	local newH = 105 + activeTabs * 58 + 62
-	F.Size = UDim2.new(0,W,0,newH)
-	F.Position = UDim2.new(0.5,-W/2,0.5,-newH/2)
-	statusLbl.Position = UDim2.new(0,12,0,newH-60)
-	btn.Position = UDim2.new(0,10,0,newH-40)
+	local newH = PATH_START_Y + activeTabs * 52 + 56
+	F.Size = UDim2.new(0, W, 0, newH)
+	F.Position = UDim2.new(0.5, -W/2, 0.5, -newH/2)
+	statusLbl.Position = UDim2.new(0, 12, 0, newH - 50)
+	btn.Position = UDim2.new(0, 10, 0, newH - 34)
 end
 
 for n = 1, 3 do
 	local b = Instance.new("TextButton", TabRow)
-	b.Size = UDim2.new(0,82,1,0)
-	b.BackgroundColor3 = (n == 1) and Color3.fromRGB(70,70,200) or Color3.fromRGB(30,30,46)
-	b.Text = n .. " mod" .. (n > 1 and "s" or "")
-	b.TextColor3 = Color3.new(1,1,1)
+	b.Size = UDim2.new(0, 56, 1, 0)
+	b.BackgroundColor3 = (n == 1) and Color3.fromRGB(65, 65, 190) or Color3.fromRGB(25, 25, 40)
+	b.BackgroundTransparency = 0
+	b.Text = n .. (n == 1 and " mod" or " mods")
+	b.TextColor3 = (n == 1) and Color3.new(1, 1, 1) or Color3.fromRGB(100, 100, 140)
 	b.Font = Enum.Font.GothamBold
-	b.TextSize = 12
+	b.TextSize = 11
 	b.BorderSizePixel = 0
-	Instance.new("UICorner", b).CornerRadius = UDim.new(0,6)
+	Instance.new("UICorner", b).CornerRadius = UDim.new(0, 5)
+	Instance.new("UIStroke", b).Color = Color3.fromRGB(40, 40, 68)
 	tabBtns[n] = b
 	local nn = n
-	b.MouseButton1Click:Connect(function() activeTabs = nn; refreshUI() end)
+	b.MouseButton1Click:Connect(function()
+		activeTabs = nn
+		refreshUI()
+	end)
 end
 
+-- ── Button Logic ──────────────────────────────────────────────────────────────
+
 btn.MouseButton1Click:Connect(function()
-	btn.BackgroundColor3 = Color3.fromRGB(35,100,48)
+	btn.BackgroundColor3 = Color3.fromRGB(35, 95, 45)
 	btn.Text = "decompiling ..."
 	statusLbl.Text = "working ..."
-	statusLbl.TextColor3 = Color3.fromRGB(255,205,50)
+	statusLbl.TextColor3 = Color3.fromRGB(240, 195, 40)
 
 	task.defer(function()
 		local paths = {}
 		for i = 1, activeTabs do
 			local t = pathBoxes[i].Text:match("^%s*(.-)%s*$")
-			if t and #t > 0 then paths[#paths+1] = t end
+			if t and #t > 0 then paths[#paths + 1] = t end
 		end
-		local varName = VB.Text:match("^%s*(.-)%s*$")
-		if #varName == 0 then varName = "null" end
 
-		print("\n"..SEP)
-		log(("start  %d path(s)  |  var='%s'"):format(#paths, varName))
+		local varName = VB.Text:match("^%s*(.-)%s*$")
+
+		-- Resolve mode
+		local currentMode = modeStates[modeIdx]
+		local isDefMode   -- nil = auto-detect per module
+		if currentMode == "definitions" then
+			isDefMode = true
+			if #varName == 0 then varName = "defToWord" end
+		elseif currentMode == "wordlist" then
+			isDefMode = false
+			if #varName == 0 then varName = "GwlWords" end
+		else
+			-- auto: nil passed, each module decides for itself
+			isDefMode = nil
+			if #varName == 0 then varName = "GwlWords" end
+		end
+
+		print("\n" .. SEP)
+		log(("start  %d path(s)  |  var='%s'  |  mode=%s"):format(#paths, varName, currentMode))
 		print(SEP)
 
 		if #paths == 0 then
-			wlog("no path entered")
+			wlog("no paths entered")
 			statusLbl.Text = "enter at least one module path"
-			statusLbl.TextColor3 = Color3.fromRGB(255,70,70)
-			btn.BackgroundColor3 = Color3.fromRGB(55,150,70)
+			statusLbl.TextColor3 = Color3.fromRGB(255, 70, 70)
+			btn.BackgroundColor3 = Color3.fromRGB(55, 150, 70)
 			btn.Text = "format + copy to clipboard"
-			notify("lunar formatter", "enter at least one module path", 4)
+			notify("lunar formatter", "enter at least one module path", 4, "error")
 			return
 		end
 
+		-- In auto mode, we need to handle mixed tables carefully.
+		-- Each module is processed separately and we merge only same-type entries.
+		-- For simplicity in auto mode: if ANY module is def-type, warn about mixing.
 		local T0 = os.clock()
-		local ok, output, lines, bytes = pcall(run, paths, varName)
-		local total = os.clock() - T0
+		local ok, output, lines, bytes = pcall(run, paths, varName, isDefMode)
+		local elapsed = os.clock() - T0
 		print(SEP)
 
-		if ok and output then
+		if ok and output and #output > 0 then
 			local cbOk, cbErr = pcall(setclipboard, output)
 			if cbOk then
-				log(("copied!  %d lines  |  %d bytes  |  %.4fs"):format(lines, bytes, total))
-				statusLbl.Text = ("copied!  %d lines  |  %.3fs"):format(lines, total)
-				statusLbl.TextColor3 = Color3.fromRGB(75,255,95)
-				notify("lunar formatter", ("copied!  %d lines  |  %.3fs"):format(lines, total), 5)
+				log(("copied!  %d lines  |  %d bytes  |  %.4fs"):format(lines, bytes, elapsed))
+				statusLbl.Text = ("copied!  %d lines  |  %.3fs"):format(lines, elapsed)
+				statusLbl.TextColor3 = Color3.fromRGB(75, 255, 95)
+				notify("lunar formatter", ("copied!  %d lines  |  %.3fs"):format(lines, elapsed), 5, "success")
 			else
-				wlog("shitty executor: "..tostring(cbErr))
-				print("\n"..output.."\n")
-				statusLbl.Text = ("printed to console  |  %d lines  |  %.3fs"):format(lines, total)
-				statusLbl.TextColor3 = Color3.fromRGB(255,180,40)
-				notify("lunar formatter", "printed to console (no clipboard)", 5)
+				wlog("clipboard failed: " .. tostring(cbErr))
+				print("\n" .. output .. "\n")
+				statusLbl.Text = ("printed to console  |  %d lines  |  %.3fs"):format(lines, elapsed)
+				statusLbl.TextColor3 = Color3.fromRGB(255, 180, 40)
+				notify("lunar formatter", "printed to console (no clipboard)", 5, "warn")
 			end
 		else
-			wlog("failed: "..(ok and "no output" or tostring(output)))
+			local errMsg = not ok and tostring(output) or "no output produced"
+			wlog("failed: " .. errMsg)
 			statusLbl.Text = "error, check console."
-			statusLbl.TextColor3 = Color3.fromRGB(255,55,55)
-			notify("lunar formatter", "error, check console.", 5)
+			statusLbl.TextColor3 = Color3.fromRGB(255, 55, 55)
+			notify("lunar formatter", "error: " .. errMsg:sub(1, 55), 6, "error")
 		end
 
-		print(SEP.."\n")
-		btn.BackgroundColor3 = Color3.fromRGB(55,150,70)
+		print(SEP .. "\n")
+		btn.BackgroundColor3 = Color3.fromRGB(55, 150, 70)
 		btn.Text = "format + copy to clipboard"
 	end)
 end)
 
 refreshUI()
 
-notify("lunar formatter", "lunar formatter is ready!", 5)
-notify("lunar formatter", "Version: 0.1.4", 5)
-print("r")
+task.wait(0.1)
+notify("lunar formatter", "lunar formatter is ready!", 4, "success")
+notify("lunar formatter", "Version: 0.1.7", 3, "info")
