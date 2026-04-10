@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 264 | Scripts: 13 | Modules: 0 | Tags: 0
+-- Instances: 266 | Scripts: 13 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.f789z43hfn3i
@@ -429,7 +429,7 @@ G2L["2f"]["TextColor3"] = Color3.fromRGB(190, 190, 190);
 G2L["2f"]["BackgroundTransparency"] = 1;
 G2L["2f"]["Size"] = UDim2.new(0.97918, 0, 0.95333, 0);
 G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["Text"] = [[Change Logs (v0.4.0)]];
+G2L["2f"]["Text"] = [[Change Logs (v0.4.5)]];
 G2L["2f"]["Name"] = [[logl]];
 G2L["2f"]["Position"] = UDim2.new(0.02265, 0, 0.04667, 0);
 
@@ -1339,11 +1339,11 @@ G2L["8e"]["TextSize"] = 14;
 G2L["8e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
 G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["8e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8e"]["Size"] = UDim2.new(0.13105, 0, 0.89006, 0);
+G2L["8e"]["Size"] = UDim2.new(0.19364, 0, 0.89006, 0);
 G2L["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8e"]["Text"] = [[Fix]];
 G2L["8e"]["Name"] = [[typomethodbtn]];
-G2L["8e"]["Position"] = UDim2.new(0.2032, 0, 7.93843, 0);
+G2L["8e"]["Position"] = UDim2.new(0.2032, 0, 7.85709, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.typomethodbtn.c
@@ -1453,6 +1453,7 @@ G2L["9b"]["Name"] = [[_c]];
 
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.losebtn.lsSlider
 G2L["9c"] = Instance.new("TextBox", G2L["96"]);
+G2L["9c"]["CursorPosition"] = -1;
 G2L["9c"]["Name"] = [[lsSlider]];
 G2L["9c"]["BorderSizePixel"] = 0;
 G2L["9c"]["TextSize"] = 14;
@@ -1461,8 +1462,8 @@ G2L["9c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["9c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["9c"]["ClearTextOnFocus"] = false;
 G2L["9c"]["PlaceholderText"] = [[...]];
-G2L["9c"]["Size"] = UDim2.new(0.13878, 0, 0.729, 0);
-G2L["9c"]["Position"] = UDim2.new(0.18726, 0, 0.11439, 0);
+G2L["9c"]["Size"] = UDim2.new(0.12893, 0, 0.729, 0);
+G2L["9c"]["Position"] = UDim2.new(0.1867, 0, 0.11663, 0);
 G2L["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9c"]["Text"] = [[]];
 
@@ -1480,11 +1481,11 @@ G2L["9e"]["TextSize"] = 14;
 G2L["9e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
 G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9e"]["Size"] = UDim2.new(0.13105, 0, 0.89006, 0);
+G2L["9e"]["Size"] = UDim2.new(0.13105, 0, 0.91805, 0);
 G2L["9e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9e"]["Text"] = [[None]];
 G2L["9e"]["Name"] = [[diebtn]];
-G2L["9e"]["Position"] = UDim2.new(0.5606, 0, 14.14269, 0);
+G2L["9e"]["Position"] = UDim2.new(0.54301, 0, 14.18931, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.diebtn.c
@@ -2032,144 +2033,149 @@ G2L["db"] = Instance.new("UICorner", G2L["da"]);
 G2L["db"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm
-G2L["dc"] = Instance.new("Frame", G2L["24"]);
-G2L["dc"]["Visible"] = false;
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.estWpm
+G2L["dc"] = Instance.new("TextLabel", G2L["c8"]);
+G2L["dc"]["TextWrapped"] = true;
 G2L["dc"]["BorderSizePixel"] = 0;
-G2L["dc"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-G2L["dc"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
-G2L["dc"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["dc"]["TextSize"] = 14;
+G2L["dc"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["dc"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["dc"]["TextScaled"] = true;
+G2L["dc"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["dc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["dc"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["dc"]["RichText"] = true;
+G2L["dc"]["Size"] = UDim2.new(0.948, 0, 1.96075, 0);
 G2L["dc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["dc"]["Name"] = [[cfrm]];
+G2L["dc"]["Text"] = [[estimated wpm : ]];
+G2L["dc"]["Name"] = [[estWpm]];
+G2L["dc"]["Position"] = UDim2.new(0.01343, 0, 7.74104, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.estWpm.c
+G2L["dd"] = Instance.new("UICorner", G2L["dc"]);
+G2L["dd"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm
+G2L["de"] = Instance.new("Frame", G2L["24"]);
+G2L["de"]["Visible"] = false;
+G2L["de"]["BorderSizePixel"] = 0;
+G2L["de"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["de"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
+G2L["de"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["de"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["de"]["Name"] = [[cfrm]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._c
-G2L["dd"] = Instance.new("UICorner", G2L["dc"]);
-G2L["dd"]["Name"] = [[_c]];
-G2L["dd"]["CornerRadius"] = UDim.new(0, 4);
+G2L["df"] = Instance.new("UICorner", G2L["de"]);
+G2L["df"]["Name"] = [[_c]];
+G2L["df"]["CornerRadius"] = UDim.new(0, 4);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr
-G2L["de"] = Instance.new("ScrollingFrame", G2L["dc"]);
-G2L["de"]["Active"] = true;
-G2L["de"]["BorderSizePixel"] = 0;
-G2L["de"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
-G2L["de"]["Name"] = [[_scr]];
-G2L["de"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["de"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
-G2L["de"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["de"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["de"]["ScrollBarThickness"] = 0;
-G2L["de"]["BackgroundTransparency"] = 1;
+G2L["e0"] = Instance.new("ScrollingFrame", G2L["de"]);
+G2L["e0"]["Active"] = true;
+G2L["e0"]["BorderSizePixel"] = 0;
+G2L["e0"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
+G2L["e0"]["Name"] = [[_scr]];
+G2L["e0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e0"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
+G2L["e0"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e0"]["ScrollBarThickness"] = 0;
+G2L["e0"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl
-G2L["df"] = Instance.new("TextLabel", G2L["de"]);
-G2L["df"]["BorderSizePixel"] = 0;
-G2L["df"]["TextSize"] = 20;
-G2L["df"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["df"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["df"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["df"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["df"]["BackgroundTransparency"] = 1;
-G2L["df"]["Size"] = UDim2.new(1, 0, 0.03, 0);
-G2L["df"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["df"]["Text"] = [[     Customization ]];
-G2L["df"]["Name"] = [[cl]];
-G2L["df"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["e1"] = Instance.new("TextLabel", G2L["e0"]);
+G2L["e1"]["BorderSizePixel"] = 0;
+G2L["e1"]["TextSize"] = 20;
+G2L["e1"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["e1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e1"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["e1"]["BackgroundTransparency"] = 1;
+G2L["e1"]["Size"] = UDim2.new(1, 0, 0.03, 0);
+G2L["e1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e1"]["Text"] = [[     Customization ]];
+G2L["e1"]["Name"] = [[cl]];
+G2L["e1"]["Position"] = UDim2.new(0, 0, -0, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.customize
-G2L["e0"] = Instance.new("LocalScript", G2L["df"]);
-G2L["e0"]["Name"] = [[customize]];
+G2L["e2"] = Instance.new("LocalScript", G2L["e1"]);
+G2L["e2"]["Name"] = [[customize]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.brd
-G2L["e1"] = Instance.new("Frame", G2L["df"]);
-G2L["e1"]["BorderSizePixel"] = 0;
-G2L["e1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e1"]["Size"] = UDim2.new(1, 0, 0.05, 0);
-G2L["e1"]["Position"] = UDim2.new(0, 0, 1, 0);
-G2L["e1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e1"]["Name"] = [[brd]];
+G2L["e3"] = Instance.new("Frame", G2L["e1"]);
+G2L["e3"]["BorderSizePixel"] = 0;
+G2L["e3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e3"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["e3"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["e3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e3"]["Name"] = [[brd]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.brd.grd
-G2L["e2"] = Instance.new("UIGradient", G2L["e1"]);
-G2L["e2"]["Name"] = [[grd]];
-G2L["e2"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
+G2L["e4"] = Instance.new("UIGradient", G2L["e3"]);
+G2L["e4"]["Name"] = [[grd]];
+G2L["e4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.brd._c
-G2L["e3"] = Instance.new("UICorner", G2L["e1"]);
-G2L["e3"]["Name"] = [[_c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn
-G2L["e4"] = Instance.new("TextButton", G2L["df"]);
-G2L["e4"]["BorderSizePixel"] = 0;
-G2L["e4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["e4"]["TextSize"] = 14;
-G2L["e4"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["e4"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["e4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["e4"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["e4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e4"]["Text"] = [[   Set background image]];
-G2L["e4"]["Name"] = [[bgsetbtn]];
-G2L["e4"]["Position"] = UDim2.new(0.02899, 0, 1.28596, 0);
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn._c
-G2L["e5"] = Instance.new("UICorner", G2L["e4"]);
+G2L["e5"] = Instance.new("UICorner", G2L["e3"]);
 G2L["e5"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn.bgidbox
-G2L["e6"] = Instance.new("TextBox", G2L["e4"]);
-G2L["e6"]["Name"] = [[bgidbox]];
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn
+G2L["e6"] = Instance.new("TextButton", G2L["e1"]);
 G2L["e6"]["BorderSizePixel"] = 0;
-G2L["e6"]["TextWrapped"] = true;
+G2L["e6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["e6"]["TextSize"] = 14;
 G2L["e6"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["e6"]["TextScaled"] = true;
-G2L["e6"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-G2L["e6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["e6"]["ClearTextOnFocus"] = false;
-G2L["e6"]["PlaceholderText"] = [[ONLY the assetid NOT rbxassetid://(assetid)]];
-G2L["e6"]["Size"] = UDim2.new(0, 113, 0, 24);
-G2L["e6"]["Position"] = UDim2.new(0.57737, 0, 0.14299, 0);
+G2L["e6"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["e6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e6"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
 G2L["e6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e6"]["Text"] = [[]];
+G2L["e6"]["Text"] = [[   Set background image]];
+G2L["e6"]["Name"] = [[bgsetbtn]];
+G2L["e6"]["Position"] = UDim2.new(0.02899, 0, 1.28596, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn._c
+G2L["e7"] = Instance.new("UICorner", G2L["e6"]);
+G2L["e7"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn.bgidbox
+G2L["e8"] = Instance.new("TextBox", G2L["e6"]);
+G2L["e8"]["CursorPosition"] = -1;
+G2L["e8"]["Name"] = [[bgidbox]];
+G2L["e8"]["BorderSizePixel"] = 0;
+G2L["e8"]["TextWrapped"] = true;
+G2L["e8"]["TextSize"] = 14;
+G2L["e8"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["e8"]["TextScaled"] = true;
+G2L["e8"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["e8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e8"]["ClearTextOnFocus"] = false;
+G2L["e8"]["PlaceholderText"] = [[...]];
+G2L["e8"]["Size"] = UDim2.new(0, 113, 0, 24);
+G2L["e8"]["Position"] = UDim2.new(0.57737, 0, 0.14299, 0);
+G2L["e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e8"]["Text"] = [[]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgsetbtn.bgidbox.c
-G2L["e7"] = Instance.new("UICorner", G2L["e6"]);
-G2L["e7"]["Name"] = [[c]];
+G2L["e9"] = Instance.new("UICorner", G2L["e8"]);
+G2L["e9"]["Name"] = [[c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgclearbtn
-G2L["e8"] = Instance.new("TextButton", G2L["df"]);
-G2L["e8"]["BorderSizePixel"] = 0;
-G2L["e8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["e8"]["TextSize"] = 14;
-G2L["e8"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["e8"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["e8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["e8"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e8"]["Text"] = [[   Clear background]];
-G2L["e8"]["Name"] = [[bgclearbtn]];
-G2L["e8"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgclearbtn._c
-G2L["e9"] = Instance.new("UICorner", G2L["e8"]);
-G2L["e9"]["Name"] = [[_c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn
-G2L["ea"] = Instance.new("TextButton", G2L["df"]);
+G2L["ea"] = Instance.new("TextButton", G2L["e1"]);
 G2L["ea"]["BorderSizePixel"] = 0;
 G2L["ea"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["ea"]["TextSize"] = 14;
@@ -2178,85 +2184,81 @@ G2L["ea"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
 G2L["ea"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["ea"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
 G2L["ea"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ea"]["Text"] = [[   Toggle blur]];
-G2L["ea"]["Name"] = [[blurbtn]];
-G2L["ea"]["Position"] = UDim2.new(0.029, 0, 4.46833, 0);
+G2L["ea"]["Text"] = [[   Clear background]];
+G2L["ea"]["Name"] = [[bgclearbtn]];
+G2L["ea"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn._c
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgclearbtn._c
 G2L["eb"] = Instance.new("UICorner", G2L["ea"]);
 G2L["eb"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn.blurslider
-G2L["ec"] = Instance.new("TextBox", G2L["ea"]);
-G2L["ec"]["Name"] = [[blurslider]];
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn
+G2L["ec"] = Instance.new("TextButton", G2L["e1"]);
 G2L["ec"]["BorderSizePixel"] = 0;
-G2L["ec"]["TextWrapped"] = true;
+G2L["ec"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["ec"]["TextSize"] = 14;
 G2L["ec"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["ec"]["TextScaled"] = true;
-G2L["ec"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-G2L["ec"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["ec"]["PlaceholderText"] = [[...]];
-G2L["ec"]["Size"] = UDim2.new(0, 84, 0, 24);
-G2L["ec"]["Position"] = UDim2.new(0.67645, 0, 0.14299, 0);
+G2L["ec"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["ec"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ec"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
 G2L["ec"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ec"]["Text"] = [[]];
+G2L["ec"]["Text"] = [[   Toggle blur]];
+G2L["ec"]["Name"] = [[blurbtn]];
+G2L["ec"]["Position"] = UDim2.new(0.029, 0, 4.46833, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn._c
+G2L["ed"] = Instance.new("UICorner", G2L["ec"]);
+G2L["ed"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn.blurslider
+G2L["ee"] = Instance.new("TextBox", G2L["ec"]);
+G2L["ee"]["Name"] = [[blurslider]];
+G2L["ee"]["BorderSizePixel"] = 0;
+G2L["ee"]["TextWrapped"] = true;
+G2L["ee"]["TextSize"] = 14;
+G2L["ee"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["ee"]["TextScaled"] = true;
+G2L["ee"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["ee"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ee"]["PlaceholderText"] = [[...]];
+G2L["ee"]["Size"] = UDim2.new(0, 84, 0, 24);
+G2L["ee"]["Position"] = UDim2.new(0.67645, 0, 0.14299, 0);
+G2L["ee"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ee"]["Text"] = [[]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.blurbtn.blurslider.c
-G2L["ed"] = Instance.new("UICorner", G2L["ec"]);
-G2L["ed"]["Name"] = [[c]];
+G2L["ef"] = Instance.new("UICorner", G2L["ee"]);
+G2L["ef"]["Name"] = [[c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgcyclebtn
-G2L["ee"] = Instance.new("TextButton", G2L["df"]);
-G2L["ee"]["BorderSizePixel"] = 0;
-G2L["ee"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["ee"]["TextSize"] = 14;
-G2L["ee"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["ee"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["ee"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["ee"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["ee"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ee"]["Text"] = [[   Cycle background]];
-G2L["ee"]["Name"] = [[bgcyclebtn]];
-G2L["ee"]["Position"] = UDim2.new(0.029, 0, 6.04842, 0);
+G2L["f0"] = Instance.new("TextButton", G2L["e1"]);
+G2L["f0"]["BorderSizePixel"] = 0;
+G2L["f0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["f0"]["TextSize"] = 14;
+G2L["f0"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["f0"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["f0"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f0"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["f0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f0"]["Text"] = [[   Cycle background]];
+G2L["f0"]["Name"] = [[bgcyclebtn]];
+G2L["f0"]["Position"] = UDim2.new(0.029, 0, 6.04842, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgcyclebtn._c
-G2L["ef"] = Instance.new("UICorner", G2L["ee"]);
-G2L["ef"]["Name"] = [[_c]];
+G2L["f1"] = Instance.new("UICorner", G2L["f0"]);
+G2L["f1"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgtransslider
-G2L["f0"] = Instance.new("TextBox", G2L["df"]);
-G2L["f0"]["Name"] = [[bgtransslider]];
-G2L["f0"]["BorderSizePixel"] = 0;
-G2L["f0"]["TextWrapped"] = true;
-G2L["f0"]["TextSize"] = 14;
-G2L["f0"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["f0"]["TextScaled"] = true;
-G2L["f0"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["f0"]["RichText"] = true;
-G2L["f0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f0"]["ClearTextOnFocus"] = false;
-G2L["f0"]["PlaceholderText"] = [[background transparency]];
-G2L["f0"]["Size"] = UDim2.new(0.44899, 0, 0.81607, 0);
-G2L["f0"]["Position"] = UDim2.new(0.519, 0, 7.59891, 0);
-G2L["f0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f0"]["Text"] = [[]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgtransslider.c
-G2L["f1"] = Instance.new("UICorner", G2L["f0"]);
-G2L["f1"]["Name"] = [[c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.guitransslider
-G2L["f2"] = Instance.new("TextBox", G2L["df"]);
-G2L["f2"]["Name"] = [[guitransslider]];
+G2L["f2"] = Instance.new("TextBox", G2L["e1"]);
+G2L["f2"]["Name"] = [[bgtransslider]];
 G2L["f2"]["BorderSizePixel"] = 0;
 G2L["f2"]["TextWrapped"] = true;
 G2L["f2"]["TextSize"] = 14;
@@ -2266,260 +2268,284 @@ G2L["f2"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
 G2L["f2"]["RichText"] = true;
 G2L["f2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["f2"]["ClearTextOnFocus"] = false;
-G2L["f2"]["PlaceholderText"] = [[gui transparency]];
+G2L["f2"]["PlaceholderText"] = [[background transparency]];
 G2L["f2"]["Size"] = UDim2.new(0.44899, 0, 0.81607, 0);
-G2L["f2"]["Position"] = UDim2.new(0.03996, 0, 7.59891, 0);
+G2L["f2"]["Position"] = UDim2.new(0.519, 0, 7.59891, 0);
 G2L["f2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["f2"]["Text"] = [[]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.guitransslider.c
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.bgtransslider.c
 G2L["f3"] = Instance.new("UICorner", G2L["f2"]);
 G2L["f3"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.thbtn
-G2L["f4"] = Instance.new("TextButton", G2L["df"]);
-G2L["f4"]["RichText"] = true;
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.guitransslider
+G2L["f4"] = Instance.new("TextBox", G2L["e1"]);
+G2L["f4"]["Name"] = [[guitransslider]];
 G2L["f4"]["BorderSizePixel"] = 0;
+G2L["f4"]["TextWrapped"] = true;
 G2L["f4"]["TextSize"] = 14;
 G2L["f4"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["f4"]["TextScaled"] = true;
 G2L["f4"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["f4"]["RichText"] = true;
 G2L["f4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f4"]["Size"] = UDim2.new(0.94799, 0, 1.23295, 0);
+G2L["f4"]["ClearTextOnFocus"] = false;
+G2L["f4"]["PlaceholderText"] = [[gui transparency]];
+G2L["f4"]["Size"] = UDim2.new(0.44899, 0, 0.81607, 0);
+G2L["f4"]["Position"] = UDim2.new(0.03996, 0, 7.59891, 0);
 G2L["f4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f4"]["Text"] = [[Black and Orange]];
-G2L["f4"]["Name"] = [[thbtn]];
-G2L["f4"]["Position"] = UDim2.new(0.029, 0, 8.89749, 0);
+G2L["f4"]["Text"] = [[]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.thbtn.c
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.guitransslider.c
 G2L["f5"] = Instance.new("UICorner", G2L["f4"]);
 G2L["f5"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main.cimg
-G2L["f6"] = Instance.new("ImageLabel", G2L["3"]);
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.thbtn
+G2L["f6"] = Instance.new("TextButton", G2L["e1"]);
+G2L["f6"]["RichText"] = true;
 G2L["f6"]["BorderSizePixel"] = 0;
-G2L["f6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f6"]["Size"] = UDim2.new(0, 501, 0, 375);
+G2L["f6"]["TextSize"] = 14;
+G2L["f6"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["f6"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["f6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f6"]["Size"] = UDim2.new(0.94799, 0, 1.23295, 0);
 G2L["f6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f6"]["BackgroundTransparency"] = 1;
-G2L["f6"]["Name"] = [[cimg]];
+G2L["f6"]["Text"] = [[Black and Orange]];
+G2L["f6"]["Name"] = [[thbtn]];
+G2L["f6"]["Position"] = UDim2.new(0.029, 0, 8.89749, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.thbtn.c
+G2L["f7"] = Instance.new("UICorner", G2L["f6"]);
+G2L["f7"]["Name"] = [[c]];
+
+
+-- StarterGui.f789z43hfn3i._main.cimg
+G2L["f8"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["f8"]["BorderSizePixel"] = 0;
+G2L["f8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f8"]["Size"] = UDim2.new(0, 501, 0, 375);
+G2L["f8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f8"]["BackgroundTransparency"] = 1;
+G2L["f8"]["Name"] = [[cimg]];
 
 
 -- StarterGui.f789z43hfn3i.tsk
-G2L["f7"] = Instance.new("Frame", G2L["1"]);
-G2L["f7"]["BorderSizePixel"] = 0;
-G2L["f7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f7"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
-G2L["f7"]["Position"] = UDim2.new(0.33083, 0, 0.27286, 0);
-G2L["f7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f7"]["Name"] = [[tsk]];
-G2L["f7"]["BackgroundTransparency"] = 1;
+G2L["f9"] = Instance.new("Frame", G2L["1"]);
+G2L["f9"]["BorderSizePixel"] = 0;
+G2L["f9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f9"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
+G2L["f9"]["Position"] = UDim2.new(0.33083, 0, 0.27286, 0);
+G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f9"]["Name"] = [[tsk]];
+G2L["f9"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.f789z43hfn3i.tsk.line
-G2L["f8"] = Instance.new("Frame", G2L["f7"]);
-G2L["f8"]["BorderSizePixel"] = 0;
-G2L["f8"]["BackgroundColor3"] = Color3.fromRGB(255, 108, 22);
-G2L["f8"]["Size"] = UDim2.new(0.99805, 0, 0.05, 0);
-G2L["f8"]["Position"] = UDim2.new(-0.00202, 0, 0.98587, 0);
-G2L["f8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f8"]["Name"] = [[line]];
+G2L["fa"] = Instance.new("Frame", G2L["f9"]);
+G2L["fa"]["BorderSizePixel"] = 0;
+G2L["fa"]["BackgroundColor3"] = Color3.fromRGB(255, 108, 22);
+G2L["fa"]["Size"] = UDim2.new(0.99805, 0, 0.05, 0);
+G2L["fa"]["Position"] = UDim2.new(-0.00202, 0, 0.98587, 0);
+G2L["fa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["fa"]["Name"] = [[line]];
 
 
 -- StarterGui.f789z43hfn3i.tsk.endb
-G2L["f9"] = Instance.new("TextButton", G2L["f7"]);
-G2L["f9"]["TextWrapped"] = true;
-G2L["f9"]["BorderSizePixel"] = 0;
-G2L["f9"]["TextSize"] = 20;
-G2L["f9"]["TextScaled"] = true;
-G2L["f9"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["f9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f9"]["BackgroundTransparency"] = 1;
-G2L["f9"]["Size"] = UDim2.new(0.03902, 0, 0.91063, 0);
-G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[X]];
-G2L["f9"]["Name"] = [[endb]];
-G2L["f9"]["Position"] = UDim2.new(0.94792, 0, -0.00047, 0);
+G2L["fb"] = Instance.new("TextButton", G2L["f9"]);
+G2L["fb"]["TextWrapped"] = true;
+G2L["fb"]["BorderSizePixel"] = 0;
+G2L["fb"]["TextSize"] = 20;
+G2L["fb"]["TextScaled"] = true;
+G2L["fb"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["fb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fb"]["FontFace"] = Font.new([[rbxasset://fonts/families/Jura.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["fb"]["BackgroundTransparency"] = 1;
+G2L["fb"]["Size"] = UDim2.new(0.03902, 0, 0.91063, 0);
+G2L["fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["fb"]["Text"] = [[X]];
+G2L["fb"]["Name"] = [[endb]];
+G2L["fb"]["Position"] = UDim2.new(0.94792, 0, -0.00047, 0);
 
 
 -- StarterGui.f789z43hfn3i.tsk.endb._es
-G2L["fa"] = Instance.new("LocalScript", G2L["f9"]);
-G2L["fa"]["Name"] = [[_es]];
+G2L["fc"] = Instance.new("LocalScript", G2L["fb"]);
+G2L["fc"]["Name"] = [[_es]];
 
 
 -- StarterGui.f789z43hfn3i.tsk.min
-G2L["fb"] = Instance.new("TextButton", G2L["f7"]);
-G2L["fb"]["TextWrapped"] = true;
-G2L["fb"]["BorderSizePixel"] = 0;
-G2L["fb"]["TextSize"] = 30;
-G2L["fb"]["TextScaled"] = true;
-G2L["fb"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["fb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["fb"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["fb"]["BackgroundTransparency"] = 1;
-G2L["fb"]["Size"] = UDim2.new(0.04113, 0, 1.11496, 0);
-G2L["fb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fb"]["Text"] = [[-]];
-G2L["fb"]["Name"] = [[min]];
-G2L["fb"]["Position"] = UDim2.new(0.90679, 0, -0.0638, -2);
+G2L["fd"] = Instance.new("TextButton", G2L["f9"]);
+G2L["fd"]["TextWrapped"] = true;
+G2L["fd"]["BorderSizePixel"] = 0;
+G2L["fd"]["TextSize"] = 30;
+G2L["fd"]["TextScaled"] = true;
+G2L["fd"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
+G2L["fd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["fd"]["BackgroundTransparency"] = 1;
+G2L["fd"]["Size"] = UDim2.new(0.04113, 0, 1.11496, 0);
+G2L["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["fd"]["Text"] = [[-]];
+G2L["fd"]["Name"] = [[min]];
+G2L["fd"]["Position"] = UDim2.new(0.90679, 0, -0.0638, -2);
 
 
 -- StarterGui.f789z43hfn3i.tsk.min._ms
-G2L["fc"] = Instance.new("LocalScript", G2L["fb"]);
-G2L["fc"]["Name"] = [[_ms]];
+G2L["fe"] = Instance.new("LocalScript", G2L["fd"]);
+G2L["fe"]["Name"] = [[_ms]];
 
 
 -- StarterGui.f789z43hfn3i.tsk._v
-G2L["fd"] = Instance.new("TextLabel", G2L["f7"]);
-G2L["fd"]["TextWrapped"] = true;
-G2L["fd"]["BorderSizePixel"] = 0;
-G2L["fd"]["TextSize"] = 14;
-G2L["fd"]["TextScaled"] = true;
-G2L["fd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["fd"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["fd"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["fd"]["BackgroundTransparency"] = 1;
-G2L["fd"]["Size"] = UDim2.new(0.20728, 0, -0.85473, 0);
-G2L["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fd"]["Text"] = [[Lunar X  - v0.4.0]];
-G2L["fd"]["Name"] = [[_v]];
-G2L["fd"]["Position"] = UDim2.new(0.01862, 0, 0.90265, 0);
+G2L["ff"] = Instance.new("TextLabel", G2L["f9"]);
+G2L["ff"]["TextWrapped"] = true;
+G2L["ff"]["BorderSizePixel"] = 0;
+G2L["ff"]["TextSize"] = 14;
+G2L["ff"]["TextScaled"] = true;
+G2L["ff"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ff"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ff"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
+G2L["ff"]["BackgroundTransparency"] = 1;
+G2L["ff"]["Size"] = UDim2.new(0.20728, 0, -0.85473, 0);
+G2L["ff"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ff"]["Text"] = [[Lunar X  - v0.4.5]];
+G2L["ff"]["Name"] = [[_v]];
+G2L["ff"]["Position"] = UDim2.new(0.01862, 0, 0.90265, 0);
 
 
 -- StarterGui.f789z43hfn3i.template
-G2L["fe"] = Instance.new("Frame", G2L["1"]);
-G2L["fe"]["Visible"] = false;
-G2L["fe"]["BorderSizePixel"] = 0;
-G2L["fe"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["fe"]["Size"] = UDim2.new(0.15479, 0, 0.08554, 0);
-G2L["fe"]["Position"] = UDim2.new(0.57637, 0, 0.36627, 0);
-G2L["fe"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fe"]["Name"] = [[template]];
+G2L["100"] = Instance.new("Frame", G2L["1"]);
+G2L["100"]["Visible"] = false;
+G2L["100"]["BorderSizePixel"] = 0;
+G2L["100"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["100"]["Size"] = UDim2.new(0.15479, 0, 0.08554, 0);
+G2L["100"]["Position"] = UDim2.new(0.57637, 0, 0.36627, 0);
+G2L["100"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["100"]["Name"] = [[template]];
 
 
 -- StarterGui.f789z43hfn3i.template._c
-G2L["ff"] = Instance.new("UICorner", G2L["fe"]);
-G2L["ff"]["Name"] = [[_c]];
-G2L["ff"]["CornerRadius"] = UDim.new(0, 10);
+G2L["101"] = Instance.new("UICorner", G2L["100"]);
+G2L["101"]["Name"] = [[_c]];
+G2L["101"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- StarterGui.f789z43hfn3i.template.circle
-G2L["100"] = Instance.new("Frame", G2L["fe"]);
-G2L["100"]["BorderSizePixel"] = 0;
-G2L["100"]["BackgroundColor3"] = Color3.fromRGB(0, 254, 0);
-G2L["100"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["100"]["Position"] = UDim2.new(0.05263, 0, 0.1831, 0);
-G2L["100"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["100"]["Name"] = [[circle]];
+G2L["102"] = Instance.new("Frame", G2L["100"]);
+G2L["102"]["BorderSizePixel"] = 0;
+G2L["102"]["BackgroundColor3"] = Color3.fromRGB(0, 254, 0);
+G2L["102"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["102"]["Position"] = UDim2.new(0.05263, 0, 0.1831, 0);
+G2L["102"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["102"]["Name"] = [[circle]];
 
 
 -- StarterGui.f789z43hfn3i.template.circle._c
-G2L["101"] = Instance.new("UICorner", G2L["100"]);
-G2L["101"]["Name"] = [[_c]];
-G2L["101"]["CornerRadius"] = UDim.new(1, 0);
+G2L["103"] = Instance.new("UICorner", G2L["102"]);
+G2L["103"]["Name"] = [[_c]];
+G2L["103"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.successimg
-G2L["102"] = Instance.new("ImageLabel", G2L["100"]);
-G2L["102"]["BorderSizePixel"] = 0;
-G2L["102"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["102"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["102"]["Image"] = [[rbxassetid://11604833061]];
-G2L["102"]["Size"] = UDim2.new(-1.03333, 0, 1, 0);
-G2L["102"]["Visible"] = false;
-G2L["102"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["102"]["BackgroundTransparency"] = 1;
-G2L["102"]["Name"] = [[successimg]];
-G2L["102"]["Position"] = UDim2.new(1, 0, 0, 0);
-
-
--- StarterGui.f789z43hfn3i.template.circle.infoimg
-G2L["103"] = Instance.new("ImageLabel", G2L["100"]);
-G2L["103"]["BorderSizePixel"] = 0;
-G2L["103"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["103"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["103"]["Image"] = [[rbxassetid://15309138473]];
-G2L["103"]["Size"] = UDim2.new(-0.99998, 0, 1, 0);
-G2L["103"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["103"]["BackgroundTransparency"] = 1;
-G2L["103"]["Name"] = [[infoimg]];
-G2L["103"]["Position"] = UDim2.new(1, 0, 0, 0);
-
-
--- StarterGui.f789z43hfn3i.template.circle.errorimg
-G2L["104"] = Instance.new("ImageLabel", G2L["100"]);
+G2L["104"] = Instance.new("ImageLabel", G2L["102"]);
 G2L["104"]["BorderSizePixel"] = 0;
 G2L["104"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["104"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["104"]["Image"] = [[rbxassetid://106210743599353]];
-G2L["104"]["Size"] = UDim2.new(-0.48147, 0, 0.46667, 0);
+G2L["104"]["Image"] = [[rbxassetid://11604833061]];
+G2L["104"]["Size"] = UDim2.new(-1.03333, 0, 1, 0);
 G2L["104"]["Visible"] = false;
 G2L["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["104"]["BackgroundTransparency"] = 1;
-G2L["104"]["Name"] = [[errorimg]];
-G2L["104"]["Position"] = UDim2.new(0.73814, 0, 0.26667, 0);
+G2L["104"]["Name"] = [[successimg]];
+G2L["104"]["Position"] = UDim2.new(1, 0, 0, 0);
+
+
+-- StarterGui.f789z43hfn3i.template.circle.infoimg
+G2L["105"] = Instance.new("ImageLabel", G2L["102"]);
+G2L["105"]["BorderSizePixel"] = 0;
+G2L["105"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["105"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
+G2L["105"]["Image"] = [[rbxassetid://15309138473]];
+G2L["105"]["Size"] = UDim2.new(-0.99998, 0, 1, 0);
+G2L["105"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["105"]["BackgroundTransparency"] = 1;
+G2L["105"]["Name"] = [[infoimg]];
+G2L["105"]["Position"] = UDim2.new(1, 0, 0, 0);
+
+
+-- StarterGui.f789z43hfn3i.template.circle.errorimg
+G2L["106"] = Instance.new("ImageLabel", G2L["102"]);
+G2L["106"]["BorderSizePixel"] = 0;
+G2L["106"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["106"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
+G2L["106"]["Image"] = [[rbxassetid://106210743599353]];
+G2L["106"]["Size"] = UDim2.new(-0.48147, 0, 0.46667, 0);
+G2L["106"]["Visible"] = false;
+G2L["106"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["106"]["BackgroundTransparency"] = 1;
+G2L["106"]["Name"] = [[errorimg]];
+G2L["106"]["Position"] = UDim2.new(0.73814, 0, 0.26667, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.warnimg
-G2L["105"] = Instance.new("ImageLabel", G2L["100"]);
-G2L["105"]["BorderSizePixel"] = 0;
-G2L["105"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["105"]["ImageColor3"] = Color3.fromRGB(39, 39, 39);
-G2L["105"]["Image"] = [[rbxassetid://15484984201]];
-G2L["105"]["Size"] = UDim2.new(-1.03333, 0, 1.06667, 0);
-G2L["105"]["Visible"] = false;
-G2L["105"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["105"]["BackgroundTransparency"] = 1;
-G2L["105"]["Name"] = [[warnimg]];
-G2L["105"]["Position"] = UDim2.new(1, 0, -0.06667, 0);
+G2L["107"] = Instance.new("ImageLabel", G2L["102"]);
+G2L["107"]["BorderSizePixel"] = 0;
+G2L["107"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["107"]["ImageColor3"] = Color3.fromRGB(39, 39, 39);
+G2L["107"]["Image"] = [[rbxassetid://15484984201]];
+G2L["107"]["Size"] = UDim2.new(-1.03333, 0, 1.06667, 0);
+G2L["107"]["Visible"] = false;
+G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["107"]["BackgroundTransparency"] = 1;
+G2L["107"]["Name"] = [[warnimg]];
+G2L["107"]["Position"] = UDim2.new(1, 0, -0.06667, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.titel
-G2L["106"] = Instance.new("TextLabel", G2L["fe"]);
-G2L["106"]["BorderSizePixel"] = 0;
-G2L["106"]["TextSize"] = 16;
-G2L["106"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["106"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["106"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
-G2L["106"]["BackgroundTransparency"] = 1;
-G2L["106"]["RichText"] = true;
-G2L["106"]["Size"] = UDim2.new(0.3157, 0, 0.76056, 0);
-G2L["106"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["106"]["Text"] = [[Lunar X]];
-G2L["106"]["Name"] = [[titel]];
-G2L["106"]["Position"] = UDim2.new(0.13414, 0, -0.09859, 0);
-
-
--- StarterGui.f789z43hfn3i.template.brd
-G2L["107"] = Instance.new("Frame", G2L["fe"]);
-G2L["107"]["BorderSizePixel"] = 0;
-G2L["107"]["BackgroundColor3"] = Color3.fromRGB(38, 42, 51);
-G2L["107"]["Size"] = UDim2.new(0.89912, 0, 0.01408, 0);
-G2L["107"]["Position"] = UDim2.new(0.05263, 0, 0.53521, 0);
-G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["107"]["Name"] = [[brd]];
-
-
--- StarterGui.f789z43hfn3i.template.text
-G2L["108"] = Instance.new("TextLabel", G2L["fe"]);
-G2L["108"]["TextWrapped"] = true;
+G2L["108"] = Instance.new("TextLabel", G2L["100"]);
 G2L["108"]["BorderSizePixel"] = 0;
-G2L["108"]["TextSize"] = 14;
-G2L["108"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["108"]["TextScaled"] = true;
+G2L["108"]["TextSize"] = 16;
 G2L["108"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["108"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["108"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
 G2L["108"]["BackgroundTransparency"] = 1;
-G2L["108"]["Size"] = UDim2.new(0.90351, 0, 0.3662, 0);
+G2L["108"]["RichText"] = true;
+G2L["108"]["Size"] = UDim2.new(0.3157, 0, 0.76056, 0);
 G2L["108"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["108"]["Text"] = [[loading]];
-G2L["108"]["Name"] = [[text]];
-G2L["108"]["Position"] = UDim2.new(0.05263, 0, 0.54929, 0);
+G2L["108"]["Text"] = [[Lunar X]];
+G2L["108"]["Name"] = [[titel]];
+G2L["108"]["Position"] = UDim2.new(0.13414, 0, -0.09859, 0);
+
+
+-- StarterGui.f789z43hfn3i.template.brd
+G2L["109"] = Instance.new("Frame", G2L["100"]);
+G2L["109"]["BorderSizePixel"] = 0;
+G2L["109"]["BackgroundColor3"] = Color3.fromRGB(38, 42, 51);
+G2L["109"]["Size"] = UDim2.new(0.89912, 0, 0.01408, 0);
+G2L["109"]["Position"] = UDim2.new(0.05263, 0, 0.53521, 0);
+G2L["109"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["109"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i.template.text
+G2L["10a"] = Instance.new("TextLabel", G2L["100"]);
+G2L["10a"]["TextWrapped"] = true;
+G2L["10a"]["BorderSizePixel"] = 0;
+G2L["10a"]["TextSize"] = 14;
+G2L["10a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["10a"]["TextScaled"] = true;
+G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10a"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
+G2L["10a"]["BackgroundTransparency"] = 1;
+G2L["10a"]["Size"] = UDim2.new(0.90351, 0, 0.3662, 0);
+G2L["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10a"]["Text"] = [[loading]];
+G2L["10a"]["Name"] = [[text]];
+G2L["10a"]["Position"] = UDim2.new(0.05263, 0, 0.54929, 0);
 
 
 -- StarterGui.f789z43hfn3i.ok
@@ -2581,7 +2607,6 @@ local script = G2L["2"];
 		if button:IsA("GuiButton") then
 			button.MouseButton1Click:Connect(function()
 				local mousePos = UserInputService:GetMouseLocation()
-				-- Note: GetMouseLocation includes the top bar inset, so we subtract it
 				local guiInset = game:GetService("GuiService"):GetGuiInset()
 				createRipple(button, mousePos.X - guiInset.X, mousePos.Y - guiInset.Y)
 			end)
@@ -2593,6 +2618,7 @@ local script = G2L["2"];
 	end
 	
 	playerGui.DescendantAdded:Connect(handleButton)
+	
 end;
 task.spawn(C_2);
 -- StarterGui.f789z43hfn3i._main.dh.ds
@@ -2967,9 +2993,7 @@ task.spawn(C_27);
 local function C_31()
 local script = G2L["31"];
 	if script.Parent then
-		script.Parent.Text = [[      [*] added new typo method, added letter correction toggle
-		      
-		        [*] added customization shit ]]
+		script.Parent.Text = [[      [*] made better idek !! ]]
 	end
 end;
 task.spawn(C_31);
@@ -5553,410 +5577,460 @@ local script = G2L["6b"];
 	
 	print("words: " .. (type(wordlist) == "table" and (#wordlist > 0 and #wordlist) or "value"))
 	
-local defToWord = {
-	["chargoggagoggmanchauggagoggchaubunagungamaugg"] = "[Noun] A lake in Webster, MA.",
-	["kingsammelot"]                               = "[Noun] a person who is probably in the server right now",
-	["adopt"]                                      = "[Verb] To choose to take up something.",
-	["amber"]                                      = "[Noun] A sap produced by trees.",
-	["ankle"]                                      = "[Noun] A bone above your foot.",
-	["ant"]                                        = "[Noun] A small insect that builds hills.",
-	["ask"]                                        = "[Verb] To propose a question to someone.",
-	["attack"]                                     = "[Verb] To intentionally hurt someone.",
-	["baby"]                                       = "[Noun] A human at a very young age.",
-	["bacon"]                                      = "[Noun] A breakfast food that comes from pigs.",
-	["banana"]                                     = "[Noun] A yellow fruit.",
-	["basket"]                                     = "[Noun] A container to carry things in.",
-	["bed"]                                        = "[Noun] An object people use to sleep on.",
-	["belt"]                                       = "[Noun] Worn around the waist.",
-	["black"]                                      = "[Noun] The absence of all colors.",
-	["blue"]                                       = "[Noun] The shade of the sky.",
-	["bottle"]                                     = "[Noun] Something we drink out of.",
-	["bottom"]                                     = "[Noun] The lowest point of something.",
-	["brain"]                                      = "[Noun] What we use to think.",
-	["break"]                                      = "[Noun] A short period spent to relax.",
-	["burst"]                                      = "[Verb] To break apart as a result of pressure.",
-	["cat"]                                        = "[Noun] A pet that meows.",
-	["chain"]                                      = "[Noun] A metal link used to secure objects.",
-	["chance"]                                     = "[Noun] An opportunity to do something.",
-	["charge"]                                     = "[Verb] To rush forward.",
-	["cherry"]                                     = "[Noun] A small red fruit.",
-	["crash"]                                      = "[Verb] To violently collide with something.",
-	["curve"]                                      = "[Noun] A line that is not straight.",
-	["deer"]                                       = "[Noun] An animal with antlers.",
-	["deny"]                                       = "[Verb] To reject something.",
-	["disco"]                                      = "[Noun] A party where people dance to music.",
-	["dog"]                                        = "[Noun] A pet that woofs.",
-	["drift"]                                      = "[Verb] To be moved away slowly.",
-	["drink"]                                      = "[Noun] A liquid that can be swallowed.",
-	["duck"]                                       = "[Noun] An animal that quacks.",
-	["dream"]                                      = "[Noun] A vision we have in our sleep.",
-	["eager"]                                      = "[Verb] To be excited to do something.",
-	["earth"]                                      = "[Noun] The planet we live on.",
-	["engine"]                                     = "[Noun] A machine that creates movement.",
-	["enter"]                                      = "[Verb] To go into something.",
-	["exit"]                                       = "[Verb] To leave something.",
-	["fairy"]                                      = "[Noun] A fictional human with magical powers.",
-	["fall"]                                       = "[Noun] The season in which trees lose their leaves.",
-	["father"]                                     = "[Noun] A male parent.",
-	["fence"]                                      = "[Noun] A wall that creates a boundary.",
-	["field"]                                      = "[Noun] An empty area of land.",
-	["finish"]                                     = "[Verb] To complete something.",
-	["flash"]                                      = "[Noun] A quick burst of light.",
-	["float"]                                      = "[Verb] To stay in the air.",
-	["flower"]                                     = "[Noun] A plant that grows in the grass.",
-	["flush"]                                      = "[Verb] To clean something with water.",
-	["food"]                                       = "[Noun] Something we eat.",
-	["forest"]                                     = "[Noun] An area with a lot of trees.",
-	["fresh"]                                      = "[Adjective] In new condition.",
-	["frost"]                                      = "[Noun] A thin layer of ice.",
-	["game"]                                       = "[Noun] Something we play.",
-	["ghost"]                                      = "[Noun] An invisible being that causes evil.",
-	["gift"]                                       = "[Noun] Something given to someone for free.",
-	["glare"]                                      = "[Noun] A very bright light.",
-	["grant"]                                      = "[Verb] To give something.",
-	["green"]                                      = "[Noun] The color of grass.",
-	["ground"]                                     = "[Noun] What we walk on outside.",
-	["guilt"]                                      = "[Noun] The feeling of regret.",
-	["happy"]                                      = "[Noun] A positive mood.",
-	["harbor"]                                     = "[Noun] Where boats stay on the water.",
-	["help"]                                       = "[Verb] To offer aid.",
-	["horse"]                                      = "[Noun] An animal we use to travel.",
-	["house"]                                      = "[Noun] A place we live in.",
-	["huge"]                                       = "[Adjective] Very big.",
-	["ice"]                                        = "[Noun] Frozen water.",
-	["igloo"]                                      = "[Noun] A shelter built from snow.",
-	["iron"]                                       = "[Noun] A metal found in the ground.",
-	["job"]                                        = "[Noun] A place where you work.",
-	["land"]                                       = "[Noun] An area of the Earth\226\128\153s surface.",
-	["leader"]                                     = "[Noun] Someone who commands a group of people.",
-	["light"]                                      = "[Noun] Something that fills darkness.",
-	["lobby"]                                      = "[Noun] The main area of a public building.",
-	["lunch"]                                      = "[Noun] A meal we eat in the afternoon.",
-	["meow"]                                       = "[Noun] The sound a cat makes.",
-	["minute"]                                     = "[Noun] A period of time equal to 60 seconds.",
-	["money"]                                      = "[Noun] What we use to pay for goods.",
-	["moon"]                                       = "[Noun] The object in the sky at night.",
-	["moral"]                                      = "[Noun] A standard of correct behavior.",
-	["mother"]                                     = "[Noun] A female parent.",
-	["noble"]                                      = "[Adjective] Having high social status.",
-	["note"]                                       = "[Noun] A written thought to help you remember something.",
-	["number"]                                     = "[Noun] An amount of something.",
-	["obese"]                                      = "[Adjective] Very fat.",
-	["office"]                                     = "[Noun] A place where you work.",
-	["orange"]                                     = "[Noun] A round fruit.",
-	["olive"]                                      = "[Noun] A small oval food.",
-	["oxygen"]                                     = "[Noun] The name for what we breathe.",
-	["panic"]                                      = "[Verb] To excessively worry.",
-	["peanut"]                                     = "[Noun] An oval seed eaten as a snack.",
-	["pink"]                                       = "[Noun] The color of a flamingo.",
-	["plant"]                                      = "[Noun] Something that grows in the ground.",
-	["please"]                                     = "[Adverb] Used to ask for something politely.",
-	["poison"]                                     = "[Noun] A substance that can make you ill.",
-	["poster"]                                     = "[Noun] A large picture for decoration.",
-	["power"]                                      = "[Noun] The amount of strength you have.",
-	["rain"]                                       = "[Noun] Water that falls from the sky.",
-	["red"]                                        = "[Noun] The color of a ruby.",
-	["rest"]                                       = "[Verb] To relax.",
-	["riot"]                                       = "[Noun] A large amount of violence.",
-	["river"]                                      = "[Noun] A large flow of water.",
-	["robot"]                                      = "[Noun] A machine that processes complex actions.",
-	["rumor"]                                      = "[Noun] A story that might not be true.",
-	["sad"]                                        = "[Adjective] A low mood.",
-	["scale"]                                      = "[Noun] The range of values that something can be.",
-	["scream"]                                     = "[Verb] To yell loudly.",
-	["second"]                                     = "[Noun] A small part of one minute.",
-	["shake"]                                      = "[Verb] To vibrate.",
-	["shark"]                                      = "[Noun] A blue animal found in the ocean.",
-	["sister"]                                     = "[Noun] A female sibling.",
-	["sketch"]                                     = "[Noun] A quick drawing.",
-	["smile"]                                      = "[Noun] A happy facial expression.",
-	["snow"]                                       = "[Noun] Something that falls from clouds in the winter.",
-	["spare"]                                      = "[Verb] Refrain from injuring something.",
-	["spring"]                                     = "[Noun] The season where plants begin to grow.",
-	["start"]                                      = "[Noun] The beginning of something.",
-	["steak"]                                      = "[Noun] A food that comes from cows.",
-	["steal"]                                      = "[Verb] To take something without permission.",
-	["stick"]                                      = "[Noun] A small piece of wood.",
-	["stormy"]                                     = "[Adjective] Having strong winds and lightning.",
-	["summer"]                                     = "[Noun] The hottest season of the year.",
-	["sun"]                                        = "[Noun] The star in our solar system.",
-	["sweat"]                                      = "[Noun] Something your body produces when you are hot.",
-	["system"]                                     = "[Noun] A defined way of doing something.",
-	["tablet"]                                     = "[Noun] A small portable device.",
-	["taxes"]                                      = "[Noun] An additional cost on goods.",
-	["thanks"]                                     = "[Noun] An expression of gratitude.",
-	["tissue"]                                     = "[Noun] Something to blow your nose with.",
-	["toast"]                                      = "[Noun] A piece of bread that becomes heated.",
-	["tower"]                                      = "[Noun] A very tall building.",
-	["track"]                                      = "[Noun] A path that a train follows.",
-	["trade"]                                      = "[Noun] The exchange of goods.",
-	["trap"]                                       = "[Noun] A device that tricks someone.",
-	["trick"]                                      = "[Noun] An act that deceives someone.",
-	["turtle"]                                     = "[Noun] A slow green animal.",
-	["ugly"]                                       = "[Adjective] Unpleasant in appearance.",
-	["uncle"]                                      = "[Noun] The brother of someone\226\128\153s parent.",
-	["unity"]                                      = "[Noun] The state of being joined together.",
-	["value"]                                      = "[Noun] The importance of something.",
-	["water"]                                      = "[Noun] A transparent liquid.",
-	["west"]                                       = "[Noun] The direction where the sun sets.",
-	["white"]                                      = "[Noun] The color of snow.",
-	["window"]                                     = "[Noun] A glass cover that you can see through.",
-	["winter"]                                     = "[Noun] The coldest season of the year.",
-	["wish"]                                       = "[Noun] A desire for something to happen.",
-	["wrong"]                                      = "[Adjective] The state of being incorrect.",
-	["zebra"]                                      = "[Noun] An animal with white and black stripes.",
-	["zombie"]                                     = "[Noun] A person who came back to life.",
-	["abolish"]                                    = "[Verb] To destroy.",
-	["acceptable"]                                 = "[Adjective] Able to be agreed on.",
-	["acoustic"]                                   = "[Adjective] Relating to sound.",
-	["adhesive"]                                   = "[Adjective] Sticky.",
-	["adventurous"]                                = "[Adjective] Wanting to explore.",
-	["aftermath"]                                  = "[Noun] The consequence of a negative event.",
-	["agriculture"]                                = "[Noun] The science of farming.",
-	["allowance"]                                  = "[Noun] The amount of something that is permitted.",
-	["ambitious"]                                  = "[Advjective] Having a strong desire to succeed.",
-	["arithmetic"]                                 = "[Noun] Relating to numbers.",
-	["arrange"]                                    = "[Verb] To put order to something.",
-	["articulate"]                                 = "[Adjective] Being precise with words.",
-	["assembly"]                                   = "[Noun] A gathering.",
-	["astonishing"]                                = "[Adjective] Surprising.",
-	["attractive"]                                 = "[Adjective] Able to draw your attention.",
-	["authority"]                                  = "[Noun] Having power over others.",
-	["available"]                                  = "[Adjective] Able to be used.",
-	["beautiful"]                                  = "[Adjective] Aesthetically pleasing.",
-	["beneficial"]                                 = "[Adjective] Resulting in good.",
-	["broadcast"]                                  = "[Noun] A program that is sent out.",
-	["broccoli"]                                   = "[Noun] A green vegetable.",
-	["brother"]                                    = "[Noun] A male sibling.",
-	["calendar"]                                   = "[Noun] An object that organizes days and months.",
-	["central"]                                    = "[Adjective] In the middle of something.",
-	["chemical"]                                   = "[Noun] A substance.",
-	["communication"]                              = "[Noun] The act of talking.",
-	["complex"]                                    = "[Adjective] Complicated.",
-	["compromise"]                                 = "[Noun] An agreement that satisfies two sides.",
-	["conspiracy"]                                 = "[Noun] A secret plan.",
-	["consumption"]                                = "[Noun] The act of eating or drinking.",
-	["correction"]                                 = "[Noun] The act of making something right.",
-	["courage"]                                    = "[Adjective] Being brave.",
-	["cultivate"]                                  = "[Verb] To grow crops.",
-	["dangerous"]                                  = "[Adjective] Potentially harmful.",
-	["deafening"]                                  = "[Adjective] Very loud.",
-	["demonstrate"]                                = "[Verb] To show or explain something.",
-	["detective"]                                  = "[Noun] Someone who investigates something.",
-	["determine"]                                  = "[Verb] To reach a conclusion.",
-	["diagram"]                                    = "[Noun] A visual representation of something.",
-	["dilemma"]                                    = "[Adjective] A difficult situation.",
-	["direction"]                                  = "[Noun] A course along which someone moves.",
-	["disagree"]                                   = "[Verb] To not get along with someone.",
-	["discovery"]                                  = "[Noun] The act of finding something new.",
-	["discreet"]                                   = "[Adjective] Kept in secret.",
-	["disgusting"]                                 = "[Adjective] Describing something that is unpleasant.",
-	["disturbance"]                                = "[Noun] An interruption in the normal flow of activities.",
-	["document"]                                   = "[Noun] A written record that provides information.",
-	["doubtful"]                                   = "[Adjective] Not fully trusting in something.",
-	["divergent"]                                  = "[Adjective] Moving in different directions.",
-	["dysfunctional"]                              = "[Adjective] Incapable of behaving properly.",
-	["economist"]                                  = "[Noun] Someone who studies finances.",
-	["emergency"]                                  = "[Noun] A situation requiring immediate action.",
-	["emphasis"]                                   = "[Noun] Adding extra importance to something.",
-	["enlighten"]                                  = "[Verb] To make clear.",
-	["establish"]                                  = "[Verb] To set something.",
-	["estimate"]                                   = "[Noun] A reasonable guess.",
-	["excitement"]                                 = "[Noun] Looking forward to something that is good.",
-	["exemption"]                                  = "[Noun] An exclusion from something.",
-	["experience"]                                 = "[Noun] Knowledge gained by doing something.",
-	["experiment"]                                 = "[Noun] A test that could go wrong.",
-	["expansion"]                                  = "[Noun] The process of growing bigger.",
-	["fantastic"]                                  = "[Adjective] Exceptionally great.",
-	["favorable"]                                  = "[Adjective] Advantageous over something else.",
-	["fearless"]                                   = "[Adjective] Not being scared of something.",
-	["franchise"]                                  = "[Noun] A company that lets individuals run services.",
-	["glorious"]                                   = "[Adjective] Worthy of being admired.",
-	["graduate"]                                   = "[Noun] Someone who completes a course of study.",
-	["grandfather"]                                = "[Noun] The dad of someone\'s dad.",
-	["gruesome"]                                   = "[Adjective] Extremely unpleasant.",
-	["honorable"]                                  = "[Adjective] Worthy of being respected.",
-	["hysterical"]                                 = "[Adjective] Extremely funny.",
-	["illustrate"]                                 = "[Verb] To visualize something.",
-	["infection"]                                  = "[Noun] The process of catching a disease.",
-	["inflation"]                                  = "[Noun] The process of increasing by an excessive amount.",
-	["information"]                                = "[Noun] Facts provided to teach someone.",
-	["innovation"]                                 = "[Noun] A new and surprising development.",
-	["insurance"]                                  = "[Noun] Protection from damage.",
-	["interface"]                                  = "[Noun] A screen that allows for communication.",
-	["intermediate"]                               = "[Adjective] Medium difficulty.",
-	["intervention"]                               = "[Noun] The process of getting in the way of something.",
-	["justice"]                                    = "[Noun] The state of proceeding in a fair way.",
-	["language"]                                   = "[Noun] The method of human communication.",
-	["legislation"]                                = "[Noun] A written law.",
-	["liberty"]                                    = "[Noun] The state of being free.",
-	["magnetic"]                                   = "[Adjective] Attraction between objects.",
-	["malicious"]                                  = "[Adjective] Having intent to do harm.",
-	["material"]                                   = "[Noun] The physical property of an object.",
-	["maximum"]                                    = "[Noun] The greatest amount.",
-	["microphone"]                                 = "[Noun] An object that you speak into.",
-	["motionless"]                                 = "[Adjective] Not moving.",
-	["mountain"]                                   = "[Noun] A big hill.",
-	["national"]                                   = "[Adjective] Relating to an entire country.",
-	["nervous"]                                    = "[Adjective] Being scared.",
-	["network"]                                    = "[Noun] A system of connected things.",
-	["nonchalant"]                                 = "[Adjective] Appearing calm.",
-	["numerous"]                                   = "[Adjective] Many.",
-	["oceanic"]                                    = "[Adjective] Relating to Earth\226\128\153s water.",
-	["observation"]                                = "[Noun] A notice of something.",
-	["omnipotent"]                                 = "[Adjective] Having unlimited power.",
-	["offender"]                                   = "[Noun] Someone who commits an illegal act.",
-	["parallel"]                                   = "[Adjective] Side by side.",
-	["permission"]                                 = "[Noun] Having authority to do something.",
-	["personality"]                                = "[Noun] The unique way someone acts.",
-	["persuade"]                                   = "[Verb] To convince someone to do something.",
-	["plaster"]                                    = "[Noun] A material you spread on walls.",
-	["plausible"]                                  = "[Adjective] Reasonable to be believed.",
-	["possessive"]                                 = "[Adjective] Taking control of something.",
-	["potential"]                                  = "[Noun] A possibility.",
-	["presentation"]                               = "[Noun] A talk that explains something to an audience.",
-	["pressure"]                                   = "[Noun] The amount of force on something.",
-	["productive"]                                 = "[Adjective] Someone who is not lazy.",
-	["prosecute"]                                  = "[Verb] To accuse someone of something.",
-	["quality"]                                    = "[Noun] The degree of excellence of something.",
-	["question"]                                   = "[Noun] A statement that asks something.",
-	["radiation"]                                  = "[Noun] Particle emission.",
-	["reasonable"]                                 = "[Adjective] Being fair.",
-	["reckless"]                                   = "[Adjective] Taking action without thinking.",
-	["reflection"]                                 = "[Noun] The act of looking back on past events.",
-	["redundant"]                                  = "[Adjective] No longer useful.",
-	["regular"]                                    = "[Adjective] Something that is in its normal state.",
-	["reliable"]                                   = "[Adjective] Able to be trusted.",
-	["remarkable"]                                 = "[Adjective] Worthy of attention.",
-	["repetition"]                                 = "[Noun] The act of repeating past information.",
-	["request"]                                    = "[Verb] To ask for something.",
-	["responsible"]                                = "[Adjective] Able to take care of things.",
-	["restrain"]                                   = "[Verb] To restrict someone from doing something.",
-	["romantic"]                                   = "[Adjective] The expression of love.",
-	["satisfying"]                                 = "[Adjective] Rewarding to watch.",
-	["seasonal"]                                   = "[Adjective] Changing based on the time of year.",
-	["sentence"]                                   = "[Noun] A group of words used to form a thought.",
-	["skeleton"]                                   = "[Noun] A model of bones in the human body.",
-	["sophisticated"]                              = "[Adjective] Developed to high complexity.",
-	["subject"]                                    = "[Noun] The person that is being discussed.",
-	["substantial"]                                = "[Adjective] Of considerate importance.",
-	["superficial"]                                = "[Adjective] Existing at the surface.",
-	["survivor"]                                   = "[Noun] A person remaining alive after an event.",
-	["tedious"]                                    = "[Adjective] A task that is long or slow.",
-	["thoughtful"]                                 = "[Adjective] Showing consideration for someone.",
-	["tradition"]                                  = "[Noun] Something that takes place regularly.",
-	["transform"]                                  = "[Verb] To change into something else.",
-	["treatment"]                                  = "[Noun] The manner in which someone behaves.",
-	["tremendous"]                                 = "[Adjective] A large amount of something.",
-	["triangle"]                                   = "[Noun] A shape with three sides.",
-	["unanimous"]                                  = "[Adjective] Fully in agreement.",
-	["understand"]                                 = "[Verb] To successfully interpret something.",
-	["unemployed"]                                 = "[Adjective] Not having a job.",
-	["warning"]                                    = "[Noun] A statement that signifies danger.",
-	["weakness"]                                   = "[Noun] The state of lacking strength.",
-	["workspace"]                                  = "[Noun] An area someone uses to work.",
-	["xylophone"]                                  = "[Noun] An instrument with mallets and wooden bars.",
-	["adrenocorticotrophin"]                       = "[Noun] A hormone that stimulates the adrenal cortex.",
-	["anatidaephobia"]                             = "[Noun] The fear that a duck is always watching you.",
-	["anticyclogenesis"]                           = "[Noun] The process of a high-pressure system forming.",
-	["antidisestablishmentarianism"]               = "[Noun] Opposition to the separation of the Church of England.",
-	["archaeological"]                             = "[Adjective] Relating to the study of history through excavation.",
-	["atherosclerosis"]                            = "[Noun] Thickening of the arteries.",
-	["auriculotemporal"]                           = "[Noun] A nerve that provides information to the ear.",
-	["bacteriologist"]                             = "[Noun] A scientist who studies bacteria.",
-	["benzotrifluoride"]                           = "[Noun] A clear and flammable liquid.",
-	["bioaccumulation"]                            = "[Noun] The buildup of chemicals within a living organism.",
-	["blepharochalasis"]                           = "[Noun] A condition that causes upper eyelid swelling.",
-	["bourgeoisification"]                         = "[Noun] The process of adapting to the middle class.",
-	["bromochloromethane"]                         = "[Noun] A clear and nonflammable liquid.",
-	["cardiovascular"]                             = "[Adjective] Relating to the heart and blood vessels.",
-	["catecholamines"]                             = "[Noun] A class of molecules that act as neurotransmitters.",
-	["cervicothoracic"]                            = "[Adjective] Relating to the neck and chest.",
-	["chondroglossus"]                             = "[Noun] A small muscle of the tongue.",
-	["compartmentalization"]                       = "[Noun] The division of something into sections.",
-	["confidentiality"]                            = "[Noun] The state of keeping something private.",
-	["conjunctivitis"]                             = "[Noun] The scientific name for pink eye.",
-	["coracobrachialis"]                           = "[Noun] A small muscle in the upper arm.",
-	["corticomesencephalic"]                       = "[Noun] A nerve pathway in the brain.",
-	["defenestration"]                             = "[Noun] The action of throwing someone out of a window.",
-	["dehydrothiotoluidine"]                       = "[Noun] A chemical used for dyes.",
-	["deoxyribonucleic"]                           = "[Noun] A molecule carrying genetic instructions.",
-	["desensitization"]                            = "[Noun] The process of losing sensitivity to something.",
-	["electrocoagulation"]                         = "[Noun] A treatment that uses an electric current to remove contaminants.",
-	["falsifiability"]                             = "[Noun] The ability to prove something as false.",
-	["flibbertigibbet"]                            = "[Noun] An excessively talkative person.",
-	["floccinaucinihilipilification"]              = "[Noun] The habit of estimating something as worthless.",
-	["gastroenterologist"]                         = "[Noun] A doctor that specializes in the stomach.",
-	["gentrification"]                             = "[Noun] The process of making something more refined.",
-	["gegenstandstheorie"]                         = "[Noun] A theory of objects.",
-	["glossopharyngeal"]                           = "[Adjective] Relating to the tongue.",
-	["hematopoietically"]                          = "[Adverb] In a manner relating to blood cell formation.",
-	["hemidemisemiquaver"]                         = "[Noun] A sixty-fourth musical note.",
-	["hemoglobinopathy"]                           = "[Noun] A group of inherited blood disorders.",
-	["hippopotomonstrosesquipedaliophobia"]        = "[Noun] The irrational fear of long words.",
-	["honorificabilitudinity"]                     = "[Noun] The state of being honorable.",
-	["hydrometeorology"]                           = "[Noun] The study of rainfall",
-	["hydroxyprogesterone"]                        = "[Noun] A medicine for birth.",
-	["hyperoxymuriatic"]                           = "[Adjective] Describing corrosive acid.",
-	["hypoparathyroidism"]                         = "[Noun] A condition leading to low blood calcium levels.",
-	["immunodeficiency"]                           = "[Noun] Failure of the immune system.",
-	["incomprehensibility"]                        = "[Noun] The state of being impossible to understand.",
-	["interstitiospinal"]                          = "[Noun] A motor pathway in the central nervous system.",
-	["laryngotracheobronchitis"]                   = "[Noun] Inflammation of the voice box.",
-	["lautenclavicymbal"]                          = "[Noun] An instrumental keyboard featuring gut strings.",
-	["lepidopterology"]                            = "[Noun] The scientific study of butterflies.",
-	["meteorological"]                             = "[Adjective] Relating to the study of the atmosphere.",
-	["micropachycephalosaurus"]                    = "[Noun] A type of extinct lizard.",
-	["micropaleontology"]                          = "[Noun] The study of tiny fossils.",
-	["miniaturization"]                            = "[Noun] The process of making something smaller.",
-	["musculoskeletal"]                            = "[Adjective] Relating to the muscular and skeletal systems.",
-	["musculocutaneous"]                           = "[Adjective] Relating to the muscular and skin systems.",
-	["neuroplasticity"]                            = "[Noun] The ability of the brain to reorganize itself.",
-	["nonanonacontanonactanonaliagon"]             = "[Noun] A polygon with 9,999 sides.",
-	["nucleosynthesis"]                            = "[Noun] The creation of atomic nuclei.",
-	["oligosynthetic"]                             = "[Adjective] Describing a simple type of language.",
-	["olivocerebellar"]                            = "[Adjective] Relating to the cerebellum and the olivary nuclei.",
-	["osteosclerosis"]                             = "[Noun] A disorder that causes increased bone density.",
-	["otorhinolaryngological"]                     = "[Adjective] Relating to the ear, nose, and throat.",
-	["paleoclimatology"]                           = "[Noun] The study of climates.",
-	["palatopharyngeus"]                           = "[Noun] A small muscle in the roof of the mouth.",
-	["parapsychology"]                             = "[Noun] The study of psychic phenomena.",
-	["paraventricular"]                            = "[Adjective] Next to a ventricle of the brain.",
-	["perissodactyla"]                             = "[Noun] An order of mammals.",
-	["pharmaceutical"]                             = "[Noun] Medicine.",
-	["pheochromocytoma"]                           = "[Noun] A tumor that develops in the adrenal glands.",
-	["polyphiloprogenitive"]                       = "[Adjective] Extremely prolific.",
-	["pneumonoultramicroscopicsilicovolcanoconiosis"] = "[Noun] A lung disease caused by inhaling ash.",
-	["pneumoencephalography"]                      = "[Noun] An obsolete brain imaging technique.",
-	["psychoanalysis"]                             = "[Noun] The study of the conscious and unconscious mind.",
-	["psychotomimetic"]                            = "[Adjective] Capable of producing a psychotic state.",
-	["pseudopseudohypoparathyroidism"]             = "[Noun] A genetic condition that causes skeletal issues.",
-	["pulchritudinous"]                            = "[Adjective] Beautiful.",
-	["quintessential"]                             = "[Adjective] Representing the most perfect example of something.",
-	["radiometeorograph"]                          = "[Noun] An instrument carried into the atmosphere by a balloon.",
-	["reconciliation"]                             = "[Noun] The process of reforming a bond with someone.",
-	["reconnaissance"]                             = "[Noun] Preliminary observation.",
-	["rehabilitation"]                             = "[Noun] The process of restoring something to its normal state.",
-	["reticulospinal"]                             = "[Noun] A motor pathway that sends signals to the spinal cord.",
-	["rhombencephalon"]                            = "[Noun] The lower part of the brainstem.",
-	["semimembranosus"]                            = "[Noun] A major hamstring muscle.",
-	["sesquipedalian"]                             = "[Adjective] Characterized by long words.",
-	["spectrofluorometer"]                         = "[Noun] An instrument that measures fluroescent light.",
-	["spinomesencephalic"]                         = "[Noun] A pathway consisting of bundled nerve fibers.",
-	["sternoclavicular"]                           = "[Noun] A joint between the clavicle and sternum.",
-	["sternocleidomastoid"]                        = "[Noun] A long muscle in the neck.",
-	["subinfeudation"]                             = "[Noun] A medieval process for granting land.",
-	["supercalifragilisticexpialidocious"]         = "[Adjective] Extraordinarily good.",
-	["supratrochlear"]                             = "[Adjective] Above the eye.",
-	["temporoparietalis"]                          = "[Noun] A muscle within the head.",
-	["thermoluminescence"]                         = "[Noun] The ability to glow through high temperatures.",
-	["tonsillopharyngitis"]                        = "[Noun] A sore throat.",
-	["utilitarianism"]                             = "[Noun] The belief in benefitting the majority.",
-	["ventriculocisternostomy"]                    = "[Noun] A procedure that creates a new pathway in the brain.",
-	["vestibulocochlear"]                          = "[Noun] A nerve within the ear.",
-	["worcestershire"]                             = "[Noun] A county in England.",
-	["zygomaticotemporal"]                         = "[Adjective] Relating to an area on the side of the head.",
-}
+	local defToWord = {
+		["kingsammelot"] = "[Noun] a person who is probably in the server right now",
+		["adopt"] = "[Verb] To choose to take up something.",
+		["amber"] = "[Noun] A sap produced by trees.",
+		["ankle"] = "[Noun] A bone above your foot.",
+		["ant"] = "[Noun] A small insect that builds hills.",
+		["ask"] = "[Verb] To propose a question to someone.",
+		["attack"] = "[Verb] To intentionally hurt someone.",
+		["baby"] = "[Noun] A human at a very young age.",
+		["bacon"] = "[Noun] A breakfast food that comes from pigs.",
+		["banana"] = "[Noun] A yellow fruit.",
+		["basket"] = "[Noun] A container to carry things in.",
+		["bed"] = "[Noun] An object people use to sleep on.",
+		["belt"] = "[Noun] Worn around the waist.",
+		["black"] = "[Noun] The absence of all colors.",
+		["blue"] = "[Noun] The shade of the sky.",
+		["bottle"] = "[Noun] Something we drink out of.",
+		["bottom"] = "[Noun] The lowest point of something.",
+		["brain"] = "[Noun] What we use to think.",
+		["break"] = "[Noun] A short period spent to relax.",
+		["burst"] = "[Verb] To break apart as a result of pressure.",
+		["cat"] = "[Noun] A pet that meows.",
+		["chain"] = "[Noun] A metal link used to secure objects.",
+		["chance"] = "[Noun] An opportunity to do something.",
+		["charge"] = "[Verb] To rush forward.",
+		["cherry"] = "[Noun] A small red fruit.",
+		["crash"] = "[Verb] To violently collide with something.",
+		["curve"] = "[Noun] A line that is not straight.",
+		["deer"] = "[Noun] An animal with antlers.",
+		["deny"] = "[Verb] To reject something.",
+		["disco"] = "[Noun] A party where people dance to music.",
+		["dog"] = "[Noun] A pet that woofs.",
+		["drift"] = "[Verb] To be moved away slowly.",
+		["drink"] = "[Noun] A liquid that can be swallowed.",
+		["duck"] = "[Noun] An animal that quacks.",
+		["dream"] = "[Noun] A vision we have in our sleep.",
+		["eager"] = "[Verb] To be excited to do something.",
+		["earth"] = "[Noun] The planet we live on.",
+		["engine"] = "[Noun] A machine that creates movement.",
+		["enter"] = "[Verb] To go into something.",
+		["exit"] = "[Verb] To leave something.",
+		["fairy"] = "[Noun] A fictional human with magical powers.",
+		["fall"] = "[Noun] The season in which trees lose their leaves.",
+		["father"] = "[Noun] A male parent.",
+		["fence"] = "[Noun] A wall that creates a boundary.",
+		["field"] = "[Noun] An empty area of land.",
+		["finish"] = "[Verb] To complete something.",
+		["flash"] = "[Noun] A quick burst of light.",
+		["float"] = "[Verb] To stay in the air.",
+		["flower"] = "[Noun] A plant that grows in the grass.",
+		["flush"] = "[Verb] To clean something with water.",
+		["food"] = "[Noun] Something we eat.",
+		["forest"] = "[Noun] An area with a lot of trees.",
+		["fresh"] = "[Adjective] In new condition.",
+		["frost"] = "[Noun] A thin layer of ice.",
+		["game"] = "[Noun] Something we play.",
+		["ghost"] = "[Noun] An invisible being that causes evil.",
+		["gift"] = "[Noun] Something given to someone for free.",
+		["glare"] = "[Noun] A very bright light.",
+		["grant"] = "[Verb] To give something.",
+		["green"] = "[Noun] The color of grass.",
+		["ground"] = "[Noun] What we walk on outside.",
+		["guilt"] = "[Noun] The feeling of regret.",
+		["happy"] = "[Noun] A positive mood.",
+		["harbor"] = "[Noun] Where boats stay on the water.",
+		["help"] = "[Verb] To offer aid.",
+		["horse"] = "[Noun] An animal we use to travel.",
+		["house"] = "[Noun] A place we live in.",
+		["huge"] = "[Adjective] Very big.",
+		["ice"] = "[Noun] Frozen water.",
+		["igloo"] = "[Noun] A shelter built from snow.",
+		["iron"] = "[Noun] A metal found in the ground.",
+		["job"] = "[Noun] A place where you work.",
+		["land"] = "[Noun] An area of the Earth\226\128\153s surface.",
+		["leader"] = "[Noun] Someone who commands a group of people.",
+		["light"] = "[Noun] Something that fills darkness.",
+		["lobby"] = "[Noun] The main area of a public building.",
+		["lunch"] = "[Noun] A meal we eat in the afternoon.",
+		["meow"] = "[Noun] The sound a cat makes.",
+		["minute"] = "[Noun] A period of time equal to 60 seconds.",
+		["money"] = "[Noun] What we use to pay for goods.",
+		["moon"] = "[Noun] The object in the sky at night.",
+		["moral"] = "[Noun] A standard of correct behavior.",
+		["mother"] = "[Noun] A female parent.",
+		["noble"] = "[Adjective] Having high social status.",
+		["note"] = "[Noun] A written thought to help you remember something.",
+		["number"] = "[Noun] An amount of something.",
+		["obese"] = "[Adjective] Very fat.",
+		["office"] = "[Noun] A place where you work.",
+		["orange"] = "[Noun] A round fruit.",
+		["olive"] = "[Noun] A small oval food.",
+		["oxygen"] = "[Noun] The name for what we breathe.",
+		["panic"] = "[Verb] To excessively worry.",
+		["peanut"] = "[Noun] An oval seed eaten as a snack.",
+		["pink"] = "[Noun] The color of a flamingo.",
+		["plant"] = "[Noun] Something that grows in the ground.",
+		["please"] = "[Adverb] Used to ask for something politely.",
+		["poison"] = "[Noun] A substance that can make you ill.",
+		["poster"] = "[Noun] A large picture for decoration.",
+		["power"] = "[Noun] The amount of strength you have.",
+		["rain"] = "[Noun] Water that falls from the sky.",
+		["red"] = "[Noun] The color of a ruby.",
+		["rest"] = "[Verb] To relax.",
+		["riot"] = "[Noun] A large amount of violence.",
+		["river"] = "[Noun] A large flow of water.",
+		["robot"] = "[Noun] A machine that processes complex actions.",
+		["rumor"] = "[Noun] A story that might not be true.",
+		["sad"] = "[Adjective] A low mood.",
+		["scale"] = "[Noun] The range of values that something can be.",
+		["scream"] = "[Verb] To yell loudly.",
+		["second"] = "[Noun] A small part of one minute.",
+		["shake"] = "[Verb] To vibrate.",
+		["shark"] = "[Noun] A blue animal found in the ocean.",
+		["sister"] = "[Noun] A female sibling.",
+		["sketch"] = "[Noun] A quick drawing.",
+		["smile"] = "[Noun] A happy facial expression.",
+		["snow"] = "[Noun] Something that falls from clouds in the winter.",
+		["spare"] = "[Verb] Refrain from injuring something.",
+		["spring"] = "[Noun] The season where plants begin to grow.",
+		["start"] = "[Noun] The beginning of something.",
+		["steak"] = "[Noun] A food that comes from cows.",
+		["steal"] = "[Verb] To take something without permission.",
+		["stick"] = "[Noun] A small piece of wood.",
+		["stormy"] = "[Adjective] Having strong winds and lightning.",
+		["summer"] = "[Noun] The hottest season of the year.",
+		["sun"] = "[Noun] The star in our solar system.",
+		["sweat"] = "[Noun] Something your body produces when you are hot.",
+		["system"] = "[Noun] A defined way of doing something.",
+		["tablet"] = "[Noun] A small portable device.",
+		["taxes"] = "[Noun] An additional cost on goods.",
+		["thanks"] = "[Noun] An expression of gratitude.",
+		["tissue"] = "[Noun] Something to blow your nose with.",
+		["toast"] = "[Noun] A piece of bread that becomes heated.",
+		["tower"] = "[Noun] A very tall building.",
+		["track"] = "[Noun] A path that a train follows.",
+		["trade"] = "[Noun] The exchange of goods.",
+		["trap"] = "[Noun] A device that tricks someone.",
+		["trick"] = "[Noun] An act that deceives someone.",
+		["turtle"] = "[Noun] A slow green animal.",
+		["ugly"] = "[Adjective] Unpleasant in appearance.",
+		["uncle"] = "[Noun] The brother of someone\226\128\153s parent.",
+		["unity"] = "[Noun] The state of being joined together.",
+		["value"] = "[Noun] The importance of something.",
+		["water"] = "[Noun] A transparent liquid.",
+		["west"] = "[Noun] The direction where the sun sets.",
+		["white"] = "[Noun] The color of snow.",
+		["window"] = "[Noun] A glass cover that you can see through.",
+		["winter"] = "[Noun] The coldest season of the year.",
+		["wish"] = "[Noun] A desire for something to happen.",
+		["wrong"] = "[Adjective] The state of being incorrect.",
+		["zebra"] = "[Noun] An animal with white and black stripes.",
+		["zombie"] = "[Noun] A person who came back to life.",
+		["abolish"] = "[Verb] To destroy.",
+		["acceptable"] = "[Adjective] Able to be agreed on.",
+		["acoustic"] = "[Adjective] Relating to sound.",
+		["adhesive"] = "[Adjective] Sticky.",
+		["adventurous"] = "[Adjective] Wanting to explore.",
+		["aftermath"] = "[Noun] The consequence of a negative event.",
+		["agriculture"] = "[Noun] The science of farming.",
+		["allowance"] = "[Noun] The amount of something that is permitted.",
+		["ambitious"] = "[Advjective] Having a strong desire to succeed.",
+		["arithmetic"] = "[Noun] Relating to numbers.",
+		["arrange"] = "[Verb] To put order to something.",
+		["articulate"] = "[Adjective] Being precise with words.",
+		["assembly"] = "[Noun] A gathering.",
+		["astonishing"] = "[Adjective] Surprising.",
+		["attractive"] = "[Adjective] Able to draw your attention.",
+		["authority"] = "[Noun] Having power over others.",
+		["available"] = "[Adjective] Able to be used.",
+		["beautiful"] = "[Adjective] Aesthetically pleasing.",
+		["beneficial"] = "[Adjective] Resulting in good.",
+		["broadcast"] = "[Noun] A program that is sent out.",
+		["broccoli"] = "[Noun] A green vegetable.",
+		["brother"] = "[Noun] A male sibling.",
+		["calendar"] = "[Noun] An object that organizes days and months.",
+		["central"] = "[Adjective] In the middle of something.",
+		["chemical"] = "[Noun] A substance.",
+		["communication"] = "[Noun] The act of talking.",
+		["complex"] = "[Adjective] Complicated.",
+		["compromise"] = "[Noun] An agreement that satisfies two sides.",
+		["conspiracy"] = "[Noun] A secret plan.",
+		["consumption"] = "[Noun] The act of eating or drinking.",
+		["correction"] = "[Noun] The act of making something right.",
+		["courage"] = "[Adjective] Being brave.",
+		["cultivate"] = "[Verb] To grow crops.",
+		["dangerous"] = "[Adjective] Potentially harmful.",
+		["deafening"] = "[Adjective] Very loud.",
+		["demonstrate"] = "[Verb] To show or explain something.",
+		["detective"] = "[Noun] Someone who investigates something.",
+		["determine"] = "[Verb] To reach a conclusion.",
+		["diagram"] = "[Noun] A visual representation of something.",
+		["dilemma"] = "[Adjective] A difficult situation.",
+		["direction"] = "[Noun] A course along which someone moves.",
+		["disagree"] = "[Verb] To not get along with someone.",
+		["discovery"] = "[Noun] The act of finding something new.",
+		["discreet"] = "[Adjective] Kept in secret.",
+		["disgusting"] = "[Adjective] Describing something that is unpleasant.",
+		["disturbance"] = "[Noun] An interruption in the normal flow of activities.",
+		["document"] = "[Noun] A written record that provides information.",
+		["doubtful"] = "[Adjective] Not fully trusting in something.",
+		["divergent"] = "[Adjective] Moving in different directions.",
+		["dysfunctional"] = "[Adjective] Incapable of behaving properly.",
+		["economist"] = "[Noun] Someone who studies finances.",
+		["emergency"] = "[Noun] A situation requiring immediate action.",
+		["emphasis"] = "[Noun] Adding extra importance to something.",
+		["enlighten"] = "[Verb] To make clear.",
+		["establish"] = "[Verb] To set something.",
+		["estimate"] = "[Noun] A reasonable guess.",
+		["excitement"] = "[Noun] Looking forward to something that is good.",
+		["exemption"] = "[Noun] An exclusion from something.",
+		["experience"] = "[Noun] Knowledge gained by doing something.",
+		["experiment"] = "[Noun] A test that could go wrong.",
+		["expansion"] = "[Noun] The process of growing bigger.",
+		["fantastic"] = "[Adjective] Exceptionally great.",
+		["favorable"] = "[Adjective] Advantageous over something else.",
+		["fearless"] = "[Adjective] Not being scared of something.",
+		["franchise"] = "[Noun] A company that lets individuals run services.",
+		["glorious"] = "[Adjective] Worthy of being admired.",
+		["graduate"] = "[Noun] Someone who completes a course of study.",
+		["grandfather"] = "[Noun] The dad of someone\'s dad.",
+		["gruesome"] = "[Adjective] Extremely unpleasant.",
+		["honorable"] = "[Adjective] Worthy of being respected.",
+		["hysterical"] = "[Adjective] Extremely funny.",
+		["illustrate"] = "[Verb] To visualize something.",
+		["infection"] = "[Noun] The process of catching a disease.",
+		["inflation"] = "[Noun] The process of increasing by an excessive amount.",
+		["information"] = "[Noun] Facts provided to teach someone.",
+		["innovation"] = "[Noun] A new and surprising development.",
+		["insurance"] = "[Noun] Protection from damage.",
+		["interface"] = "[Noun] A screen that allows for communication.",
+		["intermediate"] = "[Adjective] Medium difficulty.",
+		["intervention"] = "[Noun] The process of getting in the way of something.",
+		["justice"] = "[Noun] The state of proceeding in a fair way.",
+		["language"] = "[Noun] The method of human communication.",
+		["legislation"] = "[Noun] A written law.",
+		["liberty"] = "[Noun] The state of being free.",
+		["magnetic"] = "[Adjective] Attraction between objects.",
+		["malicious"] = "[Adjective] Having intent to do harm.",
+		["material"] = "[Noun] The physical property of an object.",
+		["maximum"] = "[Noun] The greatest amount.",
+		["microphone"] = "[Noun] An object that you speak into.",
+		["motionless"] = "[Adjective] Not moving.",
+		["mountain"] = "[Noun] A big hill.",
+		["national"] = "[Adjective] Relating to an entire country.",
+		["nervous"] = "[Adjective] Being scared.",
+		["network"] = "[Noun] A system of connected things.",
+		["nonchalant"] = "[Adjective] Appearing calm.",
+		["numerous"] = "[Adjective] Many.",
+		["oceanic"] = "[Adjective] Relating to Earth\226\128\153s water.",
+		["observation"] = "[Noun] A notice of something.",
+		["omnipotent"] = "[Adjective] Having unlimited power.",
+		["offender"] = "[Noun] Someone who commits an illegal act.",
+		["parallel"] = "[Adjective] Side by side.",
+		["permission"] = "[Noun] Having authority to do something.",
+		["personality"] = "[Noun] The unique way someone acts.",
+		["persuade"] = "[Verb] To convince someone to do something.",
+		["plaster"] = "[Noun] A material you spread on walls.",
+		["plausible"] = "[Adjective] Reasonable to be believed.",
+		["possessive"] = "[Adjective] Taking control of something.",
+		["potential"] = "[Noun] A possibility.",
+		["presentation"] = "[Noun] A talk that explains something to an audience.",
+		["pressure"] = "[Noun] The amount of force on something.",
+		["productive"] = "[Adjective] Someone who is not lazy.",
+		["prosecute"] = "[Verb] To accuse someone of something.",
+		["quality"] = "[Noun] The degree of excellence of something.",
+		["question"] = "[Noun] A statement that asks something.",
+		["radiation"] = "[Noun] Particle emission.",
+		["reasonable"] = "[Adjective] Being fair.",
+		["reckless"] = "[Adjective] Taking action without thinking.",
+		["reflection"] = "[Noun] The act of looking back on past events.",
+		["redundant"] = "[Adjective] No longer useful.",
+		["regular"] = "[Adjective] Something that is in its normal state.",
+		["reliable"] = "[Adjective] Able to be trusted.",
+		["remarkable"] = "[Adjective] Worthy of attention.",
+		["repetition"] = "[Noun] The act of repeating past information.",
+		["request"] = "[Verb] To ask for something.",
+		["responsible"] = "[Adjective] Able to take care of things.",
+		["restrain"] = "[Verb] To restrict someone from doing something.",
+		["romantic"] = "[Adjective] The expression of love.",
+		["satisfying"] = "[Adjective] Rewarding to watch.",
+		["seasonal"] = "[Adjective] Changing based on the time of year.",
+		["sentence"] = "[Noun] A group of words used to form a thought.",
+		["skeleton"] = "[Noun] A model of bones in the human body.",
+		["sophisticated"] = "[Adjective] Developed to high complexity.",
+		["subject"] = "[Noun] The person that is being discussed.",
+		["substantial"] = "[Adjective] Of considerate importance.",
+		["superficial"] = "[Adjective] Existing at the surface.",
+		["survivor"] = "[Noun] A person remaining alive after an event.",
+		["tedious"] = "[Adjective] A task that is long or slow.",
+		["thoughtful"] = "[Adjective] Showing consideration for someone.",
+		["tradition"] = "[Noun] Something that takes place regularly.",
+		["transform"] = "[Verb] To change into something else.",
+		["treatment"] = "[Noun] The manner in which someone behaves.",
+		["tremendous"] = "[Adjective] A large amount of something.",
+		["triangle"] = "[Noun] A shape with three sides.",
+		["unanimous"] = "[Adjective] Fully in agreement.",
+		["understand"] = "[Verb] To successfully interpret something.",
+		["unemployed"] = "[Adjective] Not having a job.",
+		["warning"] = "[Noun] A statement that signifies danger.",
+		["weakness"] = "[Noun] The state of lacking strength.",
+		["workspace"] = "[Noun] An area someone uses to work.",
+		["xylophone"] = "[Noun] An instrument with mallets and wooden bars.",
+		["acroscleroderma"] = "[Noun] A disease that causes tightening of the skin.",
+		["adrenocorticotrophin"] = "[Noun] A hormone that stimulates the adrenal cortex.",
+		["anatidaephobia"] = "[Noun] The fear that a duck is always watching you.",
+		["anthropocentrism"] = "[Noun] The belief that humans are superior to all of nature.",
+		["anticyclogenesis"] = "[Noun] The process of a high-pressure system forming.",
+		["archaeological"] = "[Adjective] Relating to the study of history through excavation.",
+		["atherosclerosis"] = "[Noun] Thickening of the arteries.",
+		["auriculotemporal"] = "[Noun] A nerve that provides information to the ear.",
+		["bacteriologist"] = "[Noun] A scientist who studies bacteria.",
+		["benzotrifluoride"] = "[Noun] A clear and flammable liquid.",
+		["bioaccumulation"] = "[Noun] The buildup of chemicals within a living organism.",
+		["blepharochalasis"] = "[Noun] A condition that causes upper eyelid swelling.",
+		["bourgeoisification"] = "[Noun] The process of adapting to the middle class.",
+		["bromochloromethane"] = "[Noun] A clear and nonflammable liquid.",
+		["cardiovascular"] = "[Adjective] Relating to the heart and blood vessels.",
+		["catecholamines"] = "[Noun] A class of molecules that act as neurotransmitters.",
+		["cervicothoracic"] = "[Adjective] Relating to the neck and chest.",
+		["chondroglossus"] = "[Noun] A small muscle of the tongue.",
+		["compartmentalization"] = "[Noun] The division of something into sections.",
+		["confidentiality"] = "[Noun] The state of keeping something private.",
+		["conjunctivitis"] = "[Noun] The scientific name for pink eye.",
+		["coracobrachialis"] = "[Noun] A small muscle in the upper arm.",
+		["corticomesencephalic"] = "[Noun] A nerve pathway in the brain.",
+		["defenestration"] = "[Noun] The action of throwing someone out of a window.",
+		["dehydrogenation"] = "[Noun] The process of removing hydrogen from molecules.",
+		["dehydrothiotoluidine"] = "[Noun] A chemical used for dyes.",
+		["deoxyribonucleic"] = "[Noun] A molecule carrying genetic instructions.",
+		["desensitization"] = "[Noun] The process of losing sensitivity to something.",
+		["electrocoagulation"] = "[Noun] A treatment that uses an electric current to remove contaminants.",
+		["falsifiability"] = "[Noun] The ability to prove something as false.",
+		["flibbertigibbet"] = "[Noun] An excessively talkative person.",
+		["gastroenterologist"] = "[Noun] A doctor that specializes in the stomach.",
+		["gentrification"] = "[Noun] The process of making something more refined.",
+		["gegenstandstheorie"] = "[Noun] A theory of objects.",
+		["glossopharyngeal"] = "[Adjective] Relating to the tongue.",
+		["glottochronology"] = "[Noun] A method of estimating the date in which languages diverge.",
+		["hemangiopericytoma"] = "[Noun] A type of soft-tissue cancer.",
+		["hematopoietically"] = "[Adverb] In a manner relating to blood cell formation.",
+		["hemidemisemiquaver"] = "[Noun] A sixty-fourth musical note.",
+		["hemoglobinopathy"] = "[Noun] A group of inherited blood disorders.",
+		["honorificabilitudinity"] = "[Noun] The state of being honorable.",
+		["hydrometeorology"] = "[Noun] The study of rainfall",
+		["hydroxyprogesterone"] = "[Noun] A medicine for birth.",
+		["hyperoxymuriatic"] = "[Adjective] Describing corrosive acid.",
+		["hypoparathyroidism"] = "[Noun] A condition leading to low blood calcium levels.",
+		["immunodeficiency"] = "[Noun] Failure of the immune system.",
+		["incomprehensibility"] = "[Noun] The state of being impossible to understand.",
+		["interstitiospinal"] = "[Noun] A motor pathway in the central nervous system.",
+		["labyrinthodontia"] = "[Noun] An extinct species similar to crocodiles.",
+		["lautenclavicymbal"] = "[Noun] An instrumental keyboard featuring gut strings.",
+		["lepidopterology"] = "[Noun] The scientific study of butterflies.",
+		["lipopolysaccharide"] = "[Noun] A complex molecule.",
+		["meteorological"] = "[Adjective] Relating to the study of the atmosphere.",
+		["micropaleontology"] = "[Noun] The study of tiny fossils.",
+		["miniaturization"] = "[Noun] The process of making something smaller.",
+		["musculoskeletal"] = "[Adjective] Relating to the muscular and skeletal systems.",
+		["musculocutaneous"] = "[Adjective] Relating to the muscular and skin systems.",
+		["neuroplasticity"] = "[Noun] The ability of the brain to reorganize itself.",
+		["nucleosynthesis"] = "[Noun] The creation of atomic nuclei.",
+		["oligosynthetic"] = "[Adjective] Describing a simple type of language.",
+		["olivocerebellar"] = "[Adjective] Relating to the cerebellum and the olivary nuclei.",
+		["osteosclerosis"] = "[Noun] A disorder that causes increased bone density.",
+		["otorhinolaryngological"] = "[Adjective] Relating to the ear, nose, and throat.",
+		["paleoclimatology"] = "[Noun] The study of climates.",
+		["palatopharyngeus"] = "[Noun] A small muscle in the roof of the mouth.",
+		["parapsychology"] = "[Noun] The study of psychic phenomena.",
+		["paraventricular"] = "[Adjective] Next to a ventricle of the brain.",
+		["perissodactyla"] = "[Noun] An order of mammals.",
+		["pharmaceutical"] = "[Noun] Medicine.",
+		["pheochromocytoma"] = "[Noun] A tumor that develops in the adrenal glands.",
+		["polyphiloprogenitive"] = "[Adjective] Extremely prolific.",
+		["pneumoencephalography"] = "[Noun] An obsolete brain imaging technique.",
+		["psychoanalysis"] = "[Noun] The study of the conscious and unconscious mind.",
+		["psychotomimetic"] = "[Adjective] Capable of producing a psychotic state.",
+		["pulchritudinous"] = "[Adjective] Beautiful.",
+		["quinquagenarian"] = "[Noun] A person in their 50s.",
+		["quintessential"] = "[Adjective] Representing the most perfect example of something.",
+		["radiometeorograph"] = "[Noun] An instrument carried into the atmosphere by a balloon.",
+		["reconciliation"] = "[Noun] The process of reforming a bond with someone.",
+		["reconnaissance"] = "[Noun] Preliminary observation.",
+		["rehabilitation"] = "[Noun] The process of restoring something to its normal state.",
+		["reticulospinal"] = "[Noun] A motor pathway that sends signals to the spinal cord.",
+		["rhombencephalon"] = "[Noun] The lower part of the brainstem.",
+		["semimembranosus"] = "[Noun] A major hamstring muscle.",
+		["sesquipedalian"] = "[Adjective] Characterized by long words.",
+		["spectrofluorometer"] = "[Noun] An instrument that measures fluroescent light.",
+		["spinomesencephalic"] = "[Noun] A pathway consisting of bundled nerve fibers.",
+		["sternoclavicular"] = "[Noun] A joint between the clavicle and sternum.",
+		["sternocleidomastoid"] = "[Noun] A long muscle in the neck.",
+		["subinfeudation"] = "[Noun] A medieval process for granting land.",
+		["supratrochlear"] = "[Adjective] Above the eye.",
+		["temporoparietalis"] = "[Noun] A muscle within the head.",
+		["thermoluminescence"] = "[Noun] The ability to glow through high temperatures.",
+		["tonsillopharyngitis"] = "[Noun] A sore throat.",
+		["trichotillomania"] = "[Noun] A condition that causes urges to pull out hair.",
+		["utilitarianism"] = "[Noun] The belief in benefitting the majority.",
+		["vestibulocochlear"] = "[Noun] A nerve within the ear.",
+		["vicissitudinous"] = "[Adjective] Characterized by frequent and unexpected changes.",
+		["worcestershire"] = "[Noun] A county in England.",
+		["zygomaticotemporal"] = "[Adjective] Relating to an area on the side of the head.",
+		["antidisestablishmentarianism"] = "[Noun] Opposition to the separation of the Church of England.",
+		["chargoggagoggmanchauggagoggchaubunagungamaugg"] = "[Noun] A lake in Webster, MA.",
+		["floccinaucinihilipilification"] = "[Noun] The habit of estimating something as worthless.",
+		["hippopotomonstrosesquipedaliophobia"] = "[Noun] The irrational fear of long words.",
+		["nasopharyngolaryngoscopy"] = "[Noun] A medical procedure used to examine the nose, throat, and airway.",
+		["encephaloduroarteriosynangiosis"] = "[Noun] A procedure that treats cerebrovascular diseases.",
+		["nonanonacontanonactanonaliagon"] = "[Noun] A polygon with 9,999 sides.",
+		["pneumonoultramicroscopicsilicovolcanoconiosis"] = "[Noun] A lung disease caused by inhaling ash.",
+		["pseudopseudohypoparathyroidism"] = "[Noun] A genetic condition that causes skeletal issues.",
+		["supercalifragilisticexpialidocious"] = "[Adjective] Extraordinarily good.",
+		["chemoorganoheterotrophy"] = "[Noun] A process for organisms to obtain energy and carbon from organic compounds.",
+		["amongus"] = "[Noun] \240\159\164\168",
+		["bingbop"] = "[Noun] bingo",
+		["bingchilling"] = "[Noun] \240\159\141\166",
+		["hamster"] = "[Noun] \240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\165\186\240\159\165\186\240\159\165\186\240\159\144\185\240\159\165\186\240\159\144\185\240\159\165\186\240\159\144\185\240\159\165\186",
+		["johncena"] = "[Noun] AND HIS NAME IS-",
+		["oiia"] = "[Adjective] \240\159\144\136",
+		["onion"] = "[Noun] a common kitchen vegetable",
+		["wiwiwi"] = "[Adjective] :3",
+		["yee"] = "[Noun] the only documented dinosaur sound",
+		["butterdog"] = "[Noun] \240\159\167\136\240\159\144\149",
+		["gocrazy"] = "[Verb] to act in a wild or uncontrolled manner",
+		["heheheha"] = "[Noun] a laugh in clash royale",
+		["lebronjames"] = "[Noun] the goat of basketball",
+		["metalpipe"] = "[Noun] something that would be really loud if u drop",
+		["pomegranate"] = "[Noun] this fruit is not allowed",
+		["stopthecap"] = "[Noun] lie",
+		["tralalerotralala"] = "[Noun] shark noise",
+		["vineboom"] = "[Adjective] \240\159\146\165",
+		["whistle"] = "[Noun] a way to say hello",
+		["allourfoodkeepsblowingup"] = "[Verb] unfortunate luck for arbys food",
+		["bhocolatebhipbookie"] = "[Noun] sweet treat",
+		["boombambop"] = "[Noun] epic roast",
+		["changetheworld"] = "[Noun] rat phrase",
+		["cheeseonmycheeseburger"] = "[Noun] the most important question of all time",
+		["chipichipichapachapa"] = "[Adjective] what u say to describe a cat that dances in a litter box",
+		["christmasjustaweekaway"] = "[Noun] today is december 18",
+		["icouldadroppedmycroissant"] = "[Noun] \240\159\165\144",
+		["imgonnabreakmymonitoriswear"] = "[Noun] is this a threat?",
+		["imsemiistayautomatic"] = "[Noun] mathematics :)",
+		["iwalktoburgerking"] = "[Verb] what u do when ur hungry",
+		["luigiluigiohyeahohyeah"] = "[Noun] brother of mario",
+		["metroboominmakeitboom"] = "[Verb] \240\159\143\153\239\184\143\240\159\146\165",
+		["pleaseburgercheese"] = "[Noun] \240\159\141\148",
+		["putitinreverseterry"] = "[Noun] \240\159\142\135\226\153\191\239\184\143",
+		["putthephonedown"] = "[Noun] exchange between a cop and a person armed with a phone",
+		["thereisliterallysoapeverywhere"] = "[Noun] what u say when the dishwasher messes up",
+		["thetinggoskrra"] = "[Noun] onomatopoeia of movement",
+		["thisisamomentinhistory"] = "[Noun] famous caseoh phrase",
+		["wantabreakfromtheads"] = "[Noun] spotify",
+		["whostealsacheesegrater"] = "[Noun] question about a kitchen appliance"
+	}
 	
 	local ACCENT_COLOR = Color3.fromRGB(55, 145, 230)
 	local MAIN_COLOR = Color3.fromRGB(20, 20, 30)
@@ -5969,6 +6043,20 @@ local defToWord = {
 	local NPAD = 6
 	local NRIGHT = 14
 	local NBOTTOM = 14
+	
+	-- rconsoleclear wipes the window then rconsoleprint rewrites the bar without a newline,
+	-- so it looks like the same line is updating. only works in executor consoles (synapse, fluxus etc)
+	local function consoleProgress(pct, label)
+		if not rconsoleprint or not rconsoleclear then return end
+		local filled = math.floor(pct / 5)
+		local bar = string.rep("█", filled) .. string.rep("░", 20 - filled)
+		rconsoleclear()
+		if pct >= 100 then
+			rconsoleprint("[████████████████████] 100% - done\n")
+		else
+			rconsoleprint("[" .. bar .. "] " .. pct .. "% - " .. label)
+		end
+	end
 	
 	local function notify(title, body, dur, ntype)
 		dur = dur or 4
@@ -5983,15 +6071,15 @@ local defToWord = {
 		bodyLbl.Text = body
 		local colorMap = {
 			success = Color3.fromRGB(40, 190, 80),
-			info    = ACCENT_COLOR,
-			error   = Color3.fromRGB(210, 50, 50),
-			warn    = Color3.fromRGB(225, 160, 25),
+			info = ACCENT_COLOR,
+			error = Color3.fromRGB(210, 50, 50),
+			warn = Color3.fromRGB(225, 160, 25),
 		}
 		local imgMap = {
 			success = "successimg",
-			info    = "infoimg",
-			error   = "errorimg",
-			warn    = "warnimg",
+			info = "infoimg",
+			error = "errorimg",
+			warn = "warnimg",
 		}
 		local col = colorMap[ntype] or colorMap.info
 		local imgName = imgMap[ntype] or "infoimg"
@@ -6040,48 +6128,48 @@ local defToWord = {
 		["r"]={"e","t","f","d"},["s"]={"a","d","w","e","z","x"},
 		["t"]={"r","y","g","f"},["u"]={"y","i","j","h"},
 		["v"]={"c","b","f","g"},["w"]={"q","e","s","a"},
-		["x"]={"z","c","s","d"},["y"]={"t","u","h","g"},["z"]={"a","s","x"}
+		["x"]={"z","c","s","d"},["y"]={"t","u","h","g"},["z"]={"a","s","x"},
 	}
 	
 	local state = {
-		autoType            = false,
-		randomSpeed         = false,
-		normalSpeed         = 0.02,
-		minSpeed            = 0.01,
-		maxSpeed            = 0.04,
-		currentWord         = "Waiting...",
-		typosEnabled        = false,
-		typoChance          = 15,
-		typoMethod          = "Legit",
-		loseAfterWords      = false,
-		loseCount           = 10,
-		dieMode             = "None",
-		autoEnter           = true,
-		wordsTyped          = 0,
-		isTyping            = false,
-		mode                = "Remote",
-		defMode             = false,
-		contWait            = 0.05,
-		randomContWait      = false,
-		contWaitMin         = 0.02,
-		contWaitMax         = 0.10,
-		enterDelay          = 0,
-		typingDelay         = 0,
+		autoType = false,
+		randomSpeed = false,
+		normalSpeed = 0.02,
+		minSpeed = 0.01,
+		maxSpeed = 0.04,
+		currentWord = "Waiting...",
+		typosEnabled = false,
+		typoChance = 15,
+		typoMethod = "Legit",
+		loseAfterWords = false,
+		loseCount = 10,
+		dieMode = "None",
+		autoEnter = true,
+		wordsTyped = 0,
+		isTyping = false,
+		mode = "Remote",
+		defMode = false,
+		contWait = 0.05,
+		randomContWait = false,
+		contWaitMin = 0.02,
+		contWaitMax = 0.10,
+		enterDelay = 0,
+		typingDelay = 0,
 		fullDeleteThreshold = 4,
 		noFixDeleteThreshold = 4,
-		_lastEnterDelay     = 0.5,
-		_lastTypingDelay    = 0.5,
+		_lastEnterDelay = 0.5,
+		_lastTypingDelay = 0.5,
 		manualTypingEnabled = false,
-		manualWord          = "",
-		manualIndex         = 1,
+		manualWord = "",
+		manualIndex = 1,
 	}
 	
-	local modes               = {"Remote","Input","Definition"}
-	local currentModeIndex    = 1
-	local dieModes            = {"None","EarlyEnter","EarlyType"}
+	local modes = {"Remote","Input","Definition"}
+	local currentModeIndex = 1
+	local dieModes = {"None","EarlyEnter","EarlyType"}
 	local currentDieModeIndex = 1
-	local typoMethods             = {"Legit","Fix","NoFix","FullDelete","NoFixDelete","Hesitate","DoubleType"}
-	local currentTypoMethodIndex  = 1
+	local typoMethods = {"Legit","Fix","NoFix","FullDelete","NoFixDelete","Hesitate","DoubleType"}
+	local currentTypoMethodIndex = 1
 	
 	local function getAvailableModes()
 		if gameType == "HUNDRED_PLAYER" then
@@ -6092,42 +6180,62 @@ local defToWord = {
 	
 	local activeColor = Color3.fromRGB(8, 197, 20)
 	local normalColor = Color3.fromRGB(179, 41, 22)
-	local tweenInfo   = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	local activePos   = UDim2.new(0.506, 0, 0, 0)
-	local normalPos   = UDim2.new(0, 0, 0, 0)
+	local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local activePos = UDim2.new(0.506, 0, 0, 0)
+	local normalPos = UDim2.new(0, 0, 0, 0)
 	
-	local playerGui       = player:WaitForChild("PlayerGui")
-	local mainFrame       = script.Parent:WaitForChild("msl")
-	local atBtn           = mainFrame:WaitForChild("atbtn")
-	local rsBtn           = mainFrame:WaitForChild("rsbtn")
-	local tBtn            = mainFrame:WaitForChild("tbtn")
-	local modeBtn         = mainFrame:WaitForChild("modebtn")
-	local autoEnterBtn    = mainFrame:WaitForChild("enterbtn")
-	local loseBtn         = mainFrame:WaitForChild("losebtn")
-	local dieBtn          = mainFrame:WaitForChild("diebtn")
-	local typoMethodBtn   = mainFrame:WaitForChild("typomethodbtn")
-	local normalSlider    = atBtn:WaitForChild("normalSlider")
-	local maxSlider       = rsBtn:WaitForChild("maxSlider")
-	local minSlider       = rsBtn:WaitForChild("minSlider")
-	local tSlider         = tBtn:WaitForChild("tSlider")
-	local fdtSlider       = tBtn:WaitForChild("fdtSlider")
-	local nfdtSlider      = tBtn:WaitForChild("fdtSlider"):Clone()
-	nfdtSlider.Name       = "nfdtSlider"
-	nfdtSlider.Visible    = false
-	nfdtSlider.Parent     = tBtn
+	local playerGui = player:WaitForChild("PlayerGui")
+	local mainFrame = script.Parent:WaitForChild("msl")
+	local atBtn = mainFrame:WaitForChild("atbtn")
+	local rsBtn = mainFrame:WaitForChild("rsbtn")
+	local tBtn = mainFrame:WaitForChild("tbtn")
+	local modeBtn = mainFrame:WaitForChild("modebtn")
+	local autoEnterBtn = mainFrame:WaitForChild("enterbtn")
+	local loseBtn = mainFrame:WaitForChild("losebtn")
+	local dieBtn = mainFrame:WaitForChild("diebtn")
+	local typoMethodBtn = mainFrame:WaitForChild("typomethodbtn")
+	local normalSlider = atBtn:WaitForChild("normalSlider")
+	local maxSlider = rsBtn:WaitForChild("maxSlider")
+	local minSlider = rsBtn:WaitForChild("minSlider")
+	local tSlider = tBtn:WaitForChild("tSlider")
+	local fdtSlider = tBtn:WaitForChild("fdtSlider")
+	local nfdtSlider = tBtn:WaitForChild("fdtSlider"):Clone()
+	nfdtSlider.Name = "nfdtSlider"
+	nfdtSlider.Visible = false
+	nfdtSlider.Parent = tBtn
 	local loseCountSlider = loseBtn:WaitForChild("lsSlider")
-	local wordLabel       = script.Parent:WaitForChild("rl"):WaitForChild("wordl")
-	local lettersLabel    = script.Parent:WaitForChild("rl"):WaitForChild("letters")
-	local contWaitBtn     = mainFrame:WaitForChild("contwaitbtn")
-	local rcwBtn          = mainFrame:WaitForChild("rcwbtn")
-	local contWaitSlider  = contWaitBtn:WaitForChild("cwSlider")
-	local rcwMinSlider    = rcwBtn:WaitForChild("rcwMinSlider")
-	local rcwMaxSlider    = rcwBtn:WaitForChild("rcwMaxSlider")
-	local enterDelayBtn   = mainFrame:WaitForChild("enterdelaybtn")
-	local typingDelayBtn  = mainFrame:WaitForChild("typingdelaybtn")
-	local enterDelaySlider  = enterDelayBtn:WaitForChild("edSlider")
+	local wordLabel = script.Parent:WaitForChild("rl"):WaitForChild("wordl")
+	local lettersLabel = script.Parent:WaitForChild("rl"):WaitForChild("letters")
+	local estWpmLabel = script.Parent:WaitForChild("rl"):WaitForChild("estWpm")
+	local contWaitBtn = mainFrame:WaitForChild("contwaitbtn")
+	local rcwBtn = mainFrame:WaitForChild("rcwbtn")
+	local contWaitSlider = contWaitBtn:WaitForChild("cwSlider")
+	local rcwMinSlider = rcwBtn:WaitForChild("rcwMinSlider")
+	local rcwMaxSlider = rcwBtn:WaitForChild("rcwMaxSlider")
+	local enterDelayBtn = mainFrame:WaitForChild("enterdelaybtn")
+	local typingDelayBtn = mainFrame:WaitForChild("typingdelaybtn")
+	local enterDelaySlider = enterDelayBtn:WaitForChild("edSlider")
 	local typingDelaySlider = typingDelayBtn:WaitForChild("tdSlider")
-	local manualBtn       = mainFrame:WaitForChild("manualbtn")
+	local manualBtn = mainFrame:WaitForChild("manualbtn")
+	
+	local AVG_WORD_LEN = 13
+	
+	local function calcEstWpm()
+		if state.randomSpeed then
+			local avg = (state.minSpeed + state.maxSpeed) / 2
+			if avg <= 0 then return 9999 end
+			return math.floor((40 / avg) / AVG_WORD_LEN)
+		else
+			if state.normalSpeed <= 0 then return 9999 end
+			return math.floor((40 / state.normalSpeed) / AVG_WORD_LEN)
+		end
+	end
+	
+	local function updateEstWpm()
+		if estWpmLabel then
+			estWpmLabel.Text = "est. ~" .. calcEstWpm() .. " wpm"
+		end
+	end
 	
 	local function formatSliderValue(v)
 		local f = string.format("%.3f", v)
@@ -6149,10 +6257,8 @@ local defToWord = {
 		if bar then
 			bar = bar:FindFirstChild("bar")
 			if bar then
-				local targetPos   = isActive and activePos or normalPos
-				local targetColor = isActive and activeColor or normalColor
-				TweenService:Create(bar, tweenInfo, {Position        = targetPos  }):Play()
-				TweenService:Create(bar, tweenInfo, {BackgroundColor3 = targetColor}):Play()
+				TweenService:Create(bar, tweenInfo, {Position = isActive and activePos or normalPos}):Play()
+				TweenService:Create(bar, tweenInfo, {BackgroundColor3 = isActive and activeColor or normalColor}):Play()
 			end
 		end
 	end
@@ -6172,25 +6278,22 @@ local defToWord = {
 			if mn > mx then mn, mx = mx, mn end
 			return mn + math.random() * (mx - mn)
 		end
-		return state.contWait
+		return state.contWait + (math.random() * 0.01 - 0.005)
 	end
 	
 	local function getTypingSpeed()
 		if state.randomSpeed then
-			local wt = state.minSpeed + math.random() * (state.maxSpeed - state.minSpeed)
-			return math.max(wt, 0.002)
+			-- rolls fresh every call so each letter genuinely gets a different speed
+			local spd = state.minSpeed + math.random() * (state.maxSpeed - state.minSpeed)
+			return math.max(spd, 0.002)
 		end
-		return math.max(state.normalSpeed, 0.002)
+		local jitter = state.normalSpeed * (math.random() * 0.1 - 0.05)
+		return math.max(state.normalSpeed + jitter, 0.002)
 	end
 	
-	local function resolveTypo(partial, typoCount)
-		task.wait(getContWait())
-		if state.typoMethod == "FullDelete" and typoCount >= state.fullDeleteThreshold then
-			return partial, typoCount, true, math.random(1, 2), false
-		elseif state.typoMethod == "Legit" then
-			return partial, typoCount, false, 0, true
-		end
-		return partial:sub(1, -2), typoCount, false, 0, false
+	local function getEnterDelay()
+		if state.enterDelay <= 0 then return 0 end
+		return state.enterDelay + (math.random() * 0.06 - 0.03)
 	end
 	
 	local function doLegitCorrection(partial, setTextFn, targetWord, typoInsertedAt)
@@ -6203,10 +6306,9 @@ local defToWord = {
 			partial = partial .. ec
 			charsAdded = charsAdded + 1
 			setTextFn(partial)
-			task.wait(state.normalSpeed > 0 and state.normalSpeed or 0.02)
+			task.wait(math.max(state.normalSpeed, 0.02))
 		end
-		local toDelete = charsAdded + 1
-		for d = 1, toDelete do
+		for d = 1, charsAdded + 1 do
 			if not state.autoType then break end
 			task.wait(0.04 + math.random() * 0.1)
 			partial = partial:sub(1, -2)
@@ -6218,7 +6320,7 @@ local defToWord = {
 	local function doNoFixDelete(word, setTextFn)
 		local typoCount = state.noFixDeleteThreshold or 4
 		local indices = {}
-		for i = 1, #word do indices[#indices+1] = i end
+		for i = 1, #word do indices[#indices + 1] = i end
 		for i = #indices, 2, -1 do
 			local j = math.random(1, i)
 			indices[i], indices[j] = indices[j], indices[i]
@@ -6227,37 +6329,26 @@ local defToWord = {
 		for i = 1, math.min(typoCount, #indices - 1) do
 			chosen[indices[i]] = true
 		end
-	
 		local result = ""
 		for i = 1, #word do
-			if chosen[i] then
-				result = result .. getTypoChar(word:sub(i, i))
-			else
-				result = result .. word:sub(i, i)
-			end
+			result = result .. (chosen[i] and getTypoChar(word:sub(i, i)) or word:sub(i, i))
 		end
-	
 		for i = 1, #result do
 			if not state.autoType then return result end
-			local current = result:sub(1, i)
-			setTextFn(current)
+			setTextFn(result:sub(1, i))
 			updateLettersLabel(i, #word)
 			task.wait(getTypingSpeed())
 		end
-	
 		task.wait(0.08 + math.random() * 0.12)
-	
 		local current = result
 		for i = 1, #word do
 			if not state.autoType then return word end
 			if current:sub(i, i) ~= word:sub(i, i) then
-				local corrected = current:sub(1, i - 1) .. word:sub(i, i) .. current:sub(i + 1)
-				current = corrected
+				current = current:sub(1, i - 1) .. word:sub(i, i) .. current:sub(i + 1)
 				setTextFn(current)
 				task.wait(0.03 + math.random() * 0.06)
 			end
 		end
-	
 		return word
 	end
 	
@@ -6291,9 +6382,7 @@ local defToWord = {
 		end)
 		if ok and defText and defText ~= "" then
 			for word, def in pairs(defToWord) do
-				if def == defText then
-					return word
-				end
+				if def == defText then return word end
 			end
 		end
 		return nil
@@ -6301,14 +6390,13 @@ local defToWord = {
 	
 	local function getRemoteEvents()
 		if gameType == "ORIGINAL" then
-			local eventsFolder = ReplicatedStorage:FindFirstChild("Events")
-				or ReplicatedStorage:FindFirstChild("events")
+			local eventsFolder = ReplicatedStorage:FindFirstChild("Events") or ReplicatedStorage:FindFirstChild("events")
 			local remoteEvent, monitorEvent
 			if eventsFolder then
-				remoteEvent  = eventsFolder:FindFirstChild("PlayerText")
+				remoteEvent = eventsFolder:FindFirstChild("PlayerText")
 				monitorEvent = eventsFolder:FindFirstChild("UpdateMonitorText")
 			end
-			if not remoteEvent  then remoteEvent  = ReplicatedStorage:FindFirstChild("PlayerText")       end
+			if not remoteEvent then remoteEvent = ReplicatedStorage:FindFirstChild("PlayerText") end
 			if not monitorEvent then monitorEvent = ReplicatedStorage:FindFirstChild("UpdateMonitorText") end
 			return remoteEvent, monitorEvent
 	
@@ -6353,27 +6441,22 @@ local defToWord = {
 			return ReplicatedStorage:FindFirstChild("SpellingBeeRemote"), nil
 	
 		elseif gameType == "SHIVA" then
-			return ReplicatedStorage:FindFirstChild("NextTurn"),
-			ReplicatedStorage:FindFirstChild("UpdateSignText")
+			return ReplicatedStorage:FindFirstChild("NextTurn"), ReplicatedStorage:FindFirstChild("UpdateSignText")
 	
 		elseif gameType == "OIIA" then
-			return ReplicatedStorage:FindFirstChild("SubmitSpelling"),
-			ReplicatedStorage:FindFirstChild("TypingUpdate")
+			return ReplicatedStorage:FindFirstChild("SubmitSpelling"), ReplicatedStorage:FindFirstChild("TypingUpdate")
 	
 		elseif gameType == "GALAXY" then
 			local remotesFolder = ReplicatedStorage:FindFirstChild("Remotes")
 			if remotesFolder then
-				return remotesFolder:FindFirstChild("SubmitWord"),
-				remotesFolder:FindFirstChild("UpdateBoard")
+				return remotesFolder:FindFirstChild("SubmitWord"), remotesFolder:FindFirstChild("UpdateBoard")
 			end
 	
 		elseif gameType == "SPELLING_MASTERS" then
-			return ReplicatedStorage:FindFirstChild("SubmitAnswerEvent"),
-			ReplicatedStorage:FindFirstChild("UpdateTypingEvent")
+			return ReplicatedStorage:FindFirstChild("SubmitAnswerEvent"), ReplicatedStorage:FindFirstChild("UpdateTypingEvent")
 	
 		elseif gameType == "CUPS" then
-			return ReplicatedStorage:FindFirstChild("SubmitSpelling"),
-			ReplicatedStorage:FindFirstChild("TypingUpdate")
+			return ReplicatedStorage:FindFirstChild("SubmitSpelling"), ReplicatedStorage:FindFirstChild("TypingUpdate")
 		end
 	
 		return nil, nil
@@ -6394,14 +6477,14 @@ local defToWord = {
 		timeout = timeout or 1
 		while tick() - startTime < timeout do
 			local typeGui
-			if     gameType == "XISTER"  then typeGui = playerGui:FindFirstChild("SpellingGui")
-			elseif gameType == "NUNU"    then typeGui = playerGui:FindFirstChild("SpellingBeeGUI")
-			elseif gameType == "SHIVA"   then typeGui = playerGui:FindFirstChild("Answer")
-			elseif gameType == "GALAXY"  then typeGui = playerGui:FindFirstChild("MainGui")
-			elseif gameType == "OIIA"    then typeGui = playerGui:FindFirstChild("SpellingGui")
-			elseif gameType == "CUPS"    then typeGui = playerGui:FindFirstChild("SpellingGui")
-			elseif gameType == "ONEX"    then typeGui = playerGui:FindFirstChild("SpellingBeeGui")
-			else                              typeGui = playerGui:FindFirstChild("Type")
+			if gameType == "XISTER" then typeGui = playerGui:FindFirstChild("SpellingGui")
+			elseif gameType == "NUNU" then typeGui = playerGui:FindFirstChild("SpellingBeeGUI")
+			elseif gameType == "SHIVA" then typeGui = playerGui:FindFirstChild("Answer")
+			elseif gameType == "GALAXY" then typeGui = playerGui:FindFirstChild("MainGui")
+			elseif gameType == "OIIA" then typeGui = playerGui:FindFirstChild("SpellingGui")
+			elseif gameType == "CUPS" then typeGui = playerGui:FindFirstChild("SpellingGui")
+			elseif gameType == "ONEX" then typeGui = playerGui:FindFirstChild("SpellingBeeGui")
+			else typeGui = playerGui:FindFirstChild("Type")
 			end
 			if typeGui and typeGui.Enabled then return typeGui end
 			task.wait()
@@ -6410,20 +6493,19 @@ local defToWord = {
 	end
 	
 	local function findTextBoxInGui()
-		if     gameType == "XISTER"  then return playerGui.SpellingGui.TextBox
-		elseif gameType == "CARL"    then return playerGui.Textbox.TextBox
-		elseif gameType == "NUNU"    then return playerGui.SpellingBeeGUI.GameFrame.Input
-		elseif gameType == "SHIVA"   then return playerGui.Answer.TextBox
-		elseif gameType == "CUPS"    then return playerGui.SpellingGui.TextBox
-		elseif gameType == "OIIA"    then return playerGui.SpellingGui.TextBox
-		elseif gameType == "ONEX"    then return playerGui.SpellingBeeGui.TextBox
-		elseif gameType == "GALAXY"  then
+		if gameType == "XISTER" then return playerGui.SpellingGui.TextBox
+		elseif gameType == "CARL" then return playerGui.Textbox.TextBox
+		elseif gameType == "NUNU" then return playerGui.SpellingBeeGUI.GameFrame.Input
+		elseif gameType == "SHIVA" then return playerGui.Answer.TextBox
+		elseif gameType == "CUPS" then return playerGui.SpellingGui.TextBox
+		elseif gameType == "OIIA" then return playerGui.SpellingGui.TextBox
+		elseif gameType == "ONEX" then return playerGui.SpellingBeeGui.TextBox
+		elseif gameType == "GALAXY" then
 			local mainGui = playerGui:FindFirstChild("MainGui")
 			if not mainGui then return nil end
 			local spellingUi = mainGui:FindFirstChild("GameSpellingUi", true)
 			if not spellingUi then return nil end
-			return spellingUi:FindFirstChild("TextBox", true)
-				or spellingUi:FindFirstChildWhichIsA("TextBox", true)
+			return spellingUi:FindFirstChild("TextBox", true) or spellingUi:FindFirstChildWhichIsA("TextBox", true)
 		else
 			return playerGui.Type.TextBox
 		end
@@ -6497,6 +6579,36 @@ local defToWord = {
 		return partial, typoCountRef, false, i
 	end
 	
+	local function checkLoseAfterWords()
+		if state.loseAfterWords and state.wordsTyped >= state.loseCount then
+			state.autoType = false
+			state.wordsTyped = 0
+			updateToggleBar(atBtn, false)
+		end
+	end
+	
+	local function fireEnter(remoteEvent, partialWord, word)
+		if gameType == "ORIGINAL" then
+			remoteEvent:FireServer(partialWord, workspace:GetServerTimeNow(), true)
+		elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
+			remoteEvent:FireServer(partialWord, true)
+		elseif gameType == "THE_SB" then
+			remoteEvent:FireServer(partialWord, true)
+		elseif gameType == "CARL" then
+			remoteEvent:FireServer(word)
+		elseif gameType == "NUNU" then
+			remoteEvent:FireServer("SubmitSpelling", partialWord, workspace:GetServerTimeNow())
+		elseif gameType == "SHIVA" then
+			remoteEvent:FireServer(true, workspace:GetServerTimeNow(), #partialWord)
+		elseif gameType == "OIIA" or gameType == "CUPS" then
+			remoteEvent:FireServer(partialWord)
+		elseif gameType == "GALAXY" then
+			remoteEvent:FireServer(partialWord)
+		elseif gameType == "SPELLING_MASTERS" then
+			remoteEvent:FireServer(partialWord)
+		end
+	end
+	
 	local function typeWordInput(word)
 		if state.isTyping then return end
 		state.isTyping = true
@@ -6514,10 +6626,9 @@ local defToWord = {
 		end
 	
 		local remoteEvent = getRemoteEvents()
-		local targetWord   = word
-		local partialWord  = ""
-		local totalLetters = #targetWord
-		updateLettersLabel(0, totalLetters)
+		local targetWord = word
+		local partialWord = ""
+		updateLettersLabel(0, #targetWord)
 	
 		local startIndex = 1
 		if state.dieMode == "EarlyType" then
@@ -6530,9 +6641,7 @@ local defToWord = {
 	
 		textbox.Text = ""
 	
-		local function setTextbox(t)
-			textbox.Text = t
-		end
+		local function setTextbox(t) textbox.Text = t end
 	
 		if state.typosEnabled and state.typoMethod == "NoFixDelete" then
 			partialWord = doNoFixDelete(targetWord, setTextbox)
@@ -6540,66 +6649,33 @@ local defToWord = {
 		else
 			local typoCount = 0
 			local i = startIndex
-	
 			while i <= endIndex do
 				if not state.autoType then break end
-	
-				local char       = targetWord:sub(i, i)
-				local shouldTypo = state.typosEnabled
-					and math.random(1, 100) <= state.typoChance
-					and i < endIndex
-	
+				local char = targetWord:sub(i, i)
+				local shouldTypo = state.typosEnabled and math.random(1, 100) <= state.typoChance and i < endIndex
 				if shouldTypo then
 					local newPartial, newCount, didFullReset, newI = applyTypoToChar(partialWord, setTextbox, targetWord, i, typoCount)
 					partialWord = newPartial
 					typoCount = newCount
-					if didFullReset then
-						i = 1
-					else
-						i = newI
-					end
+					i = didFullReset and 1 or newI
 					textbox.Text = partialWord
 					continue
 				end
-	
 				partialWord = partialWord .. char
 				textbox.Text = partialWord
-				updateLettersLabel(#partialWord, totalLetters)
-	
-				local waitTime = getTypingSpeed()
-				if i < endIndex then task.wait(waitTime) end
+				updateLettersLabel(#partialWord, #targetWord)
+				if i < endIndex then task.wait(getTypingSpeed()) end
 				i = i + 1
 			end
 		end
 	
-		if state.enterDelay > 0 then task.wait(state.enterDelay) end
+		local ed = getEnterDelay()
+		if ed > 0 then task.wait(ed) end
 	
 		if state.autoEnter and remoteEvent then
-			if     gameType == "ORIGINAL" then
-				remoteEvent:FireServer(partialWord, workspace:GetServerTimeNow(), true)
-			elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
-				remoteEvent:FireServer(partialWord, true)
-			elseif gameType == "THE_SB" then
-				remoteEvent:FireServer(partialWord, true)
-			elseif gameType == "CARL" then
-				remoteEvent:FireServer(word)
-			elseif gameType == "NUNU" then
-				remoteEvent:FireServer("SubmitSpelling", partialWord, workspace:GetServerTimeNow())
-			elseif gameType == "SHIVA" then
-				remoteEvent:FireServer(true, workspace:GetServerTimeNow(), #partialWord)
-			elseif gameType == "OIIA" or gameType == "CUPS" then
-				remoteEvent:FireServer(partialWord)
-			elseif gameType == "GALAXY" then
-				remoteEvent:FireServer(partialWord)
-			elseif gameType == "SPELLING_MASTERS" then
-				remoteEvent:FireServer(partialWord)
-			end
-	
+			fireEnter(remoteEvent, partialWord, word)
 			state.wordsTyped = state.wordsTyped + 1
-			if state.loseAfterWords and state.wordsTyped >= state.loseCount then
-				state.autoType = false
-				updateToggleBar(atBtn, false)
-			end
+			checkLoseAfterWords()
 		end
 	
 		if gameType == "NUNU" then task.wait(1.5) end
@@ -6635,10 +6711,9 @@ local defToWord = {
 			return
 		end
 	
-		local targetWord   = word
-		local partialWord  = ""
-		local totalLetters = #targetWord
-		updateLettersLabel(0, totalLetters)
+		local targetWord = word
+		local partialWord = ""
+		updateLettersLabel(0, #targetWord)
 	
 		local startIndex = 1
 		if state.dieMode == "EarlyType" then
@@ -6650,7 +6725,7 @@ local defToWord = {
 		end
 	
 		local function fireKeystroke(text)
-			if     gameType == "ORIGINAL" then
+			if gameType == "ORIGINAL" then
 				remoteEvent:FireServer(text, workspace:GetServerTimeNow(), false)
 				if secondaryRemote then secondaryRemote:FireServer(text) end
 			elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
@@ -6685,66 +6760,33 @@ local defToWord = {
 		else
 			local typoCount = 0
 			local i = startIndex
-	
 			while i <= endIndex do
 				if not state.autoType then break end
-	
-				local char       = targetWord:sub(i, i)
-				local shouldTypo = state.typosEnabled
-					and math.random(1, 100) <= state.typoChance
-					and i < endIndex
-	
+				local char = targetWord:sub(i, i)
+				local shouldTypo = state.typosEnabled and math.random(1, 100) <= state.typoChance and i < endIndex
 				if shouldTypo then
 					local newPartial, newCount, didFullReset, newI = applyTypoToChar(partialWord, setAndFire, targetWord, i, typoCount)
 					partialWord = newPartial
 					typoCount = newCount
-					if didFullReset then
-						i = 1
-					else
-						i = newI
-					end
+					i = didFullReset and 1 or newI
 					setAndFire(partialWord)
 					continue
 				end
-	
 				partialWord = partialWord .. char
-				updateLettersLabel(#partialWord, totalLetters)
+				updateLettersLabel(#partialWord, #targetWord)
 				setAndFire(partialWord)
-	
-				local waitTime = getTypingSpeed()
-				if i < endIndex then task.wait(waitTime) end
+				if i < endIndex then task.wait(getTypingSpeed()) end
 				i = i + 1
 			end
 		end
 	
-		if state.enterDelay > 0 then task.wait(state.enterDelay) end
+		local ed = getEnterDelay()
+		if ed > 0 then task.wait(ed) end
 	
 		if state.autoEnter then
-			if     gameType == "ORIGINAL" then
-				remoteEvent:FireServer(partialWord, workspace:GetServerTimeNow(), true)
-			elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
-				remoteEvent:FireServer(partialWord, true)
-			elseif gameType == "THE_SB" then
-				remoteEvent:FireServer(partialWord, true)
-			elseif gameType == "CARL" then
-				remoteEvent:FireServer(word)
-			elseif gameType == "NUNU" then
-				remoteEvent:FireServer("SubmitSpelling", partialWord, workspace:GetServerTimeNow())
-			elseif gameType == "SHIVA" then
-				remoteEvent:FireServer(true, workspace:GetServerTimeNow(), #partialWord)
-			elseif gameType == "OIIA" or gameType == "CUPS" then
-				remoteEvent:FireServer(partialWord)
-			elseif gameType == "GALAXY" then
-				remoteEvent:FireServer(partialWord)
-			elseif gameType == "SPELLING_MASTERS" then
-				remoteEvent:FireServer(partialWord)
-			end
-	
+			fireEnter(remoteEvent, partialWord, word)
 			state.wordsTyped = state.wordsTyped + 1
-			if state.loseAfterWords and state.wordsTyped >= state.loseCount then
-				state.autoType = false
-				updateToggleBar(atBtn, false)
-			end
+			checkLoseAfterWords()
 		end
 	
 		if gameType == "NUNU" then task.wait(1.5) end
@@ -6753,7 +6795,6 @@ local defToWord = {
 	
 	local manualTypingConnection
 	local function startManualTyping()
-		state.manualIndex = 1
 		local word = state.currentWord
 		if not word or word == "" or word == "Waiting..." then
 			notify("Lunar X", "No word detected yet", 3, "warn")
@@ -6763,15 +6804,13 @@ local defToWord = {
 		state.manualIndex = 1
 	
 		local textbox = findTextBoxInGui()
-		if textbox then
-			textbox.Text = ""
-		end
+		if textbox then textbox.Text = "" end
 	
 		local remoteEvent, secondaryRemote = getRemoteEvents()
 	
 		local function fireKeystroke(text)
 			if remoteEvent then
-				if     gameType == "ORIGINAL" then
+				if gameType == "ORIGINAL" then
 					remoteEvent:FireServer(text, workspace:GetServerTimeNow(), false)
 					if secondaryRemote then secondaryRemote:FireServer(text) end
 				elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
@@ -6801,8 +6840,9 @@ local defToWord = {
 			manualTypingConnection:Disconnect()
 			manualTypingConnection = nil
 		end
-		
+	
 		state.manualTypingEnabled = true
+	
 		manualTypingConnection = game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
 			if not state.manualTypingEnabled then
 				if manualTypingConnection then
@@ -6813,16 +6853,14 @@ local defToWord = {
 			end
 			if input.UserInputType ~= Enum.UserInputType.Keyboard then return end
 			local keyName = input.KeyCode.Name
-			if #keyName ~= 1 then return end
+			if not keyName:match("^%a$") and not keyName:match("^%d$") then return end
 	
 			local wordNow = state.manualWord
 			if state.manualIndex > #wordNow then return end
 	
-			local shouldTypo = state.typosEnabled
-				and math.random(1, 100) <= state.typoChance
-				and state.manualIndex < #wordNow
-	
+			local shouldTypo = state.typosEnabled and math.random(1, 100) <= state.typoChance and state.manualIndex < #wordNow
 			local charToType
+	
 			if shouldTypo then
 				local method = state.typoMethod
 				if method == "Legit" or method == "Fix" then
@@ -6887,32 +6925,11 @@ local defToWord = {
 	
 			if state.manualIndex > #wordNow then
 				if state.autoEnter then
-					task.wait(state.enterDelay > 0 and state.enterDelay or 0)
+					task.wait(getEnterDelay())
 					if remoteEvent then
-						if     gameType == "ORIGINAL" then
-							remoteEvent:FireServer(currentPartial, workspace:GetServerTimeNow(), true)
-						elseif gameType == "XISTER" or gameType == "BESTPLAYER" or gameType == "ONEX" then
-							remoteEvent:FireServer(currentPartial, true)
-						elseif gameType == "THE_SB" then
-							remoteEvent:FireServer(currentPartial, true)
-						elseif gameType == "CARL" then
-							remoteEvent:FireServer(wordNow)
-						elseif gameType == "NUNU" then
-							remoteEvent:FireServer("SubmitSpelling", currentPartial, workspace:GetServerTimeNow())
-						elseif gameType == "SHIVA" then
-							remoteEvent:FireServer(true, workspace:GetServerTimeNow(), #currentPartial)
-						elseif gameType == "OIIA" or gameType == "CUPS" then
-							remoteEvent:FireServer(currentPartial)
-						elseif gameType == "GALAXY" then
-							remoteEvent:FireServer(currentPartial)
-						elseif gameType == "SPELLING_MASTERS" then
-							remoteEvent:FireServer(currentPartial)
-						end
+						fireEnter(remoteEvent, currentPartial, wordNow)
 						state.wordsTyped = state.wordsTyped + 1
-						if state.loseAfterWords and state.wordsTyped >= state.loseCount then
-							state.autoType = false
-							updateToggleBar(atBtn, false)
-						end
+						checkLoseAfterWords()
 					end
 				end
 				if manualTypingConnection then
@@ -6954,6 +6971,17 @@ local defToWord = {
 			onWordDetected(wordlist[soundId])
 		end
 	end
+	
+	if Players.LocalPlayer.Character then
+		Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
+			state.wordsTyped = 0
+		end)
+	end
+	Players.LocalPlayer.CharacterAdded:Connect(function(char)
+		char:WaitForChild("Humanoid").Died:Connect(function()
+			state.wordsTyped = 0
+		end)
+	end)
 	
 	if gameType == "ORIGINAL" or gameType == "XISTER" or gameType == "SHIVA" or gameType == "OIIA" then
 		workspace.DescendantAdded:Connect(function(descendant)
@@ -7078,14 +7106,13 @@ local defToWord = {
 		end
 	
 	elseif gameType == "HUNDRED_PLAYER" then
-		local VIM      = game:GetService("VirtualInputManager")
-		local lastDef  = ""
+		local VIM = game:GetService("VirtualInputManager")
+		local lastDef = ""
 		local lastReplayWord = ""
 		local lastTextboxClearedAt = 0
 	
 		task.spawn(function()
 			while true do
-				-- always track definition word for display, even with autoType off
 				if state.defMode then
 					local mapped = getDefWord()
 					if mapped and mapped ~= lastDef then
@@ -7104,11 +7131,8 @@ local defToWord = {
 					end)
 					if ok and textbox and textbox.Parent.Visible then
 						local word = nil
-	
 						if state.defMode then
-							if lastDef ~= "" then
-								word = lastDef
-							end
+							if lastDef ~= "" then word = lastDef end
 						else
 							local w = ReplicatedStorage.replayWord.Value
 							if w ~= "" then
@@ -7139,7 +7163,6 @@ local defToWord = {
 								doNoFixDelete(word, setTB)
 							else
 								local baseWait = getTypingSpeed()
-	
 								if baseWait <= 0 then
 									textbox.Text = word
 									updateLettersLabel(#word, #word)
@@ -7149,47 +7172,34 @@ local defToWord = {
 									while i <= #word do
 										if not state.autoType then break end
 										if not textbox.Visible then break end
-										local char       = word:sub(i, i)
-										local shouldTypo = state.typosEnabled
-											and math.random(1, 100) <= state.typoChance
-											and i < #word
-	
+										local char = word:sub(i, i)
+										local shouldTypo = state.typosEnabled and math.random(1, 100) <= state.typoChance and i < #word
 										if shouldTypo then
 											local newPartial, newCount, didFullReset, newI = applyTypoToChar(textbox.Text, setTB, word, i, typoCount)
 											textbox.Text = newPartial
 											typoCount = newCount
-											if didFullReset then
-												i = 1
-											else
-												i = newI
-											end
+											i = didFullReset and 1 or newI
 											continue
 										end
-	
 										textbox.Text = textbox.Text .. char
 										updateLettersLabel(i, #word)
-	
-										local wt = getTypingSpeed()
-										if wt <= 0 then wt = 0.002 end
-										task.wait(wt)
+										task.wait(getTypingSpeed())
 										i = i + 1
 									end
 								end
 							end
 	
-							if state.enterDelay > 0 then task.wait(state.enterDelay) end
+							local ed = getEnterDelay()
+							if ed > 0 then task.wait(ed) end
 	
 							if state.autoEnter and textbox.Visible then
 								textbox:CaptureFocus()
 								task.wait(0.03)
-								VIM:SendKeyEvent(true,  Enum.KeyCode.Return, false, game)
+								VIM:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
 								task.wait(0.03)
 								VIM:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
 								state.wordsTyped = state.wordsTyped + 1
-								if state.loseAfterWords and state.wordsTyped >= state.loseCount then
-									state.autoType = false
-									updateToggleBar(atBtn, false)
-								end
+								checkLoseAfterWords()
 							end
 						end
 					end
@@ -7203,9 +7213,9 @@ local defToWord = {
 	
 	local function queueReload()
 		local queued = [[
-		        task.wait(5)
-		        loadstring(game:HttpGet("]] .. scriptUrl .. [["))()
-		    ]]
+			task.wait(5)
+			loadstring(game:HttpGet("]] .. scriptUrl .. [["))()
+		]]
 		if syn and syn.queue_on_teleport then
 			syn.queue_on_teleport(queued)
 		elseif queue_on_teleport then
@@ -7224,14 +7234,18 @@ local defToWord = {
 		updateToggleBar(atBtn, state.autoType)
 		if state.autoType then state.wordsTyped = 0 end
 	end)
+	
 	rsBtn.MouseButton1Click:Connect(function()
 		state.randomSpeed = not state.randomSpeed
 		updateToggleBar(rsBtn, state.randomSpeed)
+		updateEstWpm()
 	end)
+	
 	tBtn.MouseButton1Click:Connect(function()
 		state.typosEnabled = not state.typosEnabled
 		updateToggleBar(tBtn, state.typosEnabled)
 	end)
+	
 	modeBtn.MouseButton1Click:Connect(function()
 		local available = getAvailableModes()
 		currentModeIndex = currentModeIndex % #available + 1
@@ -7245,28 +7259,30 @@ local defToWord = {
 		end
 		modeBtn.Text = selected
 	end)
+	
 	autoEnterBtn.MouseButton1Click:Connect(function()
 		state.autoEnter = not state.autoEnter
 		updateToggleBar(autoEnterBtn, state.autoEnter)
 	end)
+	
 	loseBtn.MouseButton1Click:Connect(function()
 		state.loseAfterWords = not state.loseAfterWords
-		if not state.loseAfterWords then
-			state.wordsTyped = 0
-		end
+		if not state.loseAfterWords then state.wordsTyped = 0 end
 		updateToggleBar(loseBtn, state.loseAfterWords)
 	end)
+	
 	dieBtn.MouseButton1Click:Connect(function()
 		currentDieModeIndex = currentDieModeIndex % #dieModes + 1
-		state.dieMode       = dieModes[currentDieModeIndex]
-		dieBtn.Text         = state.dieMode
+		state.dieMode = dieModes[currentDieModeIndex]
+		dieBtn.Text = state.dieMode
 	end)
+	
 	typoMethodBtn.MouseButton1Click:Connect(function()
 		currentTypoMethodIndex = currentTypoMethodIndex % #typoMethods + 1
-		state.typoMethod       = typoMethods[currentTypoMethodIndex]
-		typoMethodBtn.Text     = state.typoMethod
-		fdtSlider.Visible      = state.typoMethod == "FullDelete"
-		nfdtSlider.Visible     = state.typoMethod == "NoFixDelete"
+		state.typoMethod = typoMethods[currentTypoMethodIndex]
+		typoMethodBtn.Text = state.typoMethod
+		fdtSlider.Visible = state.typoMethod == "FullDelete"
+		nfdtSlider.Visible = state.typoMethod == "NoFixDelete"
 	end)
 	
 	manualBtn.MouseButton1Click:Connect(function()
@@ -7304,7 +7320,7 @@ local defToWord = {
 	end)
 	
 	local function refreshDelayButtonStates()
-		updateToggleBar(enterDelayBtn,  state.enterDelay  > 0)
+		updateToggleBar(enterDelayBtn, state.enterDelay > 0)
 		updateToggleBar(typingDelayBtn, state.typingDelay > 0)
 	end
 	
@@ -7337,58 +7353,69 @@ local defToWord = {
 		if val then
 			state.normalSpeed = math.clamp(val, 0, 1)
 			normalSlider.Text = formatSliderValue(state.normalSpeed)
+			if not state.randomSpeed then updateEstWpm() end
 		end
 	end)
+	
 	minSlider.FocusLost:Connect(function()
 		local val = tonumber(minSlider.Text)
 		if val then
 			state.minSpeed = math.clamp(val, 0, state.maxSpeed)
 			minSlider.Text = formatSliderValue(state.minSpeed)
+			if state.randomSpeed then updateEstWpm() end
 		end
 	end)
+	
 	maxSlider.FocusLost:Connect(function()
 		local val = tonumber(maxSlider.Text)
 		if val then
 			state.maxSpeed = math.clamp(val, state.minSpeed, 1)
 			maxSlider.Text = formatSliderValue(state.maxSpeed)
+			if state.randomSpeed then updateEstWpm() end
 		end
 	end)
+	
 	tSlider.FocusLost:Connect(function()
 		local val = tonumber(tSlider.Text)
 		if val then
 			state.typoChance = math.clamp(val, 0, 100)
-			tSlider.Text     = tostring(state.typoChance)
+			tSlider.Text = tostring(state.typoChance)
 		end
 	end)
+	
 	fdtSlider.FocusLost:Connect(function()
 		local val = tonumber(fdtSlider.Text)
 		if val then
 			state.fullDeleteThreshold = math.clamp(math.floor(val), 1, 20)
-			fdtSlider.Text            = tostring(state.fullDeleteThreshold)
+			fdtSlider.Text = tostring(state.fullDeleteThreshold)
 		end
 	end)
+	
 	nfdtSlider.FocusLost:Connect(function()
 		local val = tonumber(nfdtSlider.Text)
 		if val then
 			state.noFixDeleteThreshold = math.clamp(math.floor(val), 1, 20)
-			nfdtSlider.Text            = tostring(state.noFixDeleteThreshold)
+			nfdtSlider.Text = tostring(state.noFixDeleteThreshold)
 		end
 	end)
+	
 	loseCountSlider.FocusLost:Connect(function()
 		local val = tonumber(loseCountSlider.Text)
 		if val then
-			state.loseCount      = math.clamp(val, 1, 1000)
+			state.loseCount = math.clamp(val, 1, 1000)
 			loseCountSlider.Text = tostring(state.loseCount)
 		end
 	end)
+	
 	contWaitSlider.FocusLost:Connect(function()
 		local val = tonumber(contWaitSlider.Text)
 		if val then
-			state.contWait      = math.clamp(val, 0, 1)
+			state.contWait = math.clamp(val, 0, 1)
 			contWaitSlider.Text = formatSliderValue(state.contWait)
 			updateToggleBar(contWaitBtn, state.contWait > 0)
 		end
 	end)
+	
 	rcwMinSlider.FocusLost:Connect(function()
 		local val = tonumber(rcwMinSlider.Text)
 		if val then
@@ -7396,6 +7423,7 @@ local defToWord = {
 			rcwMinSlider.Text = formatSliderValue(state.contWaitMin)
 		end
 	end)
+	
 	rcwMaxSlider.FocusLost:Connect(function()
 		local val = tonumber(rcwMaxSlider.Text)
 		if val then
@@ -7403,53 +7431,56 @@ local defToWord = {
 			rcwMaxSlider.Text = formatSliderValue(state.contWaitMax)
 		end
 	end)
+	
 	enterDelaySlider.FocusLost:Connect(function()
 		local val = tonumber(enterDelaySlider.Text)
 		if val then
-			state.enterDelay      = math.clamp(val, 0, 10)
+			state.enterDelay = math.clamp(val, 0, 10)
 			if state.enterDelay > 0 then state._lastEnterDelay = state.enterDelay end
 			enterDelaySlider.Text = formatSliderValue(state.enterDelay)
 			refreshDelayButtonStates()
 		end
 	end)
+	
 	typingDelaySlider.FocusLost:Connect(function()
 		local val = tonumber(typingDelaySlider.Text)
 		if val then
-			state.typingDelay      = math.clamp(val, 0, 10)
+			state.typingDelay = math.clamp(val, 0, 10)
 			if state.typingDelay > 0 then state._lastTypingDelay = state.typingDelay end
 			typingDelaySlider.Text = formatSliderValue(state.typingDelay)
 			refreshDelayButtonStates()
 		end
 	end)
 	
-	updateToggleBar(atBtn,        state.autoType)
-	updateToggleBar(rsBtn,        state.randomSpeed)
-	updateToggleBar(tBtn,         state.typosEnabled)
+	updateToggleBar(atBtn, state.autoType)
+	updateToggleBar(rsBtn, state.randomSpeed)
+	updateToggleBar(tBtn, state.typosEnabled)
 	updateToggleBar(autoEnterBtn, state.autoEnter)
-	updateToggleBar(loseBtn,      state.loseAfterWords)
-	updateToggleBar(rcwBtn,       state.randomContWait)
-	updateToggleBar(contWaitBtn,  state.contWait > 0)
-	updateToggleBar(manualBtn,    state.manualTypingEnabled)
+	updateToggleBar(loseBtn, state.loseAfterWords)
+	updateToggleBar(rcwBtn, state.randomContWait)
+	updateToggleBar(contWaitBtn, state.contWait > 0)
+	updateToggleBar(manualBtn, state.manualTypingEnabled)
 	refreshDelayButtonStates()
-	modeBtn.Text       = "Remote"
-	dieBtn.Text        = state.dieMode
+	modeBtn.Text = "Remote"
+	dieBtn.Text = state.dieMode
 	typoMethodBtn.Text = "Legit"
-	fdtSlider.Visible  = false
+	fdtSlider.Visible = false
 	nfdtSlider.Visible = false
 	updateWordLabel()
-	normalSlider.Text      = formatSliderValue(state.normalSpeed)
-	minSlider.Text         = formatSliderValue(state.minSpeed)
-	maxSlider.Text         = formatSliderValue(state.maxSpeed)
-	tSlider.Text           = tostring(state.typoChance)
-	fdtSlider.Text         = tostring(state.fullDeleteThreshold)
-	nfdtSlider.Text        = tostring(state.noFixDeleteThreshold)
-	loseCountSlider.Text   = tostring(state.loseCount)
-	contWaitSlider.Text    = formatSliderValue(state.contWait)
-	rcwMinSlider.Text      = formatSliderValue(state.contWaitMin)
-	rcwMaxSlider.Text      = formatSliderValue(state.contWaitMax)
-	enterDelaySlider.Text  = formatSliderValue(state.enterDelay)
+	normalSlider.Text = formatSliderValue(state.normalSpeed)
+	minSlider.Text = formatSliderValue(state.minSpeed)
+	maxSlider.Text = formatSliderValue(state.maxSpeed)
+	tSlider.Text = tostring(state.typoChance)
+	fdtSlider.Text = tostring(state.fullDeleteThreshold)
+	nfdtSlider.Text = tostring(state.noFixDeleteThreshold)
+	loseCountSlider.Text = tostring(state.loseCount)
+	contWaitSlider.Text = formatSliderValue(state.contWait)
+	rcwMinSlider.Text = formatSliderValue(state.contWaitMin)
+	rcwMaxSlider.Text = formatSliderValue(state.contWaitMax)
+	enterDelaySlider.Text = formatSliderValue(state.enterDelay)
 	typingDelaySlider.Text = formatSliderValue(state.typingDelay)
 	updateLettersLabel(0, 0)
+	updateEstWpm()
 	
 	if not gameType then
 		notify("Lunar X", "unsupported placeid: " .. placeId .. ", closing script", 3, "error")
@@ -7457,14 +7488,9 @@ local defToWord = {
 		playerGui:WaitForChild("f789z43hfn3i"):Destroy()
 	end
 	
-	if gameType == "HUNDRED_PLAYER" then
-		task.wait(0.3)
-		notify("Lunar X", "use definition mode, NOT input/remote mode, on time trials (better, more reliable)", 12.5, "warn")
-	end
-	
 	task.wait(0.5)
-	notify("Lunar X", "found and recognized placeid: " .. placeId, 5, "success")
-	notify("Lunar X", "version: 0.4.0, script made and developed by _n.ick", 5, "info")
+	notify("Lunar X", "found placeid: " .. placeId, 5, "success")
+	notify("Lunar X", "version: 0.4.5 | by .weound", 5, "info")
 end;
 task.spawn(C_6b);
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.aabtn.aas
@@ -7506,8 +7532,8 @@ local script = G2L["ca"];
 end;
 task.spawn(C_ca);
 -- StarterGui.f789z43hfn3i._main._frms.cfrm._scr.cl.customize
-local function C_e0()
-local script = G2L["e0"];
+local function C_e2()
+local script = G2L["e2"];
 	local btn = script.Parent:WaitForChild("thbtn")
 	local gui = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("f789z43hfn3i")
 	local TweenService = game:GetService("TweenService")
@@ -7557,30 +7583,64 @@ local script = G2L["e0"];
 	}
 	
 	local currentTheme = 1
-	
 	local bgTransparency = 0.35
 	local guiTransparency = 0.0
 	local blurEnabled = false
 	local blurSize = 10
-	local blurEffect = nil
 	
 	local main = gui:WaitForChild("_main")
 	local cimg = main:WaitForChild("cimg")
 	
-	local bgSetBtn       = script.Parent:WaitForChild("bgsetbtn")
-	local bgIdBox        = bgSetBtn:WaitForChild("bgidbox")
-	local bgClearBtn     = script.Parent:WaitForChild("bgclearbtn")
-	local bgTransSlider  = script.Parent:WaitForChild("bgtransslider")
+	local bgSetBtn = script.Parent:WaitForChild("bgsetbtn")
+	local bgIdBox = bgSetBtn:WaitForChild("bgidbox")
+	local bgClearBtn = script.Parent:WaitForChild("bgclearbtn")
+	local bgTransSlider = script.Parent:WaitForChild("bgtransslider")
 	local guiTransSlider = script.Parent:WaitForChild("guitransslider")
-	local blurBtn        = script.Parent:WaitForChild("blurbtn")
-	local blurSlider     = blurBtn:WaitForChild("blurslider")
-	local bgCycleBtn     = script.Parent:WaitForChild("bgcyclebtn")
+	local blurBtn = script.Parent:WaitForChild("blurbtn")
+	local blurSlider = blurBtn:WaitForChild("blurslider")
+	local bgCycleBtn = script.Parent:WaitForChild("bgcyclebtn")
 	
 	local GREEN = Color3.fromRGB(8, 197, 20)
-	local RED   = Color3.fromRGB(179, 41, 22)
-	local ANIM  = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	local RED = Color3.fromRGB(179, 41, 22)
+	local ANIM = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 	local RIGHT = UDim2.new(0.506, 0, 0, 0)
-	local LEFT  = UDim2.new(0, 0, 0, 0)
+	local LEFT = UDim2.new(0, 0, 0, 0)
+	
+	-- blur is done by stacking offset copies of the image behind cimg
+	-- this way it only affects the background image, not the whole game
+	local blurLayers = {}
+	
+	local BLUR_DIRS = {
+		{1,0},{-1,0},{0,1},{0,-1},
+		{1,1},{-1,1},{1,-1},{-1,-1},
+		{2,0},{-2,0},{0,2},{0,-2},
+		{2,1},{-2,1},{1,2},{-1,2},
+	}
+	
+	local function clearBlurLayers()
+		for _, layer in ipairs(blurLayers) do
+			layer:Destroy()
+		end
+		blurLayers = {}
+	end
+	
+	local function rebuildBlurLayers()
+		clearBlurLayers()
+		if not blurEnabled or cimg.Image == "" then return end
+		local spread = math.max(1, blurSize) * 0.35
+		for _, dir in ipairs(BLUR_DIRS) do
+			local layer = Instance.new("ImageLabel")
+			layer.Image = cimg.Image
+			layer.ScaleType = Enum.ScaleType.Crop
+			layer.BackgroundTransparency = 1
+			layer.Size = UDim2.new(1, 0, 1, 0)
+			layer.Position = UDim2.new(0, dir[1] * spread, 0, dir[2] * spread)
+			layer.ImageTransparency = math.min(bgTransparency + 0.48, 0.97)
+			layer.ZIndex = cimg.ZIndex
+			layer.Parent = cimg.Parent
+			table.insert(blurLayers, layer)
+		end
+	end
 	
 	local function animateToggle(button, on)
 		local bar = button:FindFirstChild("tfrm") and button.tfrm:FindFirstChild("bar")
@@ -7611,15 +7671,20 @@ local script = G2L["e0"];
 		cimg.Size = UDim2.new(1, 0, 1, 0)
 		cimg.Position = UDim2.new(0, 0, 0, 0)
 		cimg.Visible = true
+		rebuildBlurLayers()
 	end
 	
 	local function removeBgImage()
 		cimg.Image = ""
 		cimg.Visible = false
+		clearBlurLayers()
 	end
 	
 	local function updateBgTransparency()
 		cimg.ImageTransparency = bgTransparency
+		for _, layer in ipairs(blurLayers) do
+			layer.ImageTransparency = math.min(bgTransparency + 0.48, 0.97)
+		end
 	end
 	
 	local function updateGuiTransparency()
@@ -7637,23 +7702,6 @@ local script = G2L["e0"];
 		end
 	end
 	
-	local function applyBlur(on)
-		local lighting = game:GetService("Lighting")
-		if on then
-			if not blurEffect then
-				blurEffect = Instance.new("BlurEffect")
-				blurEffect.Name = "LunarXBlur"
-				blurEffect.Parent = lighting
-			end
-			blurEffect.Size = blurSize
-		else
-			if blurEffect then
-				blurEffect:Destroy()
-				blurEffect = nil
-			end
-		end
-	end
-	
 	local function applyTheme(theme)
 		main.BackgroundColor3 = theme.mainBg
 		for _, obj in pairs(gui:GetDescendants()) do
@@ -7664,7 +7712,7 @@ local script = G2L["e0"];
 				obj.BackgroundColor3 = theme.innerFrameBg
 			end
 			if obj.Name == "bg" then
-				obj.BackgroundColor3 = Color3.new(255,255,255)
+				obj.BackgroundColor3 = Color3.new(255, 255, 255)
 				obj.BackgroundTransparency = 0.93
 			end
 			if obj.Name == "logs" then
@@ -7683,7 +7731,7 @@ local script = G2L["e0"];
 			if obj:IsA("UIGradient") and obj.Name == "grd" then
 				obj.Color = ColorSequence.new{
 					ColorSequenceKeypoint.new(0.000, theme.accentColor),
-					ColorSequenceKeypoint.new(1.000, theme.innerFrameBg)
+					ColorSequenceKeypoint.new(1.000, theme.innerFrameBg),
 				}
 			end
 			if obj.Name == "brd" and obj.Parent.Parent.Name == "tsk" then
@@ -7749,7 +7797,11 @@ local script = G2L["e0"];
 	blurBtn.MouseButton1Click:Connect(function()
 		blurEnabled = not blurEnabled
 		animateToggle(blurBtn, blurEnabled)
-		applyBlur(blurEnabled)
+		if blurEnabled then
+			rebuildBlurLayers()
+		else
+			clearBlurLayers()
+		end
 	end)
 	
 	blurSlider.FocusLost:Connect(function()
@@ -7757,9 +7809,7 @@ local script = G2L["e0"];
 		if v then
 			blurSize = math.clamp(math.floor(v), 0, 56)
 			blurSlider.Text = tostring(blurSize)
-			if blurEnabled and blurEffect then
-				blurEffect.Size = blurSize
-			end
+			if blurEnabled then rebuildBlurLayers() end
 		end
 	end)
 	
@@ -7769,12 +7819,12 @@ local script = G2L["e0"];
 		local id = bgImages[currentBgIndex]
 		applyBgImage(id)
 		bgIdBox.Text = id
-	end)
+	end)	
 end;
-task.spawn(C_e0);
+task.spawn(C_e2);
 -- StarterGui.f789z43hfn3i.tsk.endb._es
-local function C_fa()
-local script = G2L["fa"];
+local function C_fc()
+local script = G2L["fc"];
 	local Players = game:GetService("Players")
 	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
 	
@@ -7785,10 +7835,10 @@ local script = G2L["fa"];
 	end)
 	
 end;
-task.spawn(C_fa);
+task.spawn(C_fc);
 -- StarterGui.f789z43hfn3i.tsk.min._ms
-local function C_fc()
-local script = G2L["fc"];
+local function C_fe()
+local script = G2L["fe"];
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	
@@ -7844,6 +7894,6 @@ local script = G2L["fc"];
 	button.MouseButton1Click:Connect(toggle)
 	button.Activated:Connect(toggle)
 end;
-task.spawn(C_fc);
+task.spawn(C_fe);
 
 return G2L["1"], require;
