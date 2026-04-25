@@ -1,4 +1,5 @@
-	wordlist = {
+-- dm l_.l_l_l if theres missing words 
+wordlist = {
 		["rbxassetid://119699946181489"] =      "dolphin",
 		["rbxassetid://17620333788"]     =      "thesis",
 		["rbxassetid://18257417645"]     =      "refrain",
