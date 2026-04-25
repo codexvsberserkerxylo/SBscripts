@@ -1,34 +1,9 @@
---open source for you all that need the fuckass wordlists :blushing-face: and this is just ai so idc bro
+--open source for you all that need the fuckass wordlists :blushing-face:
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local CoreGui = game:GetService("CoreGui")
 local player = Players.LocalPlayer
 local pGui = player:WaitForChild("PlayerGui")
-
--- ─── Auto Reload ─────────────────────────────────────────────────────────────
-
-local scriptUrl = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/wordformatter"
-
-local function queueReload()
-	local queued = 'task.wait(3) loadstring(game:HttpGet("' .. scriptUrl .. '"))()'
-	if syn and syn.queue_on_teleport then
-		syn.queue_on_teleport(queued)
-	elseif queue_on_teleport then
-		queue_on_teleport(queued)
-	elseif fluxus and fluxus.queue_on_teleport then
-		fluxus.queue_on_teleport(queued)
-	end
-end
-
-local teleportQueued = false
-player.OnTeleport:Connect(function(state)
-	if (state == Enum.TeleportState.Started or state == Enum.TeleportState.WaitingForServer) and not teleportQueued then
-		teleportQueued = true
-		queueReload()
-	end
-end)
-
--- ─── Logging ─────────────────────────────────────────────────────────────────
 
 local SEP = string.rep("─", 56)
 local function log(m)  print(("[LunarFormatter | %s] %s"):format(os.date("%H:%M:%S"), m)) end
@@ -38,8 +13,6 @@ local function pbar(label, n, total)
 	print(("  [%s%s] %s (%d/%d)"):format(string.rep("▓", f), string.rep("░", 28 - f), label, n, total))
 end
 
--- ─── Cleanup Old GUI ─────────────────────────────────────────────────────────
-
 for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 	local old = pGui:FindFirstChild(name)
 	if old then old:Destroy() end
@@ -48,8 +21,6 @@ for _, name in ipairs({"GwlFmtGui", "LunarNotifications"}) do
 		if old2 then old2:Destroy() end
 	end)
 end
-
--- ─── Notification System ─────────────────────────────────────────────────────
 
 local notificationHolder = Instance.new("ScreenGui")
 notificationHolder.Name = "LunarNotifications"
@@ -155,8 +126,6 @@ local function notify(title, text, duration, ntype)
 	end)
 end
 
--- ─── Core Logic ──────────────────────────────────────────────────────────────
-
 local function resolvePath(raw)
 	local parts = {}
 	for p in raw:match("^%s*(.-)%s*$"):gmatch("[^%.]+") do parts[#parts + 1] = p end
@@ -189,9 +158,6 @@ local function getSource(obj)
 	return nil, "no decompiler available"
 end
 
--- ─── Definition format detector ──────────────────────────────────────────────
--- Returns true if the source looks like a word→definition table
--- e.g.  word = "[Noun] A definition.";
 local function isDefinitionSource(src)
 	local defMatches = 0
 	for _ in src:gmatch('%[%s*[Nn]oun%s*%]') do defMatches = defMatches + 1 end
@@ -201,11 +167,6 @@ local function isDefinitionSource(src)
 	return defMatches >= 3
 end
 
--- ─── Parse word→definition entries ───────────────────────────────────────────
--- Handles:
---   word = "definition";
---   ["word"] = "definition";
---   word = 'definition';
 local function parseDefinitionEntries(src)
 	local entries = {}
 	local seen = {}
@@ -227,17 +188,12 @@ local function parseDefinitionEntries(src)
 			entries[#entries + 1] = {word = word, def = def}
 		end
 	end
-
-	-- Priority 1: bracketed key with double quotes:  ["word"] = "definition";
 	for word, def in src:gmatch('%["([A-Za-z][A-Za-z0-9_]*)"%]%s*=%s*"(.-)"') do
 		add(word, def)
 	end
-	-- Priority 2: bracketed key with single quotes:  ['word'] = 'definition';
 	for word, def in src:gmatch("%['([A-Za-z][A-Za-z0-9_]*)']%s*=%s*'(.-)'") do
 		add(word, def)
 	end
-	-- Priority 3: bare key with double quotes — must be indented (tab or spaces) to avoid matching top-level locals
-	-- Pattern: start of line with whitespace, then word = "..."
 	for word, def in src:gmatch('\n%s+([A-Za-z][A-Za-z0-9_]*)%s*=%s*"(.-)"') do
 		add(word, def)
 	end
@@ -247,15 +203,12 @@ local function parseDefinitionEntries(src)
 
 	return entries
 end
-
--- ─── Format defToWord table ───────────────────────────────────────────────────
 local COL_DEF = 48
 
 local function formatDefToWord(entries, varName)
 	local lines = {("local %s = {"):format(varName)}
 	for _, e in ipairs(entries) do
 		if not e.word or not e.def then continue end
-		-- escape any quotes in the definition string
 		local safeDef = e.def:gsub('"', '\\"')
 		local kPart = ('\t["%s"]'):format(e.word)
 		local padding = string.rep(" ", math.max(1, COL_DEF - #kPart))
@@ -265,7 +218,6 @@ local function formatDefToWord(entries, varName)
 	return table.concat(lines, "\n")
 end
 
--- ─── Parse word→soundid entries (original format) ────────────────────────────
 local COL = 52
 
 local function parseEntries(src)
@@ -307,8 +259,6 @@ local function formatGwl(entries, varName)
 	return table.concat(lines, "\n")
 end
 
--- ─── Process one module (auto-detects format) ────────────────────────────────
-
 local function processOne(pathStr, idx, total, all, seenGlobal, isDefMode)
 	log(("module %d/%d  →  %s"):format(idx, total, pathStr))
 	local obj, pathErr = resolvePath(pathStr)
@@ -321,7 +271,6 @@ local function processOne(pathStr, idx, total, all, seenGlobal, isDefMode)
 	if not src then wlog("  " .. deErr); return end
 	log(("  got %d bytes"):format(#src))
 
-	-- Auto-detect or use forced mode
 	local useDefMode = isDefMode
 	if useDefMode == nil then
 		useDefMode = isDefinitionSource(src)
@@ -386,8 +335,6 @@ local function run(paths, varName, isDefMode)
 	return output, lines, #output
 end
 
--- ─── GUI ─────────────────────────────────────────────────────────────────────
-
 local W = 520
 
 local sg = Instance.new("ScreenGui")
@@ -398,7 +345,6 @@ sg.IgnoreGuiInset = true
 local sgOk = pcall(function() sg.Parent = CoreGui end)
 if not sgOk or not sg.Parent then sg.Parent = pGui end
 
--- main frame
 local F = Instance.new("Frame")
 F.Size = UDim2.new(0, W, 0, 200)
 F.Position = UDim2.new(0.5, -W/2, 0.5, -130)
@@ -412,7 +358,6 @@ local fStroke = Instance.new("UIStroke", F)
 fStroke.Color = Color3.fromRGB(50, 50, 72)
 fStroke.Thickness = 1.2
 
--- drag
 local drag, ds, dp
 F.InputBegan:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -429,7 +374,6 @@ F.InputEnded:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = false end
 end)
 
--- title bar
 local TB = Instance.new("Frame", F)
 TB.Size = UDim2.new(1, 0, 0, 36)
 TB.BackgroundColor3 = Color3.fromRGB(16, 16, 26)
@@ -450,7 +394,7 @@ local XB = Instance.new("TextButton", TB)
 XB.Size = UDim2.new(0, 26, 0, 26)
 XB.Position = UDim2.new(1, -32, 0.5, -13)
 XB.BackgroundColor3 = Color3.fromRGB(175, 40, 40)
-XB.Text = "✕"
+XB.Text = "X"
 XB.TextColor3 = Color3.new(1, 1, 1)
 XB.Font = Enum.Font.GothamBold
 XB.TextSize = 11
@@ -460,14 +404,12 @@ XB.MouseButton1Click:Connect(function() sg:Destroy() end)
 XB.MouseEnter:Connect(function() XB.BackgroundColor3 = Color3.fromRGB(210, 55, 55) end)
 XB.MouseLeave:Connect(function() XB.BackgroundColor3 = Color3.fromRGB(175, 40, 40) end)
 
--- divider line under title bar
 local divider = Instance.new("Frame", F)
 divider.Size = UDim2.new(1, 0, 0, 1)
 divider.Position = UDim2.new(0, 0, 0, 36)
 divider.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
 divider.BorderSizePixel = 0
 
--- ─── var name row ─────────────────────────────────────────────────────────────
 local BODY_Y = 46
 
 local VL = Instance.new("TextLabel", F)
@@ -498,8 +440,6 @@ Instance.new("UICorner", VB).CornerRadius = UDim.new(0, 5)
 Instance.new("UIStroke", VB).Color = Color3.fromRGB(40, 40, 65)
 Instance.new("UIPadding", VB).PaddingLeft = UDim.new(0, 7)
 
--- ─── Mode toggle (Auto / Wordlist / Definitions) ──────────────────────────────
--- Sits to the right of the var name box
 local modeStates = {"auto", "wordlist", "definitions"}
 local modeIdx = 1
 local modeColors = {
@@ -531,7 +471,6 @@ ModeBtn.MouseButton1Click:Connect(function()
 	local m = modeStates[modeIdx]
 	ModeBtn.BackgroundColor3 = modeColors[m]
 	ModeBtn.Text = modeLabels[m]
-	-- update var name placeholder to something sensible
 	if m == "definitions" then
 		VB.PlaceholderText = "defToWord"
 	else
@@ -545,7 +484,6 @@ ModeBtn.MouseLeave:Connect(function()
 	ModeBtn.BackgroundTransparency = 0
 end)
 
--- ─── tab row ──────────────────────────────────────────────────────────────────
 local TabRow = Instance.new("Frame", F)
 TabRow.Size = UDim2.new(0, 185, 0, 24)
 TabRow.Position = UDim2.new(0, 10, 0, BODY_Y + 28)
@@ -607,7 +545,6 @@ end
 
 for i = 1, 3 do makePathRow(i) end
 
--- status label
 local statusLbl = Instance.new("TextLabel", F)
 statusLbl.Size = UDim2.new(1, -20, 0, 18)
 statusLbl.BackgroundTransparency = 1
@@ -617,7 +554,6 @@ statusLbl.TextSize = 11
 statusLbl.TextXAlignment = Enum.TextXAlignment.Left
 statusLbl.Text = "enter module path and shit"
 
--- format button
 local btn = Instance.new("TextButton", F)
 btn.Size = UDim2.new(1, -20, 0, 30)
 btn.BackgroundColor3 = Color3.fromRGB(55, 150, 70)
@@ -665,8 +601,6 @@ for n = 1, 3 do
 	end)
 end
 
--- ── Button Logic ──────────────────────────────────────────────────────────────
-
 btn.MouseButton1Click:Connect(function()
 	btn.BackgroundColor3 = Color3.fromRGB(35, 95, 45)
 	btn.Text = "decompiling ..."
@@ -682,9 +616,8 @@ btn.MouseButton1Click:Connect(function()
 
 		local varName = VB.Text:match("^%s*(.-)%s*$")
 
-		-- Resolve mode
 		local currentMode = modeStates[modeIdx]
-		local isDefMode   -- nil = auto-detect per module
+		local isDefMode
 		if currentMode == "definitions" then
 			isDefMode = true
 			if #varName == 0 then varName = "defToWord" end
@@ -692,7 +625,6 @@ btn.MouseButton1Click:Connect(function()
 			isDefMode = false
 			if #varName == 0 then varName = "GwlWords" end
 		else
-			-- auto: nil passed, each module decides for itself
 			isDefMode = nil
 			if #varName == 0 then varName = "GwlWords" end
 		end
@@ -711,9 +643,6 @@ btn.MouseButton1Click:Connect(function()
 			return
 		end
 
-		-- In auto mode, we need to handle mixed tables carefully.
-		-- Each module is processed separately and we merge only same-type entries.
-		-- For simplicity in auto mode: if ANY module is def-type, warn about mixing.
 		local T0 = os.clock()
 		local ok, output, lines, bytes = pcall(run, paths, varName, isDefMode)
 		local elapsed = os.clock() - T0
@@ -751,4 +680,4 @@ refreshUI()
 
 task.wait(0.1)
 notify("lunar formatter", "lunar formatter is ready!", 4, "success")
-notify("lunar formatter", "Version: 0.1.7", 3, "info")
+notify("lunar formatter", "version: 0.1.7", 3, "info")
