@@ -1,2 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nick2132131/idk-script-/refs/heads/main/loader.lua"))()
--- dont skid if youre tuff
+print("broken rn sorry mate")
