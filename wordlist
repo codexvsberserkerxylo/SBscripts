@@ -816,7 +816,6 @@
 			["rbxassetid://121728116373984"] = "bunny",
 			["rbxassetid://125543734185215"] = "basket",
 			["rbxassetid://95135129991304"] = "bean",
-			["rbxassetid://104726012267702"] = "melt",
 			["rbxassetid://95733228007897"] = "cow",
 			["rbxassetid://105555823203048"] = "job",
 			["rbxassetid://91999101718617"] = "bed",
@@ -837,7 +836,7 @@
 			["rbxassetid://95002536906041"] = "four",
 			["rbxassetid://110718742115532"] = "five",
 			["rbxassetid://124363963202884"] = "egg",
-            -- new and old ones
+            -- new ones and some i missed
             ["rbxassetid://122117094563892"] = "evanesce",
             ["rbxassetid://95363682210222"] = "folliculitis",
             ["rbxassetid://100940450163077"] = "esurient",
