@@ -798,10 +798,10 @@
 			["rbxassetid://85108713775880"] = "iodochlorhydroxyquinoline",
 			["rbxassetid://118760171206206"] = "neuroimmunomodulation",
 			["rbxassetid://72397566459211"] = "wrought",
-			["rbxassetid://83591951394433"] = "Monocotyledonous",
-			["rbxassetid://98182022993909"] = "Imperturbability",
+			["rbxassetid://83591951394433"] = "monocotyledonous",
+			["rbxassetid://98182022993909"] = "imperturbability",
 			["rbxassetid://96249602146202"] = "proceleusmatic",
-			["rbxassetid://121391366690012"] = "Aspartylglucosaminuria", 
+			["rbxassetid://121391366690012"] = "aspartylglucosaminuria", -- i think
 			["rbxassetid://129726108723902"] = "coalworkerspneumoconiosis",
 			["rbxassetid://93753731040177"] = "photoreconnaissance",
 			["rbxassetid://103868656717426"] = "ethereal",
@@ -875,7 +875,7 @@
             ["rbxassetid://118828106914149"] = "meretricious",
             ["rbxassetid://133032977853579"] = "abacaxi",
             ["rbxassetid://125146243286159"] = "polymerization",
-            ["rbxassetid://108857456914488"] = "Metempsychosis",
+            ["rbxassetid://108857456914488"] = "metempsychosis",
             ["rbxassetid://99509100054020"] = "sententiously",
             ["rbxassetid://133716799245597"] = "environmental",
             ["rbxassetid://116538908460173"] = "jaded",
@@ -884,7 +884,7 @@
             ["rbxassetid://117439878935332"] = "metabolism",
             ["rbxassetid://81313141375250"] = "cognitive",
             ["rbxassetid://77475615818328"] = "insipid",
-            ["rbxassetid://94666246209609"] = "Callow", -- i think
+            ["rbxassetid://94666246209609"] = "callow", -- i think
             ["rbxassetid://74953102485250"] = "celebration",
             ["rbxassetid://116470425289706"] = "introspect",
             ["rbxassetid://89789742891436"] = "germination",
@@ -893,6 +893,7 @@
             ["rbxassetid://83150040650126"] = "brown",
             ["rbxassetid://118888914787461"] = "stew",
             ["rbxassetid://136998905013119"] = "hunt",
+            ["rbxassetid://104726012267702"] = "melt",
             ["rbxassetid://90491050592870"] = "sock",
             ["rbxassetid://121264325593055"] = "bark",
             ["rbxassetid://77308599583064"] = "purple",
@@ -903,12 +904,15 @@
             ["rbxassetid://89914529721804"] = "integration",
             ["rbxassetid://134410151385080"] = "fantasy",
             ["rbxassetid://127052033590518"] = "pulsar",
-            --["rbxassetid://101323730829452"] = "convival", broken
-            --["rbxassetid://a"] = "ebullition", i forgot it 
+            --["rbxassetid://101323730829452"] = "convival", broken ( no sound ) 
+            ["rbxassetid://122147322343381"] = "ebullition",
             ["rbxassetid://132775546183399"] = "occhiolism",
             ["rbxassetid://111621315962447"] = "stop",
             ["rbxassetid://101411925896608"] = "nest",
             ["rbxassetid://83700075849544"] = "seed",
             ["rbxassetid://131737910573215"] = "schizophrenic",
             ["rbxassetid://126713104371193"] = "elf",
+            ["rbxassetid://91200772943221"] = "latitudinarian",
+            ["rbxassetid://87806195014572"] = "garrulous", -- i think
+            ["rbxassetid://99994396037749"] = "hair",
 		}
