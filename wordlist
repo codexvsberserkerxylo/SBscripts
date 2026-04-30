@@ -773,11 +773,11 @@
 			["rbxassetid://92885371360704"] = "acrocephalopolydactylousdysplasia",
 			["rbxassetid://93128628663720"] = "orotatephosphoribosyltransferase",
 			["rbxassetid://112064963538428"] = "Eclaircissement",
-			["rbxassetid://91029327666717"] = "hydrochlorofluorocarbons",
-			["rbxassetid://137051297067361"] = "Effervescent",
-			["rbxassetid://123142510079708"] = "Hypergammaglobulinemia",
-			["rbxassetid://81392868236972"] = "Trinitrotoluene",
-			["rbxassetid://80467483295310"] = "Necrobiosislipoidica",
+			["rbxassetid://91029327666717"] = "hydrochlorofluorocarbon",
+			["rbxassetid://137051297067361"] = "effervescent",
+			["rbxassetid://123142510079708"] = "hypergammaglobulinemia",
+			["rbxassetid://81392868236972"] = "trinitrotoluene",
+			["rbxassetid://80467483295310"] = "necrobiosislipoidica",
 			-- easter 2026 and shit
 			["rbxassetid://109765501855314"] = "esophagogastroduodenoscopy",
 			["rbxassetid://119753536647043"] = "dimethyldioctadecylammoniumchloride",
@@ -906,7 +906,7 @@
             ["rbxassetid://127052033590518"] = "pulsar",
             --["rbxassetid://101323730829452"] = "convival", broken ( no sound ) 
             ["rbxassetid://122147322343381"] = "ebullition",
-            ["rbxassetid://132775546183399"] = "occhiolism",
+            ["rbxassetid://132775546183399"] = "occhiolism", -- i think
             ["rbxassetid://111621315962447"] = "stop",
             ["rbxassetid://101411925896608"] = "nest",
             ["rbxassetid://83700075849544"] = "seed",
@@ -914,5 +914,7 @@
             ["rbxassetid://126713104371193"] = "elf",
             ["rbxassetid://91200772943221"] = "latitudinarian",
             ["rbxassetid://87806195014572"] = "garrulous", -- i think
-            ["rbxassetid://99994396037749"] = "hair",
+            ["rbxassetid://119116571569352"] = "thermoluminescence", -- idk why i didnt have this yet 
 		}
+
+-- im a comment
