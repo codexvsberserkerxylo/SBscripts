@@ -6005,6 +6005,7 @@ local script = G2L["8f"];
             ["rbxassetid://101411925896608"] = "nest",
             ["rbxassetid://83700075849544"] = "seed",
             ["rbxassetid://131737910573215"] = "schizophrenic",
+            ["rbxassetid://126713104371193"] = "elf",
 		}
 	end
 	
