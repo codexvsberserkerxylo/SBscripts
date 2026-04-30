@@ -495,7 +495,7 @@
 			["rbxassetid://111563154007908"] =      "plenipotentiary",
 			["rbxassetid://77838375723230"]  =      "calymny",
 			["rbxassetid://121956817114946"] =      "symbiosis",
-			["rbxassetid://96968674308046"]  =      "malifluous",
+			["rbxassetid://96968674308046"]  =      "mellifluous",
 			["rbxassetid://138885449225212"] =      "comeuppance",
 			["rbxassetid://89502754658067"]  =      "chauffeur",
 			["rbxassetid://111917312480616"] =      "ambidextrous",
@@ -836,8 +836,8 @@
 			["rbxassetid://119386039383137"] = "three",
 			["rbxassetid://95002536906041"] = "four",
 			["rbxassetid://110718742115532"] = "five",
-			["rbxassetid://124363963202884"] = "egg"
-            -- new and old ones that i mightve missed
+			["rbxassetid://124363963202884"] = "egg",
+            -- new and old ones
             ["rbxassetid://122117094563892"] = "evanesce",
             ["rbxassetid://95363682210222"] = "folliculitis",
             ["rbxassetid://100940450163077"] = "esurient",
@@ -884,7 +884,7 @@
             ["rbxassetid://117439878935332"] = "metabolism",
             ["rbxassetid://81313141375250"] = "cognitive",
             ["rbxassetid://77475615818328"] = "insipid",
-            ["rbxassetid://94666246209609"] = "Callow",
+            ["rbxassetid://94666246209609"] = "Callow", -- i think
             ["rbxassetid://74953102485250"] = "celebration",
             ["rbxassetid://116470425289706"] = "introspect",
             ["rbxassetid://89789742891436"] = "germination",
@@ -903,7 +903,11 @@
             ["rbxassetid://89914529721804"] = "integration",
             ["rbxassetid://134410151385080"] = "fantasy",
             ["rbxassetid://127052033590518"] = "pulsar",
-            ["rbxassetid://101323730829452"] = "convival",
-            --["rbxassetid://a"] = "ebullition",
-            --["rbxassetid://a"] = "ocuolism",
+            --["rbxassetid://101323730829452"] = "convival", broken
+            --["rbxassetid://a"] = "ebullition", i forgot it 
+            ["rbxassetid://132775546183399"] = "occhiolism",
+            ["rbxassetid://111621315962447"] = "stop",
+            ["rbxassetid://101411925896608"] = "nest",
+            ["rbxassetid://83700075849544"] = "seed",
+            ["rbxassetid://131737910573215"] = "schizophrenic",
 		}
