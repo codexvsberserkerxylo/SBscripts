@@ -1,15 +1,6 @@
--- hey if u skid atleast credit me for your fucking functionality
+-- hey if u skid atleast give me credit bud
 
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 328 | Scripts: 16 | Modules: 0 | Tags: 0
+-- Instances: 329 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.f789z43hfn3i
@@ -3114,6 +3105,11 @@ G2L["148"]["Name"] = [[text]];
 G2L["148"]["Position"] = UDim2.new(0.05263, 0, 0.54929, 0);
 
 
+-- StarterGui.f789z43hfn3i.mobile
+G2L["149"] = Instance.new("LocalScript", G2L["1"]);
+G2L["149"]["Name"] = [[mobile]];
+
+
 -- StarterGui.f789z43hfn3i.ok
 local function C_2()
 local script = G2L["2"];
@@ -3220,7 +3216,6 @@ local script = G2L["7"];
 	local TweenService = game:GetService("TweenService")
 	
 	local dragHandle = script.Parent
-	
 	local mainFrame = script.Parent.Parent
 	local tskFrame = script.Parent.Parent.Parent:WaitForChild("tsk")
 	
@@ -3229,7 +3224,6 @@ local script = G2L["7"];
 	local startPosMain
 	local startPosTsk
 	local dragSpeed = 0.1
-	
 	
 	local function updateInput(input)
 		local delta = input.Position - dragStart
@@ -3252,10 +3246,8 @@ local script = G2L["7"];
 		TweenService:Create(tskFrame, TweenInfo.new(dragSpeed), {Position = newTskPos}):Play()
 	end
 	
-	
 	dragHandle.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-	
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			dragging = true
 			dragStart = input.Position
 	
@@ -3270,13 +3262,11 @@ local script = G2L["7"];
 		end
 	end)
 	
-	
 	UIS.InputChanged:Connect(function(input)
 		if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
 			updateInput(input)
 		end
 	end)
-	
 end;
 task.spawn(C_7);
 -- StarterGui.f789z43hfn3i._main._btns.btnhnd
@@ -6849,5 +6839,22 @@ local script = G2L["13d"];
 	
 end;
 task.spawn(C_13d);
+-- StarterGui.f789z43hfn3i.mobile
+local function C_149()
+local script = G2L["149"];
+	local UIS = game:GetService("UserInputService")
+	local targetFrame = script.Parent
+	
+	local isMobile = UIS.TouchEnabled and not UIS.KeyboardEnabled
+	
+	if isMobile then
+		local scaleModifier = Instance.new("UIScale")
+		scaleModifier.Scale = 0.5
+		scaleModifier.Name = "mobile"
+	
+		scaleModifier.Parent = targetFrame
+	end
+end;
+task.spawn(C_149);
 
 return G2L["1"], require;
