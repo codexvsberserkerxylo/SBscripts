@@ -1,4 +1,13 @@
--- hey if u skid atleast give me credit bud
+-- if u skid atleast give me credit that your auto type is looking legit !
+
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
 -- Instances: 329 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
@@ -5245,10 +5254,10 @@ local script = G2L["8f"];
 			local max = state.maxSpeed or 1
 			local avg = (min + max) / 2
 			if avg <= 0 then return 9999 end
-			return math.floor((200 / avg) / AVG_WORD_LEN)
+			return math.floor((130 / avg) / AVG_WORD_LEN)
 		else
 			if currentSpeed <= 0 then return "inf" end
-			return math.floor((200 / currentSpeed) / AVG_WORD_LEN)
+			return math.floor((130 / currentSpeed) / AVG_WORD_LEN)
 		end
 	end
 	
