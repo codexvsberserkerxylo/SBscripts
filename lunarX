@@ -7001,9 +7001,9 @@ local script = G2L["9e"];
 				return
 			end
 	
-			local partialWord = targetWord:sub(1, endIndex)
-			fireKeystroke(partialWord)
-			updateLettersLabel(#partialWord, #targetWord)
+			local partialWord = runTypingLoop(targetWord, startIndex, endIndex, setAndFire, function()
+				return state.autoType
+			end)
 	
 			local ed = getEnterDelay()
 			if ed > 0 then task.wait(ed) end
