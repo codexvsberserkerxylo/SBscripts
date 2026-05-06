@@ -31,6 +31,7 @@ G2L["3"]["Name"] = [[mobile]];
 
 -- StarterGui.f789z43hfn3i._main
 G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["ZIndex"] = 234892348;
 G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
 G2L["4"]["Size"] = UDim2.new(0.33971, 0, 0.45251, 0);
@@ -1763,7 +1764,6 @@ G2L["b6"]["Name"] = [[_c]];
 
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.minSlider
 G2L["b7"] = Instance.new("TextBox", G2L["b5"]);
-G2L["b7"]["CursorPosition"] = -1;
 G2L["b7"]["Name"] = [[minSlider]];
 G2L["b7"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["b7"]["BorderSizePixel"] = 0;
@@ -1786,7 +1786,6 @@ G2L["b8"]["Name"] = [[c]];
 
 -- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.msl.rsbtn.maxSlider
 G2L["b9"] = Instance.new("TextBox", G2L["b5"]);
-G2L["b9"]["CursorPosition"] = -1;
 G2L["b9"]["Name"] = [[maxSlider]];
 G2L["b9"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["b9"]["BorderSizePixel"] = 0;
@@ -3299,6 +3298,7 @@ G2L["15e"]["Name"] = [[cimg]];
 
 -- StarterGui.f789z43hfn3i.tsk
 G2L["15f"] = Instance.new("Frame", G2L["1"]);
+G2L["15f"]["ZIndex"] = 234892348;
 G2L["15f"]["BorderSizePixel"] = 0;
 G2L["15f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["15f"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
@@ -3403,6 +3403,7 @@ G2L["167"]["Name"] = [[_es]];
 -- StarterGui.f789z43hfn3i.template
 G2L["168"] = Instance.new("Frame", G2L["1"]);
 G2L["168"]["Visible"] = false;
+G2L["168"]["ZIndex"] = 234892348;
 G2L["168"]["BorderSizePixel"] = 0;
 G2L["168"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
 G2L["168"]["Size"] = UDim2.new(0.15479, 0, 0.08554, 0);
@@ -3629,6 +3630,8 @@ local script = G2L["2"];
 		handleButton(desc)
 	end
 	thisGui.DescendantAdded:Connect(handleButton)
+	
+	
 end;
 task.spawn(C_2);
 -- StarterGui.f789z43hfn3i.mobile
@@ -6320,13 +6323,18 @@ local script = G2L["9e"];
 		return state.contWait + (math.random() * 0.01 - 0.005)
 	end
 	
+	-- FIX: returns 0 when speed is 0, so callers can skip the wait entirely
 	local function getTypingSpeed()
 		if state.randomSpeed then
-			local spd = state.minSpeed + math.random() * (state.maxSpeed - state.minSpeed)
-			return math.max(spd, 0.002)
+			local mn = state.minSpeed
+			local mx = state.maxSpeed
+			if mn <= 0 and mx <= 0 then return 0 end
+			local spd = mn + math.random() * (mx - mn)
+			return math.max(spd, 0)
 		end
+		if state.normalSpeed <= 0 then return 0 end
 		local jitter = state.normalSpeed * (math.random() * 0.1 - 0.05)
-		return math.max(state.normalSpeed + jitter, 0.002)
+		return math.max(state.normalSpeed + jitter, 0)
 	end
 	
 	local function getEnterDelay()
@@ -6358,7 +6366,8 @@ local script = G2L["9e"];
 			partial = partial .. ec
 			charsAdded = charsAdded + 1
 			setTextFn(partial)
-			task.wait(math.max(state.normalSpeed, 0.02))
+			local spd = math.max(state.normalSpeed, 0.02)
+			if spd > 0 then task.wait(spd) end
 		end
 		for d = 1, charsAdded + 1 do
 			if not state.autoType then break end
@@ -6389,7 +6398,8 @@ local script = G2L["9e"];
 			if not state.autoType then return result end
 			setTextFn(result:sub(1, i))
 			updateLettersLabel(i, #word)
-			task.wait(getTypingSpeed())
+			local spd = getTypingSpeed()
+			if spd > 0 then task.wait(spd) end
 			maybeRandomPause(i)
 		end
 		task.wait(0.08 + math.random() * 0.12)
@@ -6758,11 +6768,16 @@ local script = G2L["9e"];
 		return nil
 	end
 	
-	local function typeWordVIM(word, textbox)
+	-- FIX: typeWordVIM now accepts an optional onChar callback.
+	-- In Remote mode, onChar = setAndFire so each character fires the keystroke remote.
+	-- In Input mode, onChar = setTextbox so the textbox updates per character.
+	-- Speed 0 skips all delays for truly instant typing.
+	local function typeWordVIM(word, textbox, onChar)
 		if textbox then
 			textbox:CaptureFocus()
 			task.wait(0.05)
 		end
+		local partial = ""
 		for i = 1, #word do
 			if not state.autoType then break end
 			local char = word:sub(i, i)
@@ -6773,12 +6788,20 @@ local script = G2L["9e"];
 				task.wait(0.01)
 				VirtualInputManager:SendKeyEvent(false, kc, false, game)
 			end
+			partial = partial .. char
+			if onChar then onChar(partial) end
 			updateLettersLabel(i, #word)
 			maybeRandomPause(i)
-			if i < #word then task.wait(getTypingSpeed()) end
+			if i < #word then
+				local spd = getTypingSpeed()
+				if spd > 0 then task.wait(spd) end
+			end
 		end
+		return partial
 	end
 	
+	-- FIX: all task.wait(getTypingSpeed()) calls are now guarded with `if spd > 0`
+	-- so speed=0 results in zero delay, no yield whatsoever.
 	local function runTypingLoop(targetWord, startIndex, endIndex, setTextFn, guardFn)
 		local partialWord = ""
 	
@@ -6810,7 +6833,10 @@ local script = G2L["9e"];
 			updateLettersLabel(#partialWord, #targetWord)
 			setTextFn(partialWord)
 			maybeRandomPause(#partialWord)
-			if i < endIndex then task.wait(getTypingSpeed()) end
+			if i < endIndex then
+				local spd = getTypingSpeed()
+				if spd > 0 then task.wait(spd) end
+			end
 			i = i + 1
 		end
 		return partialWord
@@ -6852,9 +6878,9 @@ local script = G2L["9e"];
 				textbox.CursorPosition = #t + 1
 			end
 	
+			-- FIX: pass setTextbox as the onChar callback so VIM updates the textbox per-character
 			if state.mode == "VIM" then
-				typeWordVIM(targetWord, textbox)
-				local partialWord = textbox.Text
+				local partialWord = typeWordVIM(targetWord, textbox, setTextbox)
 				local ed = getEnterDelay()
 				if ed > 0 then task.wait(ed) end
 				if state.autoEnter and remoteEvent then
@@ -6962,8 +6988,7 @@ local script = G2L["9e"];
 			end
 	
 			if state.mode == "VIM" then
-				typeWordVIM(targetWord, textbox)
-				local partialWord = textbox and textbox.Text or targetWord
+				local partialWord = typeWordVIM(targetWord, textbox, setAndFire)
 				local ed = getEnterDelay()
 				if ed > 0 then task.wait(ed) end
 				if state.autoEnter then
@@ -6976,9 +7001,9 @@ local script = G2L["9e"];
 				return
 			end
 	
-			local partialWord = runTypingLoop(targetWord, startIndex, endIndex, setAndFire, function()
-				return state.autoType
-			end)
+			local partialWord = targetWord:sub(1, endIndex)
+			fireKeystroke(partialWord)
+			updateLettersLabel(#partialWord, #targetWord)
 	
 			local ed = getEnterDelay()
 			if ed > 0 then task.wait(ed) end
@@ -7411,10 +7436,10 @@ local script = G2L["9e"];
 							end
 	
 							if state.mode == "VIM" then
-								typeWordVIM(word, textbox)
+								typeWordVIM(word, textbox, setTB)
 							else
-								local baseWait = getTypingSpeed()
-								if baseWait <= 0 then
+								local spd = getTypingSpeed()
+								if spd <= 0 then
 									textbox.Text = word
 									textbox.CursorPosition = #word + 1
 									updateLettersLabel(#word, #word)
@@ -7596,7 +7621,7 @@ local script = G2L["9e"];
 		local val = tonumber(normalSlider.Text)
 		if val then
 			local newSpeed = math.clamp(val, 0, 1)
-			if newSpeed < 0.07 then
+			if newSpeed > 0 and newSpeed < 0.07 then
 				local lastGood = state.normalSpeed
 				normalSlider.Text = formatSliderValue(lastGood)
 				showSpeedDisclaimer(function()
@@ -7618,7 +7643,7 @@ local script = G2L["9e"];
 		local val = tonumber(minSlider.Text)
 		if val then
 			local newSpeed = math.clamp(val, 0, state.maxSpeed)
-			if newSpeed < 0.001 then
+			if newSpeed > 0 and newSpeed < 0.001 then
 				local lastGood = state.minSpeed
 				minSlider.Text = formatSliderValue(lastGood)
 				showSpeedDisclaimer(function()
@@ -7640,7 +7665,7 @@ local script = G2L["9e"];
 		local val = tonumber(maxSlider.Text)
 		if val then
 			local newSpeed = math.clamp(val, state.minSpeed, 1)
-			if newSpeed < 0.07 then
+			if newSpeed > 0 and newSpeed < 0.07 then
 				local lastGood = state.maxSpeed
 				maxSlider.Text = formatSliderValue(lastGood)
 				showSpeedDisclaimer(function()
