@@ -1,5 +1,11 @@
-[+] added avg letters, avg wpm, last wpm, current typer and current difficulty
-    [!] fixed the letters lable, current word and made estimated wpm more accurate
+[+] added avg letters, avg wpm, last wpm,
+current typer and current difficulty
+
+    [!] fixed the letters label, 
+    current word and made estimated wpm more accurate
+
   [*] made random speed more random (tuff)
-[+] added another 50-ish words (has already been out but im putting ts in teh changelog because it wasnt in a other one)
+
+[+] added another 50-ish words
+
   [*] updated to v0.58
