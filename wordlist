@@ -1178,6 +1178,8 @@ return {
 		["rbxassetid://119116571569352"] = "thermoluminescence", -- idk why i didnt have this yet 
 		["rbxassetid://101023078768143"] = "irascible", -- found it
 		["rbxassetid://108272772236843"] = "latitudinarianism", -- ???? idfk bro 
+        ["rbxassetid://109321407307313"] = "photosynthesis", -- idk
+        ["rbxassetid://106506603198433"] = "supercentenarian",
     },
     BESTPLAYER = {
 		"Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft", "nonanonacontanonactanonaliagon", "Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft",
