@@ -1,4 +1,4 @@
-return defToWord = {
+return {
 	["abolish"] = "[Verb] To destroy.",
 	["acceptable"] = "[Adjective] Able to be agreed on.",
 	["acoustic"] = "[Adjective] Relating to sound.",
