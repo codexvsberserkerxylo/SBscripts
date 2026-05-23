@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 390 | Scripts: 24 | Modules: 0 | Tags: 0
+-- Instances: 401 | Scripts: 25 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.f789z43hfn3i
@@ -2958,779 +2958,885 @@ G2L["134"] = Instance.new("UICorner", G2L["132"]);
 G2L["134"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer
-G2L["135"] = Instance.new("Frame", G2L["9b"]);
-G2L["135"]["Visible"] = false;
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg
+G2L["135"] = Instance.new("Frame", G2L["10d"]);
 G2L["135"]["BorderSizePixel"] = 0;
-G2L["135"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-G2L["135"]["Size"] = UDim2.new(0.75248, 0, 0.35992, 0);
-G2L["135"]["Position"] = UDim2.new(0.07359, 0, 0.29133, 0);
+G2L["135"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["135"]["Size"] = UDim2.new(0.91521, 0, 3.35145, 0);
+G2L["135"]["Position"] = UDim2.new(0.02447, 0, 15.05724, 0);
 G2L["135"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["135"]["Name"] = [[disclaimer]];
+G2L["135"]["Name"] = [[msg]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.drag
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.check
 G2L["136"] = Instance.new("LocalScript", G2L["135"]);
-G2L["136"]["Name"] = [[drag]];
+G2L["136"]["Name"] = [[check]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer._c
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.c
 G2L["137"] = Instance.new("UICorner", G2L["135"]);
-G2L["137"]["Name"] = [[_c]];
+G2L["137"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer._s
-G2L["138"] = Instance.new("UIStroke", G2L["135"]);
-G2L["138"]["Transparency"] = 0.55;
-G2L["138"]["Color"] = Color3.fromRGB(231, 113, 10);
-G2L["138"]["Name"] = [[_s]];
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.user
+G2L["138"] = Instance.new("TextBox", G2L["135"]);
+G2L["138"]["Name"] = [[user]];
+G2L["138"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
+G2L["138"]["BorderSizePixel"] = 0;
+G2L["138"]["TextSize"] = 14;
+G2L["138"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["138"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["138"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["138"]["ClearTextOnFocus"] = false;
+G2L["138"]["PlaceholderText"] = [[Username]];
+G2L["138"]["Size"] = UDim2.new(0.24741, 0, 0.42857, 0);
+G2L["138"]["Position"] = UDim2.new(0.04192, 0, 0.14299, 0);
+G2L["138"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["138"]["Text"] = [[]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.w
-G2L["139"] = Instance.new("TextLabel", G2L["135"]);
-G2L["139"]["TextWrapped"] = true;
-G2L["139"]["BorderSizePixel"] = 0;
-G2L["139"]["TextSize"] = 14;
-G2L["139"]["TextScaled"] = true;
-G2L["139"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["139"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["139"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["139"]["BackgroundTransparency"] = 1;
-G2L["139"]["Size"] = UDim2.new(1, 0, 0.30786, 0);
-G2L["139"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["139"]["Text"] = [[The following auto type speed ... MIGHT get you banned. Do u wish to proceed?]];
-G2L["139"]["Name"] = [[w]];
-G2L["139"]["Position"] = UDim2.new(0, 0, -0, 0);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.user.c
+G2L["139"] = Instance.new("UICorner", G2L["138"]);
+G2L["139"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsnoban
-G2L["13a"] = Instance.new("TextButton", G2L["135"]);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.wpm
+G2L["13a"] = Instance.new("TextBox", G2L["135"]);
+G2L["13a"]["Name"] = [[wpm]];
+G2L["13a"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["13a"]["BorderSizePixel"] = 0;
 G2L["13a"]["TextSize"] = 14;
 G2L["13a"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["13a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13a"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["13a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["13a"]["BackgroundTransparency"] = 0.95;
-G2L["13a"]["Size"] = UDim2.new(0, 137, 0, 27);
+G2L["13a"]["ClearTextOnFocus"] = false;
+G2L["13a"]["PlaceholderText"] = [[WPM]];
+G2L["13a"]["Size"] = UDim2.new(0.24741, 0, 0.42857, 0);
+G2L["13a"]["Position"] = UDim2.new(0.6746, 0, 0.14299, 0);
 G2L["13a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13a"]["Text"] = [[No]];
-G2L["13a"]["Name"] = [[plsnoban]];
-G2L["13a"]["Position"] = UDim2.new(0.0377, 0, 0.67321, 0);
+G2L["13a"]["Text"] = [[]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsnoban._c
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.wpm.c
 G2L["13b"] = Instance.new("UICorner", G2L["13a"]);
-G2L["13b"]["Name"] = [[_c]];
+G2L["13b"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsban
-G2L["13c"] = Instance.new("TextButton", G2L["135"]);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.word
+G2L["13c"] = Instance.new("TextBox", G2L["135"]);
+G2L["13c"]["Name"] = [[word]];
+G2L["13c"]["PlaceholderColor3"] = Color3.fromRGB(179, 179, 179);
 G2L["13c"]["BorderSizePixel"] = 0;
 G2L["13c"]["TextSize"] = 14;
 G2L["13c"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["13c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["13c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["13c"]["BackgroundTransparency"] = 0.95;
-G2L["13c"]["Size"] = UDim2.new(0, 90, 0, 27);
+G2L["13c"]["ClearTextOnFocus"] = false;
+G2L["13c"]["PlaceholderText"] = [[Word]];
+G2L["13c"]["Size"] = UDim2.new(0.24741, 0, 0.42857, 0);
+G2L["13c"]["Position"] = UDim2.new(0.35344, 0, 0.14299, 0);
 G2L["13c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13c"]["Text"] = [[Yes]];
-G2L["13c"]["Name"] = [[plsban]];
-G2L["13c"]["Position"] = UDim2.new(0.59943, 0, 0.67321, 0);
+G2L["13c"]["Text"] = [[]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsban._c
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.word.c
 G2L["13d"] = Instance.new("UICorner", G2L["13c"]);
-G2L["13d"]["Name"] = [[_c]];
+G2L["13d"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm
-G2L["13e"] = Instance.new("Frame", G2L["2a"]);
-G2L["13e"]["Visible"] = false;
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.fire
+G2L["13e"] = Instance.new("TextButton", G2L["135"]);
+G2L["13e"]["RichText"] = true;
 G2L["13e"]["BorderSizePixel"] = 0;
-G2L["13e"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
-G2L["13e"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
-G2L["13e"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["13e"]["TextSize"] = 14;
+G2L["13e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["13e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["13e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13e"]["Size"] = UDim2.new(0.89983, 0, 0.28469, 0);
 G2L["13e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13e"]["Name"] = [[efrm]];
+G2L["13e"]["Text"] = [[Fire fake chat message? (client sided)]];
+G2L["13e"]["Name"] = [[fire]];
+G2L["13e"]["Position"] = UDim2.new(0.03533, 0, 0.65809, 0);
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._c
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.fire.c
 G2L["13f"] = Instance.new("UICorner", G2L["13e"]);
-G2L["13f"]["Name"] = [[_c]];
-G2L["13f"]["CornerRadius"] = UDim.new(0, 4);
+G2L["13f"]["Name"] = [[c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr
-G2L["140"] = Instance.new("ScrollingFrame", G2L["13e"]);
-G2L["140"]["Active"] = true;
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer
+G2L["140"] = Instance.new("Frame", G2L["9b"]);
+G2L["140"]["Visible"] = false;
 G2L["140"]["BorderSizePixel"] = 0;
-G2L["140"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
-G2L["140"]["Name"] = [[_scr]];
-G2L["140"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["140"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
-G2L["140"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["140"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["140"]["Size"] = UDim2.new(0.75248, 0, 0.35992, 0);
+G2L["140"]["Position"] = UDim2.new(0.07359, 0, 0.29133, 0);
 G2L["140"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["140"]["ScrollBarThickness"] = 0;
-G2L["140"]["BackgroundTransparency"] = 1;
+G2L["140"]["Name"] = [[disclaimer]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el
-G2L["141"] = Instance.new("TextLabel", G2L["140"]);
-G2L["141"]["BorderSizePixel"] = 0;
-G2L["141"]["TextSize"] = 20;
-G2L["141"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["141"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["141"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["141"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["141"]["BackgroundTransparency"] = 1;
-G2L["141"]["Size"] = UDim2.new(1, 0, 0.03, 0);
-G2L["141"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["141"]["Text"] = [[     Emotes ]];
-G2L["141"]["Name"] = [[el]];
-G2L["141"]["Position"] = UDim2.new(0, 0, -0, 0);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.drag
+G2L["141"] = Instance.new("LocalScript", G2L["140"]);
+G2L["141"]["Name"] = [[drag]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.emotes
-G2L["142"] = Instance.new("LocalScript", G2L["141"]);
-G2L["142"]["Name"] = [[emotes]];
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer._c
+G2L["142"] = Instance.new("UICorner", G2L["140"]);
+G2L["142"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss
-G2L["143"] = Instance.new("TextButton", G2L["141"]);
-G2L["143"]["BorderSizePixel"] = 0;
-G2L["143"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["143"]["TextSize"] = 14;
-G2L["143"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["143"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["143"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["143"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["143"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["143"]["Text"] = [[   Floss]];
-G2L["143"]["Name"] = [[floss]];
-G2L["143"]["Position"] = UDim2.new(0.029, 0, 1.286, 0);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer._s
+G2L["143"] = Instance.new("UIStroke", G2L["140"]);
+G2L["143"]["Transparency"] = 0.55;
+G2L["143"]["Color"] = Color3.fromRGB(231, 113, 10);
+G2L["143"]["Name"] = [[_s]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss._c
-G2L["144"] = Instance.new("UICorner", G2L["143"]);
-G2L["144"]["Name"] = [[_c]];
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.w
+G2L["144"] = Instance.new("TextLabel", G2L["140"]);
+G2L["144"]["TextWrapped"] = true;
+G2L["144"]["BorderSizePixel"] = 0;
+G2L["144"]["TextSize"] = 14;
+G2L["144"]["TextScaled"] = true;
+G2L["144"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["144"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["144"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["144"]["BackgroundTransparency"] = 1;
+G2L["144"]["Size"] = UDim2.new(0.9623, 0, 0.41079, 0);
+G2L["144"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["144"]["Text"] = [[The following auto type speed ... WILL PROBABLY get you banned. Do u wish to proceed?]];
+G2L["144"]["Name"] = [[w]];
+G2L["144"]["Position"] = UDim2.new(0.01881, 0, 0.07833, 0);
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm
-G2L["145"] = Instance.new("Frame", G2L["143"]);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsnoban
+G2L["145"] = Instance.new("TextButton", G2L["140"]);
 G2L["145"]["BorderSizePixel"] = 0;
-G2L["145"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["145"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["145"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["145"]["TextSize"] = 14;
+G2L["145"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["145"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["145"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["145"]["BackgroundTransparency"] = 0.95;
+G2L["145"]["Size"] = UDim2.new(0, 137, 0, 27);
 G2L["145"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["145"]["Name"] = [[tfrm]];
+G2L["145"]["Text"] = [[No]];
+G2L["145"]["Name"] = [[plsnoban]];
+G2L["145"]["Position"] = UDim2.new(0.02637, 0, 0.60607, 0);
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm._c
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsnoban._c
 G2L["146"] = Instance.new("UICorner", G2L["145"]);
 G2L["146"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm.bar
-G2L["147"] = Instance.new("Frame", G2L["145"]);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsban
+G2L["147"] = Instance.new("TextButton", G2L["140"]);
 G2L["147"]["BorderSizePixel"] = 0;
-G2L["147"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["147"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["147"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["147"]["TextSize"] = 14;
+G2L["147"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["147"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["147"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["147"]["BackgroundTransparency"] = 0.95;
+G2L["147"]["Size"] = UDim2.new(0, 90, 0, 27);
 G2L["147"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["147"]["Name"] = [[bar]];
+G2L["147"]["Text"] = [[Yes]];
+G2L["147"]["Name"] = [[plsban]];
+G2L["147"]["Position"] = UDim2.new(0.59943, 0, 0.60607, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.plsban._c
+G2L["148"] = Instance.new("UICorner", G2L["147"]);
+G2L["148"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm
+G2L["149"] = Instance.new("Frame", G2L["2a"]);
+G2L["149"]["Visible"] = false;
+G2L["149"]["BorderSizePixel"] = 0;
+G2L["149"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["149"]["Size"] = UDim2.new(0.9346, 0, 0.91563, 0);
+G2L["149"]["Position"] = UDim2.new(0.03161, 0, 0.04375, 0);
+G2L["149"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["149"]["Name"] = [[efrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._c
+G2L["14a"] = Instance.new("UICorner", G2L["149"]);
+G2L["14a"]["Name"] = [[_c]];
+G2L["14a"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr
+G2L["14b"] = Instance.new("ScrollingFrame", G2L["149"]);
+G2L["14b"]["Active"] = true;
+G2L["14b"]["BorderSizePixel"] = 0;
+G2L["14b"]["CanvasSize"] = UDim2.new(0, 0, 3, 0);
+G2L["14b"]["Name"] = [[_scr]];
+G2L["14b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14b"]["Size"] = UDim2.new(0.967, 0, 0.951, 0);
+G2L["14b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14b"]["ScrollBarThickness"] = 0;
+G2L["14b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el
+G2L["14c"] = Instance.new("TextLabel", G2L["14b"]);
+G2L["14c"]["BorderSizePixel"] = 0;
+G2L["14c"]["TextSize"] = 20;
+G2L["14c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["14c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14c"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["14c"]["BackgroundTransparency"] = 1;
+G2L["14c"]["Size"] = UDim2.new(1, 0, 0.03, 0);
+G2L["14c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14c"]["Text"] = [[     Emotes ]];
+G2L["14c"]["Name"] = [[el]];
+G2L["14c"]["Position"] = UDim2.new(0, 0, -0, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.emotes
+G2L["14d"] = Instance.new("LocalScript", G2L["14c"]);
+G2L["14d"]["Name"] = [[emotes]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss
+G2L["14e"] = Instance.new("TextButton", G2L["14c"]);
+G2L["14e"]["BorderSizePixel"] = 0;
+G2L["14e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["14e"]["TextSize"] = 14;
+G2L["14e"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["14e"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["14e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["14e"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["14e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14e"]["Text"] = [[   Floss]];
+G2L["14e"]["Name"] = [[floss]];
+G2L["14e"]["Position"] = UDim2.new(0.029, 0, 1.286, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss._c
+G2L["14f"] = Instance.new("UICorner", G2L["14e"]);
+G2L["14f"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm
+G2L["150"] = Instance.new("Frame", G2L["14e"]);
+G2L["150"]["BorderSizePixel"] = 0;
+G2L["150"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["150"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["150"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["150"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["150"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm._c
+G2L["151"] = Instance.new("UICorner", G2L["150"]);
+G2L["151"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm.bar
+G2L["152"] = Instance.new("Frame", G2L["150"]);
+G2L["152"]["BorderSizePixel"] = 0;
+G2L["152"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["152"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["152"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["152"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["152"]["Name"] = [[bar]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.floss.tfrm.bar._c
-G2L["148"] = Instance.new("UICorner", G2L["147"]);
-G2L["148"]["Name"] = [[_c]];
-G2L["148"]["CornerRadius"] = UDim.new(0, 5);
+G2L["153"] = Instance.new("UICorner", G2L["152"]);
+G2L["153"]["Name"] = [[_c]];
+G2L["153"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy
-G2L["149"] = Instance.new("TextButton", G2L["141"]);
-G2L["149"]["BorderSizePixel"] = 0;
-G2L["149"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["149"]["TextSize"] = 14;
-G2L["149"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["149"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["149"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["149"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["149"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["149"]["Text"] = [[   Shimmy]];
-G2L["149"]["Name"] = [[shimmy]];
-G2L["149"]["Position"] = UDim2.new(0.029, 0, 4.305, 0);
+G2L["154"] = Instance.new("TextButton", G2L["14c"]);
+G2L["154"]["BorderSizePixel"] = 0;
+G2L["154"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["154"]["TextSize"] = 14;
+G2L["154"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["154"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["154"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["154"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["154"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["154"]["Text"] = [[   Shimmy]];
+G2L["154"]["Name"] = [[shimmy]];
+G2L["154"]["Position"] = UDim2.new(0.029, 0, 4.305, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy._c
-G2L["14a"] = Instance.new("UICorner", G2L["149"]);
-G2L["14a"]["Name"] = [[_c]];
+G2L["155"] = Instance.new("UICorner", G2L["154"]);
+G2L["155"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy.tfrm
-G2L["14b"] = Instance.new("Frame", G2L["149"]);
-G2L["14b"]["BorderSizePixel"] = 0;
-G2L["14b"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["14b"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["14b"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
-G2L["14b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14b"]["Name"] = [[tfrm]];
+G2L["156"] = Instance.new("Frame", G2L["154"]);
+G2L["156"]["BorderSizePixel"] = 0;
+G2L["156"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["156"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["156"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["156"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["156"]["Name"] = [[tfrm]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy.tfrm._c
-G2L["14c"] = Instance.new("UICorner", G2L["14b"]);
-G2L["14c"]["Name"] = [[_c]];
+G2L["157"] = Instance.new("UICorner", G2L["156"]);
+G2L["157"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy.tfrm.bar
-G2L["14d"] = Instance.new("Frame", G2L["14b"]);
-G2L["14d"]["BorderSizePixel"] = 0;
-G2L["14d"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["14d"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["14d"]["Position"] = UDim2.new(0, 0, -0, 0);
-G2L["14d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14d"]["Name"] = [[bar]];
+G2L["158"] = Instance.new("Frame", G2L["156"]);
+G2L["158"]["BorderSizePixel"] = 0;
+G2L["158"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["158"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["158"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["158"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["158"]["Name"] = [[bar]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.shimmy.tfrm.bar._c
-G2L["14e"] = Instance.new("UICorner", G2L["14d"]);
-G2L["14e"]["Name"] = [[_c]];
-G2L["14e"]["CornerRadius"] = UDim.new(0, 5);
+G2L["159"] = Instance.new("UICorner", G2L["158"]);
+G2L["159"]["Name"] = [[_c]];
+G2L["159"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy
-G2L["14f"] = Instance.new("TextButton", G2L["141"]);
-G2L["14f"]["BorderSizePixel"] = 0;
-G2L["14f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["14f"]["TextSize"] = 14;
-G2L["14f"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["14f"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["14f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["14f"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["14f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14f"]["Text"] = [[   Griddy]];
-G2L["14f"]["Name"] = [[griddy]];
-G2L["14f"]["Position"] = UDim2.new(0.029, 0, 5.858, 0);
+G2L["15a"] = Instance.new("TextButton", G2L["14c"]);
+G2L["15a"]["BorderSizePixel"] = 0;
+G2L["15a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15a"]["TextSize"] = 14;
+G2L["15a"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["15a"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["15a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15a"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["15a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15a"]["Text"] = [[   Griddy]];
+G2L["15a"]["Name"] = [[griddy]];
+G2L["15a"]["Position"] = UDim2.new(0.029, 0, 5.858, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy._c
-G2L["150"] = Instance.new("UICorner", G2L["14f"]);
-G2L["150"]["Name"] = [[_c]];
+G2L["15b"] = Instance.new("UICorner", G2L["15a"]);
+G2L["15b"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy.tfrm
-G2L["151"] = Instance.new("Frame", G2L["14f"]);
-G2L["151"]["BorderSizePixel"] = 0;
-G2L["151"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["151"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["151"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
-G2L["151"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["151"]["Name"] = [[tfrm]];
+G2L["15c"] = Instance.new("Frame", G2L["15a"]);
+G2L["15c"]["BorderSizePixel"] = 0;
+G2L["15c"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["15c"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["15c"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["15c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15c"]["Name"] = [[tfrm]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy.tfrm._c
-G2L["152"] = Instance.new("UICorner", G2L["151"]);
-G2L["152"]["Name"] = [[_c]];
+G2L["15d"] = Instance.new("UICorner", G2L["15c"]);
+G2L["15d"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy.tfrm.bar
-G2L["153"] = Instance.new("Frame", G2L["151"]);
-G2L["153"]["BorderSizePixel"] = 0;
-G2L["153"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["153"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["153"]["Position"] = UDim2.new(0, 0, -0, 0);
-G2L["153"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["153"]["Name"] = [[bar]];
+G2L["15e"] = Instance.new("Frame", G2L["15c"]);
+G2L["15e"]["BorderSizePixel"] = 0;
+G2L["15e"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["15e"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["15e"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["15e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15e"]["Name"] = [[bar]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.griddy.tfrm.bar._c
-G2L["154"] = Instance.new("UICorner", G2L["153"]);
-G2L["154"]["Name"] = [[_c]];
-G2L["154"]["CornerRadius"] = UDim.new(0, 5);
+G2L["15f"] = Instance.new("UICorner", G2L["15e"]);
+G2L["15f"]["Name"] = [[_c]];
+G2L["15f"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance
-G2L["155"] = Instance.new("TextButton", G2L["141"]);
-G2L["155"]["BorderSizePixel"] = 0;
-G2L["155"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["155"]["TextSize"] = 14;
-G2L["155"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["155"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["155"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["155"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["155"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["155"]["Text"] = [[   Breakdance]];
-G2L["155"]["Name"] = [[breakdance]];
-G2L["155"]["Position"] = UDim2.new(0.029, 0, 8.964, 0);
+G2L["160"] = Instance.new("TextButton", G2L["14c"]);
+G2L["160"]["BorderSizePixel"] = 0;
+G2L["160"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["160"]["TextSize"] = 14;
+G2L["160"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["160"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["160"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["160"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["160"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["160"]["Text"] = [[   Breakdance]];
+G2L["160"]["Name"] = [[breakdance]];
+G2L["160"]["Position"] = UDim2.new(0.029, 0, 8.964, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance._c
-G2L["156"] = Instance.new("UICorner", G2L["155"]);
-G2L["156"]["Name"] = [[_c]];
+G2L["161"] = Instance.new("UICorner", G2L["160"]);
+G2L["161"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance.tfrm
-G2L["157"] = Instance.new("Frame", G2L["155"]);
-G2L["157"]["BorderSizePixel"] = 0;
-G2L["157"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["157"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["157"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
-G2L["157"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["157"]["Name"] = [[tfrm]];
+G2L["162"] = Instance.new("Frame", G2L["160"]);
+G2L["162"]["BorderSizePixel"] = 0;
+G2L["162"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["162"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["162"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["162"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["162"]["Name"] = [[tfrm]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance.tfrm._c
-G2L["158"] = Instance.new("UICorner", G2L["157"]);
-G2L["158"]["Name"] = [[_c]];
+G2L["163"] = Instance.new("UICorner", G2L["162"]);
+G2L["163"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance.tfrm.bar
-G2L["159"] = Instance.new("Frame", G2L["157"]);
-G2L["159"]["BorderSizePixel"] = 0;
-G2L["159"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["159"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["159"]["Position"] = UDim2.new(0, 0, -0, 0);
-G2L["159"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["159"]["Name"] = [[bar]];
+G2L["164"] = Instance.new("Frame", G2L["162"]);
+G2L["164"]["BorderSizePixel"] = 0;
+G2L["164"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["164"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["164"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["164"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["164"]["Name"] = [[bar]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.breakdance.tfrm.bar._c
-G2L["15a"] = Instance.new("UICorner", G2L["159"]);
-G2L["15a"]["Name"] = [[_c]];
-G2L["15a"]["CornerRadius"] = UDim.new(0, 5);
+G2L["165"] = Instance.new("UICorner", G2L["164"]);
+G2L["165"]["Name"] = [[_c]];
+G2L["165"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL
-G2L["15b"] = Instance.new("TextButton", G2L["141"]);
-G2L["15b"]["BorderSizePixel"] = 0;
-G2L["15b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["15b"]["TextSize"] = 14;
-G2L["15b"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["15b"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["15b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15b"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["15b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15b"]["Text"] = [[   Take the L]];
-G2L["15b"]["Name"] = [[taketheL]];
-G2L["15b"]["Position"] = UDim2.new(0.026, 0, 7.411, 0);
+G2L["166"] = Instance.new("TextButton", G2L["14c"]);
+G2L["166"]["BorderSizePixel"] = 0;
+G2L["166"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["166"]["TextSize"] = 14;
+G2L["166"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["166"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["166"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["166"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["166"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["166"]["Text"] = [[   Take the L]];
+G2L["166"]["Name"] = [[taketheL]];
+G2L["166"]["Position"] = UDim2.new(0.026, 0, 7.411, 0);
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL._c
-G2L["15c"] = Instance.new("UICorner", G2L["15b"]);
-G2L["15c"]["Name"] = [[_c]];
+G2L["167"] = Instance.new("UICorner", G2L["166"]);
+G2L["167"]["Name"] = [[_c]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm
-G2L["15d"] = Instance.new("Frame", G2L["15b"]);
-G2L["15d"]["BorderSizePixel"] = 0;
-G2L["15d"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["15d"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["15d"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
-G2L["15d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15d"]["Name"] = [[tfrm]];
+G2L["168"] = Instance.new("Frame", G2L["166"]);
+G2L["168"]["BorderSizePixel"] = 0;
+G2L["168"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["168"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["168"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["168"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["168"]["Name"] = [[tfrm]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm._c
-G2L["15e"] = Instance.new("UICorner", G2L["15d"]);
-G2L["15e"]["Name"] = [[_c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm.bar
-G2L["15f"] = Instance.new("Frame", G2L["15d"]);
-G2L["15f"]["BorderSizePixel"] = 0;
-G2L["15f"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["15f"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["15f"]["Position"] = UDim2.new(0, 0, -0, 0);
-G2L["15f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15f"]["Name"] = [[bar]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm.bar._c
-G2L["160"] = Instance.new("UICorner", G2L["15f"]);
-G2L["160"]["Name"] = [[_c]];
-G2L["160"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot
-G2L["161"] = Instance.new("TextButton", G2L["141"]);
-G2L["161"]["BorderSizePixel"] = 0;
-G2L["161"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["161"]["TextSize"] = 14;
-G2L["161"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["161"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["161"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["161"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
-G2L["161"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["161"]["Text"] = [[   Robot]];
-G2L["161"]["Name"] = [[robot]];
-G2L["161"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot._c
-G2L["162"] = Instance.new("UICorner", G2L["161"]);
-G2L["162"]["Name"] = [[_c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm
-G2L["163"] = Instance.new("Frame", G2L["161"]);
-G2L["163"]["BorderSizePixel"] = 0;
-G2L["163"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["163"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["163"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
-G2L["163"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["163"]["Name"] = [[tfrm]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm._c
-G2L["164"] = Instance.new("UICorner", G2L["163"]);
-G2L["164"]["Name"] = [[_c]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm.bar
-G2L["165"] = Instance.new("Frame", G2L["163"]);
-G2L["165"]["BorderSizePixel"] = 0;
-G2L["165"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["165"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["165"]["Position"] = UDim2.new(0, 0, -0, 0);
-G2L["165"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["165"]["Name"] = [[bar]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm.bar._c
-G2L["166"] = Instance.new("UICorner", G2L["165"]);
-G2L["166"]["Name"] = [[_c]];
-G2L["166"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd
-G2L["167"] = Instance.new("Frame", G2L["141"]);
-G2L["167"]["BorderSizePixel"] = 0;
-G2L["167"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["167"]["Size"] = UDim2.new(0.44315, 0, 0.03, 0);
-G2L["167"]["Position"] = UDim2.new(0, 0, 1, 0);
-G2L["167"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["167"]["Name"] = [[brd]];
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd.grd
-G2L["168"] = Instance.new("UIGradient", G2L["167"]);
-G2L["168"]["Name"] = [[grd]];
-G2L["168"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
-
-
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd._c
-G2L["169"] = Instance.new("UICorner", G2L["167"]);
+G2L["169"] = Instance.new("UICorner", G2L["168"]);
 G2L["169"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny
-G2L["16a"] = Instance.new("TextButton", G2L["141"]);
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm.bar
+G2L["16a"] = Instance.new("Frame", G2L["168"]);
 G2L["16a"]["BorderSizePixel"] = 0;
-G2L["16a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["16a"]["TextSize"] = 14;
-G2L["16a"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["16a"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
-G2L["16a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["16a"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["16a"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["16a"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["16a"]["Position"] = UDim2.new(0, 0, -0, 0);
 G2L["16a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16a"]["Text"] = [[   Bunny]];
-G2L["16a"]["Name"] = [[bunny]];
-G2L["16a"]["Position"] = UDim2.new(0.029, 0, 10.55582, 0);
+G2L["16a"]["Name"] = [[bar]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny._c
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.taketheL.tfrm.bar._c
 G2L["16b"] = Instance.new("UICorner", G2L["16a"]);
 G2L["16b"]["Name"] = [[_c]];
+G2L["16b"]["CornerRadius"] = UDim.new(0, 5);
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm
-G2L["16c"] = Instance.new("Frame", G2L["16a"]);
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot
+G2L["16c"] = Instance.new("TextButton", G2L["14c"]);
 G2L["16c"]["BorderSizePixel"] = 0;
-G2L["16c"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
-G2L["16c"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
-G2L["16c"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["16c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["16c"]["TextSize"] = 14;
+G2L["16c"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["16c"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["16c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16c"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
 G2L["16c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16c"]["Name"] = [[tfrm]];
+G2L["16c"]["Text"] = [[   Robot]];
+G2L["16c"]["Name"] = [[robot]];
+G2L["16c"]["Position"] = UDim2.new(0.029, 0, 2.829, 0);
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm._c
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot._c
 G2L["16d"] = Instance.new("UICorner", G2L["16c"]);
 G2L["16d"]["Name"] = [[_c]];
 
 
--- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm.bar
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm
 G2L["16e"] = Instance.new("Frame", G2L["16c"]);
 G2L["16e"]["BorderSizePixel"] = 0;
-G2L["16e"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
-G2L["16e"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
-G2L["16e"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["16e"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["16e"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["16e"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
 G2L["16e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16e"]["Name"] = [[bar]];
+G2L["16e"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm._c
+G2L["16f"] = Instance.new("UICorner", G2L["16e"]);
+G2L["16f"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm.bar
+G2L["170"] = Instance.new("Frame", G2L["16e"]);
+G2L["170"]["BorderSizePixel"] = 0;
+G2L["170"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["170"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["170"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["170"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["170"]["Name"] = [[bar]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.robot.tfrm.bar._c
+G2L["171"] = Instance.new("UICorner", G2L["170"]);
+G2L["171"]["Name"] = [[_c]];
+G2L["171"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd
+G2L["172"] = Instance.new("Frame", G2L["14c"]);
+G2L["172"]["BorderSizePixel"] = 0;
+G2L["172"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["172"]["Size"] = UDim2.new(0.44315, 0, 0.03, 0);
+G2L["172"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["172"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["172"]["Name"] = [[brd]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd.grd
+G2L["173"] = Instance.new("UIGradient", G2L["172"]);
+G2L["173"]["Name"] = [[grd]];
+G2L["173"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 108, 22)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(32, 32, 32))};
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.brd._c
+G2L["174"] = Instance.new("UICorner", G2L["172"]);
+G2L["174"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny
+G2L["175"] = Instance.new("TextButton", G2L["14c"]);
+G2L["175"]["BorderSizePixel"] = 0;
+G2L["175"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["175"]["TextSize"] = 14;
+G2L["175"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
+G2L["175"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["175"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["175"]["Size"] = UDim2.new(0.948, 0, 1.26, 0);
+G2L["175"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["175"]["Text"] = [[   Bunny]];
+G2L["175"]["Name"] = [[bunny]];
+G2L["175"]["Position"] = UDim2.new(0.029, 0, 10.55582, 0);
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny._c
+G2L["176"] = Instance.new("UICorner", G2L["175"]);
+G2L["176"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm
+G2L["177"] = Instance.new("Frame", G2L["175"]);
+G2L["177"]["BorderSizePixel"] = 0;
+G2L["177"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["177"]["Size"] = UDim2.new(0.25198, 0, 0.71, 0);
+G2L["177"]["Position"] = UDim2.new(0.70288, 0, 0.14706, 0);
+G2L["177"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["177"]["Name"] = [[tfrm]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm._c
+G2L["178"] = Instance.new("UICorner", G2L["177"]);
+G2L["178"]["Name"] = [[_c]];
+
+
+-- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm.bar
+G2L["179"] = Instance.new("Frame", G2L["177"]);
+G2L["179"]["BorderSizePixel"] = 0;
+G2L["179"]["BackgroundColor3"] = Color3.fromRGB(210, 59, 59);
+G2L["179"]["Size"] = UDim2.new(0.496, 0, 1.00001, 0);
+G2L["179"]["Position"] = UDim2.new(0, 0, -0, 0);
+G2L["179"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["179"]["Name"] = [[bar]];
 
 
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.bunny.tfrm.bar._c
-G2L["16f"] = Instance.new("UICorner", G2L["16e"]);
-G2L["16f"]["Name"] = [[_c]];
-G2L["16f"]["CornerRadius"] = UDim.new(0, 5);
+G2L["17a"] = Instance.new("UICorner", G2L["179"]);
+G2L["17a"]["Name"] = [[_c]];
+G2L["17a"]["CornerRadius"] = UDim.new(0, 5);
 
 
 -- StarterGui.f789z43hfn3i._main.cimg
-G2L["170"] = Instance.new("ImageLabel", G2L["4"]);
-G2L["170"]["BorderSizePixel"] = 0;
-G2L["170"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["170"]["Size"] = UDim2.new(0, 501, 0, 375);
-G2L["170"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["170"]["BackgroundTransparency"] = 1;
-G2L["170"]["Name"] = [[cimg]];
+G2L["17b"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["17b"]["BorderSizePixel"] = 0;
+G2L["17b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17b"]["Size"] = UDim2.new(0, 501, 0, 375);
+G2L["17b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17b"]["BackgroundTransparency"] = 1;
+G2L["17b"]["Name"] = [[cimg]];
 
 
 -- StarterGui.f789z43hfn3i.tsk
-G2L["171"] = Instance.new("Frame", G2L["1"]);
-G2L["171"]["ZIndex"] = 234892348;
-G2L["171"]["BorderSizePixel"] = 0;
-G2L["171"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["171"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
-G2L["171"]["Position"] = UDim2.new(0.30155, 0, 0.27286, 0);
-G2L["171"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["171"]["Name"] = [[tsk]];
-G2L["171"]["BackgroundTransparency"] = 1;
+G2L["17c"] = Instance.new("Frame", G2L["1"]);
+G2L["17c"]["ZIndex"] = 234892348;
+G2L["17c"]["BorderSizePixel"] = 0;
+G2L["17c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17c"]["Size"] = UDim2.new(0.34037, 0, 0.03245, 0);
+G2L["17c"]["Position"] = UDim2.new(0.30155, 0, 0.27286, 0);
+G2L["17c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17c"]["Name"] = [[tsk]];
+G2L["17c"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.f789z43hfn3i.tsk.line
-G2L["172"] = Instance.new("Frame", G2L["171"]);
-G2L["172"]["BorderSizePixel"] = 0;
-G2L["172"]["BackgroundColor3"] = Color3.fromRGB(255, 108, 22);
-G2L["172"]["Size"] = UDim2.new(0.99805, 0, 0.05, 0);
-G2L["172"]["Position"] = UDim2.new(-0.00202, 0, 0.98587, 0);
-G2L["172"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["172"]["Name"] = [[line]];
+G2L["17d"] = Instance.new("Frame", G2L["17c"]);
+G2L["17d"]["BorderSizePixel"] = 0;
+G2L["17d"]["BackgroundColor3"] = Color3.fromRGB(255, 108, 22);
+G2L["17d"]["Size"] = UDim2.new(0.99805, 0, 0.05, 0);
+G2L["17d"]["Position"] = UDim2.new(-0.00202, 0, 0.98587, 0);
+G2L["17d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17d"]["Name"] = [[line]];
 
 
 -- StarterGui.f789z43hfn3i.tsk.min
-G2L["173"] = Instance.new("TextButton", G2L["171"]);
-G2L["173"]["TextWrapped"] = true;
-G2L["173"]["BorderSizePixel"] = 0;
-G2L["173"]["TextSize"] = 40;
-G2L["173"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["173"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["173"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["173"]["BackgroundTransparency"] = 1;
-G2L["173"]["Size"] = UDim2.new(0.04113, 0, 0.99978, 0);
-G2L["173"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["173"]["Text"] = [[-]];
-G2L["173"]["Name"] = [[min]];
-G2L["173"]["Position"] = UDim2.new(0.90118, 0, 0.01252, -2);
+G2L["17e"] = Instance.new("TextButton", G2L["17c"]);
+G2L["17e"]["TextWrapped"] = true;
+G2L["17e"]["BorderSizePixel"] = 0;
+G2L["17e"]["TextSize"] = 40;
+G2L["17e"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
+G2L["17e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17e"]["BackgroundTransparency"] = 1;
+G2L["17e"]["Size"] = UDim2.new(0.04113, 0, 0.99978, 0);
+G2L["17e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17e"]["Text"] = [[-]];
+G2L["17e"]["Name"] = [[min]];
+G2L["17e"]["Position"] = UDim2.new(0.90118, 0, 0.01252, -2);
 
 
 -- StarterGui.f789z43hfn3i.tsk.min._ms
-G2L["174"] = Instance.new("LocalScript", G2L["173"]);
-G2L["174"]["Name"] = [[_ms]];
+G2L["17f"] = Instance.new("LocalScript", G2L["17e"]);
+G2L["17f"]["Name"] = [[_ms]];
 
 
 -- StarterGui.f789z43hfn3i.tsk._v
-G2L["175"] = Instance.new("TextLabel", G2L["171"]);
-G2L["175"]["TextWrapped"] = true;
-G2L["175"]["BorderSizePixel"] = 0;
-G2L["175"]["TextSize"] = 14;
-G2L["175"]["TextScaled"] = true;
-G2L["175"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["175"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["175"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["175"]["BackgroundTransparency"] = 1;
-G2L["175"]["Size"] = UDim2.new(0.20728, 0, -0.85473, 0);
-G2L["175"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["175"]["Text"] = [[Lunar X  - ...]];
-G2L["175"]["Name"] = [[_v]];
-G2L["175"]["Position"] = UDim2.new(0.01862, 0, 0.90265, 0);
+G2L["180"] = Instance.new("TextLabel", G2L["17c"]);
+G2L["180"]["TextWrapped"] = true;
+G2L["180"]["BorderSizePixel"] = 0;
+G2L["180"]["TextSize"] = 14;
+G2L["180"]["TextScaled"] = true;
+G2L["180"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["180"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["180"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
+G2L["180"]["BackgroundTransparency"] = 1;
+G2L["180"]["Size"] = UDim2.new(0.20728, 0, -0.85473, 0);
+G2L["180"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["180"]["Text"] = [[Lunar X  - ...]];
+G2L["180"]["Name"] = [[_v]];
+G2L["180"]["Position"] = UDim2.new(0.01862, 0, 0.90265, 0);
 
 
 -- StarterGui.f789z43hfn3i.tsk._v.v
-G2L["176"] = Instance.new("LocalScript", G2L["175"]);
-G2L["176"]["Name"] = [[v]];
+G2L["181"] = Instance.new("LocalScript", G2L["180"]);
+G2L["181"]["Name"] = [[v]];
 
 
 -- StarterGui.f789z43hfn3i.tsk._g
-G2L["177"] = Instance.new("TextLabel", G2L["171"]);
-G2L["177"]["TextWrapped"] = true;
-G2L["177"]["BorderSizePixel"] = 0;
-G2L["177"]["TextSize"] = 15;
-G2L["177"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["177"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["177"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["177"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
-G2L["177"]["BackgroundTransparency"] = 1;
-G2L["177"]["Size"] = UDim2.new(0.32884, 0, -0.85473, 0);
-G2L["177"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["177"]["Text"] = [[-- Spelling Bee]];
-G2L["177"]["Name"] = [[_g]];
-G2L["177"]["Position"] = UDim2.new(0.24678, 0, 0.90265, 0);
+G2L["182"] = Instance.new("TextLabel", G2L["17c"]);
+G2L["182"]["TextWrapped"] = true;
+G2L["182"]["BorderSizePixel"] = 0;
+G2L["182"]["TextSize"] = 15;
+G2L["182"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["182"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["182"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["182"]["TextColor3"] = Color3.fromRGB(178, 178, 178);
+G2L["182"]["BackgroundTransparency"] = 1;
+G2L["182"]["Size"] = UDim2.new(0.32884, 0, -0.85473, 0);
+G2L["182"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["182"]["Text"] = [[-- Spelling Bee]];
+G2L["182"]["Name"] = [[_g]];
+G2L["182"]["Position"] = UDim2.new(0.24678, 0, 0.90265, 0);
 
 
 -- StarterGui.f789z43hfn3i.tsk._g.game
-G2L["178"] = Instance.new("LocalScript", G2L["177"]);
-G2L["178"]["Name"] = [[game]];
+G2L["183"] = Instance.new("LocalScript", G2L["182"]);
+G2L["183"]["Name"] = [[game]];
 
 
 -- StarterGui.f789z43hfn3i.tsk.endb
-G2L["179"] = Instance.new("TextButton", G2L["171"]);
-G2L["179"]["TextWrapped"] = true;
-G2L["179"]["BorderSizePixel"] = 0;
-G2L["179"]["TextSize"] = 20;
-G2L["179"]["TextScaled"] = true;
-G2L["179"]["TextColor3"] = Color3.fromRGB(255, 49, 63);
-G2L["179"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["179"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["179"]["BackgroundTransparency"] = 1;
-G2L["179"]["Size"] = UDim2.new(0.03925, 0, 0.85473, 0);
-G2L["179"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["179"]["Text"] = [[X]];
-G2L["179"]["Name"] = [[endb]];
-G2L["179"]["Position"] = UDim2.new(0.94395, 0, 0.04792, 0);
+G2L["184"] = Instance.new("TextButton", G2L["17c"]);
+G2L["184"]["TextWrapped"] = true;
+G2L["184"]["BorderSizePixel"] = 0;
+G2L["184"]["TextSize"] = 20;
+G2L["184"]["TextScaled"] = true;
+G2L["184"]["TextColor3"] = Color3.fromRGB(255, 49, 63);
+G2L["184"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["184"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["184"]["BackgroundTransparency"] = 1;
+G2L["184"]["Size"] = UDim2.new(0.03925, 0, 0.85473, 0);
+G2L["184"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["184"]["Text"] = [[X]];
+G2L["184"]["Name"] = [[endb]];
+G2L["184"]["Position"] = UDim2.new(0.94395, 0, 0.04792, 0);
 
 
 -- StarterGui.f789z43hfn3i.tsk.endb._es
-G2L["17a"] = Instance.new("LocalScript", G2L["179"]);
-G2L["17a"]["Name"] = [[_es]];
+G2L["185"] = Instance.new("LocalScript", G2L["184"]);
+G2L["185"]["Name"] = [[_es]];
 
 
 -- StarterGui.f789z43hfn3i.template
-G2L["17b"] = Instance.new("Frame", G2L["1"]);
-G2L["17b"]["Visible"] = false;
-G2L["17b"]["ZIndex"] = 234892349;
-G2L["17b"]["BorderSizePixel"] = 0;
-G2L["17b"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["17b"]["Size"] = UDim2.new(0.15479, 0, 0.08554, 0);
-G2L["17b"]["Position"] = UDim2.new(0.83403, 0, 0.89097, 0);
-G2L["17b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17b"]["Name"] = [[template]];
+G2L["186"] = Instance.new("Frame", G2L["1"]);
+G2L["186"]["Visible"] = false;
+G2L["186"]["ZIndex"] = 234892349;
+G2L["186"]["BorderSizePixel"] = 0;
+G2L["186"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["186"]["Size"] = UDim2.new(0.15479, 0, 0.08554, 0);
+G2L["186"]["Position"] = UDim2.new(0.83403, 0, 0.89097, 0);
+G2L["186"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["186"]["Name"] = [[template]];
 
 
 -- StarterGui.f789z43hfn3i.template._c
-G2L["17c"] = Instance.new("UICorner", G2L["17b"]);
-G2L["17c"]["Name"] = [[_c]];
-G2L["17c"]["CornerRadius"] = UDim.new(0, 10);
+G2L["187"] = Instance.new("UICorner", G2L["186"]);
+G2L["187"]["Name"] = [[_c]];
+G2L["187"]["CornerRadius"] = UDim.new(0, 10);
 
 
 -- StarterGui.f789z43hfn3i.template.circle
-G2L["17d"] = Instance.new("Frame", G2L["17b"]);
-G2L["17d"]["BorderSizePixel"] = 0;
-G2L["17d"]["BackgroundColor3"] = Color3.fromRGB(0, 254, 0);
-G2L["17d"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["17d"]["Position"] = UDim2.new(0.05263, 0, 0.1831, 0);
-G2L["17d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17d"]["Name"] = [[circle]];
+G2L["188"] = Instance.new("Frame", G2L["186"]);
+G2L["188"]["BorderSizePixel"] = 0;
+G2L["188"]["BackgroundColor3"] = Color3.fromRGB(0, 254, 0);
+G2L["188"]["Size"] = UDim2.new(0, 15, 0, 15);
+G2L["188"]["Position"] = UDim2.new(0.05263, 0, 0.1831, 0);
+G2L["188"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["188"]["Name"] = [[circle]];
 
 
 -- StarterGui.f789z43hfn3i.template.circle._c
-G2L["17e"] = Instance.new("UICorner", G2L["17d"]);
-G2L["17e"]["Name"] = [[_c]];
-G2L["17e"]["CornerRadius"] = UDim.new(1, 0);
+G2L["189"] = Instance.new("UICorner", G2L["188"]);
+G2L["189"]["Name"] = [[_c]];
+G2L["189"]["CornerRadius"] = UDim.new(1, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.successimg
-G2L["17f"] = Instance.new("ImageLabel", G2L["17d"]);
-G2L["17f"]["BorderSizePixel"] = 0;
-G2L["17f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17f"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["17f"]["Image"] = [[rbxassetid://11604833061]];
-G2L["17f"]["Size"] = UDim2.new(-1.03333, 0, 1, 0);
-G2L["17f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17f"]["BackgroundTransparency"] = 1;
-G2L["17f"]["Name"] = [[successimg]];
-G2L["17f"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["18a"] = Instance.new("ImageLabel", G2L["188"]);
+G2L["18a"]["BorderSizePixel"] = 0;
+G2L["18a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18a"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
+G2L["18a"]["Image"] = [[rbxassetid://11604833061]];
+G2L["18a"]["Size"] = UDim2.new(-1.03333, 0, 1, 0);
+G2L["18a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18a"]["BackgroundTransparency"] = 1;
+G2L["18a"]["Name"] = [[successimg]];
+G2L["18a"]["Position"] = UDim2.new(1, 0, 0, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.infoimg
-G2L["180"] = Instance.new("ImageLabel", G2L["17d"]);
-G2L["180"]["BorderSizePixel"] = 0;
-G2L["180"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["180"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["180"]["Image"] = [[rbxassetid://15309138473]];
-G2L["180"]["Size"] = UDim2.new(-0.99998, 0, 1, 0);
-G2L["180"]["Visible"] = false;
-G2L["180"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["180"]["BackgroundTransparency"] = 1;
-G2L["180"]["Name"] = [[infoimg]];
-G2L["180"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["18b"] = Instance.new("ImageLabel", G2L["188"]);
+G2L["18b"]["BorderSizePixel"] = 0;
+G2L["18b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18b"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
+G2L["18b"]["Image"] = [[rbxassetid://15309138473]];
+G2L["18b"]["Size"] = UDim2.new(-0.99998, 0, 1, 0);
+G2L["18b"]["Visible"] = false;
+G2L["18b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18b"]["BackgroundTransparency"] = 1;
+G2L["18b"]["Name"] = [[infoimg]];
+G2L["18b"]["Position"] = UDim2.new(1, 0, 0, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.errorimg
-G2L["181"] = Instance.new("ImageLabel", G2L["17d"]);
-G2L["181"]["BorderSizePixel"] = 0;
-G2L["181"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["181"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
-G2L["181"]["Image"] = [[rbxassetid://106210743599353]];
-G2L["181"]["Size"] = UDim2.new(-0.48147, 0, 0.46667, 0);
-G2L["181"]["Visible"] = false;
-G2L["181"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["181"]["BackgroundTransparency"] = 1;
-G2L["181"]["Name"] = [[errorimg]];
-G2L["181"]["Position"] = UDim2.new(0.73814, 0, 0.26667, 0);
+G2L["18c"] = Instance.new("ImageLabel", G2L["188"]);
+G2L["18c"]["BorderSizePixel"] = 0;
+G2L["18c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18c"]["ImageColor3"] = Color3.fromRGB(40, 42, 47);
+G2L["18c"]["Image"] = [[rbxassetid://106210743599353]];
+G2L["18c"]["Size"] = UDim2.new(-0.48147, 0, 0.46667, 0);
+G2L["18c"]["Visible"] = false;
+G2L["18c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18c"]["BackgroundTransparency"] = 1;
+G2L["18c"]["Name"] = [[errorimg]];
+G2L["18c"]["Position"] = UDim2.new(0.73814, 0, 0.26667, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.circle.warnimg
-G2L["182"] = Instance.new("ImageLabel", G2L["17d"]);
-G2L["182"]["BorderSizePixel"] = 0;
-G2L["182"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["182"]["ImageColor3"] = Color3.fromRGB(39, 39, 39);
-G2L["182"]["Image"] = [[rbxassetid://15484984201]];
-G2L["182"]["Size"] = UDim2.new(-1.03333, 0, 1.06667, 0);
-G2L["182"]["Visible"] = false;
-G2L["182"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["182"]["BackgroundTransparency"] = 1;
-G2L["182"]["Name"] = [[warnimg]];
-G2L["182"]["Position"] = UDim2.new(1, 0, -0.06667, 0);
+G2L["18d"] = Instance.new("ImageLabel", G2L["188"]);
+G2L["18d"]["BorderSizePixel"] = 0;
+G2L["18d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18d"]["ImageColor3"] = Color3.fromRGB(39, 39, 39);
+G2L["18d"]["Image"] = [[rbxassetid://15484984201]];
+G2L["18d"]["Size"] = UDim2.new(-1.03333, 0, 1.06667, 0);
+G2L["18d"]["Visible"] = false;
+G2L["18d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18d"]["BackgroundTransparency"] = 1;
+G2L["18d"]["Name"] = [[warnimg]];
+G2L["18d"]["Position"] = UDim2.new(1, 0, -0.06667, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.titel
-G2L["183"] = Instance.new("TextLabel", G2L["17b"]);
-G2L["183"]["BorderSizePixel"] = 0;
-G2L["183"]["TextSize"] = 16;
-G2L["183"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["183"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["183"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
-G2L["183"]["BackgroundTransparency"] = 1;
-G2L["183"]["RichText"] = true;
-G2L["183"]["Size"] = UDim2.new(0.3157, 0, 0.76056, 0);
-G2L["183"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["183"]["Text"] = [[Lunar X]];
-G2L["183"]["Name"] = [[titel]];
-G2L["183"]["Position"] = UDim2.new(0.13414, 0, -0.09859, 0);
+G2L["18e"] = Instance.new("TextLabel", G2L["186"]);
+G2L["18e"]["BorderSizePixel"] = 0;
+G2L["18e"]["TextSize"] = 16;
+G2L["18e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["18e"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
+G2L["18e"]["BackgroundTransparency"] = 1;
+G2L["18e"]["RichText"] = true;
+G2L["18e"]["Size"] = UDim2.new(0.3157, 0, 0.76056, 0);
+G2L["18e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18e"]["Text"] = [[Lunar X]];
+G2L["18e"]["Name"] = [[titel]];
+G2L["18e"]["Position"] = UDim2.new(0.13414, 0, -0.09859, 0);
 
 
 -- StarterGui.f789z43hfn3i.template.brd
-G2L["184"] = Instance.new("Frame", G2L["17b"]);
-G2L["184"]["BorderSizePixel"] = 0;
-G2L["184"]["BackgroundColor3"] = Color3.fromRGB(38, 42, 51);
-G2L["184"]["Size"] = UDim2.new(0.89912, 0, 0.01408, 0);
-G2L["184"]["Position"] = UDim2.new(0.05263, 0, 0.53521, 0);
-G2L["184"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["184"]["Name"] = [[brd]];
+G2L["18f"] = Instance.new("Frame", G2L["186"]);
+G2L["18f"]["BorderSizePixel"] = 0;
+G2L["18f"]["BackgroundColor3"] = Color3.fromRGB(38, 42, 51);
+G2L["18f"]["Size"] = UDim2.new(0.89912, 0, 0.01408, 0);
+G2L["18f"]["Position"] = UDim2.new(0.05263, 0, 0.53521, 0);
+G2L["18f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18f"]["Name"] = [[brd]];
 
 
 -- StarterGui.f789z43hfn3i.template.text
-G2L["185"] = Instance.new("TextLabel", G2L["17b"]);
-G2L["185"]["TextWrapped"] = true;
-G2L["185"]["BorderSizePixel"] = 0;
-G2L["185"]["TextSize"] = 14;
-G2L["185"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["185"]["TextScaled"] = true;
-G2L["185"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["185"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["185"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
-G2L["185"]["BackgroundTransparency"] = 1;
-G2L["185"]["Size"] = UDim2.new(0.90351, 0, 0.3662, 0);
-G2L["185"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["185"]["Text"] = [[loading]];
-G2L["185"]["Name"] = [[text]];
-G2L["185"]["Position"] = UDim2.new(0.05263, 0, 0.54929, 0);
+G2L["190"] = Instance.new("TextLabel", G2L["186"]);
+G2L["190"]["TextWrapped"] = true;
+G2L["190"]["BorderSizePixel"] = 0;
+G2L["190"]["TextSize"] = 14;
+G2L["190"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["190"]["TextScaled"] = true;
+G2L["190"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["190"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["190"]["TextColor3"] = Color3.fromRGB(226, 226, 227);
+G2L["190"]["BackgroundTransparency"] = 1;
+G2L["190"]["Size"] = UDim2.new(0.90351, 0, 0.3662, 0);
+G2L["190"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["190"]["Text"] = [[loading]];
+G2L["190"]["Name"] = [[text]];
+G2L["190"]["Position"] = UDim2.new(0.05263, 0, 0.54929, 0);
 
 
 -- StarterGui.f789z43hfn3i.template._s
-G2L["186"] = Instance.new("UIStroke", G2L["17b"]);
-G2L["186"]["Transparency"] = 0.8;
-G2L["186"]["Thickness"] = 2.5;
-G2L["186"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["186"]["Name"] = [[_s]];
+G2L["191"] = Instance.new("UIStroke", G2L["186"]);
+G2L["191"]["Transparency"] = 0.8;
+G2L["191"]["Thickness"] = 2.5;
+G2L["191"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["191"]["Name"] = [[_s]];
 
 
 -- StarterGui.f789z43hfn3i.ok
@@ -4192,13 +4298,13 @@ local script = G2L["2d"];
 			if isReady then
 				headshot.Image = content
 			else
-				notify("Lunar X", "Headshot thumbnail not ready yet for user:", user, 5, "warn")
+				notify("Lunar X", "headshot thumbnail not ready yet for user:", user, 5, "warn")
 				headshot.Image = "rbxasset://textures/face.png"
 			end
 		end)
 	
 		if not success then
-			notify("Lunar X", "Failed to get user thumbnail:", err, 5, "error")
+			notify("Lunar X", "failed to get user thumbnail:", err, 5, "error")
 			headshot.Image = "rbxasset://textures/face.png" 
 		end
 	end
@@ -4339,7 +4445,6 @@ local script = G2L["3d"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local TweenService = game:GetService("TweenService")
-	local CoreGui = game:GetService("CoreGui")
 	
 	local player = Players.LocalPlayer
 	local PlayerGui = player:WaitForChild("PlayerGui")
@@ -4357,7 +4462,7 @@ local script = G2L["3d"];
 		OIIA = {100548936992564, 119209707540839},
 		CUPS = {104648332635645, 81727403179414},
 		GALAXY = {81758715686872, 134256650999630, 85435089388064},
-		SPELLING_MASTERS = {122374779203159}
+		SPELLING_MASTERS = {122374779203159},
 	}
 	
 	local function detectGame()
@@ -4398,16 +4503,16 @@ local script = G2L["3d"];
 	local LEFT = UDim2.new(0, 0, 0, 0)
 	
 	local colorPresets = {
-		{ name = "pink",    hex = "#FFCDCB" },
-		{ name = "white",   hex = "#FFFFFF" },
-		{ name = "red",     hex = "#FF4444" },
-		{ name = "cyan",    hex = "#00FFFF" },
-		{ name = "yellow",  hex = "#FFFF00" },
-		{ name = "lime",    hex = "#00FF88" },
-		{ name = "orange",  hex = "#FF8800" },
-		{ name = "purple",  hex = "#CC44FF" },
-		{ name = "sky",     hex = "#88CCFF" },
-		{ name = "gold",    hex = "#FFD700" },
+		{name = "pink",   hex = "#FFCDCB"},
+		{name = "white",  hex = "#FFFFFF"},
+		{name = "red",    hex = "#FF4444"},
+		{name = "cyan",   hex = "#00FFFF"},
+		{name = "yellow", hex = "#FFFF00"},
+		{name = "lime",   hex = "#00FF88"},
+		{name = "orange", hex = "#FF8800"},
+		{name = "purple", hex = "#CC44FF"},
+		{name = "sky",    hex = "#88CCFF"},
+		{name = "gold",   hex = "#FFD700"},
 	}
 	local currentColorIndex = 1
 	
@@ -4417,19 +4522,17 @@ local script = G2L["3d"];
 	
 	local function updateColorBtn()
 		local preset = getCurrentColor()
+		local r = tonumber(preset.hex:sub(2, 3), 16) / 255
+		local g = tonumber(preset.hex:sub(4, 5), 16) / 255
+		local b = tonumber(preset.hex:sub(6, 7), 16) / 255
+		local col = Color3.new(r, g, b)
 		local textLabel = colorButton:FindFirstChildOfClass("TextLabel")
 		if textLabel then
 			textLabel.Text = preset.name
-			local r = tonumber(preset.hex:sub(2,3), 16) / 255
-			local g = tonumber(preset.hex:sub(4,5), 16) / 255
-			local b = tonumber(preset.hex:sub(6,7), 16) / 255
-			textLabel.TextColor3 = Color3.new(r, g, b)
+			textLabel.TextColor3 = col
 		else
 			colorButton.Text = preset.name
-			local r = tonumber(preset.hex:sub(2,3), 16) / 255
-			local g = tonumber(preset.hex:sub(4,5), 16) / 255
-			local b = tonumber(preset.hex:sub(6,7), 16) / 255
-			colorButton.TextColor3 = Color3.new(r, g, b)
+			colorButton.TextColor3 = col
 		end
 	end
 	
@@ -4437,7 +4540,7 @@ local script = G2L["3d"];
 		osu = false,
 		spy = false,
 		galaxyCat = false,
-		method = "standard"
+		method = "standard",
 	}
 	
 	local galaxyCatThread = nil
@@ -4459,8 +4562,7 @@ local script = G2L["3d"];
 		tb:SetAttribute("OsuHooked", true)
 		tb:GetPropertyChangedSignal("Text"):Connect(function()
 			if not state.osu then return end
-			local len = #tb.Text
-			osuSound.PlaybackSpeed = 1.0 + (len * 0.015)
+			osuSound.PlaybackSpeed = 1.0 + (#tb.Text * 0.015)
 			osuSound:Stop()
 			osuSound:Play()
 		end)
@@ -4471,7 +4573,6 @@ local script = G2L["3d"];
 			if tb:IsA("TextBox") then hookTextbox(tb) end
 		end
 	end
-	
 	PlayerGui.DescendantAdded:Connect(function(d)
 		if d:IsA("TextBox") then hookTextbox(d) end
 	end)
@@ -4486,7 +4587,6 @@ local script = G2L["3d"];
 	consoleTextBox.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 	consoleTextBox.TextColor3 = Color3.fromRGB(220, 220, 220)
 	consoleTextBox.RichText = false
-	
 	scrollFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
 	scrollFrame.ScrollBarThickness = 6
 	
@@ -4502,21 +4602,6 @@ local script = G2L["3d"];
 		scrollFrame.CanvasPosition = Vector2.new(0, math.max(0, textHeight - scrollFrame.AbsoluteWindowSize.Y))
 	end
 	
-	local function getRemoteNames()
-		if GAME == "ORIGINAL" then return {"PlayerText", "UpdateMonitorText"}
-		elseif GAME == "XISTER" then return {"TypingEvent"}
-		elseif GAME == "THE_SB" then return {"Type"}
-		elseif GAME == "CARL" then return {"CheckSpelling", "UpdateSpellingText", "ChangeCurrentText"}
-		elseif GAME == "BESTPLAYER" or GAME == "ONEX" then return {"TypingEvent"}
-		elseif GAME == "NUNU" then return {"SpellingBeeRemote"}
-		elseif GAME == "SHIVA" then return {"NextTurn", "UpdateSignText"}
-		elseif GAME == "OIIA" or GAME == "CUPS" then return {"SubmitSpelling", "TypingUpdate"}
-		elseif GAME == "GALAXY" then return {"SubmitWord", "UpdateBoard"}
-		elseif GAME == "SPELLING_MASTERS" then return {"SubmitAnswerEvent", "UpdateTypingEvent"}
-		end
-		return {"PlayerText", "UpdateMonitorText"}
-	end
-	
 	local function valToStr(v)
 		local t = typeof(v)
 		if t == "string" then return '"' .. v .. '"' end
@@ -4525,7 +4610,7 @@ local script = G2L["3d"];
 			local out = "{"
 			local count = 0
 			for k, val in pairs(v) do
-				count = count + 1
+				count += 1
 				if count > 6 then break end
 				out = out .. "[" .. tostring(k) .. "]=" .. valToStr(val) .. ","
 			end
@@ -4534,27 +4619,8 @@ local script = G2L["3d"];
 		return tostring(v)
 	end
 	
-	local function findRemote(name)
-		local events = ReplicatedStorage:FindFirstChild("Events") or ReplicatedStorage:FindFirstChild("events")
-		if events then
-			local r = events:FindFirstChild(name)
-			if r then return r end
-		end
-		local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-		if remotes then
-			local r = remotes:FindFirstChild(name)
-			if r then return r end
-		end
-		return ReplicatedStorage:FindFirstChild(name)
-	end
-	
-	local spyActive = false
-	local namecallHooked = false
-	local originalNamecall = nil
-	local remoteLog = {}
-	
 	local function HasSpecial(str)
-		return (str:match("%c") or str:match("%s") or str:match("%p") or tonumber(str:sub(1,1))) ~= nil
+		return (str:match("%c") or str:match("%s") or str:match("%p") or tonumber(str:sub(1, 1))) ~= nil
 	end
 	
 	local function GetPath(obj)
@@ -4597,42 +4663,75 @@ local script = G2L["3d"];
 	end
 	
 	local function buildScript(object, method, ...)
-		local src = "-- Script generated by Lunar X\n-- Lunar X developed by _n.ick\n \n"
 		local args = {...}
+		local src = "-- Script generated by Lunar X\n-- Lunar X developed by _n.ick\n \n"
 		local argNames = {}
 		for i, v in ipairs(args) do
 			src = src .. "local A_" .. i .. " = " .. (type(v) == "table" and Table_TS(v) or GetType(v)) .. "\n"
-			argNames[#argNames+1] = "A_" .. i
+			argNames[#argNames + 1] = "A_" .. i
 		end
 		src = src .. "local Event = " .. GetPath(object) .. "\n\n"
 		src = src .. "Event:" .. method .. "(" .. table.concat(argNames, ", ") .. ")"
 		return src
 	end
 	
+	-- Remote Spy
+	local spyActive = false
+	local namecallHooked = false
+	local remoteLog = {}
+	
 	local function hookNamecall()
 		if namecallHooked then return end
+	
 		local meta = getrawmetatable(game)
+		if not meta then
+			log("[rspy] error: getrawmetatable unavailable")
+			return
+		end
+	
 		local orig = meta.__namecall
-		originalNamecall = orig
-		namecallHooked = true
+		if not orig then
+			log("[rspy] error: __namecall not found")
+			return
+		end
 	
-		local mwr
-		if setreadonly then mwr = function() setreadonly(meta, false) end
-		elseif make_writeable then mwr = function() make_writeable(meta) end end
-		if mwr then mwr() end
+		local function setWritable(tbl, writable)
+			if setreadonly then
+				pcall(setreadonly, tbl, not writable)
+			elseif make_writeable and not writable == false then
+				pcall(make_writeable, tbl)
+			elseif make_readonly and writable == false then
+				pcall(make_readonly, tbl)
+			end
+		end
 	
-		meta.__namecall = function(object, ...)
-			local method = tostring(getnamecallmethod())
-			if spyActive and method:match("Server") and object.Name ~= "CharacterSoundEvent" then
-				local args = {...}
-				local built = buildScript(object, method == "FireServer" and "FireServer" or "InvokeServer", table.unpack(args))
-				local msg = "→ [" .. object.Name .. ":" .. method .. "]"
-				for _, a in ipairs(args) do msg = msg .. " " .. valToStr(a) end
-				log(msg)
-				table.insert(remoteLog, {name=object.Name, method=method, script=built})
+		local ok = pcall(setWritable, meta, true)
+		if not ok then
+			log("[rspy] error: could not make metatable writable")
+			return
+		end
+	
+		meta.__namecall = newcclosure(function(object, ...)
+			local method = getnamecallmethod()
+			if spyActive and method then
+				local ms = tostring(method)
+				if (ms == "FireServer" or ms == "InvokeServer") and object.Name ~= "CharacterSoundEvent" then
+					local args = {...}
+					local built = buildScript(object, ms, table.unpack(args))
+					local msg = "→ [" .. object.Name .. ":" .. ms .. "]"
+					for _, a in ipairs(args) do
+						msg = msg .. " " .. valToStr(a)
+					end
+					log(msg)
+					table.insert(remoteLog, {name = object.Name, method = ms, script = built})
+				end
 			end
 			return orig(object, ...)
-		end
+		end)
+	
+		pcall(setWritable, meta, false)
+		namecallHooked = true
+		log("[rspy] namecall hooked")
 	end
 	
 	local function startSpy()
@@ -4640,7 +4739,13 @@ local script = G2L["3d"];
 		state.spy = true
 		spyActive = true
 		hookNamecall()
-		log("rspy started [namecall hook] for " .. GAME)
+		if namecallHooked then
+			log("rspy started for " .. GAME)
+		else
+			state.spy = false
+			spyActive = false
+			animateToggle(spyButton, false)
+		end
 	end
 	
 	local function stopSpy()
@@ -4650,18 +4755,16 @@ local script = G2L["3d"];
 		log("rspy stopped")
 	end
 	
+	-- Spam
 	local function spamStandard(text)
-		local A_2 = math.random(0, 1)
-		local A_3 = math.random(0, 1)
 		local Event = ReplicatedStorage:FindFirstChild("MessageSentRE")
-		if Event then Event:FireServer(text, A_2, A_3) end
+		if Event then Event:FireServer(text, math.random(0, 1), math.random(0, 1)) end
 	end
 	
 	local function spamColor(text)
 		local preset = getCurrentColor()
-		local A_1 = "<font color='" .. preset.hex .. "'>" .. text .. "</font>"
 		local Event = ReplicatedStorage:FindFirstChild("SystemEvent")
-		if Event then Event:FireServer(A_1) end
+		if Event then Event:FireServer("<font color='" .. preset.hex .. "'>" .. text .. "</font>") end
 	end
 	
 	local function startGalaxyCatSpam()
@@ -4671,9 +4774,16 @@ local script = G2L["3d"];
 			while state.galaxyCat do
 				local text = inputBox.Text
 				if text and text ~= "" then
-					if state.method == "standard" then spamStandard(text) task.wait(0.05)
-					elseif state.method == "color" then spamColor(text) task.wait(0.1) end
-				else task.wait(0.1) end
+					if state.method == "standard" then
+						spamStandard(text)
+						task.wait(0.05)
+					elseif state.method == "color" then
+						spamColor(text)
+						task.wait(0.1)
+					end
+				else
+					task.wait(0.1)
+				end
 			end
 		end)
 	end
@@ -4681,7 +4791,10 @@ local script = G2L["3d"];
 	local function stopGalaxyCatSpam()
 		if not state.galaxyCat then return end
 		state.galaxyCat = false
-		if galaxyCatThread then task.cancel(galaxyCatThread) galaxyCatThread = nil end
+		if galaxyCatThread then
+			task.cancel(galaxyCatThread)
+			galaxyCatThread = nil
+		end
 	end
 	
 	local function sendXisterMessage()
@@ -4689,13 +4802,21 @@ local script = G2L["3d"];
 		if not text or text == "" then log("no text to send") return end
 		if state.method == "standard" then
 			local Event = ReplicatedStorage:FindFirstChild("MessageSentRE")
-			if Event then Event:FireServer(text, 0.9873249327483272, 0.6845349183446351) log("sent (standard): " .. text)
-			else log("MessageSentRE not found") end
+			if Event then
+				Event:FireServer(text, 0.9873249327483272, 0.6845349183446351)
+				log("sent (standard): " .. text)
+			else
+				log("MessageSentRE not found")
+			end
 		elseif state.method == "color" then
 			local preset = getCurrentColor()
 			local Event = ReplicatedStorage:FindFirstChild("SystemEvent")
-			if Event then Event:FireServer("<font color='" .. preset.hex .. "'>" .. text .. "</font>") log("sent (color/" .. preset.name .. "): " .. text)
-			else log("SystemEvent not found") end
+			if Event then
+				Event:FireServer("<font color='" .. preset.hex .. "'>" .. text .. "</font>")
+				log("sent (color/" .. preset.name .. "): " .. text)
+			else
+				log("SystemEvent not found")
+			end
 		end
 	end
 	
@@ -4706,9 +4827,12 @@ local script = G2L["3d"];
 		if textLabel then textLabel.Text = state.method end
 	end
 	
+	-- Formatter
 	local function resolvePath(raw)
 		local parts = {}
-		for p in raw:match("^%s*(.-)%s*$"):gmatch("[^%.]+") do parts[#parts+1] = p end
+		for p in raw:match("^%s*(.-)%s*$"):gmatch("[^%.]+") do
+			parts[#parts + 1] = p
+		end
 		local cur = game
 		for i, part in ipairs(parts) do
 			if i == 1 and part:lower() == "game" then
@@ -4741,7 +4865,10 @@ local script = G2L["3d"];
 		local entries = {}
 		local seen = {}
 		local function add(word, id)
-			if not seen[id] then seen[id] = true entries[#entries+1] = {word=word, id=id} end
+			if not seen[id] then
+				seen[id] = true
+				entries[#entries + 1] = {word = word, id = id}
+			end
 		end
 		for word, id in src:gmatch('"([A-Za-z][A-Za-z0-9_]*)"[,]?\n?%s*(%d%d%d%d%d+)') do add(word, id) end
 		for word, id in src:gmatch('{%s*"([A-Za-z][A-Za-z0-9_]*)",%s*(%d%d%d%d%d+)') do add(word, id) end
@@ -4750,7 +4877,10 @@ local script = G2L["3d"];
 		local capturedIds = {}
 		for _, e in ipairs(entries) do capturedIds[e.id] = true end
 		for id in src:gmatch('(%d%d%d%d%d+)') do
-			if not capturedIds[id] then capturedIds[id] = true entries[#entries+1] = {word="null", id=id} end
+			if not capturedIds[id] then
+				capturedIds[id] = true
+				entries[#entries + 1] = {word = "null", id = id}
+			end
 		end
 		return entries
 	end
@@ -4762,9 +4892,9 @@ local script = G2L["3d"];
 		for _, e in ipairs(entries) do
 			local kPart = '\t["rbxassetid://' .. e.id .. '"]'
 			local padding = string.rep(" ", math.max(1, COL - #kPart))
-			out[#out+1] = kPart .. padding .. '= "' .. e.word .. '",'
+			out[#out + 1] = kPart .. padding .. '= "' .. e.word .. '",'
 		end
-		out[#out+1] = "}"
+		out[#out + 1] = "}"
 		return table.concat(out, "\n")
 	end
 	
@@ -4789,7 +4919,11 @@ local script = G2L["3d"];
 		if #entries == 0 then flog("no entries found") return end
 		local added = 0
 		for _, e in ipairs(entries) do
-			if not seenGlobal[e.id] then seenGlobal[e.id] = true all[#all+1] = e added = added + 1 end
+			if not seenGlobal[e.id] then
+				seenGlobal[e.id] = true
+				all[#all + 1] = e
+				added += 1
+			end
 		end
 		flog("added " .. added .. " | " .. (#entries - added) .. " dupes skipped")
 	end
@@ -4797,7 +4931,9 @@ local script = G2L["3d"];
 	local function runFormatter(paths, varName)
 		local all = {}
 		local seen = {}
-		for idx, pathStr in ipairs(paths) do processOne(pathStr, idx, #paths, all, seen) end
+		for idx, pathStr in ipairs(paths) do
+			processOne(pathStr, idx, #paths, all, seen)
+		end
 		flog("total: " .. #all .. " entries | formatting...")
 		local output = formatGwl(all, varName)
 		local lineCount = select(2, output:gsub("\n", "")) + 1
@@ -4824,26 +4960,21 @@ local script = G2L["3d"];
 		fmtBtn.Text = "working..."
 		fmtStatus.Text = "decompiling..."
 		fmtStatus.TextColor3 = Color3.fromRGB(240, 195, 40)
-	
 		task.defer(function()
 			local paths = {}
 			for i = 1, activeFmtTabs do
 				local t = fmtPathBoxes[i].Text:match("^%s*(.-)%s*$")
-				if t and #t > 0 then paths[#paths+1] = t end
+				if t and #t > 0 then paths[#paths + 1] = t end
 			end
-	
 			local varName = fmtVarName.Text:match("^%s*(.-)%s*$")
 			if #varName == 0 then varName = "GwlWords" end
-	
 			if #paths == 0 then
 				fmtStatus.Text = "enter at least one path"
 				fmtStatus.TextColor3 = Color3.fromRGB(255, 70, 70)
 				fmtBtn.Text = "format"
 				return
 			end
-	
 			local ok, output = pcall(runFormatter, paths, varName)
-	
 			if ok and output and #output > 0 then
 				local cbOk = pcall(setclipboard, output)
 				if cbOk then
@@ -4858,7 +4989,6 @@ local script = G2L["3d"];
 				fmtStatus.Text = "error: " .. tostring(output):sub(1, 40)
 				fmtStatus.TextColor3 = Color3.fromRGB(255, 55, 55)
 			end
-	
 			fmtBtn.Text = "format"
 		end)
 	end)
@@ -5247,460 +5377,7 @@ local script = G2L["9e"];
 		wordlist = wordlists[gameType] or {}
 	end
 	
-	local defToWord = {
-		["kingsammelot"] = "[Noun] a person who is probably in the server right now",
-		["adopt"] = "[Verb] To choose to take up something.",
-		["amber"] = "[Noun] A sap produced by trees.",
-		["ankle"] = "[Noun] A bone above your foot.",
-		["ant"] = "[Noun] A small insect that builds hills.",
-		["ask"] = "[Verb] To propose a question to someone.",
-		["attack"] = "[Verb] To intentionally hurt someone.",
-		["baby"] = "[Noun] A human at a very young age.",
-		["bacon"] = "[Noun] A breakfast food that comes from pigs.",
-		["banana"] = "[Noun] A yellow fruit.",
-		["basket"] = "[Noun] A container to carry things in.",
-		["bed"] = "[Noun] An object people use to sleep on.",
-		["belt"] = "[Noun] Worn around the waist.",
-		["black"] = "[Noun] The absence of all colors.",
-		["blue"] = "[Noun] The shade of the sky.",
-		["bottle"] = "[Noun] Something we drink out of.",
-		["bottom"] = "[Noun] The lowest point of something.",
-		["brain"] = "[Noun] What we use to think.",
-		["break"] = "[Noun] A short period spent to relax.",
-		["burst"] = "[Verb] To break apart as a result of pressure.",
-		["cat"] = "[Noun] A pet that meows.",
-		["chain"] = "[Noun] A metal link used to secure objects.",
-		["chance"] = "[Noun] An opportunity to do something.",
-		["charge"] = "[Verb] To rush forward.",
-		["cherry"] = "[Noun] A small red fruit.",
-		["crash"] = "[Verb] To violently collide with something.",
-		["curve"] = "[Noun] A line that is not straight.",
-		["deer"] = "[Noun] An animal with antlers.",
-		["deny"] = "[Verb] To reject something.",
-		["disco"] = "[Noun] A party where people dance to music.",
-		["dog"] = "[Noun] A pet that woofs.",
-		["drift"] = "[Verb] To be moved away slowly.",
-		["drink"] = "[Noun] A liquid that can be swallowed.",
-		["duck"] = "[Noun] An animal that quacks.",
-		["dream"] = "[Noun] A vision we have in our sleep.",
-		["eager"] = "[Verb] To be excited to do something.",
-		["earth"] = "[Noun] The planet we live on.",
-		["engine"] = "[Noun] A machine that creates movement.",
-		["enter"] = "[Verb] To go into something.",
-		["exit"] = "[Verb] To leave something.",
-		["fairy"] = "[Noun] A fictional human with magical powers.",
-		["fall"] = "[Noun] The season in which trees lose their leaves.",
-		["father"] = "[Noun] A male parent.",
-		["fence"] = "[Noun] A wall that creates a boundary.",
-		["field"] = "[Noun] An empty area of land.",
-		["finish"] = "[Verb] To complete something.",
-		["flash"] = "[Noun] A quick burst of light.",
-		["float"] = "[Verb] To stay in the air.",
-		["flower"] = "[Noun] A plant that grows in the grass.",
-		["flush"] = "[Verb] To clean something with water.",
-		["food"] = "[Noun] Something we eat.",
-		["forest"] = "[Noun] An area with a lot of trees.",
-		["fresh"] = "[Adjective] In new condition.",
-		["frost"] = "[Noun] A thin layer of ice.",
-		["game"] = "[Noun] Something we play.",
-		["ghost"] = "[Noun] An invisible being that causes evil.",
-		["gift"] = "[Noun] Something given to someone for free.",
-		["glare"] = "[Noun] A very bright light.",
-		["grant"] = "[Verb] To give something.",
-		["green"] = "[Noun] The color of grass.",
-		["ground"] = "[Noun] What we walk on outside.",
-		["guilt"] = "[Noun] The feeling of regret.",
-		["happy"] = "[Noun] A positive mood.",
-		["harbor"] = "[Noun] Where boats stay on the water.",
-		["help"] = "[Verb] To offer aid.",
-		["horse"] = "[Noun] An animal we use to travel.",
-		["house"] = "[Noun] A place we live in.",
-		["huge"] = "[Adjective] Very big.",
-		["ice"] = "[Noun] Frozen water.",
-		["igloo"] = "[Noun] A shelter built from snow.",
-		["iron"] = "[Noun] A metal found in the ground.",
-		["job"] = "[Noun] A place where you work.",
-		["land"] = "[Noun] An area of the Earth\226\128\153s surface.",
-		["leader"] = "[Noun] Someone who commands a group of people.",
-		["light"] = "[Noun] Something that fills darkness.",
-		["lobby"] = "[Noun] The main area of a public building.",
-		["lunch"] = "[Noun] A meal we eat in the afternoon.",
-		["meow"] = "[Noun] The sound a cat makes.",
-		["minute"] = "[Noun] A period of time equal to 60 seconds.",
-		["money"] = "[Noun] What we use to pay for goods.",
-		["moon"] = "[Noun] The object in the sky at night.",
-		["moral"] = "[Noun] A standard of correct behavior.",
-		["mother"] = "[Noun] A female parent.",
-		["noble"] = "[Adjective] Having high social status.",
-		["note"] = "[Noun] A written thought to help you remember something.",
-		["number"] = "[Noun] An amount of something.",
-		["obese"] = "[Adjective] Very fat.",
-		["office"] = "[Noun] A place where you work.",
-		["orange"] = "[Noun] A round fruit.",
-		["olive"] = "[Noun] A small oval food.",
-		["oxygen"] = "[Noun] The name for what we breathe.",
-		["panic"] = "[Verb] To excessively worry.",
-		["peanut"] = "[Noun] An oval seed eaten as a snack.",
-		["pink"] = "[Noun] The color of a flamingo.",
-		["plant"] = "[Noun] Something that grows in the ground.",
-		["please"] = "[Adverb] Used to ask for something politely.",
-		["poison"] = "[Noun] A substance that can make you ill.",
-		["poster"] = "[Noun] A large picture for decoration.",
-		["power"] = "[Noun] The amount of strength you have.",
-		["rain"] = "[Noun] Water that falls from the sky.",
-		["red"] = "[Noun] The color of a ruby.",
-		["rest"] = "[Verb] To relax.",
-		["riot"] = "[Noun] A large amount of violence.",
-		["river"] = "[Noun] A large flow of water.",
-		["robot"] = "[Noun] A machine that processes complex actions.",
-		["rumor"] = "[Noun] A story that might not be true.",
-		["sad"] = "[Adjective] A low mood.",
-		["scale"] = "[Noun] The range of values that something can be.",
-		["scream"] = "[Verb] To yell loudly.",
-		["second"] = "[Noun] A small part of one minute.",
-		["shake"] = "[Verb] To vibrate.",
-		["shark"] = "[Noun] A blue animal found in the ocean.",
-		["sister"] = "[Noun] A female sibling.",
-		["sketch"] = "[Noun] A quick drawing.",
-		["smile"] = "[Noun] A happy facial expression.",
-		["snow"] = "[Noun] Something that falls from clouds in the winter.",
-		["spare"] = "[Verb] Refrain from injuring something.",
-		["spring"] = "[Noun] The season where plants begin to grow.",
-		["start"] = "[Noun] The beginning of something.",
-		["steak"] = "[Noun] A food that comes from cows.",
-		["steal"] = "[Verb] To take something without permission.",
-		["stick"] = "[Noun] A small piece of wood.",
-		["stormy"] = "[Adjective] Having strong winds and lightning.",
-		["summer"] = "[Noun] The hottest season of the year.",
-		["sun"] = "[Noun] The star in our solar system.",
-		["sweat"] = "[Noun] Something your body produces when you are hot.",
-		["system"] = "[Noun] A defined way of doing something.",
-		["tablet"] = "[Noun] A small portable device.",
-		["taxes"] = "[Noun] An additional cost on goods.",
-		["thanks"] = "[Noun] An expression of gratitude.",
-		["tissue"] = "[Noun] Something to blow your nose with.",
-		["toast"] = "[Noun] A piece of bread that becomes heated.",
-		["tower"] = "[Noun] A very tall building.",
-		["track"] = "[Noun] A path that a train follows.",
-		["trade"] = "[Noun] The exchange of goods.",
-		["trap"] = "[Noun] A device that tricks someone.",
-		["trick"] = "[Noun] An act that deceives someone.",
-		["turtle"] = "[Noun] A slow green animal.",
-		["ugly"] = "[Adjective] Unpleasant in appearance.",
-		["uncle"] = "[Noun] The brother of someone\226\128\153s parent.",
-		["unity"] = "[Noun] The state of being joined together.",
-		["value"] = "[Noun] The importance of something.",
-		["water"] = "[Noun] A transparent liquid.",
-		["west"] = "[Noun] The direction where the sun sets.",
-		["white"] = "[Noun] The color of snow.",
-		["window"] = "[Noun] A glass cover that you can see through.",
-		["winter"] = "[Noun] The coldest season of the year.",
-		["wish"] = "[Noun] A desire for something to happen.",
-		["wrong"] = "[Adjective] The state of being incorrect.",
-		["zebra"] = "[Noun] An animal with white and black stripes.",
-		["zombie"] = "[Noun] A person who came back to life.",
-		["abolish"] = "[Verb] To destroy.",
-		["acceptable"] = "[Adjective] Able to be agreed on.",
-		["acoustic"] = "[Adjective] Relating to sound.",
-		["adhesive"] = "[Adjective] Sticky.",
-		["adventurous"] = "[Adjective] Wanting to explore.",
-		["aftermath"] = "[Noun] The consequence of a negative event.",
-		["agriculture"] = "[Noun] The science of farming.",
-		["allowance"] = "[Noun] The amount of something that is permitted.",
-		["ambitious"] = "[Advjective] Having a strong desire to succeed.",
-		["arithmetic"] = "[Noun] Relating to numbers.",
-		["arrange"] = "[Verb] To put order to something.",
-		["articulate"] = "[Adjective] Being precise with words.",
-		["assembly"] = "[Noun] A gathering.",
-		["astonishing"] = "[Adjective] Surprising.",
-		["attractive"] = "[Adjective] Able to draw your attention.",
-		["authority"] = "[Noun] Having power over others.",
-		["available"] = "[Adjective] Able to be used.",
-		["beautiful"] = "[Adjective] Aesthetically pleasing.",
-		["beneficial"] = "[Adjective] Resulting in good.",
-		["broadcast"] = "[Noun] A program that is sent out.",
-		["broccoli"] = "[Noun] A green vegetable.",
-		["brother"] = "[Noun] A male sibling.",
-		["calendar"] = "[Noun] An object that organizes days and months.",
-		["central"] = "[Adjective] In the middle of something.",
-		["chemical"] = "[Noun] A substance.",
-		["communication"] = "[Noun] The act of talking.",
-		["complex"] = "[Adjective] Complicated.",
-		["compromise"] = "[Noun] An agreement that satisfies two sides.",
-		["conspiracy"] = "[Noun] A secret plan.",
-		["consumption"] = "[Noun] The act of eating or drinking.",
-		["correction"] = "[Noun] The act of making something right.",
-		["courage"] = "[Adjective] Being brave.",
-		["cultivate"] = "[Verb] To grow crops.",
-		["dangerous"] = "[Adjective] Potentially harmful.",
-		["deafening"] = "[Adjective] Very loud.",
-		["demonstrate"] = "[Verb] To show or explain something.",
-		["detective"] = "[Noun] Someone who investigates something.",
-		["determine"] = "[Verb] To reach a conclusion.",
-		["diagram"] = "[Noun] A visual representation of something.",
-		["dilemma"] = "[Adjective] A difficult situation.",
-		["direction"] = "[Noun] A course along which someone moves.",
-		["disagree"] = "[Verb] To not get along with someone.",
-		["discovery"] = "[Noun] The act of finding something new.",
-		["discreet"] = "[Adjective] Kept in secret.",
-		["disgusting"] = "[Adjective] Describing something that is unpleasant.",
-		["disturbance"] = "[Noun] An interruption in the normal flow of activities.",
-		["document"] = "[Noun] A written record that provides information.",
-		["doubtful"] = "[Adjective] Not fully trusting in something.",
-		["divergent"] = "[Adjective] Moving in different directions.",
-		["dysfunctional"] = "[Adjective] Incapable of behaving properly.",
-		["economist"] = "[Noun] Someone who studies finances.",
-		["emergency"] = "[Noun] A situation requiring immediate action.",
-		["emphasis"] = "[Noun] Adding extra importance to something.",
-		["enlighten"] = "[Verb] To make clear.",
-		["establish"] = "[Verb] To set something.",
-		["estimate"] = "[Noun] A reasonable guess.",
-		["excitement"] = "[Noun] Looking forward to something that is good.",
-		["exemption"] = "[Noun] An exclusion from something.",
-		["experience"] = "[Noun] Knowledge gained by doing something.",
-		["experiment"] = "[Noun] A test that could go wrong.",
-		["expansion"] = "[Noun] The process of growing bigger.",
-		["fantastic"] = "[Adjective] Exceptionally great.",
-		["favorable"] = "[Adjective] Advantageous over something else.",
-		["fearless"] = "[Adjective] Not being scared of something.",
-		["franchise"] = "[Noun] A company that lets individuals run services.",
-		["glorious"] = "[Adjective] Worthy of being admired.",
-		["graduate"] = "[Noun] Someone who completes a course of study.",
-		["grandfather"] = "[Noun] The dad of someone's dad.",
-		["gruesome"] = "[Adjective] Extremely unpleasant.",
-		["honorable"] = "[Adjective] Worthy of being respected.",
-		["hysterical"] = "[Adjective] Extremely funny.",
-		["illustrate"] = "[Verb] To visualize something.",
-		["infection"] = "[Noun] The process of catching a disease.",
-		["inflation"] = "[Noun] The process of increasing by an excessive amount.",
-		["information"] = "[Noun] Facts provided to teach someone.",
-		["innovation"] = "[Noun] A new and surprising development.",
-		["insurance"] = "[Noun] Protection from damage.",
-		["interface"] = "[Noun] A screen that allows for communication.",
-		["intermediate"] = "[Adjective] Medium difficulty.",
-		["intervention"] = "[Noun] The process of getting in the way of something.",
-		["justice"] = "[Noun] The state of proceeding in a fair way.",
-		["language"] = "[Noun] The method of human communication.",
-		["legislation"] = "[Noun] A written law.",
-		["liberty"] = "[Noun] The state of being free.",
-		["magnetic"] = "[Adjective] Attraction between objects.",
-		["malicious"] = "[Adjective] Having intent to do harm.",
-		["material"] = "[Noun] The physical property of an object.",
-		["maximum"] = "[Noun] The greatest amount.",
-		["microphone"] = "[Noun] An object that you speak into.",
-		["motionless"] = "[Adjective] Not moving.",
-		["mountain"] = "[Noun] A big hill.",
-		["national"] = "[Adjective] Relating to an entire country.",
-		["nervous"] = "[Adjective] Being scared.",
-		["network"] = "[Noun] A system of connected things.",
-		["nonchalant"] = "[Adjective] Appearing calm.",
-		["numerous"] = "[Adjective] Many.",
-		["oceanic"] = "[Adjective] Relating to Earth\226\128\153s water.",
-		["observation"] = "[Noun] A notice of something.",
-		["omnipotent"] = "[Adjective] Having unlimited power.",
-		["offender"] = "[Noun] Someone who commits an illegal act.",
-		["parallel"] = "[Adjective] Side by side.",
-		["permission"] = "[Noun] Having authority to do something.",
-		["personality"] = "[Noun] The unique way someone acts.",
-		["persuade"] = "[Verb] To convince someone to do something.",
-		["plaster"] = "[Noun] A material you spread on walls.",
-		["plausible"] = "[Adjective] Reasonable to be believed.",
-		["possessive"] = "[Adjective] Taking control of something.",
-		["potential"] = "[Noun] A possibility.",
-		["presentation"] = "[Noun] A talk that explains something to an audience.",
-		["pressure"] = "[Noun] The amount of force on something.",
-		["productive"] = "[Adjective] Someone who is not lazy.",
-		["prosecute"] = "[Verb] To accuse someone of something.",
-		["quality"] = "[Noun] The degree of excellence of something.",
-		["question"] = "[Noun] A statement that asks something.",
-		["radiation"] = "[Noun] Particle emission.",
-		["reasonable"] = "[Adjective] Being fair.",
-		["reckless"] = "[Adjective] Taking action without thinking.",
-		["reflection"] = "[Noun] The act of looking back on past events.",
-		["redundant"] = "[Adjective] No longer useful.",
-		["regular"] = "[Adjective] Something that is in its normal state.",
-		["reliable"] = "[Adjective] Able to be trusted.",
-		["remarkable"] = "[Adjective] Worthy of attention.",
-		["repetition"] = "[Noun] The act of repeating past information.",
-		["request"] = "[Verb] To ask for something.",
-		["responsible"] = "[Adjective] Able to take care of things.",
-		["restrain"] = "[Verb] To restrict someone from doing something.",
-		["romantic"] = "[Adjective] The expression of love.",
-		["satisfying"] = "[Adjective] Rewarding to watch.",
-		["seasonal"] = "[Adjective] Changing based on the time of year.",
-		["sentence"] = "[Noun] A group of words used to form a thought.",
-		["skeleton"] = "[Noun] A model of bones in the human body.",
-		["sophisticated"] = "[Adjective] Developed to high complexity.",
-		["subject"] = "[Noun] The person that is being discussed.",
-		["substantial"] = "[Adjective] Of considerate importance.",
-		["superficial"] = "[Adjective] Existing at the surface.",
-		["survivor"] = "[Noun] A person remaining alive after an event.",
-		["tedious"] = "[Adjective] A task that is long or slow.",
-		["thoughtful"] = "[Adjective] Showing consideration for someone.",
-		["tradition"] = "[Noun] Something that takes place regularly.",
-		["transform"] = "[Verb] To change into something else.",
-		["treatment"] = "[Noun] The manner in which someone behaves.",
-		["tremendous"] = "[Adjective] A large amount of something.",
-		["triangle"] = "[Noun] A shape with three sides.",
-		["unanimous"] = "[Adjective] Fully in agreement.",
-		["understand"] = "[Verb] To successfully interpret something.",
-		["unemployed"] = "[Adjective] Not having a job.",
-		["warning"] = "[Noun] A statement that signifies danger.",
-		["weakness"] = "[Noun] The state of lacking strength.",
-		["workspace"] = "[Noun] An area someone uses to work.",
-		["xylophone"] = "[Noun] An instrument with mallets and wooden bars.",
-		["acroscleroderma"] = "[Noun] A disease that causes tightening of the skin.",
-		["adrenocorticotrophin"] = "[Noun] A hormone that stimulates the adrenal cortex.",
-		["anatidaephobia"] = "[Noun] The fear that a duck is always watching you.",
-		["anthropocentrism"] = "[Noun] The belief that humans are superior to all of nature.",
-		["anticyclogenesis"] = "[Noun] The process of a high-pressure system forming.",
-		["archaeological"] = "[Adjective] Relating to the study of history through excavation.",
-		["atherosclerosis"] = "[Noun] Thickening of the arteries.",
-		["auriculotemporal"] = "[Noun] A nerve that provides information to the ear.",
-		["bacteriologist"] = "[Noun] A scientist who studies bacteria.",
-		["benzotrifluoride"] = "[Noun] A clear and flammable liquid.",
-		["bioaccumulation"] = "[Noun] The buildup of chemicals within a living organism.",
-		["blepharochalasis"] = "[Noun] A condition that causes upper eyelid swelling.",
-		["bourgeoisification"] = "[Noun] The process of adapting to the middle class.",
-		["bromochloromethane"] = "[Noun] A clear and nonflammable liquid.",
-		["cardiovascular"] = "[Adjective] Relating to the heart and blood vessels.",
-		["catecholamines"] = "[Noun] A class of molecules that act as neurotransmitters.",
-		["cervicothoracic"] = "[Adjective] Relating to the neck and chest.",
-		["chondroglossus"] = "[Noun] A small muscle of the tongue.",
-		["compartmentalization"] = "[Noun] The division of something into sections.",
-		["confidentiality"] = "[Noun] The state of keeping something private.",
-		["conjunctivitis"] = "[Noun] The scientific name for pink eye.",
-		["coracobrachialis"] = "[Noun] A small muscle in the upper arm.",
-		["corticomesencephalic"] = "[Noun] A nerve pathway in the brain.",
-		["defenestration"] = "[Noun] The action of throwing someone out of a window.",
-		["dehydrogenation"] = "[Noun] The process of removing hydrogen from molecules.",
-		["dehydrothiotoluidine"] = "[Noun] A chemical used for dyes.",
-		["deoxyribonucleic"] = "[Noun] A molecule carrying genetic instructions.",
-		["desensitization"] = "[Noun] The process of losing sensitivity to something.",
-		["electrocoagulation"] = "[Noun] A treatment that uses an electric current to remove contaminants.",
-		["falsifiability"] = "[Noun] The ability to prove something as false.",
-		["flibbertigibbet"] = "[Noun] An excessively talkative person.",
-		["gastroenterologist"] = "[Noun] A doctor that specializes in the stomach.",
-		["gentrification"] = "[Noun] The process of making something more refined.",
-		["gegenstandstheorie"] = "[Noun] A theory of objects.",
-		["glossopharyngeal"] = "[Adjective] Relating to the tongue.",
-		["glottochronology"] = "[Noun] A method of estimating the date in which languages diverge.",
-		["hemangiopericytoma"] = "[Noun] A type of soft-tissue cancer.",
-		["hematopoietically"] = "[Adverb] In a manner relating to blood cell formation.",
-		["hemidemisemiquaver"] = "[Noun] A sixty-fourth musical note.",
-		["hemoglobinopathy"] = "[Noun] A group of inherited blood disorders.",
-		["honorificabilitudinity"] = "[Noun] The state of being honorable.",
-		["hydrometeorology"] = "[Noun] The study of rainfall",
-		["hydroxyprogesterone"] = "[Noun] A medicine for birth.",
-		["hyperoxymuriatic"] = "[Adjective] Describing corrosive acid.",
-		["hypoparathyroidism"] = "[Noun] A condition leading to low blood calcium levels.",
-		["immunodeficiency"] = "[Noun] Failure of the immune system.",
-		["incomprehensibility"] = "[Noun] The state of being impossible to understand.",
-		["interstitiospinal"] = "[Noun] A motor pathway in the central nervous system.",
-		["labyrinthodontia"] = "[Noun] An extinct species similar to crocodiles.",
-		["lautenclavicymbal"] = "[Noun] An instrumental keyboard featuring gut strings.",
-		["lepidopterology"] = "[Noun] The scientific study of butterflies.",
-		["lipopolysaccharide"] = "[Noun] A complex molecule.",
-		["meteorological"] = "[Adjective] Relating to the study of the atmosphere.",
-		["micropaleontology"] = "[Noun] The study of tiny fossils.",
-		["miniaturization"] = "[Noun] The process of making something smaller.",
-		["musculoskeletal"] = "[Adjective] Relating to the muscular and skeletal systems.",
-		["musculocutaneous"] = "[Adjective] Relating to the muscular and skin systems.",
-		["neuroplasticity"] = "[Noun] The ability of the brain to reorganize itself.",
-		["nucleosynthesis"] = "[Noun] The creation of atomic nuclei.",
-		["oligosynthetic"] = "[Adjective] Describing a simple type of language.",
-		["olivocerebellar"] = "[Adjective] Relating to the cerebellum and the olivary nuclei.",
-		["osteosclerosis"] = "[Noun] A disorder that causes increased bone density.",
-		["otorhinolaryngological"] = "[Adjective] Relating to the ear, nose, and throat.",
-		["paleoclimatology"] = "[Noun] The study of climates.",
-		["palatopharyngeus"] = "[Noun] A small muscle in the roof of the mouth.",
-		["parapsychology"] = "[Noun] The study of psychic phenomena.",
-		["paraventricular"] = "[Adjective] Next to a ventricle of the brain.",
-		["perissodactyla"] = "[Noun] An order of mammals.",
-		["pharmaceutical"] = "[Noun] Medicine.",
-		["pheochromocytoma"] = "[Noun] A tumor that develops in the adrenal glands.",
-		["polyphiloprogenitive"] = "[Adjective] Extremely prolific.",
-		["pneumoencephalography"] = "[Noun] An obsolete brain imaging technique.",
-		["psychoanalysis"] = "[Noun] The study of the conscious and unconscious mind.",
-		["psychotomimetic"] = "[Adjective] Capable of producing a psychotic state.",
-		["pulchritudinous"] = "[Adjective] Beautiful.",
-		["quinquagenarian"] = "[Noun] A person in their 50s.",
-		["quintessential"] = "[Adjective] Representing the most perfect example of something.",
-		["radiometeorograph"] = "[Noun] An instrument carried into the atmosphere by a balloon.",
-		["reconciliation"] = "[Noun] The process of reforming a bond with someone.",
-		["reconnaissance"] = "[Noun] Preliminary observation.",
-		["rehabilitation"] = "[Noun] The process of restoring something to its normal state.",
-		["reticulospinal"] = "[Noun] A motor pathway that sends signals to the spinal cord.",
-		["rhombencephalon"] = "[Noun] The lower part of the brainstem.",
-		["semimembranosus"] = "[Noun] A major hamstring muscle.",
-		["sesquipedalian"] = "[Adjective] Characterized by long words.",
-		["spectrofluorometer"] = "[Noun] An instrument that measures fluroescent light.",
-		["spinomesencephalic"] = "[Noun] A pathway consisting of bundled nerve fibers.",
-		["sternoclavicular"] = "[Noun] A joint between the clavicle and sternum.",
-		["sternocleidomastoid"] = "[Noun] A long muscle in the neck.",
-		["subinfeudation"] = "[Noun] A medieval process for granting land.",
-		["supratrochlear"] = "[Adjective] Above the eye.",
-		["temporoparietalis"] = "[Noun] A muscle within the head.",
-		["thermoluminescence"] = "[Noun] The ability to glow through high temperatures.",
-		["tonsillopharyngitis"] = "[Noun] A sore throat.",
-		["trichotillomania"] = "[Noun] A condition that causes urges to pull out hair.",
-		["utilitarianism"] = "[Noun] The belief in benefitting the majority.",
-		["vestibulocochlear"] = "[Noun] A nerve within the ear.",
-		["vicissitudinous"] = "[Adjective] Characterized by frequent and unexpected changes.",
-		["worcestershire"] = "[Noun] A county in England.",
-		["zygomaticotemporal"] = "[Adjective] Relating to an area on the side of the head.",
-		["antidisestablishmentarianism"] = "[Noun] Opposition to the separation of the Church of England.",
-		["chargoggagoggmanchauggagoggchaubunagungamaugg"] = "[Noun] A lake in Webster, MA.",
-		["floccinaucinihilipilification"] = "[Noun] The habit of estimating something as worthless.",
-		["hippopotomonstrosesquipedaliophobia"] = "[Noun] The irrational fear of long words.",
-		["nasopharyngolaryngoscopy"] = "[Noun] A medical procedure used to examine the nose, throat, and airway.",
-		["encephaloduroarteriosynangiosis"] = "[Noun] A procedure that treats cerebrovascular diseases.",
-		["nonanonacontanonactanonaliagon"] = "[Noun] A polygon with 9,999 sides.",
-		["pneumonoultramicroscopicsilicovolcanoconiosis"] = "[Noun] A lung disease caused by inhaling ash.",
-		["pseudopseudohypoparathyroidism"] = "[Noun] A genetic condition that causes skeletal issues.",
-		["supercalifragilisticexpialidocious"] = "[Adjective] Extraordinarily good.",
-		["chemoorganoheterotrophy"] = "[Noun] A process for organisms to obtain energy and carbon from organic compounds.",
-		["amongus"] = "[Noun] \240\159\164\168",
-		["bingbop"] = "[Noun] bingo",
-		["bingchilling"] = "[Noun] \240\159\141\166",
-		["hamster"] = "[Noun] \240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\144\185\240\159\165\186\240\159\165\186\240\159\165\186\240\159\144\185\240\159\165\186\240\159\144\185\240\159\165\186\240\159\144\185\240\159\165\186",
-		["johncena"] = "[Noun] AND HIS NAME IS-",
-		["oiia"] = "[Adjective] \240\159\144\136",
-		["onion"] = "[Noun] a common kitchen vegetable",
-		["wiwiwi"] = "[Adjective] :3",
-		["yee"] = "[Noun] the only documented dinosaur sound",
-		["butterdog"] = "[Noun] \240\159\167\136\240\159\144\149",
-		["gocrazy"] = "[Verb] to act in a wild or uncontrolled manner",
-		["heheheha"] = "[Noun] a laugh in clash royale",
-		["lebronjames"] = "[Noun] the goat of basketball",
-		["metalpipe"] = "[Noun] something that would be really loud if u drop",
-		["pomegranate"] = "[Noun] this fruit is not allowed",
-		["stopthecap"] = "[Noun] lie",
-		["tralalerotralala"] = "[Noun] shark noise",
-		["vineboom"] = "[Adjective] \240\159\146\165",
-		["whistle"] = "[Noun] a way to say hello",
-		["allourfoodkeepsblowingup"] = "[Verb] unfortunate luck for arbys food",
-		["bhocolatebhipbookie"] = "[Noun] sweet treat",
-		["boombambop"] = "[Noun] epic roast",
-		["changetheworld"] = "[Noun] rat phrase",
-		["cheeseonmycheeseburger"] = "[Noun] the most important question of all time",
-		["chipichipichapachapa"] = "[Adjective] what u say to describe a cat that dances in a litter box",
-		["christmasjustaweekaway"] = "[Noun] today is december 18",
-		["icouldadroppedmycroissant"] = "[Noun] \240\159\165\144",
-		["imgonnabreakmymonitoriswear"] = "[Noun] is this a threat?",
-		["imsemiistayautomatic"] = "[Noun] mathematics :)",
-		["iwalktoburgerking"] = "[Verb] what u do when ur hungry",
-		["luigiluigiohyeahohyeah"] = "[Noun] brother of mario",
-		["metroboominmakeitboom"] = "[Verb] \240\159\143\153\239\184\143\240\159\146\165",
-		["pleaseburgercheese"] = "[Noun] \240\159\141\148",
-		["putitinreverseterry"] = "[Noun] \240\159\142\135\226\153\191\239\184\143",
-		["putthephonedown"] = "[Noun] exchange between a cop and a person armed with a phone",
-		["thereisliterallysoapeverywhere"] = "[Noun] what u say when the dishwasher messes up",
-		["thetinggoskrra"] = "[Noun] onomatopoeia of movement",
-		["thisisamomentinhistory"] = "[Noun] famous caseoh phrase",
-		["wantabreakfromtheads"] = "[Noun] spotify",
-		["whostealsacheesegrater"] = "[Noun] question about a kitchen appliance",
-	}
+	local defToWord = loadstring(game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/defs.luau"))()
 	
 	local ACCENT_COLOR = Color3.fromRGB(55, 145, 230)
 	local MAIN_COLOR = Color3.fromRGB(20, 20, 30)
@@ -6303,18 +5980,25 @@ local script = G2L["9e"];
 	
 	local function initMonitorTracking()
 		task.spawn(function()
+			local monitorPart = workspace.Map.Parts.Monitor.Main
+	
 			while true do
 				local sg = getMonitorSurfaceGui()
 				if sg then
 					hookMonitor(sg)
-					sg.AncestryChanged:Connect(function(_, newParent)
-						if newParent == nil then
+	
+					monitorPart.ChildRemoved:Connect(function(child)
+						if child:IsA("SurfaceGui") then
 							hookMonitor(nil)
 						end
 					end)
-					workspace.Map.Parts.Monitor.Main:GetPropertyChangedSignal("SurfaceGui"):Connect(function()
-						hookMonitor(getMonitorSurfaceGui())
+	
+					monitorPart.ChildAdded:Connect(function(child)
+						if child:IsA("SurfaceGui") then
+							hookMonitor(child)
+						end
 					end)
+	
 					break
 				end
 				task.wait(1)
@@ -8185,7 +7869,7 @@ local script = G2L["9e"];
 			return game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/v")
 		end)
 		local ver = (ok and raw and raw:match("v[%d%.]+")) and raw:match("v[%d%.]+") or "0.57"
-		notify("Lunar X", "version: " .. ver .. " | by .n_ick1", 5, "info")
+		notify("Lunar X", "version: " .. ver .. " | by .weound", 5, "info")
 	end)
 end;
 task.spawn(C_9e);
@@ -8293,34 +7977,45 @@ task.spawn(C_110);
 local function C_127()
 local script = G2L["127"];
 	local function getb()
-		local s = game.Workspace.Map.Parts.Monitor.Main.SurfaceGui
-		if not s then return 0 end
-		if s then return s end
+		local map = workspace:FindFirstChild("Map")
+		if not map then return nil end
+		local parts = map:FindFirstChild("Parts")
+		if not parts then return nil end
+		local monitor = parts:FindFirstChild("Monitor")
+		if not monitor then return nil end
+		local main = monitor:FindFirstChild("Main")
+		if not main then return nil end
+	
+		return main:FindFirstChild("SurfaceGui")
 	end
 	
 	local function gett(b)
-		if b ~= nil then
-			local top = b:WaitForChild("TopText")
-			local txt = top.Text
-			local uname = string.split(txt, " ")[1]
+		if b and typeof(b) == "Instance" then
+			local top = b:FindFirstChild("TopText")
 	
-			if uname then
-				return uname
+			if top and top:IsA("TextLabel") then
+				local txt = top.Text
+				if txt then
+					return string.split(txt, " ")[1]
+				end
 			end
 		end
+		return nil
 	end
 	
 	local function start()
 		local b = getb()
 		local t = gett(b)
 	
-		if t ~= nil then 
-			if t == "Intermission" then
-				script.Parent.Text = "Intermission"
-			elseif t == "Game over!" then
-				script.Parent.Text = "Intermission"
-			else
-				script.Parent.Text = "current typer: "..t
+		if script.Parent and script.Parent:IsA("TextLabel") then
+			if t ~= nil then 
+				if t == "Intermission" then
+					script.Parent.Text = "Intermission"
+				elseif t == "Game over!" then
+					script.Parent.Text = "Intermission"
+				else
+					script.Parent.Text = "current typer: "..t
+				end
 			end
 		end
 	end
@@ -8329,10 +8024,13 @@ local script = G2L["127"];
 	start()
 	
 	local mg = getb()
-	if mg ~= 0 and mg:FindFirstChild("TopText") then
-		mg.TopText:GetPropertyChangedSignal("Text"):Connect(function()
-			start()
-		end)
+	if mg and typeof(mg) == "Instance" then
+		local topText = mg:FindFirstChild("TopText")
+		if topText then
+			topText:GetPropertyChangedSignal("Text"):Connect(function()
+				start()
+			end)
+		end
 	end
 end;
 task.spawn(C_127);
@@ -8340,28 +8038,40 @@ task.spawn(C_127);
 local function C_12e()
 local script = G2L["12e"];
 	local function getb()
-		local s = game.Workspace.Map.Parts.Monitor.Main.SurfaceGui
-		if not s then return 0 end
-		if s then return s end
+		local map = workspace:FindFirstChild("Map")
+		if not map then return nil end
+		local parts = map:FindFirstChild("Parts")
+		if not parts then return nil end
+		local monitor = parts:FindFirstChild("Monitor")
+		if not monitor then return nil end
+		local main = monitor:FindFirstChild("Main")
+		if not main then return nil end
+	
+		return main:FindFirstChild("SurfaceGui")
 	end
 	
 	local function gett(b)
-		if b ~= nil then
-			local top = b:WaitForChild("TimerText")
-			local txt = top.Text
-			local timer = string.split(txt, " ")[1]
+		if b and typeof(b) == "Instance" then
+			local top = b:FindFirstChild("TimerText")
 	
-			if timer then
-				return timer
-			end -- game.Workspace.Map.Parts.MapName
+			if top and top:IsA("TextLabel") then
+				local txt = top.Text
+				if txt then
+					return string.split(txt, " ")[1]
+				end
+			end
 		end
+		return nil
 	end
 	
 	local function start()
 		local b = getb()
 		local t = gett(b)
-		if t ~= nil then 
-			script.Parent.Text = t
+	
+		if script.Parent and script.Parent:IsA("TextLabel") then
+			if t ~= nil then 
+				script.Parent.Text = t
+			end
 		end
 	end
 	
@@ -8369,10 +8079,13 @@ local script = G2L["12e"];
 	start()
 	
 	local mg = getb()
-	if mg ~= 0 and mg:FindFirstChild("TimerText") then
-		mg.TimerText:GetPropertyChangedSignal("Text"):Connect(function()
-			start()
-		end)
+	if mg and typeof(mg) == "Instance" then
+		local timerText = mg:FindFirstChild("TimerText")
+		if timerText then
+			timerText:GetPropertyChangedSignal("Text"):Connect(function()
+				start()
+			end)
+		end
 	end
 end;
 task.spawn(C_12e);
@@ -8441,9 +8154,121 @@ local script = G2L["133"];
 	end
 end;
 task.spawn(C_133);
--- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.drag
+-- StarterGui.f789z43hfn3i._main._frms.mfrm._scr.rl.msg.check
 local function C_136()
 local script = G2L["136"];
+	local player = game.Players.LocalPlayer
+	local pgui = player:WaitForChild("PlayerGui")
+	local mgr = pgui:WaitForChild("f789z43hfn3i")
+	local notif = mgr
+	local template = notif:WaitForChild("template")
+	local TweenService = game:GetService("TweenService")
+	
+	local ACCENT_COLOR = Color3.fromRGB(55, 145, 230)
+	local MAIN_COLOR = Color3.fromRGB(20, 20, 30)
+	local BORDER_COLOR = Color3.fromRGB(60, 60, 80)
+	
+	local activeNotifs = {}
+	local NPAD = 6
+	local NRIGHT = 14
+	local NBOTTOM = 14
+	
+	local function notify(title, body, dur, ntype)
+		dur = dur or 4
+		ntype = ntype or "info"
+		if not notif or not notif.Parent then return end
+		local ok, card = pcall(function() return template:Clone() end)
+		if not ok or not card then return end
+		card.Visible = true
+		card.Name = "notif_" .. tostring(tick())
+		local titleLbl = card:WaitForChild("titel")
+		local bodyLbl = card:WaitForChild("text")
+		local circle = card:WaitForChild("circle")
+		titleLbl.Text = title
+		bodyLbl.Text = body
+		local colorMap = {
+			success = Color3.fromRGB(40, 190, 80),
+			info = ACCENT_COLOR,
+			error = Color3.fromRGB(210, 50, 50),
+			warn = Color3.fromRGB(225, 160, 25),
+		}
+		local imgMap = {
+			success = "successimg", info = "infoimg",
+			error = "errorimg", warn = "warnimg",
+		}
+		local col = colorMap[ntype] or colorMap.info
+		local imgName = imgMap[ntype] or "infoimg"
+		for _, imgChild in ipairs(circle:GetChildren()) do
+			if imgChild:IsA("ImageLabel") then
+				imgChild.Visible = imgChild.Name == imgName
+			end
+		end
+		local brd = card:FindFirstChild("brd")
+		if brd then brd.BackgroundColor3 = col end
+		circle.BackgroundColor3 = col
+		local cardH = math.max(66, bodyLbl.TextBounds.Y + 46)
+		card.Size = UDim2.new(0, 240, 0, cardH)
+		card.Position = UDim2.new(1, NRIGHT, 1, -(NBOTTOM + cardH))
+		card.Parent = notif
+		table.insert(activeNotifs, card)
+		local function restack()
+			for i, f in ipairs(activeNotifs) do
+				local fH = f.Size.Y.Offset
+				TweenService:Create(f, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+					Position = UDim2.new(1, -(240 + NRIGHT), 1, -(NBOTTOM + (fH + NPAD) * i))
+				}):Play()
+			end
+		end
+		restack()
+		task.delay(dur, function()
+			local idx = table.find(activeNotifs, card)
+			if idx then table.remove(activeNotifs, idx) end
+			if card and card.Parent then
+				TweenService:Create(card, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {
+					Position = UDim2.new(1, NRIGHT + 240 + 10, card.Position.Y.Scale, card.Position.Y.Offset)
+				}):Play()
+				task.wait(0.22)
+				pcall(function() card:Destroy() end)
+			end
+			restack()
+		end)
+	end
+	
+	local re = game:GetService("ReplicatedStorage").Events.ChatMessage
+	local function fire(n, t, w)
+		if re then
+			if firesignal then
+				firesignal(re.OnClientEvent, "<font color = \"rgb(255,0,0)\">[Server] </font><font color = \"rgb(255, 195, 90)\">"..n.." just typed "..t.." at "..w.." WPM!</font>")
+			else
+				notify("Lunar X", "your executor does not support firesignal()", 3, "error")
+			end
+		else
+			notify("Lunar X", "couldnt find the remote event for the chat message", 3, "error")
+		end
+	end
+	
+	local sc = script.Parent
+	local btn = sc.fire
+	local u = sc.user
+	local t = sc.word
+	local w = sc.wpm
+	btn.MouseButton1Click:Connect(function()
+		if u and t and w and 
+			u.Text:gsub("%s+", "") ~= "" and 
+			t.Text:gsub("%s+", "") ~= "" and 
+			w.Text:gsub("%s+", "") ~= "" then
+	
+			fire(u.Text, t.Text, w.Text)
+			notify("Lunar X", "fired a fake chat message", 3, "success")
+		else
+			notify("Lunar X", "please fill in all fields", 3, "error")
+		end
+	end)
+end;
+task.spawn(C_136);
+-- StarterGui.f789z43hfn3i._main._frms.mfrm.disclaimer.drag
+local function C_141()
+local script = G2L["141"];
 	local UIS = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
 	
@@ -8487,10 +8312,10 @@ local script = G2L["136"];
 		end
 	end)
 end;
-task.spawn(C_136);
+task.spawn(C_141);
 -- StarterGui.f789z43hfn3i._main._frms.efrm._scr.el.emotes
-local function C_142()
-local script = G2L["142"];
+local function C_14d()
+local script = G2L["14d"];
 	local UIS = game:GetService("UserInputService")
 	local TweenService = game:GetService("TweenService")
 	local Players = game:GetService("Players")
@@ -8604,10 +8429,10 @@ local script = G2L["142"];
 		connectHumanoidEvents()
 	end)
 end;
-task.spawn(C_142);
+task.spawn(C_14d);
 -- StarterGui.f789z43hfn3i.tsk.min._ms
-local function C_174()
-local script = G2L["174"];
+local function C_17f()
+local script = G2L["17f"];
 	local Players = game:GetService("Players")
 	local TweenService = game:GetService("TweenService")
 	
@@ -8663,10 +8488,10 @@ local script = G2L["174"];
 	button.MouseButton1Click:Connect(toggle)
 	button.Activated:Connect(toggle)
 end;
-task.spawn(C_174);
+task.spawn(C_17f);
 -- StarterGui.f789z43hfn3i.tsk._v.v
-local function C_176()
-local script = G2L["176"];
+local function C_181()
+local script = G2L["181"];
 	local v = "https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/main/v"
 	
 	if script.Parent then
@@ -8679,10 +8504,10 @@ local script = G2L["176"];
 		end
 	end
 end;
-task.spawn(C_176);
+task.spawn(C_181);
 -- StarterGui.f789z43hfn3i.tsk._g.game
-local function C_178()
-local script = G2L["178"];
+local function C_183()
+local script = G2L["183"];
 	local GAMES = {
 		["Spelling Bee"] = {17590362521, 83091000527113, 17707569217, 91692552632068, 133419989757748, 70718852079605, 115840692772844, 135159688166294},
 		["XisterZeriu's Spelling Bee"] = {86245840690390, 88343529452667, 134934672525554, 120304859859010, 81384385119149},
@@ -8711,10 +8536,10 @@ local script = G2L["178"];
 	
 	script.Parent.Text = "-- " .. foundName
 end;
-task.spawn(C_178);
+task.spawn(C_183);
 -- StarterGui.f789z43hfn3i.tsk.endb._es
-local function C_17a()
-local script = G2L["17a"];
+local function C_185()
+local script = G2L["185"];
 	local Players = game:GetService("Players")
 	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
 	
@@ -8725,6 +8550,6 @@ local script = G2L["17a"];
 	end)
 	
 end;
-task.spawn(C_17a);
+task.spawn(C_185);
 
 return G2L["1"], require;
