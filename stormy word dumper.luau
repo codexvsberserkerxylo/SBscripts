@@ -1,4 +1,5 @@
-
+-- first and best stormys sb script : https://github.com/codexvsberserkerxylo/SBscripts/blob/main/lunarX
+-- this is the first and best stormys sb definition, soundid dumper. current word dump : https://github.com/codexvsberserkerxylo/SBscripts/blob/main/stormy%20sb%20word%20dump.lua
 -- made by nick (.weound) at like 2:50 am dont judge code
 
 -- fetch version
