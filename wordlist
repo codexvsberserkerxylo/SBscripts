@@ -1,4 +1,4 @@
--- dm (or ping) .n_ick1 if theres missing words 
+-- dm (or ping) .weound (nick) if theres missing words 
 return {
     XISTER = {
 		["rbxassetid://97572492784626"]                    = "Alice",
