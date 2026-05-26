@@ -1,4 +1,5 @@
 --open source for you all that need the fuckass wordlists :blushing-face:
+-- THIS IS ASS JS USE MY XISTER WORD DUMPER AND STORMY WORD DUMPER BRO
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local CoreGui = game:GetService("CoreGui")
