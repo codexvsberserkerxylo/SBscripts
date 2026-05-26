@@ -1,11 +1,19 @@
-[+] added avg letters, avg wpm, last wpm,
-current typer and current difficulty
-
-    [!] fixed the letters label, 
-    current word and made estimated wpm more accurate
-
-  [*] made random speed more random (tuff)
-
-[+] added another 50-ish words
-
-  [*] updated to v0.58
+  [++] added Fernando's Spelling Bee support
+  [++] added mini mode (exit with left ctrl)
+  [++] added font spoofing with dropdown (EXPERIMENTAL)
+  [++] added microphone spoof (REALLY EXPERIMENTAL)
+  [++] added stormy sb full support (EXPERIMENTAL, MIGHT BE DETECTED.)
+  [+] added in-game afk toggle
+  [+] added word correction toggle
+  [+] added typing fatigue (speed degrades per N letters, resets on new word)
+  [+] added clipboard import for configs
+  [+] added config auto-refresh every 20s + manual refresh button
+  [+] added game info labels (typer, timer, diff...) for beans sb, xisters, stormys, fernandos
+  [+] added fake chat msg support for xister + stormy
+  [+] auto word dumper runs on execute for xister + stormy
+  [!!] fixed full delete (properly resets now)
+  [!!] removed VIM mode (was causing instant death)
+  [*] version mismatch warning on config load
+  [*] monitor re-hooks every 30s now (handles map changes)
+  [*] export now also copies to clipboard
+  [*] reverted random speed changes from v0.58
