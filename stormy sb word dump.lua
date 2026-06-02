@@ -1,7 +1,8 @@
 -- .gg/q5BCRbUmf7
--- Lunar X v0.57
--- time : 05/23/26 03:10:18 AM
--- took : 0.0041s
+-- dumped by Lunar X v0.60
+-- time : 06/02/26 05:49:22 PM
+-- took : 0.0060s
+-- total words : 411
 
 local ids = {
 	-- Easy Words
@@ -422,9 +423,10 @@ local ids = {
 } -- table ids
 
 -- .gg/q5BCRbUmf7
--- Lunar X v0.57
--- time : 05/23/26 03:10:18 AM
--- took : 0.0002s
+-- dumped by Lunar X v0.60
+-- time : 06/02/26 05:49:22 PM
+-- took : 0.0003s
+-- total words : 40
 
 local memes = {
 	-- Easy Memes
@@ -473,9 +475,10 @@ local memes = {
 } -- table memes
 
 -- .gg/q5BCRbUmf7
--- Lunar X v0.57
--- time : 05/23/26 03:10:18 AM
+-- dumped by Lunar X v0.60
+-- time : 06/02/26 05:49:22 PM
 -- took : 0.0000s
+-- total definitions : 452
 
 local defs = {
 	["abolish"] = "[Verb] To destroy.",
@@ -492,7 +495,7 @@ local defs = {
 	["allowance"] = "[Noun] The amount of something that is permitted.",
 	["amber"] = "[Noun] A sap produced by trees.",
 	["ambitious"] = "[Advjective] Having a strong desire to succeed.",
-	["amongus"] = "[Noun] ðŸ¤¨",
+	["amongus"] = "[Noun] 🤨",
 	["anatidaephobia"] = "[Noun] The fear that a duck is always watching you.",
 	["ankle"] = "[Noun] A bone above your foot.",
 	["ant"] = "[Noun] A small insect that builds hills.",
@@ -524,7 +527,7 @@ local defs = {
 	["benzotrifluoride"] = "[Noun] A clear and flammable liquid.",
 	["bhocolatebhipbookie"] = "[Noun] sweet treat",
 	["bingbop"] = "[Noun] bingo",
-	["bingchilling"] = "[Noun] ðŸ¦",
+	["bingchilling"] = "[Noun] 🍦",
 	["bioaccumulation"] = "[Noun] The buildup of chemicals within a living organism.",
 	["black"] = "[Noun] The absence of all colors.",
 	["blepharochalasis"] = "[Noun] A condition that causes upper eyelid swelling.",
@@ -540,7 +543,7 @@ local defs = {
 	["bromochloromethane"] = "[Noun] A clear and nonflammable liquid.",
 	["brother"] = "[Noun] A male sibling.",
 	["burst"] = "[Verb] To break apart as a result of pressure.",
-	["butterdog"] = "[Noun] ðŸ§ˆðŸ•",
+	["butterdog"] = "[Noun] 🧈🐕",
 	["calendar"] = "[Noun] An object that organizes days and months.",
 	["cardiovascular"] = "[Adjective] Relating to the heart and blood vessels.",
 	["cat"] = "[Noun] A pet that meows.",
@@ -661,7 +664,7 @@ local defs = {
 	["ground"] = "[Noun] What we walk on outside.",
 	["gruesome"] = "[Adjective] Extremely unpleasant.",
 	["guilt"] = "[Noun] The feeling of regret.",
-	["hamster"] = "[Noun] ðŸ¹ðŸ¹ðŸ¹ðŸ¹ðŸ¹ðŸ¹ðŸ¹ðŸ¥ºðŸ¥ºðŸ¥ºðŸ¹ðŸ¥ºðŸ¹ðŸ¥ºðŸ¹ðŸ¥º",
+	["hamster"] = "[Noun] 🐹🐹🐹🐹🐹🐹🐹🥺🥺🥺🐹🥺🐹🥺🐹🥺",
 	["happy"] = "[Noun] A positive mood.",
 	["harbor"] = "[Noun] Where boats stay on the water.",
 	["heheheha"] = "[Noun] a laugh in clash royale",
@@ -682,7 +685,7 @@ local defs = {
 	["hypoparathyroidism"] = "[Noun] A condition leading to low blood calcium levels.",
 	["hysterical"] = "[Adjective] Extremely funny.",
 	["ice"] = "[Noun] Frozen water.",
-	["icouldadroppedmycroissant"] = "[Noun] ðŸ¥",
+	["icouldadroppedmycroissant"] = "[Noun] 🥐",
 	["igloo"] = "[Noun] A shelter built from snow.",
 	["illustrate"] = "[Verb] To visualize something.",
 	["imgonnabreakmymonitoriswear"] = "[Noun] is this a threat?",
@@ -705,7 +708,7 @@ local defs = {
 	["justice"] = "[Noun] The state of proceeding in a fair way.",
 	["kingsammelot"] = "[Noun] a person who is probably in the server right now",
 	["labyrinthodontia"] = "[Noun] An extinct species similar to crocodiles.",
-	["land"] = "[Noun] An area of the Earthâ€™s surface.",
+	["land"] = "[Noun] An area of the Earth’s surface.",
 	["language"] = "[Noun] The method of human communication.",
 	["lautenclavicymbal"] = "[Noun] An instrumental keyboard featuring gut strings.",
 	["leader"] = "[Noun] Someone who commands a group of people.",
@@ -725,7 +728,7 @@ local defs = {
 	["meow"] = "[Noun] The sound a cat makes.",
 	["metalpipe"] = "[Noun] something that would be really loud if u drop",
 	["meteorological"] = "[Adjective] Relating to the study of the atmosphere.",
-	["metroboominmakeitboom"] = "[Verb] ðŸ™ï¸ðŸ’¥",
+	["metroboominmakeitboom"] = "[Verb] 🏙️💥",
 	["micropaleontology"] = "[Noun] The study of tiny fossils.",
 	["microphone"] = "[Noun] An object that you speak into.",
 	["miniaturization"] = "[Noun] The process of making something smaller.",
@@ -752,10 +755,10 @@ local defs = {
 	["numerous"] = "[Adjective] Many.",
 	["obese"] = "[Adjective] Very fat.",
 	["observation"] = "[Noun] A notice of something.",
-	["oceanic"] = "[Adjective] Relating to Earthâ€™s water.",
+	["oceanic"] = "[Adjective] Relating to Earth’s water.",
 	["offender"] = "[Noun] Someone who commits an illegal act.",
 	["office"] = "[Noun] A place where you work.",
-	["oiia"] = "[Adjective] ðŸˆ",
+	["oiia"] = "[Adjective] 🐈",
 	["oligosynthetic"] = "[Adjective] Describing a simple type of language.",
 	["olive"] = "[Noun] A small oval food.",
 	["olivocerebellar"] = "[Adjective] Relating to the cerebellum and the olivary nuclei.",
@@ -783,7 +786,7 @@ local defs = {
 	["plaster"] = "[Noun] A material you spread on walls.",
 	["plausible"] = "[Adjective] Reasonable to be believed.",
 	["please"] = "[Adverb] Used to ask for something politely.",
-	["pleaseburgercheese"] = "[Noun] ðŸ”",
+	["pleaseburgercheese"] = "[Noun] 🍔",
 	["pneumoencephalography"] = "[Noun] An obsolete brain imaging technique.",
 	["pneumonoultramicroscopicsilicovolcanoconiosis"] = "[Noun] A lung disease caused by inhaling ash.",
 	["poison"] = "[Noun] A substance that can make you ill.",
@@ -801,7 +804,7 @@ local defs = {
 	["psychoanalysis"] = "[Noun] The study of the conscious and unconscious mind.",
 	["psychotomimetic"] = "[Adjective] Capable of producing a psychotic state.",
 	["pulchritudinous"] = "[Adjective] Beautiful.",
-	["putitinreverseterry"] = "[Noun] ðŸŽ‡â™¿ï¸",
+	["putitinreverseterry"] = "[Noun] 🎇♿️",
 	["putthephonedown"] = "[Noun] exchange between a cop and a person armed with a phone",
 	["quality"] = "[Noun] The degree of excellence of something.",
 	["question"] = "[Noun] A statement that asks something.",
@@ -901,7 +904,7 @@ local defs = {
 	["turtle"] = "[Noun] A slow green animal.",
 	["ugly"] = "[Adjective] Unpleasant in appearance.",
 	["unanimous"] = "[Adjective] Fully in agreement.",
-	["uncle"] = "[Noun] The brother of someoneâ€™s parent.",
+	["uncle"] = "[Noun] The brother of someone’s parent.",
 	["understand"] = "[Verb] To successfully interpret something.",
 	["unemployed"] = "[Adjective] Not having a job.",
 	["unity"] = "[Noun] The state of being joined together.",
@@ -909,7 +912,7 @@ local defs = {
 	["value"] = "[Noun] The importance of something.",
 	["vestibulocochlear"] = "[Noun] A nerve within the ear.",
 	["vicissitudinous"] = "[Adjective] Characterized by frequent and unexpected changes.",
-	["vineboom"] = "[Adjective] ðŸ’¥",
+	["vineboom"] = "[Adjective] 💥",
 	["wantabreakfromtheads"] = "[Noun] spotify",
 	["warning"] = "[Noun] A statement that signifies danger.",
 	["water"] = "[Noun] A transparent liquid.",
