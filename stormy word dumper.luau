@@ -3,7 +3,7 @@
 -- made by nick (.weound) at like 2:50 am dont judge code
 
 -- fetch version
-local v = "v0.58" -- fallback
+local v = "v0.60" -- fallback
 local success, result = pcall(function()
     return game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/v")
 end)
