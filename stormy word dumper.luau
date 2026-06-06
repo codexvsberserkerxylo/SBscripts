@@ -177,4 +177,11 @@ end
 local formattedmeme = format(foundmeme, "memes", tmem)
 local formatteddefault = format(founddefault, "ids", tdef)
 local formatteddefs = formatDict(defs, "defs", tdefs)
-setclipboard(formatteddefault .. "\n\n" .. formattedmeme .. "\n\n" .. formatteddefs) -- ez
+--setclipboard(formatteddefault .. "\n\n" .. formattedmeme .. "\n\n" .. formatteddefs) -- ez
+local success, err = pcall(function()
+    writefile("dump.lua", formatteddefault .. "\n\n" .. formattedmeme .. "\n\n" .. formatteddefs)
+end)
+
+if not success then
+    warn("failed: " .. tostring(err))
+end -- if u dont use writefile then it will make emojis look like "[Verb] ðŸ™ï¸ðŸ’¥" so yeah
