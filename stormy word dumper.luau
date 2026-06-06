@@ -77,7 +77,7 @@ local tmem = os.clock() - t2
 
 local t3 = os.clock()
 local defs = {}
-local rsfound = game.ReplicatedStorage:FindFirstChild("wordDefinitions")
+local rsfound = game.ReplicatedStorage:FindFirstChild("wordDefinitions") -- are we detected
 if rsfound then
     -- require()
     local s, r = pcall(require, rsfound)
@@ -87,18 +87,18 @@ if rsfound then
         warn("couldnt require defs")
     end
 else
-    warn("defs not found")
+    warn("defs not found") -- we are so cooked ggs 
 end
 local tdefs = os.clock() - t3
 
 print(foundmeme) -- output: table: 0x...
-print(founddefault) -- output: table: 0x...(idk why i added these)
+print(founddefault) -- output: table: 0x...(idk why i added these comments useless asf)
 print(defs) -- output: table: 0x...
 
 local function format(t, tname, dt)
    if not t then return "err" end
    
-   -- handles am / pm
+   -- handles am / pm (no shit sherlock)
    local tform = os.date("%x %I:%M:%S %p")
    local dumptime = string.format("%.4f", dt)
 
@@ -109,7 +109,7 @@ local function format(t, tname, dt)
        end
    end
    
-   local startsec = "-- .gg/q5BCRbUmf7\n-- dumped by Lunar X " .. v .. "\n-- time : ".. tform .."\n-- took : ".. dumptime .."s\n-- total words : " .. words .. "\n\nlocal " .. tname .. " = {\n"
+   local startsec = "-- .gg/q5BCRbUmf7\n-- Lunar X " .. v .. "\n-- time : ".. tform .."\n-- took : ".. dumptime .."s\n-- total words : " .. words .. "\n\nlocal " .. tname .. " = {\n"
    local endsec = "} -- table " .. tname
    
    local body = ""
@@ -151,7 +151,7 @@ local function formatDict(t, tname, dt)
       end)
       
       local words = #keys
-      local startsec = "-- .gg/q5BCRbUmf7\n-- dumped by Lunar X " .. v .. "\n-- time : ".. tform .."\n-- took : ".. dumptime .."s\n-- total definitions : " .. words .. "\n\nlocal " .. tname .. " = {\n"
+      local startsec = "-- .gg/q5BCRbUmf7\n-- Lunar X " .. v .. "\n-- time : ".. tform .."\n-- took : ".. dumptime .."s\n-- total definitions : " .. words .. "\n\nlocal " .. tname .. " = {\n"
       local endsec = "} -- table " .. tname
       
       local keys = {}
