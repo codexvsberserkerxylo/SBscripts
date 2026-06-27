@@ -1180,6 +1180,11 @@ return {
 		["rbxassetid://108272772236843"] = "latitudinarianism", -- ???? idfk bro 
         ["rbxassetid://109321407307313"] = "photosynthesis", -- idk
         ["rbxassetid://106506603198433"] = "supercentenarian",
+        ["rbxassetid://91487285948470"] = "funkenzwangsvorstellung",
+        ["rbxassetid://74200942780496"] = "percutaneousendoscopicgastrostomy",
+        ["rbxassetid://80336487740341"] = "stem",
+        ["rbxassetid://75081824462965"] = "twin",
+        ["rbxassetid://90924558745249"] = "uridinediphosphateglycosyltransferase",
     },
     BESTPLAYER = {
 		"Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft", "nonanonacontanonactanonaliagon", "Wolfeschlegelsteinhausenbergerdorffvoralterwissenhaftschaferswassenschaft",
