@@ -3,7 +3,7 @@
 -- made by nick (.weound) 
 -- ud
 
-local v = "v0.58"
+local v = "v0.60"
 local success, result = pcall(function()
     return game:HttpGet("https://raw.githubusercontent.com/codexvsberserkerxylo/SBscripts/refs/heads/main/v")
 end)
@@ -33,7 +33,7 @@ end
 local tform = os.date("%x %I:%M:%S %p")
 local out = "-- .gg/q5BCRbUmf7\n-- Lunar X " .. v .. "\n-- time : " .. tform .. "\nreturn {\n"
 
-local parsedEntries = {}
+local entries = {}
 
 for _, val in ipairs(defs) do
     if type(val) == "table" then
@@ -43,7 +43,7 @@ for _, val in ipairs(defs) do
         local alt = val[4]
         
         if word and id and def then
-            table.insert(parsedEntries, {
+            table.insert(entries, {
                 word = tostring(word),
                 id = tostring(id),
                 def = tostring(def),
@@ -53,26 +53,26 @@ for _, val in ipairs(defs) do
     end
 end
 
-table.sort(parsedEntries, function(a, b) 
+table.sort(entries, function(a, b) 
     return a.word:lower() < b.word:lower() 
 end)
 
-for _, entry in ipairs(parsedEntries) do
-    local safeWord = string.format("%q", entry.word)
-    local safeDef = string.format("%q", entry.def)
-    local idStr = entry.id
+for _, entry in ipairs(entries) do
+    local safew = string.format("%q", entry.word)
+    local safed = string.format("%q", entry.def)
+    local ids = entry.id
     
     if type(entry.alt) == "table" and #entry.alt > 0 then
-        local altStr = "{ "
+        local alts = "{ "
         for i, a in ipairs(entry.alt) do
-            altStr = altStr .. string.format("%q", tostring(a))
-            if i < #entry.alt then altStr = altStr .. ", " end
+            alts = alts .. string.format("%q", tostring(a))
+            if i < #entry.alt then alts = alts .. ", " end
         end
-        altStr = altStr .. " }"
+        alts = alts .. " }"
         
-        out = out .. '\t{ ' .. safeWord .. ', ' .. idStr .. ', ' .. safeDef .. ', ' .. altStr .. ' },\n'
+        out = out .. '\t{ ' .. safew .. ', ' .. ids .. ', ' .. safed .. ', ' .. alts .. ' },\n'
     else
-        out = out .. '\t{ ' .. safeWord .. ', ' .. idStr .. ', ' .. safeDef .. ' },\n'
+        out = out .. '\t{ ' .. safew .. ', ' .. ids .. ', ' .. safed .. ' },\n'
     end
 end
 
@@ -82,4 +82,5 @@ local dt = os.clock() - t1
 local dumptime = string.format("%.4f", dt)
 out = out:gsub("return {", "-- took : " .. dumptime .. "s\nreturn {")
 
-setclipboard(out)
+--setclipboard(out)
+writefile("xister-dump.lua", out)
