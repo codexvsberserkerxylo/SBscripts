@@ -1,10 +1,10 @@
 -- .gg/q5BCRbUmf7
--- dumped by Lunar X v0.60
--- time : 06/06/26 09:39:07 PM
--- took : 0.0001s
+-- Lunar X v0.61
+-- time : 07/11/26 08:06:28 AM
+-- took : 0.0000s
 -- total definitions : 481
 
-return {
+local defs = {
 	["abolish"] = "[Verb] To destroy.",
 	["acceptable"] = "[Adjective] Able to be agreed on.",
 	["acoustic"] = "[Adjective] Relating to sound.",
@@ -486,4 +486,4 @@ return {
 	["zebra"] = "[Noun] An animal with white and black stripes.",
 	["zombie"] = "[Noun] A person who came back to life.",
 	["zygomaticotemporal"] = "[Adjective] Relating to an area on the side of the head.",
-}
+} -- table defs
